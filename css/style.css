@@ -55,12 +55,12 @@
 
 .principal{
 	margin-left: 0;
-	padding: 0;
+	padding: 20px 0;
 }
 
 .principal h1{
 	font-size: 1.5em;
-	padding: 10px 10px;
+	padding: 0 10px;
 }
 
 .container { margin: 0 auto; }
@@ -95,7 +95,7 @@
 	text-align: center;
 	cursor: pointer;
 }
-.frame ul li.active {
+.frame ul li:hover {
 	color: #fff;
 	background: #333;
 }
@@ -161,6 +161,31 @@
 .crazy ul li:nth-child(4n) { width: 400px; margin: 0 30px 0 2px; }
 
 
+/* Player */
+.topbar{
+	width: 100%;
+	height: 50px;
+	background: #888;
+	padding: 10px 20px;
+}
+.topbar i{
+	float: left;
+	font-size: 2em;
+	color: #fff;
+}
+.topbar h1{
+	text-align: center;
+	font-size: 1.6em;
+	color: #fff;
+}
+
+.video{
+	text-align: center;
+}
+video{
+	width: 80%;
+}
+
 @media screen and (min-width: 1080px){
 	.tabBar{
 		height: 100%;
@@ -207,5 +232,8 @@
 	.principal h1{
 		font-size: 2em;
 		padding: 0;
+	}
+	.topbar{
+		padding: 10px 100px;
 	}
 }
