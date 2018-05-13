@@ -3,32 +3,37 @@
 <head>
 	<meta charset="utf-8">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
-
-	<title>Player</title>
+	<title>Cadastro</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<!-- NAVBAR-->
 	<header class="topbar">
 		<a href="../index.html"><i class="fas fa-angle-left"></i></a>
 		<h1>LOGO</h1>
 	</header>
 
 	<section class="principal">
-		<div class="video">
-			<video controls>
-	  			<source src="../video/britney.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			</video>
-		</div>
-	</section>
-	
+        <form>
+            <h6>Nome:</h6>
+            <input type="text" id="name" class="textfield"/><br/>
+            <h6>E-mail:</h6>
+            <input type="text" id="email" class="textfield"/><br/>
+            <h6>Senha:</h6>
+            <input type="password" id="password" class="textfield"/><br/>
+			<input type="submit" class="go" value="Cadastrar"/><br/>
+		</form>
+			
+    </section>
+
 	<nav class="tabBar">
 		<a href="#"><i class="fas fa-home"></i></a>
 		<a href="#"><i class="fas fa-users"></i></a>
 		<a href="#"><i class="fas fa-globe"></i></a>
 		<a href="#"><i class="fas fa-info"></i></a>
 	</nav>
+	
 </body>
 </html>
