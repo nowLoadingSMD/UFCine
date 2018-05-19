@@ -1,0 +1,67 @@
+a{
+    text-decoration: none;
+}
+#alphabet{
+    width: 40px;
+    background: #eee;
+    text-align: center;
+    margin-top: 20px; 
+    padding: 8px;
+    position: absolute;
+    right: 20px;
+    overflow-y: scroll;
+    height: 70%;
+    position: fixed;
+}
+
+.letters{
+    font-size: 1.2em;
+    background: #333;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.principal .titles{
+    font-size: 1.5em;
+    width: 180px;
+    padding: 10px;
+    background: #ddd;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+.titleLetter{
+    font-size: 1.5em;
+    width: 40px;
+    padding: 5px;
+    background: #ddd;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.blockAuthors{
+    width: 95%;
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.infAuthor{
+    height: 200px;
+    margin: 15px 15px 15px 0;
+    float: left;
+    flex: 0 0 auto;
+}
+
+.imgAuthor{
+    width: 150px;
+    height: 150px;
+    background: #ddd;
+}
+
+.blockAuthors h1{
+    margin-top: 5px;
+    font-size: 1.2em;
+}
