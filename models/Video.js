@@ -10,8 +10,24 @@ const VideoSchema = mongoose.Schema({
         required: true,
         lowercase: true
     },
-    publisher: {
-        type: String,
+    producerID: {
+        type: Object,
+        required: true
+    },
+    quantityOfApplauses: {
+        type: Number,
+        required: true
+    },
+    produtionInfoID: {
+        type: Object,
+        required: true
+    },
+    onExposition: {
+        type: Boolean,
+        required: true
+    },
+    quantityOfViewLastWeek: {
+        type: Number,
         required: true
     },
     createdAt: {
@@ -30,5 +46,32 @@ Video.getVideos = (callback, limit) => {
     Video.find(callback).limit(limit)
 }
 
+Video.getRecommendations = () => {
+
+}
+
+Video.getRecents = () => {
+
+}
+
+Video.getVideoByID = () => {
+    
+}
+
+Video.getVideosByTagID = () => {
+
+}
+
+Video.getVideosByGenreID = () => {
+
+}
+
+Video.getVideosByProducerID = () => {
+
+}
+
+Video.setApplauses = (videoID, quantityOfApplauses) => {
+
+}
 
 module.exports = Video
