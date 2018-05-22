@@ -9,12 +9,16 @@ const TagSchema = mongoose.Schema({
 
 const Tag = mongoose.model("Tag", TagSchema)
 
-Tag.getTags = () => {
-
+Tag.addTag = (tag, callback) => {
+    Tag.create(tag, callback)
 }
 
-Tag.getNameByID = () => {
+Tag.getTags = (limit, callback) => {
+    Tag.find(callback).limit(limit)
+}
 
+Tag.getNameByID = (id, callback) => {
+    Tag.findById(id, callback)
 }
 
 

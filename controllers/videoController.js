@@ -79,8 +79,8 @@ router.post("/uploadVideo", async (req, res) => {
 router.post("/", async (req, res) => {
 
     const limit = req.body.limit
-    console.log(limit)
-    Video.getVideos((err, videos) =>{
+    // console.log(limit)
+    Video.getVideos((err, videos) => {
 
         if (err) {
             throw err

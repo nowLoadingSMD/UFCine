@@ -18,6 +18,7 @@ require("./routes/index.js")(app)
 //Require Controllers
 require("./controllers/authController")(app)
 require("./controllers/videoController")(app)
+require("./controllers/tagController")(app)
 
 app.listen(3000)
 
