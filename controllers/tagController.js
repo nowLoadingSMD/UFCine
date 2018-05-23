@@ -42,4 +42,12 @@ router.post("/createTag", async (req, res) => {
 
 })
 
-module.exports = (app) => app.use("/api/tags", router)
+router.get("/names", async (req, res) => {
+
+    console.log(await Tag.getNames())
+
+    res.send("Ok")
+
+})
+
+module.exports = (app) => app.use("/api/tag", router)
