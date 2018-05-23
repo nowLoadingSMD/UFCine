@@ -1,6 +1,8 @@
 const mongoose = require("../database")
 const bcrypt = require("bcryptjs")
 
+const Schema = mongoose.Schema
+
 const UserSchema = mongoose.Schema({
     name: {
       type: String,
@@ -25,6 +27,16 @@ const UserSchema = mongoose.Schema({
         type: Boolean,
         required: true
     },
+    favorites: [
+        {
+            type: Schema.Types.ObjectId, ref: 'Video'
+        }
+    ],
+    watchList: [
+        {
+            type: Schema.Types.ObjectId, ref: 'Video'
+        }
+    ],
     createdAt: {
         type: Date,
         default: Date.now

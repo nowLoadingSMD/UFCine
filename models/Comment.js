@@ -1,12 +1,13 @@
 const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
 const CommentSchema = mongoose.Schema({
     videoID: {
-        type: Object,
+        type: Schema.Types.ObjectId, ref: 'Video',
         required: true
     },
     userID: {
-        type: Object,
+        type: Schema.Types.ObjectId, ref: 'User',
         required: true
     },
     content: {

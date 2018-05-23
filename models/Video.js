@@ -1,4 +1,5 @@
 const mongoose = require("../database")
+const Schema = mongoose.Schema
 
 const VideoSchema = mongoose.Schema({
     name: {
@@ -11,7 +12,7 @@ const VideoSchema = mongoose.Schema({
         lowercase: true
     },
     producerID: {
-        type: Object,
+        type: Schema.Types.ObjectId, ref: 'User',
         required: true
     },
     quantityOfApplauses: {
@@ -19,7 +20,7 @@ const VideoSchema = mongoose.Schema({
         required: true
     },
     produtionInfoID: {
-        type: Object,
+        type: Schema.Types.ObjectId, ref: 'ProdutionInfo',
         required: true
     },
     onExposition: {
