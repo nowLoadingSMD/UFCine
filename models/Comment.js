@@ -18,12 +18,5 @@ const CommentSchema = mongoose.Schema({
 
 const Comment = mongoose.model("Comment", CommentSchema)
 
-Comment.getCommentsByVideoID = () => {
-
-}
-
-Comment.getCommentsByUserID = () => {
-    
-}
 
 module.exports = Comment

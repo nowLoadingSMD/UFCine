@@ -21,6 +21,7 @@ require("./controllers/videoController")(app)
 require("./controllers/tagController")(app)
 require("./controllers/genreController")(app)
 require("./controllers/productionInfoController")(app)
+require("./controllers/commentController")(app)
 
 app.listen(3000)
 
