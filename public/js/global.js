@@ -49,3 +49,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+var logar = document.getElementById("btn-goLogin");
+var user = document.getElementById("btn-user");
+var logarMobile = document.getElementById("iconLogin");
+
+logar.onclick = function(){
+  modal.style.display = "none";
+  btn.style.display = "none";
+  user.style.display = "block";
+  logarMobile.style.display = "none";
+}
