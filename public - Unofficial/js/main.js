@@ -113,7 +113,7 @@ function displayVideos(videos) {
 
         itemNode.addEventListener("click", function(){
             const id = {id : nodeID()}
-            window.location.replace(`/api/video/videoStream?id=${id.id}`);
+            window.location.replace(`/api/video/videPlayer?id=${id.id}`);
         })
 
         $("#videosList").append(itemNode)

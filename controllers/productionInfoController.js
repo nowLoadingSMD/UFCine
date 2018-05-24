@@ -26,7 +26,7 @@ router.post("/createProductionInfo", (req, res) => {
         if (err) 
             throw err
 
-        res.json("OK")
+        res.json( { err: null })
     })
 })
 

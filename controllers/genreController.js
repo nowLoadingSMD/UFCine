@@ -38,7 +38,7 @@ router.post("/createGenre", (req, res) => {
         if (err) 
             throw err
 
-        res.json({ res: "OK"})
+        res.json({ err: null })
     })
     
 })

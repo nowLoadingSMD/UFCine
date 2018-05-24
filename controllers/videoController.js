@@ -10,7 +10,7 @@ const router = express.Router()
 const Video = require("../models/Video")
 
 
-router.get("/videoStream", (req, res) => {
+router.get("/videoPlayer", (req, res) => {
 
     const id = req.query.id
 
@@ -24,7 +24,7 @@ router.get("/videoStream", (req, res) => {
 
 })
 
-router.get("/videoStreamForReal", (req, res) => {
+router.get("/videoStream", (req, res) => {
 
     const path = 'assets/sample.mp4'
     const stat = fs.statSync(path)

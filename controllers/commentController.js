@@ -16,6 +16,14 @@ router.post("/", (req, res) => {
 
                 res.json(comments)
             })
+
+        // console.log("Hello")
+
+        // Comment.getByVideoID(params.videoID)
+        //     .then( (result) => {
+        //         res.json(result)
+        //     })
+    
     } else if (params.userID) {
 
         Comment
@@ -26,6 +34,8 @@ router.post("/", (req, res) => {
                 
                 res.json(comments)
             })
+    } else {
+        res.json( {err: "It's not possible to return comments"})
     }
 })
 
@@ -37,7 +47,7 @@ router.post("/createComment", (req, res) => {
         if (err)
             throw err
         
-        res.json({res: "OK"})
+        res.json( {err: null} )
     })
 })
 

@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
 
     try {
         if (await User.findOne({ email })){
-            return res.json({ error: "User already exists" })
+            return res.json({ err: "User already exists" })
         }
 
         const user = await User.create(req.body)
@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
         })
 
     } catch (err) {
-        return res.json({ error: "Registration Failed" });
+        return res.json({ err: "Registration Failed" });
     }
 })
 
@@ -42,10 +42,10 @@ router.post("/authenticate", async (req, res) => {
     const user = await User.findOne({ email }).select("+password")
 
     if (!user) 
-        return res.json({ error: "User not found"})
+        return res.json({ err: "User not found"})
 
     if(!await bcrypt.compare(password, user.password))
-        return res.json({ error: "Invalid password"})
+        return res.json({ err: "Invalid password"})
 
 
     user.password = undefined
@@ -61,21 +61,21 @@ router.post("/verifyToken", async (req, res) => {
     const { token } = req.body
 
     if (!token)
-        return res.json({ valid: false, error: "No Token provided"}) 
+        return res.json({ valid: false, err: "No Token provided"}) 
 
     const parts = token.split(" ");
 
     if (parts.length != 2)
-        return res.json({ valid: false, error: "Token Error" }) 
+        return res.json({ valid: false, err: "Token Error" }) 
 
     const [ scheme, tok ] = parts;
 
     if ( !(scheme === "Bearer") )
-        return res.json({ valid: false, error: "Token malformatted" }) 
+        return res.json({ valid: false, err: "Token malformatted" }) 
 
     jwt.verify(tok, authConfig.secret, (err, decoded) => {
 
-        if (err) return res.status(401).send({ error: "Token Invalid"})
+        if (err) return res.status(401).send({ err: "Token Invalid"})
         
         return res.json({ valid: true }) 
         
