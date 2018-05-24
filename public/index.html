@@ -18,9 +18,47 @@
 		<h1>LOGO</h1>
 		<a href="pages/login.html"><i class="fas fa-sign-in-alt" id="iconLogin"></i></a>
 		<!--<i class="fas fa-user"></i>-->
-		<a href="pages/login.html"><button type="button" id="login">Entrar</button></a>
+		<button type="button" id="btn-login">Entrar</button>
 		<i class="fas fa-search" id="searchIcon"></i>
 	</header>
+
+	<!-- MODAL LOGIN/SIGNUP -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<!-- MODAL LOGIN -->
+			<div id="modal-login">
+				<h1>LOGIN</h1>
+				<span class="close">&times;</span><br/>
+				<form>
+					<input type="text" id="email" class="textfield" placeholder="Email"/><br/>
+					<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
+					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
+					<input type="submit" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
+					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
+				</form>
+			</div>
+			<!-- MODAL SIGNUP -->
+			<div id="modal-signUp">
+				<h1>CADASTRO</h1>
+				<span class="close">&times;</span><br/>
+				<form id="form-signUp">
+					<div id="form-left">
+						<input type="text" id="name" class="textfield" placeholder="Nome completo"/><br/>
+						<input type="text" id="email" class="textfield" placeholder="E-mail"/><br/>
+						<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
+						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
+					</div>
+					<div id="form-right">
+						<input type="text" id="userName" class="textfield" placeholder="Nome de usuário"/><br/>
+						<input type="text" id="matriculation" class="textfield" placeholder="Matrícula"/><br/>
+						<input type="password" id="confirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
+						<input type="submit" id="btn-goSignUp" class="btn-go" value="Cadastrar"/><br/>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<section class="principal">
 		<article class="titles"><h1>Em cartaz</h1></article>
@@ -150,5 +188,7 @@
 	<!-- Scripts -->
 	<script src="lib/glide.min.js"></script>
 	<script src="js/scrollbar.js"></script>
+	<script src="js/global.js"></script>
+
 </body>
 </html>
