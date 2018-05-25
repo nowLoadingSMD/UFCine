@@ -8,6 +8,7 @@ const authConfig = require("../config/auth")
 const router = express.Router()
 
 const Video = require("../models/Video")
+const ProductionInfo = require("../models/ProductionInfo")
 
 
 router.get("/videoPlayer", (req, res) => {
@@ -90,6 +91,37 @@ router.post("/", async (req, res) => {
     }, limit)
 
 })
+
+router.post("/getVideosByTagID", (req, res) => {
+    const params = req.body
+
+    if (params.videoID) {
+        console.log("Oi")
+        Video.findById(params, (err, video) => {
+            if (err)
+                throw err
+            
+            res.json(video)
+        })
+    } else if (params.TagID) {
+        
+        ProductionInfo
+            .find( {tags: params.TagID })
+            .populate('videoID')
+            .select("videoID")
+            .exec( (err, result) => {
+                if (err)
+                    throw err
+
+                res.json(result)
+            })
+
+    }
+
+
+
+})
+
 
 
 module.exports = (app) => app.use("/api/video", router) 

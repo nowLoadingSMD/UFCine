@@ -25,6 +25,7 @@ Comment.getByVideoID = async (id) => {
             .exec( async (err, comments) => {
                 if (err)
                     throw err
+                console.log(comments)
                 result = await comments
             //    return comments
             })

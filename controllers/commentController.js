@@ -8,21 +8,21 @@ router.post("/", (req, res) => {
 
     if (params.videoID) {
 
-        Comment.
-            find( {videoID: params.videoID} ).
-            exec( (err, comments) => {
-                if (err)
-                    throw err
+        // Comment.
+        //     find( {videoID: params.videoID} ).
+        //     exec( (err, comments) => {
+        //         if (err)
+        //             throw err
 
-                res.json(comments)
-            })
+        //         res.json(comments)
+        //     })
 
         // console.log("Hello")
 
-        // Comment.getByVideoID(params.videoID)
-        //     .then( (result) => {
-        //         res.json(result)
-        //     })
+        Comment.getByVideoID(params.videoID)
+            .then( (result) => {
+                res.json(result)
+            })
     
     } else if (params.userID) {
 
