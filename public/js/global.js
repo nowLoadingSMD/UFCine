@@ -1,8 +1,16 @@
-jQuery(document).ready(function($) { 
+jQuery(document).ready(async function($) { 
     $(".scroll").click(function(event){        
 		event.preventDefault();
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
     });
+
+    console.log(await checkLogged())
+
+    if (await checkLogged()) {
+      document.getElementById("btn-login").style.display = "none";
+      document.getElementById("btn-user").style.display = "block";
+    }
+
 });
 
 // Get the modal
@@ -54,9 +62,37 @@ var logar = document.getElementById("btn-goLogin");
 var user = document.getElementById("btn-user");
 var logarMobile = document.getElementById("iconLogin");
 
-logar.onclick = function(){
-  modal.style.display = "none";
-  btn.style.display = "none";
-  user.style.display = "block";
-  logarMobile.style.display = "none";
+var btnGoSignUp = document.getElementById("btn-goSignUp"); //Rever essa variavel
+var btnLogout = document.getElementById("btn-logout");
+
+logar.onclick = async function(){
+
+  if ( await login() ){
+      modal.style.display = "none";
+      btn.style.display = "none";
+      user.style.display = "block";
+      logarMobile.style.display = "none";
+  } else {
+    alert("Erro ao logar")
+  }
+
+}
+
+btnGoSignUp.onclick = async function(){
+
+  if ( await signUp() ) {
+    modal.style.display = "none";
+    btn.style.display = "none";
+    user.style.display = "block";
+    logarMobile.style.display = "none";
+  } else {
+    alert("Erro ao cadastrar")
+  }
+}
+
+btnLogout.onclick = function(e){
+  // e.preventDefault()
+  logout();
+  btn.style.display = "block";
+  user.style.display = "none";
 }

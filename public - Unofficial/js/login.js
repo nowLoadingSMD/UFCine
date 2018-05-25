@@ -1,8 +1,8 @@
 function logar(){
 
     const user = {
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        email: document.getElementById("loginEmail").value,
+        password: document.getElementById("loginPassword").value
     }
 
     $.post("/auth/authenticate", user, (data) => {
