@@ -77,36 +77,45 @@ router.post("/uploadVideo", async (req, res) => {
 
 })
 
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
 
-    const limit = req.body.limit
-    // console.log(limit)
-    Video.getVideos((err, videos) => {
+    const limit = req.query.limit
 
-        if (err) {
-            throw err
-        }
+    if (limit) {
+        // console.log(limit)
+        Video.getVideos((err, videos) => {
 
-        res.json(videos)
-    }, limit)
+            if (err) {
+                throw err
+            }
+
+            res.json(videos)
+        }, limit)
+    }
 
 })
 
-router.post("/getVideosByTagID", (req, res) => {
-    const params = req.body
+router.get("/getVideoByID", (req, res) => {
+    const id = req.query.id
 
-    if (params.videoID) {
-        console.log("Oi")
-        Video.findById(params, (err, video) => {
+    if (id) {
+        Video.findById(id, (err, video) => {
             if (err)
                 throw err
-            
+                
             res.json(video)
         })
-    } else if (params.TagID) {
+    }
+})
+
+router.post("/getVideosByTagID", (req, res) => {
+
+    const tagID = req.body.tagID
+
+    if (tagID) {
         
         ProductionInfo
-            .find( {tags: params.TagID })
+            .find( {tags: tagID })
             .populate('videoID')
             .select("videoID")
             .exec( (err, result) => {
@@ -115,28 +124,17 @@ router.post("/getVideosByTagID", (req, res) => {
 
                 res.json(result)
             })
-
     }
-
-
 
 })
 
 router.post("/getVideosByGenrerID", (req, res) => {
-    const params = req.body
+    const genreID = req.body.genreID
 
-    if (params.GenreID) {
-        // console.log("Oi")
-        Video.findById(params, (err, video) => {
-            if (err)
-                throw err
-            
-            res.json(video)
-        })
-    } else if (params.TagID) {
+    if (genreID) {
         
         ProductionInfo
-            .find( {tags: params.TagID })
+            .find( {genres: genreID })
             .populate('videoID')
             .select("videoID")
             .exec( (err, result) => {
@@ -145,8 +143,8 @@ router.post("/getVideosByGenrerID", (req, res) => {
 
                 res.json(result)
             })
-
     }
+
 })
 
 
