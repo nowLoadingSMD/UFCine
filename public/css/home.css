@@ -65,3 +65,12 @@
     margin-left: 53%;
   }
 }
+
+.btn-viewMore{
+  padding: 10px;
+  font-size: 1.3em;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: -47px;
+  width: 8%;
+}

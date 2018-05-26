@@ -22,11 +22,16 @@ var btn = document.getElementById("btn-login");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
+var span3 = document.getElementsByClassName("close")[2];
 
 var btnSignUp = document.getElementById("btn-modal-signUp");
 var btnLogin = document.getElementById("btn-modal-login");
+var btnUpload = document.getElementById("btn-upload");
 var modalLogin = document.getElementById("modal-login");
 var modalSignUp = document.getElementById("modal-signUp");
+var modalUpload = document.getElementById("modal-upload");
+
+var modalContent = document.getElementsByClassName('modal-content')[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -40,15 +45,30 @@ span.onclick = function() {
 span2.onclick = function() {
   modal.style.display = "none";
 }
+span3.onclick = function() {
+  modal.style.display = "none";
+}
 
 btnSignUp.onclick = function(){
   modalLogin.style.display = "none";
   modalSignUp.style.display = "block";
+  modalUpload.style.display = "none";
 }
 
 btnLogin.onclick = function(){
   modalLogin.style.display = "block";
   modalSignUp.style.display = "none";
+  modalUpload.style.display = "none";
+}
+
+btnUpload.onclick = function(){
+  modalContent.style.width = "80%";
+  modalContent.style.height = "auto";
+  modalContent.style.marginTop = "-50px";
+  modalLogin.style.display = "none";
+  modalSignUp.style.display = "none";
+  modal.style.display = "block";
+  modalUpload.style.display = "block";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -67,14 +87,14 @@ var btnLogout = document.getElementById("btn-logout");
 
 logar.onclick = async function(){
 
-  if ( await login() ){
+  // if ( await login() ){
       modal.style.display = "none";
       btn.style.display = "none";
       user.style.display = "block";
       logarMobile.style.display = "none";
-  } else {
-    alert("Erro ao logar")
-  }
+  // } else {
+  //   alert("Erro ao logar")
+  // }
 
 }
 
@@ -95,4 +115,21 @@ btnLogout.onclick = function(e){
   logout();
   btn.style.display = "block";
   user.style.display = "none";
+}
+
+var addItem = document.getElementById("addItem");
+var list = document.getElementById("list");
+var addItem2 = document.getElementById("addItem2");
+var list2 = document.getElementById("list2");
+
+addItem.onclick = function(){
+  var textfield = document.createElement("input");
+  textfield.type = "text";
+  list.appendChild(textfield);
+}
+
+addItem2.onclick = function(){
+  var textfield = document.createElement("input");
+  textfield.type = "text";
+  list2.appendChild(textfield);
 }

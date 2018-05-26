@@ -1,0 +1,49 @@
+.principal .titles{
+    font-size: 1.5em;
+    width: 200px;
+    padding: 10px;
+    background: #ddd;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+}
+
+.principal{
+    padding-right: 70px;
+    padding-left: 50px;
+}
+
+.grid-films{
+    display: grid;
+    grid-gap: 40px 25px;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    margin-top: 100px;
+}
+
+.film{
+    width: 90%;
+}
+
+.imgFilm{
+    width: 100%;
+    height: 200px;
+    background: #bbb;
+}
+
+.nameFilm{
+    background: #ddd;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+}
+
+.film i{
+    font-size: 1.3em;
+    padding-left: 15%;
+    float: left;
+    margin-top: 170px;
+}
+
+.film .actions{
+    margin-left: 58%;
+}
