@@ -127,6 +127,11 @@ btnLogout.onclick = function(e){
   logout();
   btn.style.display = "block";
   user.style.display = "none";
+  modalLogin.style.display = "block";
+  modalUpload.style.display = "none";
+  modalContent.style.width = "40%";
+  modalContent.style.height = "350px";
+  modalContent.style.marginTop = "auto";
 }
 
 var addItem = document.getElementById("addItem");
