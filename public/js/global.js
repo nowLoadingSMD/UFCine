@@ -9,6 +9,10 @@ jQuery(document).ready(async function($) {
     if (await checkLogged()) {
       document.getElementById("btn-login").style.display = "none";
       document.getElementById("btn-user").style.display = "block";
+
+      $(".block-logged").css("display", "block");
+    } else {
+      $(".block-logged").css("display", "none");
     }
 
 });
@@ -87,7 +91,7 @@ var btnLogout = document.getElementById("btn-logout");
 
 logar.onclick = async function(){
 
-  // if ( await login() ){
+  if ( await login() ){
       modal.style.display = "none";
       btn.style.display = "none";
       user.style.display = "block";
@@ -95,6 +99,12 @@ logar.onclick = async function(){
   // } else {
   //   alert("Erro ao logar")
   // }
+
+  
+      $(".block-logged").css("display", "block");
+  } else {
+    alert("Erro ao logar")
+  }
 
 }
 
@@ -105,6 +115,8 @@ btnGoSignUp.onclick = async function(){
     btn.style.display = "none";
     user.style.display = "block";
     logarMobile.style.display = "none";
+
+    $(".block-logged").css("display", "block");
   } else {
     alert("Erro ao cadastrar")
   }
@@ -132,4 +144,6 @@ addItem2.onclick = function(){
   var textfield = document.createElement("input");
   textfield.type = "text";
   list2.appendChild(textfield);
+
+  $(".block-logged").css("display", "none");
 }

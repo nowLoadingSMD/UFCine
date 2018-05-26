@@ -3,31 +3,32 @@ const router = express.Router()
 
 const Comment = require("../models/Comment")
 
-router.post("/", (req, res) => {
-    const params = req.body
+router.get("/", (req, res) => {
+    const videoID = req.query.videoID
+    const userID = req.query.userID
 
-    if (params.videoID) {
+    if (videoID) {
 
-        // Comment.
-        //     find( {videoID: params.videoID} ).
-        //     exec( (err, comments) => {
-        //         if (err)
-        //             throw err
+        Comment.
+            find( {videoID: videoID} ).
+            exec( (err, comments) => {
+                if (err)
+                    throw err
 
-        //         res.json(comments)
-        //     })
+                res.json(comments)
+            })
 
         // console.log("Hello")
 
-        Comment.getByVideoID(params.videoID)
-            .then( (result) => {
-                res.json(result)
-            })
+        // Comment.getByVideoID(videoID)
+        //     .then( (result) => {
+        //         res.json(result)
+        //     })
     
-    } else if (params.userID) {
+    } else if (userID) {
 
         Comment
-            .find( { userID: params.userID } ).
+            .find( { userID: userID } ).
             exec( (err, comments) => {
                 if (err)
                     throw err
@@ -42,7 +43,7 @@ router.post("/", (req, res) => {
 router.post("/createComment", (req, res) => {
 
     const comment = req.body
-
+    console.log(comment)
     Comment.create(comment, (err, comment) => {
         if (err)
             throw err
