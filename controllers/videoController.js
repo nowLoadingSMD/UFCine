@@ -69,7 +69,7 @@ router.get("/videoStream", (req, res) => {
 router.post("/uploadVideo", async (req, res) => {
 
     const video = req.body
-    video.path = "sample.mp4"
+    video.path = "../assets/sample.mp4"
 
     console.log(video)
 
