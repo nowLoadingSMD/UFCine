@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/player.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="../js/cookieLibrary.js"></script>
+	<script src="../js/auth.js"></script>
+
 </head>
 <body>
 	<!-- NAVBAR-->
@@ -23,62 +27,87 @@
 					<a href="#">Notificações</a>
 					<a href="#">Enviar filme</a>
 					<a href="#">Configurações da conta</a>
-					<a href="#">Sair</a>
+					<a href="#" id="btn-logout">Sair</a>
 				</div>
 			</div>
 			<button type="button" id="btn-login">Entrar</button>
 			<i class="fas fa-search" id="searchIcon"></i>
 		</header>
 
+	<!-- MODAL LOGIN/SIGNUP -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<!-- MODAL LOGIN -->
+			<div id="modal-login">
+				<h1>LOGIN</h1>
+				<span class="close">&times;</span><br/>
+				<form>
+					<input type="text" id="loginEmail" class="textfield" placeholder="Email"/><br/>
+					<input type="password" id="loginPassword" class="textfield" placeholder="Senha"/><br/>
+					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
+					<input type="button" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
+					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
+				</form>
+			</div>
+			<!-- MODAL SIGNUP -->
+			<div id="modal-signUp">
+				<h1>CADASTRO</h1>
+				<span class="close">&times;</span><br/>
+				<form id="form-signUp">
+					<div id="form-left">
+						<input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
+						<input type="text" id="signUpEmail" class="textfield" placeholder="E-mail"/><br/>
+						<input type="password" id="signUpPassword" class="textfield" placeholder="Senha"/><br/>
+						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
+					</div>
+					<div id="form-right">
+						<input type="text" id="signUpUserName" class="textfield" placeholder="Nome de usuário"/><br/>
+						<input type="text" id="signUpMatriculation" class="textfield" placeholder="Matrícula"/><br/>
+						<input type="password" id="signUpConfirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
+						<input type="button" id="btn-goSignUp" class="btn-go" value="Cadastrar"/><br/>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<section class="principal">
 		<div id="left">
-			<article class="titles">Nome do filme</article>
+			<article class="titles" id="videoName">Nome do filme</article>
 			<div class="video">
-				<video controls>
-		  			<source src="../video/britney.mp4" type="video/mp4">
+				<video controls id="videoPlayer">
+		  			<source src="" type="video/mp4">
 				Your browser does not support the video tag.
 				</video><br/>
-				<button class="btn-addVideo">WatchList</button>
-				<button class="btn-addVideo">Favoritar</button>
+				<button class="btn-addVideo block-logged" id="btn-watchlist">WatchList</button>
+				<button class="btn-addVideo block-logged" id="btn-favorite">Favoritar</button>
 				<i class="fas fa-thumbs-up"></i>50
 			</div>
 			<article class="titlesMedium">Comentários</article>
-			<div class="comment">
+			<div class="comment block-logged">
 				<i class="fas fa-user-circle"></i>
 				<h1>Nome de usuário</h1>
-				<textarea rows="5" cols="28" placeholder="Escreva aqui seu comentário..."></textarea>
-				<button class="btn-comment">Comentar</button>
+				<textarea rows="5" cols="28" placeholder="Escreva aqui seu comentário..." id="commentContent"></textarea>
+				<button class="btn-comment" id="btn-comment">Comentar</button>
 			</div>
-			<div class="comment">
-				<i class="fas fa-user-circle"></i>
-				<h1>Nome de usuário</h1>
-				<div class="contentComment">
-					<p>aslfaskdajkdsfdalfs</p>
-				</div>
-				<button class="btn-comment">Responder</button>
-			</div>
-			<div class="comment">
-				<i class="fas fa-user-circle"></i>
-				<h1>Nome de usuário</h1>
-				<div class="contentComment">
-					<p>aslfaskdajkdsfdalfs</p>
-				</div>
-				<button class="btn-comment">Responder</button>
-			</div>
-			<div class="comment">
-				<i class="fas fa-user-circle"></i>
-				<h1>Nome de usuário</h1>
-				<div class="contentComment">
-					<p>aslfaskdajkdsfdalfs</p>
-				</div>
-				<button class="btn-comment">Responder</button>
-			</div>
+			<div id="commentList"></div>
+			<!--
+				<div class="comment">
+					<i class="fas fa-user-circle"></i>
+					<h1>Nome de usuário</h1>
+					<div class="contentComment">
+						<p>${comment.content}</p>
+					</div>
+					<button class="btn-comment">Responder</button>
+            	</div>
+			-->
 		</div>
 		<div id="right">
 			<article class="titles">Descrição</article>
-			<article class="content">amksdanfansfm,asnam,dnasd,mand,masndm,asdnasdlaksdjalsdjasklalsdkajsdklasjfklasfjalkfhdsajksdhfjklsdfhlasdkjfhasdklfashdkgjlsdhagsdfgksdfjdhfkjdgkalfhdjkfgakldahsfjklasghdjkasdhaskjfaghsdjkashdajkasgkdjaskldhasfjklasdgakdldfkadlsghdfjkaldafgdfsfdsdlgdsdljdsdlfdfsldjgdskdsfl.</article>
+			<article class="content" id="productionInfoDescription"></article>
 			<article class="titles">Informações</article>
-			<article class="content">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
+			<article class="content" id="productionInfoGenres">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
 			<article class="titles">Direção</article>
 			<article class="content">- pocoto<br/>- louro josé</article>
 			<article class="titles">Roteiro</article>
@@ -95,5 +124,9 @@
 		<a href="#"><i class="fas fa-info"></i></a>
 	</nav>
 	<footer><h1>©Now Loading</h1></footer>
+
+	<script src="../js/player.js"></script>
+	<script src="../js/global.js"></script>
+	
 </body>
 </html>

@@ -27,6 +27,10 @@ router.get("/videoPlayer", (req, res) => {
 
 router.get("/videoStream", (req, res) => {
 
+    const id = req.query.id;
+
+    console.log(id);
+
     const path = 'assets/sample.mp4'
     const stat = fs.statSync(path)
     const fileSize = stat.size

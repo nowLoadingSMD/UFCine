@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<script src="../lib/jquery-3.3.1.min.js"></script>	
+
+	<title>Player</title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/player.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<!-- NAVBAR-->
+	<header class="navbar">
+			<input type="text" id="search" placeholder="Pesquisar" />
+			<h1>LOGO</h1>
+			<i class="fas fa-sign-in-alt" id="iconLogin"></i>
+			<div id="dropdown">
+				<i id="btn-user" class="fas fa-user"></i>
+				<div class="dropdown-content">
+					<a href="pages/profile.html">Perfil</a>
+					<a href="#">Notificações</a>
+					<a href="#">Enviar filme</a>
+					<a href="#">Configurações da conta</a>
+					<a href="#">Sair</a>
+				</div>
+			</div>
+			<button type="button" id="btn-login">Entrar</button>
+			<i class="fas fa-search" id="searchIcon"></i>
+		</header>
+
+	<section class="principal">
+		<div id="left">
+			<article class="titles"> <%= title %></article>
+			<div class="video">
+				<video controls>
+		  			<source src="../video/britney.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video><br/>
+				<button class="btn-addVideo">WatchList</button>
+				<button class="btn-addVideo">Favoritar</button>
+				<i class="fas fa-thumbs-up"></i>50
+			</div>
+			<article class="titlesMedium">Comentários</article>
+			<div class="comment">
+				<i class="fas fa-user-circle"></i>
+				<h1>Nome de usuário</h1>
+				<textarea rows="5" cols="28" placeholder="Escreva aqui seu comentário..."></textarea>
+				<button class="btn-comment">Comentar</button>
+			</div>
+			<div class="comment">
+				<i class="fas fa-user-circle"></i>
+				<h1>Nome de usuário</h1>
+				<div class="contentComment">
+					<p>aslfaskdajkdsfdalfs</p>
+				</div>
+				<button class="btn-comment">Responder</button>
+			</div>
+			<div class="comment">
+				<i class="fas fa-user-circle"></i>
+				<h1>Nome de usuário</h1>
+				<div class="contentComment">
+					<p>aslfaskdajkdsfdalfs</p>
+				</div>
+				<button class="btn-comment">Responder</button>
+			</div>
+			<div class="comment">
+				<i class="fas fa-user-circle"></i>
+				<h1>Nome de usuário</h1>
+				<div class="contentComment">
+					<p>aslfaskdajkdsfdalfs</p>
+				</div>
+				<button class="btn-comment">Responder</button>
+			</div>
+		</div>
+		<div id="right">
+			<article class="titles">Descrição</article>
+			<article class="content">amksdanfansfm,asnam,dnasd,mand,masndm,asdnasdlaksdjalsdjasklalsdkajsdklasjfklasfjalkfhdsajksdhfjklsdfhlasdkjfhasdklfashdkgjlsdhagsdfgksdfjdhfkjdgkalfhdjkfgakldahsfjklasghdjkasdhaskjfaghsdjkashdajkasgkdjaskldhasfjklasdgakdldfkadlsghdfjkaldafgdfsfdsdlgdsdljdsdlfdfsldjgdskdsfl.</article>
+			<article class="titles">Informações</article>
+			<article class="content">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
+			<article class="titles">Direção</article>
+			<article class="content">- pocoto<br/>- louro josé</article>
+			<article class="titles">Roteiro</article>
+			<article class="content">- pocoto<br/>- louro josé</article>
+			<article class="titles">Elenco</article>
+			<article class="content">- pocoto<br/>- louro josé</article>
+		</div>
+	</section>
+	
+	<nav class="tabBar">
+		<a href="#"><i class="fas fa-home"></i></a>
+		<a href="#"><i class="fas fa-users"></i></a>
+		<a href="#"><i class="fas fa-globe"></i></a>
+		<a href="#"><i class="fas fa-info"></i></a>
+	</nav>
+	<footer><h1>©Now Loading</h1></footer>
+</body>
+</html>

@@ -9,6 +9,10 @@ jQuery(document).ready(async function($) {
     if (await checkLogged()) {
       document.getElementById("btn-login").style.display = "none";
       document.getElementById("btn-user").style.display = "block";
+
+      $(".block-logged").css("display", "block");
+    } else {
+      $(".block-logged").css("display", "none");
     }
 
 });
@@ -72,6 +76,8 @@ logar.onclick = async function(){
       btn.style.display = "none";
       user.style.display = "block";
       logarMobile.style.display = "none";
+
+      $(".block-logged").css("display", "block");
   } else {
     alert("Erro ao logar")
   }
@@ -85,6 +91,8 @@ btnGoSignUp.onclick = async function(){
     btn.style.display = "none";
     user.style.display = "block";
     logarMobile.style.display = "none";
+
+    $(".block-logged").css("display", "block");
   } else {
     alert("Erro ao cadastrar")
   }
@@ -95,4 +103,6 @@ btnLogout.onclick = function(e){
   logout();
   btn.style.display = "block";
   user.style.display = "none";
+
+  $(".block-logged").css("display", "none");
 }
