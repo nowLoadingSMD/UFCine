@@ -1,6 +1,6 @@
 .principal .titles{
     font-size: 1.5em;
-    width: 200px;
+    width: 400px;
     padding: 10px;
     background: #ddd;
     text-align: center;
@@ -47,3 +47,4 @@
 .film .actions{
     margin-left: 58%;
 }
+
