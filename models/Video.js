@@ -19,10 +19,10 @@ const VideoSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    produtionInfoID: {
-        type: Schema.Types.ObjectId, ref: 'ProdutionInfo',
-        required: true
-    },
+    // productionInfoID: {
+    //     type: Schema.Types.ObjectId, ref: 'ProdutionInfo',
+    //     required: true
+    // },
     onExposition: {
         type: Boolean,
         required: true

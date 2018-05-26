@@ -11,8 +11,10 @@ jQuery(document).ready(async function($){
     // } 
 
     var url_string = window.location.href;
-    var url = new URL(url_string)
+    var url = new URL(url_string);
     var id = url.searchParams.get("id");
+
+    // var id = "5b09a72be6643d78fc55f11a"
 
     let video;
     let productionInfo;
