@@ -37,6 +37,16 @@ const UserSchema = mongoose.Schema({
             type: Schema.Types.ObjectId, ref: 'Video'
         }
     ],
+    isProducer: {
+        type: Boolean,
+        required: true
+    },
+    isPortfolioActivated: {
+        type: Boolean
+    },
+    portfolioDescription: {
+        type: String
+    },
     createdAt: {
         type: Date,
         default: Date.now
