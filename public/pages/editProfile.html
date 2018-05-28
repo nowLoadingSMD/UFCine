@@ -6,7 +6,7 @@
 
 	<title>Player</title>
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
-	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+	<link rel="stylesheet" type="text/css" href="../css/editProfile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -121,82 +121,35 @@
 	</div>
 
 	<section class="principal">
-        <div class="content-principal">
-            <div class="content-profile">
-                <article class="titles">PERFIL</article>
-                <a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
-                <div class="infos">
-                    <article id="imgProfile"></article>
-                    <h1>NOME DO USUÁRIO</h1>
-                    <h1 id="email">EMAIL DO USUÁRIO</h1>
+        <article class="titles"><a href="profile.html">Perfil</a> > Configurações da Conta</article>
+            <article id="img-edit"></article>
+            <div class="grid-edit">
+                <div class="grid-values">
+                    <form>
+                        <input type="text" id="editName" placeholder="Nome completo">
+                        <input type="text" id="editUser" placeholder="Nome de usuário">
+                        <input type="text" id="editEmail" placeholder="Email">
+                        <input type="password" id="editPassword" placeholder="Senha">
+                    </form>
                 </div>
-                <ul>
-                    <li id="btn-favorites">FAVORITOS</li>
-                    <li id="btn-posted" class="active">POSTADOS</li>
-                    <li id="btn-watchlist">WATCHLIST</li>
-                </ul>
-                <div class="group-films" id="posted">
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="uploadedFilms.html"><div class="viewMore">
-                        <i class="fas fa-plus"></i>
-                    </div></a>
+                <div class="grid-values">
+                    <form>
+                        <input type="text" id="editMatr" placeholder="Matrícula">
+                    </form>
+                    <article>Desativar conta
+                        <button>Desativar</button>
+                    </article>
+                    <article>Ativar Portfólio
+                        <div class="slideOne">  
+                            <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
+                            <label for="slideOne"></label>
+                        </div>
+                    </article>
+                    <article id="editPortfolio">Editar Portfólio
+                        <button>Editar</button>
+                    </article>
                 </div>
-                <div class="group-films" id="favorites">
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme jj</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="favorites.html"><div class="viewMore">
-                        <i class="fas fa-plus"></i>
-                    </div></a>
-                </div>
-                <div class="group-films" id="watchlist">
-					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
-						<article>Nome do filme kk</article>
-					</div></a>
-					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
-						<article>Nome do filme</article>
-					</div></a>
-					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
-						<article>Nome do filme</article>
-					</div></a>
-					<a href="watchList.html"><div class="viewMore">
-						<i class="fas fa-plus"></i>
-					</div></a>
-				</div>
             </div>
-            <div class="content-notifications">
-                <article class="titles">NOTIFICAÇÕES</article>
-                <ul>
-                    <li><a href="#">RESPONDIDAS</a></li>
-                    <li><a class="active" href="#">NÃO RESPONDIDAS</a></li>
-                    <li><a href="#">COMENTÁRIOS</a></li>
-                </ul>
-            </div>
-        </div>
-        
 	</section>
 	
 	<nav class="tabBar">
@@ -208,6 +161,6 @@
     <footer><h1>©Now Loading</h1></footer>
 
     <script src="../js/global.js"></script>
-    <script src="../js/profile.js"></script>
+    <script src="../js/editProfile.js"></script>
 </body>
 </html>

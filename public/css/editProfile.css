@@ -1,0 +1,89 @@
+.principal .titles{
+    font-size: 1.5em;
+    width: 400px;
+    padding: 10px;
+    background: #ddd;
+    text-align: center;
+    margin-top: 50px;
+}
+
+ #img-edit{
+    background: #aaa;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    float: left;
+}
+
+.grid-edit{
+    width: 70%;
+    height: 200px;
+    margin: 50px 300px;
+    display: grid;
+    grid-gap: 20px 2%;
+    grid-template-columns: 49% 49%;
+}
+
+.grid-edit .grid-values{
+    width: 100%;
+    height: 100%;
+}
+
+.grid-edit .grid-values input{
+    width: 100%;
+    margin-bottom: 21px;
+    padding: 8px;
+    background: #ddd;
+}
+.grid-edit .grid-values article{
+    font-size: 1.3em;
+    float: left;
+    height: 34px;
+    margin-bottom: 21px;
+    width: 100%;
+    padding: 2px;
+}
+.grid-edit .grid-values button{
+    font-size: 0.8em;
+    padding: 5px;
+    float: right;
+}
+
+#editPortfolio{
+    display: none;
+}
+
+.slideOne {
+    width: 35px;
+    height: 10px;
+    background: #333;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    float: right;
+}
+  .slideOne label {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    cursor: pointer;
+    background: #fcfff4;
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 50px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+  }
+  .slideOne input[type=checkbox] {
+    visibility: hidden;
+  }
+  .slideOne input[type=checkbox]:checked + label {
+    left: 20px;
+  }
+
+  footer{
+      margin-top: 9%;
+  }
