@@ -40,14 +40,14 @@
 		<div class="modal-content">
 			<!-- MODAL LOGIN -->
 			<div id="modal-login">
-				<h1>LOGIN</h1>
-				<span class="close">&times;</span><br/>
+				<h1>Login</h1>
+				<span class="close"></span><br/>
 				<form>
 					<input type="text" id="loginEmail" class="textfield" placeholder="Email"/><br/>
 					<input type="password" id="loginPassword" class="textfield" placeholder="Senha"/><br/>
-					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
+					<a href="#"><h5>Esqueceu sua senha?</h5></a>
 					<input type="button" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
-					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
+					<a id="btn-modal-signUp"><h2>Criar conta</h2></a>
 				</form>
 			</div>
 			<!-- MODAL SIGNUP -->
@@ -59,7 +59,7 @@
 						<input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
 						<input type="text" id="signUpEmail" class="textfield" placeholder="E-mail"/><br/>
 						<input type="password" id="signUpPassword" class="textfield" placeholder="Senha"/><br/>
-						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
+						<a id="btn-modal-login"><h3>Já é cadastrado?</h3></a>
 					</div>
 					<div id="form-right">
 						<input type="text" id="signUpUserName" class="textfield" placeholder="Nome de usuário"/><br/>
@@ -131,45 +131,59 @@
   			<div class="slider__track glide__track" data-glide-el="track">
     			<ul class="slider__slides glide__slides">
 			        <li class="slider__frame glide__slide">
-			        	<div class="banner-player">
-			        		<i class="fas fa-play"></i>
-			        	</div>
-			        	<article>Nome do filme</article>
-			        	<article>Descrição:<br/>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
-			        	<article>Local de Exibição:<br/>casa do caralho</article>
-			        </li>      
-			        <li class="slider__frame glide__slide">
-			        	<div class="banner-player">
-			        		<i class="fas fa-play"></i>
-			        	</div>
-			        	<article>Nome do filme</article>
-			        	<article>Descrição:<br/>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
-			        	<article>Local de Exibição:<br/>casa do caralho</article>
-			        </li>     
-			        <li class="slider__frame glide__slide">
-			        	<div class="banner-player">
-			        		<i class="fas fa-play"></i>
-			        	</div>
-			        	<article>Nome do filme</article>
-			        	<article>Descrição:<br/>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflsdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
-			        	<article>Local de Exibição:<br/>casa do caralho</article>
-			        </li>
-			        <li class="slider__frame glide__slide">
-			        	<div class="banner-player">
-			        		<i class="fas fa-play"></i>
-			        	</div>
-			        	<article>Nome do filme</article>
-			        	<article>Descrição:<br/>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
-			        	<article>Local de Exibição:<br/>casa do caralho</article>
-			        </li>
-			        <li class="slider__frame glide__slide">
-			        	<div class="banner-player">
-			        		<i class="fas fa-play"></i>
-			        	</div>
-			        	<article>Nome do filme</article>
-			        	<article>Descrição:<br/>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
-			        	<article>Local de Exibição:<br/>casa do caralho</article>
-			        </li>      
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>  
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>        
     			</ul>
   			</div>
 	  		<div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">    
@@ -185,69 +199,93 @@
 		<a href="pages/releases.html"><button class="btn-viewMore">Mais</button></a>
 		<div class="releases">
 			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
-				<div><i class="fas fa-play"></i></div>
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
 			</div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
+		    <a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
+			</div></a>
+			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
+			</div></a>
+			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
+			</div></a>
+			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
+			</div></a>
+			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+				<div>
+					<img src="img/play.png" class="icon-play">
+					<img src="img/films/movie.jpg" class="img-film"></div>
 				<article>Nome do filme</article>
-		    </div></a>
+			</div></a>
 		</div>
 
 		<div id="group">
 		<article class="titles"><h1>Recomendados</h1></article>
 		<a href="pages/recommended.html"><button class="btn-viewMore">Mais</button></a>
 		<div class="recommended">
-			<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
-				<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-			</div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-		    </div></a> 
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-		    </div></a>
-		    <a href="pages/player.html"><div class="grid-item">
-		    	<div><i class="fas fa-play"></i></div>
-				<article>Nome do filme</article>
-		    </div></a>
+				<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="pages/player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="img/play.png" class="icon-play">
+							<img src="img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
 		</div>
 
 		</div>
 	</section>
 
 	<nav class="tabBar">
-		<a href="#"><i class="fas fa-home"></i></a>
-		<a href="pages/authors.html"><i class="fas fa-users"></i></a>
-		<a href="pages/browse.html"><i class="fas fa-globe"></i></a>
-		<a href="pages/about.html"><i class="fas fa-info"></i></a>
+		<a href="#" id="tagHome"><article id="iconHome" class="icons"></article>Início</a>
+		<a href="pages/browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article>Navegar</a>
+		<a href="pages/authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
+		<a href="pages/about.html" id="tabAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
 	</nav>
 
 	<footer><h1>©Now Loading</h1></footer>

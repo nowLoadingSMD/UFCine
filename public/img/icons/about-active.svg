@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.895 39.895">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #30d0dd;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Group_178" data-name="Group 178" transform="translate(-47 -642)">
+    <rect id="Rectangle_84" data-name="Rectangle 84" class="cls-1" width="39.895" height="39.895" transform="translate(47 642)"/>
+    <g id="Group_177" data-name="Group 177" transform="translate(50.5 645.5)">
+      <path id="Path_3256" data-name="Path 3256" class="cls-2" d="M20.527,15.8h0a1.392,1.392,0,0,1,1.4,1.4V29.237l.466.466,1.087.078a.7.7,0,0,1,.7.7h0a.7.7,0,0,1-.7.7H16.8a.7.7,0,0,1-.7-.7h0a.7.7,0,0,1,.7-.7l1.01-.078.466-.466V19.217a.7.7,0,0,0-.7-.7h-.621a.7.7,0,0,1-.7-.7h0a.787.787,0,0,1,.466-.7l3.806-1.243C20.372,15.8,20.45,15.8,20.527,15.8Z" transform="translate(-3.483 -3.417)"/>
+      <path id="Path_3257" data-name="Path 3257" class="cls-3" d="M20.575,6.6a2.559,2.559,0,0,1,1.709.621A2.161,2.161,0,0,1,22.9,8.852a2.559,2.559,0,0,1-.621,1.709,2.235,2.235,0,0,1-1.631.7,2.507,2.507,0,0,1-1.631-.621A2.055,2.055,0,0,1,18.4,9.008,2.559,2.559,0,0,1,19.021,7.3,1.955,1.955,0,0,1,20.575,6.6Z" transform="translate(-3.997 -1.362)"/>
+      <circle id="Ellipse_480" data-name="Ellipse 480" class="cls-2" cx="16" cy="16" r="16" transform="translate(0.5 0.5)"/>
+    </g>
+  </g>
+</svg>

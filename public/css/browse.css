@@ -1,3 +1,11 @@
+.tabBar #iconBrowse{
+    background-image: url(../img/icons/browse-active.svg);
+}
+
+.tabBar #tagBrowse{
+    color: #30d0dd;
+}
+
 .principal .titles{
     font-size: 1.5em;
     width: 170px;
