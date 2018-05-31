@@ -4,14 +4,11 @@
 	<meta charset="utf-8">
 	<script src="../lib/jquery-3.3.1.min.js"></script>	
 
-	<title>Tag</title>
+	<title>Player</title>
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
-	<link rel="stylesheet" type="text/css" href="../css/similar-pages.css">
+	<link rel="stylesheet" type="text/css" href="../css/editProfile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <script src="../js/cookieLibrary.js"></script>
-    <script src="../js/auth.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<!-- NAVBAR-->
@@ -25,8 +22,8 @@
                     <a href="profile.html">Perfil</a>
                     <a href="#">Notificações</a>
                     <a href="#" id="btn-upload">Enviar filme</a>
-                    <a href="#">Configurações da conta</a>
-                    <a href="#" id="btn-logout">Sair</a>
+					<a href="#">Configurações da conta</a>
+					<a href="#" id="btn-logout">Sair</a>
                 </div>
             </div>
             <button type="button" id="btn-login">Entrar</button>
@@ -41,10 +38,10 @@
 				<h1>LOGIN</h1>
 				<span class="close">&times;</span><br/>
 				<form>
-					<input type="text" id="loginEmail" class="textfield" placeholder="Email"/><br/>
-					<input type="password" id="loginPassword" class="textfield" placeholder="Senha"/><br/>
+					<input type="text" id="email" class="textfield" placeholder="Email"/><br/>
+					<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
 					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
-					<input type="button" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
+					<input type="submit" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
 					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
 				</form>
 			</div>
@@ -54,15 +51,15 @@
 				<span class="close">&times;</span><br/>
 				<form id="form-signUp">
 					<div id="form-left">
-						<input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
-						<input type="text" id="signEmail" class="textfield" placeholder="E-mail"/><br/>
-						<input type="password" id="signPassword" class="textfield" placeholder="Senha"/><br/>
+						<input type="text" id="name" class="textfield" placeholder="Nome completo"/><br/>
+						<input type="text" id="email" class="textfield" placeholder="E-mail"/><br/>
+						<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
 						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
 					</div>
 					<div id="form-right">
-						<input type="text" id="signUserName" class="textfield" placeholder="Nome de usuário"/><br/>
-						<input type="text" id="signMatriculation" class="textfield" placeholder="Matrícula"/><br/>
-						<input type="password" id="signUpConfirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
+						<input type="text" id="userName" class="textfield" placeholder="Nome de usuário"/><br/>
+						<input type="text" id="matriculation" class="textfield" placeholder="Matrícula"/><br/>
+						<input type="password" id="confirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
 						<input type="submit" id="btn-goSignUp" class="btn-go" value="Cadastrar"/><br/>
 					</div>
 				</form>
@@ -124,75 +121,35 @@
 	</div>
 
 	<section class="principal">
-        <article class="titles"><a href="#">NAVEGAR</a> > TAG ESCOLHIDA</article>
-        <div class="grid-films">
-            <div class="film">
-                <div class="actions">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-plus-circle"></i>
+        <article class="titles"><a href="profile.html">Perfil</a> > Configurações da Conta</article>
+            <article id="img-edit"></article>
+            <div class="grid-edit">
+                <div class="grid-values">
+                    <form>
+                        <input type="text" id="editName" placeholder="Nome completo">
+                        <input type="text" id="editUser" placeholder="Nome de usuário">
+                        <input type="text" id="editEmail" placeholder="Email">
+                        <input type="password" id="editPassword" placeholder="Senha">
+                    </form>
                 </div>
-                <article class="imgFilm"></article>
-                <article class="nameFilm">Nome do filme</article>
+                <div class="grid-values">
+                    <form>
+                        <input type="text" id="editMatr" placeholder="Matrícula">
+                    </form>
+                    <article>Desativar conta
+                        <button>Desativar</button>
+                    </article>
+                    <article>Ativar Portfólio
+                        <div class="slideOne">  
+                            <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
+                            <label for="slideOne"></label>
+                        </div>
+                    </article>
+                    <article id="editPortfolio">Editar Portfólio
+                        <button>Editar</button>
+                    </article>
+                </div>
             </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            
-           
-        </div>
 	</section>
 	
 	<nav class="tabBar">
@@ -204,5 +161,6 @@
     <footer><h1>©Now Loading</h1></footer>
 
     <script src="../js/global.js"></script>
+    <script src="../js/editProfile.js"></script>
 </body>
 </html>

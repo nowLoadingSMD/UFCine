@@ -6,12 +6,18 @@
 	outline: none;
 	font-weight: 300;
 	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+	background-color: #2D243F;
+	background-image: linear-gradient(rgba(0, 216, 255, 0.53), rgba(155, 233, 235, 0.22) 32%, rgba(63, 212, 228, 0) 64%, rgba(221, 48, 96, 0.44) 100%, rgba(63, 212, 228, 0), rgba(95, 21, 98, 0));
 }
 
 .navbar{
 	width: 100%;
 	height: 50px;
-	background: #888;
+	background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
 	position: fixed;
 	z-index: 5;
 }
@@ -42,11 +48,22 @@
 .navbar #btn-login{
 	display: none;
 	font-size: 1.2em;
-	background-color: #ccc;
+	background: none;
 	padding: 5px;
 	float: right;
 	margin: 15px 25px;
 	cursor: pointer;
+	width: 96px;
+  	height: 34px;	
+	border-radius: 2px;
+	border: solid 2px #30d0dd;
+	color: #30d0dd;
+	transition: background 0.2s;
+}
+
+.navbar #btn-login:hover{
+	color: #fff;
+	background: #30d0dd;
 }
 
 .navbar #btn-user{
@@ -85,7 +102,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background: #777;
+	background-color: #111738;
 	position: fixed;
 	text-align: center;
 	z-index: 6;
@@ -97,6 +114,34 @@
 	margin: 15px 7%;
 }
 
+.tabBar a{
+	color: #fff;
+}
+
+.tabBar #iconHome{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/icons/home.svg");
+}
+
+.tabBar #iconAuthors{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/icons/authors.svg");
+}
+
+.tabBar #iconBrowse{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/icons/browse.svg");
+}
+
+.tabBar #iconAbout{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/icons/about.svg");
+}
+
 .principal{
 	padding: 50px 10px 40px 10px;
 }
@@ -104,7 +149,8 @@
 footer{
 	width: 100%;
 	height: 50px;
-	background: #ddd;
+	background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
+	color: #fff;
 	text-align: center;
 	padding: 15px;
 	font-size: 1.3em;
@@ -114,13 +160,13 @@ footer{
 @media screen and (min-width: 1080px){
 	.tabBar{
 		height: 100%;
-		width: 70px;
+		width: 100px;
 	}
-	.tabBar i{
-		margin: 11vh 10px;
+	.tabBar .icons{
+		margin: 12vh 0 5px 30px;
 	}
 	.navbar{
-		height: 60px;
+		height: 70px;
 	}
 	.navbar h1{
 		text-align: center;
@@ -136,6 +182,11 @@ footer{
 		margin: 17px 100px;
 		border-radius: 50px;
 		padding: 3px 15px;  
+		border-radius: 17px;
+		border: solid 2px #30d0dd;
+		background: rgba(0, 0, 0, 0);
+		color: #30d0dd;
+		width: 300px;
 	}
 	.navbar #searchIcon{
 		display: none;
@@ -149,7 +200,7 @@ footer{
 
 	.principal{
 		margin-left: 70px;
-		padding: 60px 20px 40px 20px;
+		padding: 60px 50px 40px 80px;
 	}
 /*	.principal h1{
 		font-size: 2em;
@@ -216,36 +267,38 @@ footer{
 
 /* Modal Content */
 .modal-content {
-    background-color: #ddd;
+	background-color: rgb(52, 63, 65);
+	border-radius: 8px;
     margin: auto;
     padding: 20px;
 	width: 40%;
-	height: 350px;
+	height: 400px;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
     float: right;
-	font-size: 3em;
-	padding-right: 25px;
+	margin: 25px;
+	background-image: url("../img/btn-close.png");
+	width: 32px;
+	height: 32px;
 }
 
 .close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
+    background-image: url("../img/btn-close-hover.png");
     cursor: pointer;
 }
 
 .modal h1{
-	font-size: 1.5em;
+	font-size: 2.15em;
+	color: #fff;
 	float: left; 
-	padding: 20px;
+	padding: 26px;
 }
 
 #modal-login form{
-	width: 80%;
-	margin-left: 10%;
+	width: 90%;
+	margin-left: 5%;
 }
 
 #modal-signUp form{
@@ -256,8 +309,11 @@ footer{
 form .textfield{
 	width: 100%;
 	margin-top: 20px;
-	padding: 5px;
-	color: #333;
+	padding: 5px 15px;
+	border-radius: 16px;
+	border: solid 2px rgb(48, 208, 221);
+	color: #30d0dd;
+	background: none;
 }
 
 form .go{
@@ -269,13 +325,39 @@ form .go{
 
 form a{
 	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+form a:hover{
+	color: #dd3060;
+}
+
+form h5{
+	font-size: 1.125em;
+	margin-top: 20px;
+}
+
+form h2{
+	font-size: 1.125em;
+	margin-top: 50px;
+	float: left;
+}
+
+form h3{
+	font-size: 1.125em;
+	margin-top: 70px;
+	float: left;
 }
 
 form .btn-go{
-	background: #555;
-	color: #fff;
+	border-radius: 2px;
+  	border: solid 2px rgb(48, 208, 221);
+	color: #30d0dd;
 	padding: 10px;
-	margin-top: 20px; 
+	margin-top: 60px; 
+	background: none;
+	cursor: pointer;
 }
 
 form #btn-signUp{
@@ -378,4 +460,8 @@ button{
 a{
 	text-decoration: none;
 	color: #000;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #30d0dd;
+    opacity: 1; /* Firefox */
 }

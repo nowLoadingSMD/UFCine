@@ -1,8 +1,16 @@
+.tabBar #iconHome{
+  background-image: url(../img/icons/home-active.svg);
+}
+
+.tabBar #tagHome{
+  color: #30d0dd;
+}
+
 .releases{
   margin-top: 15px;
   display: grid;
   width: 100%;
-  grid-gap: 20px 20px;
+  grid-gap: 20px 2%;
   grid-template-columns: auto auto;
 }
 
@@ -10,7 +18,7 @@
   margin-top: 15px;
   display: grid;
   width: 100%;
-  grid-gap: 20px 20px;
+  grid-gap: 20px 2%;
   grid-template-columns: auto auto;
 }
 
@@ -29,25 +37,45 @@
 }
 
 .grid-item div{
-	height: 150px;
-	background: #ddd;
+	height: 240px;
+  overflow:hidden;
 }
-.grid-item div i{
-	padding-top: 70px;
+.grid-item div .img-film{
+  width: 100%;
 }
+.grid-item div .icon-play{
+  position: absolute;
+  width: 70px;
+  margin-left: 10%;
+  margin-top: 13%;
+  display: none;
+}
+.grid-item:hover .img-film{
 
+}
+.grid-item:hover .icon-play{
+  display: block;
+}
 .grid-item article{
 	padding: 5px;
-	text-decoration: none !important;
+  text-decoration: none !important;
+  color: #fff;
+  font-size: 1.3em;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+.grid-item:hover article{
+  background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
+}
+.recommended div .icon-play{
+  margin-left: 5%;
+  margin-top: 5.5%;
 }
 
 .principal .titles{
-  font-size: 1.5em;
+  font-size: 2.125em;
   width: 170px;
-  padding: 10px;
-  background: #ddd;
-  text-align: center;
   margin-top: 15px;
+  color: #fff;
 }
 
 
@@ -55,22 +83,33 @@
   .releases{
     width: 43%;
     position: absolute;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 32% 32% 32%;
   }
   .recommended{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 32% 32% 32%;
   }
   #group{
-    margin-top: -62px;
+    margin-top: -52px;
     margin-left: 53%;
   }
 }
 
 .btn-viewMore{
-  padding: 10px;
-  font-size: 1.3em;
+  padding: 5px;
+  font-size: 1em;
   position: absolute;
-  margin-left: 35%;
-  margin-top: -47px;
-  width: 8%;
+  margin-left: 37%;
+  margin-top: -35px;
+  width: 6%;
+  border-radius: 2px;
+  border: solid 2px #30d0dd;
+  color: #30d0dd;
+  background: none;
+  border-radius: 2px;
+  transition: 0.2s background;
+}
+
+.btn-viewMore:hover{
+  background:#30d0dd;
+  color: #fff;
 }

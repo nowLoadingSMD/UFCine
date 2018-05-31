@@ -1,3 +1,11 @@
+.tabBar #iconAuthors{
+    background-image: url(../img/icons/authors-active.svg);
+}
+
+.tabBar #tagAuthors{
+    color: #30d0dd;
+}
+
 a{
     text-decoration: none;
 }

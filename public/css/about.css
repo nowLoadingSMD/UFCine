@@ -1,0 +1,7 @@
+.tabBar #iconAbout{
+    background-image: url(../img/icons/about-active.svg);
+}
+
+.tabBar #tagAbout{
+    color: #30d0dd;
+}
