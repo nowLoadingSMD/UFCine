@@ -1,9 +1,7 @@
 .principal .titles{
-    font-size: 1.5em;
+    font-size: 2.1em;
     width: 200px;
-    padding: 10px;
-    background: #ddd;
-    text-align: center;
+    color: #fff;
     margin-top: 50px;
     float: left;
   }
@@ -15,59 +13,76 @@
 }
 
 #btn-editProfile{
-    background: #ddd;
-    padding: 10px;
+    background: none;
+    color: #30d0dd;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    padding: 8px;
     width: 80px;
-    margin-top: 55px;
+    margin-top: 100px;
+    margin-left: 15px;
     text-align: center;
-    float: right;
 }
 
-.infos{
+#btn-editProfile:hover{
+    background: #30d0dd;
+    color: #fff;
+}
+
+.content-profile .infos{
     margin-top: 110px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 150px;
 }
 
 #imgProfile{
     width: 150px;
     height: 150px;
-    background: #ddd;
+    background-image: url("../img/authors/Camila.jpg");
+    background-size: 110%;
     float: left;
 }
 
 .infos h1{
-    font-size: 1.4em;
-    margin-left: 170px;
-    margin-top: 80px;
+    font-size: 1.6em;
+    margin-left: 165px;
+    margin-top: 20px;
     position: absolute;
+    color: #fff;
 }
 
 .infos #email{
-    margin-top: 110px;
+    margin-top: 60px;
 }
 
 .content-profile ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #999;
-    margin-top: 300px;
+    background-color: none;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .content-profile li {
     float: left;
-    width: 33.3%;
+    width: 33.332%;
     display: block;
-    color: white;
+    color: #30d0dd;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border: solid 2px rgb(48, 208, 221);
 }
 
 .content-profile li:hover {
-    background-color: #111;
+    background-color: #30d0dd;
+    color: #fff;
 }
 
 .content-profile .active {
-    background-color: #111;
+    background-color: #30d0dd;
+    color: #fff;
 }
 
 .content-profile .posted{
@@ -80,7 +95,10 @@
     width: 29%;
     height: 40%;
     float: left;
-    text-align: center;
+}
+
+.group-films .film:hover article{
+    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
 }
 
 .group-films .film i{
@@ -91,30 +109,43 @@
 
 .group-films .film div{
     width: 100%;
-    height: 12vw;
-    background: #999;
+    height: 200px;
+    overflow: hidden;
+}
+
+.group-films .film div img{
+    width: 100%;
 }
 
 .group-films .film article{
     font-size: 1.2em;
-    color: #000;
-    background: #fff;
+    color: #fff;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     padding: 10px;
+    text-align: center;
 }
 
 .group-films .viewMore{
     width: 7%;
-    height: 12vw;
-    background: #111;
-    margin-top: 2%;
+    height: 60px;
+    border: solid 2px rgb(48, 208, 221);
+    margin-top: 100px;
     float: right;
 }
 
-.group-films .viewMore i{
+.group-films .viewMore:hover{
+    background: #30d0dd;
+}
+
+.group-films .viewMore:hover i{
     color: #fff;
-    font-size: 1.5em;
-    margin-top: 5.5vw;
-    margin-left: 30%;
+}
+
+.group-films .viewMore i{
+    color: #30d0dd;
+    font-size: 2em;
+    margin-top: 13px;
+    margin-left: 15px;
 }
 
 .content-notifications ul {

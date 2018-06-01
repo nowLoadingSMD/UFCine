@@ -11,10 +11,10 @@ a{
 }
 #alphabet{
     width: 40px;
-    background: #eee;
+    background: none;
     text-align: center;
-    margin-top: 20px; 
-    padding: 8px;
+    margin-top: 80px; 
+    padding: 8px 2px 0 0;
     position: absolute;
     right: 20px;
     overflow-y: scroll;
@@ -23,28 +23,33 @@ a{
 }
 
 .letters{
-    font-size: 1.2em;
-    background: #333;
+    font-size: 1.8em;
+    background: none;
+    color: #30d0dd;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+}
+
+.letters:hover{
+    background: #30d0dd;
     color: #fff;
-    margin-bottom: 5px;
 }
 
 .principal .titles{
-    font-size: 1.5em;
+    font-size: 2.125em;
     width: 180px;
-    padding: 10px;
-    background: #ddd;
-    text-align: center;
+    color: #fff;
     margin-top: 15px;
   }
 
 .titleLetter{
-    font-size: 1.5em;
+    font-size: 1.8em;
     width: 40px;
     padding: 5px;
-    background: #ddd;
+    color: #fff;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .blockAuthors{
@@ -58,18 +63,29 @@ a{
 
 .infAuthor{
     height: 200px;
-    margin: 15px 15px 15px 0;
+    margin: 5px 15px 15px 0;
     float: left;
     flex: 0 0 auto;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8)70%, rgba(0, 0, 0, 0));
+}
+
+.infAuthor:hover{
+    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8)70%, rgba(111, 24, 48, 0));
 }
 
 .imgAuthor{
     width: 150px;
     height: 150px;
-    background: #ddd;
+    overflow: hidden;
+}
+
+.imgAuthor img{
+    height: 100%;
 }
 
 .blockAuthors h1{
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 1.2em;
+    color: #fff;
 }

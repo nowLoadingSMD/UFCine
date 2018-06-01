@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<script src="../lib/jquery-3.3.1.min.js"></script>	
 
-	<title>Player</title>
+	<title>Perfil</title>
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
 	<link rel="stylesheet" type="text/css" href="../css/profile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -38,10 +38,10 @@
 				<h1>LOGIN</h1>
 				<span class="close">&times;</span><br/>
 				<form>
-					<input type="text" id="email" class="textfield" placeholder="Email"/><br/>
-					<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
+					<input type="text" id="loginEmail" class="textfield" placeholder="Email"/><br/>
+					<input type="password" id="loginPassword" class="textfield" placeholder="Senha"/><br/>
 					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
-					<input type="submit" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
+					<input type="button" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
 					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
 				</form>
 			</div>
@@ -51,15 +51,15 @@
 				<span class="close">&times;</span><br/>
 				<form id="form-signUp">
 					<div id="form-left">
-						<input type="text" id="name" class="textfield" placeholder="Nome completo"/><br/>
-						<input type="text" id="email" class="textfield" placeholder="E-mail"/><br/>
-						<input type="password" id="password" class="textfield" placeholder="Senha"/><br/>
+						<input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
+						<input type="text" id="signEmail" class="textfield" placeholder="E-mail"/><br/>
+						<input type="password" id="signPassword" class="textfield" placeholder="Senha"/><br/>
 						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
 					</div>
 					<div id="form-right">
-						<input type="text" id="userName" class="textfield" placeholder="Nome de usuário"/><br/>
-						<input type="text" id="matriculation" class="textfield" placeholder="Matrícula"/><br/>
-						<input type="password" id="confirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
+						<input type="text" id="signUserName" class="textfield" placeholder="Nome de usuário"/><br/>
+						<input type="text" id="signMatriculation" class="textfield" placeholder="Matrícula"/><br/>
+						<input type="password" id="signUpConfirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
 						<input type="submit" id="btn-goSignUp" class="btn-go" value="Cadastrar"/><br/>
 					</div>
 				</form>
@@ -123,12 +123,12 @@
 	<section class="principal">
         <div class="content-principal">
             <div class="content-profile">
-                <article class="titles">PERFIL</article>
-                <a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
+                <article class="titles">Perfil</article>
                 <div class="infos">
                     <article id="imgProfile"></article>
-                    <h1>NOME DO USUÁRIO</h1>
-                    <h1 id="email">EMAIL DO USUÁRIO</h1>
+                    <h1>Nome de Usuário</h1>
+					<h1 id="email">useremail@email.com</h1>
+					<a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
                 </div>
                 <ul>
                     <li id="btn-favorites">FAVORITOS</li>
@@ -137,53 +137,53 @@
                 </ul>
                 <div class="group-films" id="posted">
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme</article>
                     </div></a>
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme</article>
                     </div></a>
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme</article>
                     </div></a>
                     <a href="uploadedFilms.html"><div class="viewMore">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-angle-right"></i>
                     </div></a>
                 </div>
                 <div class="group-films" id="favorites">
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme jj</article>
                     </div></a>
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme</article>
                     </div></a>
                     <a href="player.html"><div class="film">
-                        <div><i class="fas fa-play"></i></div>
+                        <div><img src="../img/films/movie.jpg"></div>
                         <article>Nome do filme</article>
                     </div></a>
                     <a href="favorites.html"><div class="viewMore">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-angle-right"></i>
                     </div></a>
                 </div>
                 <div class="group-films" id="watchlist">
 					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
+						<div><img src="../img/films/movie.jpg"></div>
 						<article>Nome do filme kk</article>
 					</div></a>
 					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
+						<div><img src="../img/films/movie.jpg"></div>
 						<article>Nome do filme</article>
 					</div></a>
 					<a href="player.html"><div class="film">
-						<div><i class="fas fa-play"></i></div>
+						<div><img src="../img/films/movie.jpg"></div>
 						<article>Nome do filme</article>
 					</div></a>
 					<a href="watchList.html"><div class="viewMore">
-						<i class="fas fa-plus"></i>
+						<i class="fas fa-angle-right"></i>
 					</div></a>
 				</div>
             </div>
@@ -200,10 +200,10 @@
 	</section>
 	
 	<nav class="tabBar">
-		<a href="../index.html" id="tagHome"><article id="iconHome" class="icons"></article>Início</a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article>Navegar</a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
-		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
+		<a href="../index.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
 	</nav>
     <footer><h1>©Now Loading</h1></footer>
 
