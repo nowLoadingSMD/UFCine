@@ -68,16 +68,40 @@ router.get("/videoStream", (req, res) => {
 
 router.post("/uploadVideo", async (req, res) => {
 
-    const video = req.body
-    video.path = "../assets/sample.mp4"
+    if (!req.files)
+        return res.send({err: "No files uploaded"})
+    
+    let videoMP4 = req.files.videoMP4
 
-    console.log(video)
+    let video = {
+        name: req.body.name,
+        path: "",
+        producerID: req.body.producerID,
+        quantityOfApplauses: 0,
+        onExposition: req.body.onExposition,
+        quantityOfViewLastWeek: 0,
+        private: req.body.private
+    }
 
     Video.addVideo(video, (err, video) => {
 
         if (err) {
             throw err
         }
+
+        let id = video._id
+
+        videoMP4.mv(`assets/${id}.mp4`, (error) => {
+            if (error)
+                return res.status(500).send({err: error})
+    
+        })
+
+        Video.findByIdAndUpdate(id, { $set: { path: `assets/${id}.mp4` }}, { new: true }, function (err, video) {
+            if (err) return handleError(err);
+            res.send({err: nil});
+          });
+    
 
     })
     
