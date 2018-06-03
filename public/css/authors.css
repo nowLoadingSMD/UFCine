@@ -3,7 +3,7 @@
 }
 
 .tabBar #tagAuthors{
-    color: #30d0dd;
+    color: var(--aqua-marine);
 }
 
 a{
@@ -22,26 +22,25 @@ a{
     position: fixed;
 }
 
+.principal .titles{
+    margin-bottom: 30px;
+}
+
 .letters{
     font-size: 1.3em;
     background: none;
-    color: #30d0dd;
+    color: var(--aqua-marine);
     margin-bottom: 10px;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
+    font-family: CircularBold;
+    padding-top: 3px;
 }
 
 .letters:hover{
-    background: #30d0dd;
+    background: var(--aqua-marine);
     color: #fff;
 }
-
-.principal .titles{
-    font-size: 2.125em;
-    width: 180px;
-    color: #fff;
-    margin-top: 15px;
-  }
 
 .titleLetter{
     font-size: 1.8em;
@@ -50,6 +49,7 @@ a{
     color: #fff;
     text-align: center;
     margin-top: 25px;
+    font-family: CircularBold;
 }
 
 .blockAuthors{

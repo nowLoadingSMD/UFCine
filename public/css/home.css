@@ -3,7 +3,7 @@
 }
 
 .tabBar #tagHome{
-  color: #30d0dd;
+  color: var(--aqua-marine);
 }
 
 .banners{
@@ -86,15 +86,8 @@
   margin-top: 5.5%;
 }
 
-.principal .titles{
-  font-size: 1.5em;
-  width: 170px;
-  margin-top: 15px;
-  color: #fff;
-  float: left;
-}
-
 .principal .titleInitial{
+  font-family: CircularBlack;
   font-size: 2em;
   width: 170px;
   margin-top: 15px;
@@ -105,7 +98,7 @@
   padding: 3px;
   font-size: 1em;
   width: 60px;
-  border: solid 2px #30d0dd;
+  border: solid 2px var(--aqua-marine);
   color: #30d0dd;
   background: none;
   border-radius: 2px;
@@ -143,10 +136,8 @@
   }
 }
 
-
-
 .btn-viewMore:hover{
-  background:#30d0dd;
+  background:var(--aqua-marine);
   color: #fff;
 }
 

@@ -59,11 +59,11 @@ btnSignUp.onclick = function(){
   modalUpload.style.display = "none";
 }
 
-btnLogin.onclick = function(){
-  modalLogin.style.display = "block";
-  modalSignUp.style.display = "none";
-  modalUpload.style.display = "none";
-}
+// btnLogin.onclick = function(){
+//   modalLogin.style.display = "block";
+//   modalSignUp.style.display = "none";
+//   modalUpload.style.display = "none";
+// }
 
 btnUpload.onclick = function(){
   modalContent.style.width = "80%";
@@ -92,10 +92,10 @@ var btnLogout = document.getElementById("btn-logout");
 logar.onclick = async function(){
 
   if ( await login() ){
-      modal.style.display = "none";
-      btn.style.display = "none";
-      user.style.display = "block";
-      logarMobile.style.display = "none";
+      // modal.style.display = "none";
+      // btn.style.display = "none";
+      // user.style.display = "block";
+      // logarMobile.style.display = "none";
   // } else {
   //   alert("Erro ao logar")
   // }
