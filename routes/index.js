@@ -76,6 +76,10 @@ router.get("/pages/genre.html", function(req,res, next) {
   res.render('pages/genre');
 })
 
+router.get("/pages/login.html", function(req, res, next) {
+  res.render('pages/login');
+})
+
 router.get("/pages/player.html", function(req,res, next) {
 
   var id = req.query.id
@@ -145,6 +149,10 @@ router.get("/pages/releases.html", function(req,res, next) {
       res.render('pages/releases', {releasesList: result});
     })
 
+})
+
+router.get("/pages/signUp.html", function(req, res, next) {
+  res.render('pages/signUp')
 })
 
 router.get("/pages/tag.html", function(req,res, next) {
