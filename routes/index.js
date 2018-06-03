@@ -9,9 +9,9 @@ const ProductionInfo = require("../models/ProductionInfo")
 router.get('/pages/home.html', async function(req, res, next) {
 
   let emCartazItem = {
-    "name": "PQPQP",
-    "description": "HUE",
-    "exibitionLocation": "Caralho's house"
+    "name": "Nome do filme em cartaz",
+    "description": "Oi",
+    "exibitionLocation": "Algum lugar"
   };
 
   let emCartaz = [];
