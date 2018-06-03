@@ -30,7 +30,10 @@ var signUp = async function(){
     password: document.getElementById("signUpPassword").value,
     accountActivated: true,
     favorites: [],
-    watchList: []
+    watchList: [],
+    isProducer: false,
+    isPortfolioActivated: false,
+    portfolioDescription: ""
   }
 
   console.log(user)

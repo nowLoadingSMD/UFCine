@@ -6,7 +6,7 @@ const User = require("../models/user")
 router.post("/addToFavorite", (req, res) => {
     User.update(
         { _id: req.body.userID},
-        { $push: { favorites: req.body.videoID} },
+        { $addToSet: { favorites: req.body.videoID} },
         (err, sucess) => {
             if (err) res.send({err: "Problema ao adicionar aos favoritos"})
         }
@@ -18,7 +18,7 @@ router.post("/addToFavorite", (req, res) => {
 router.post("/addToWatchlist", (req, res) => {
     User.update(
         { _id: req.body.userID},
-        { $push: { watchList: req.body.videoID} },
+        { $addToSet: { watchList: req.body.videoID} },
         (err, sucess) => {
             if (err) res.send({err: "Problema ao adicionar aos favoritos"})
         }

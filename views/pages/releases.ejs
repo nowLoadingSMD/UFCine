@@ -21,7 +21,7 @@
 	<% include ../partials/modals/modals %>
 
 	<section class="principal">
-        <article class="titles"><a href="../index.html">INÍCIO</a> > LANÇAMENTOS</article>
+        <article class="titles"><a href="./home.html">INÍCIO</a> > LANÇAMENTOS</article>
         <div class="grid-films">
                 <% releasesList.forEach(function(item){ %>
                     <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id}); %> 

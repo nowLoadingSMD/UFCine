@@ -40,6 +40,8 @@ router.get('/pages/home.html', async function(req, res, next) {
         .limit(6)
         .exec( (err, result) => {
 
+          if (err) res.send({err: "Problema ao renderizar página"})
+
           res.render('pages/home', {
             emCartazList: emCartaz,
             releasesList: resultReleases,
@@ -78,6 +80,9 @@ router.get("/pages/player.html", function(req,res, next) {
 
   var id = req.query.id
 
+  if (!id)
+    res.send({err: "Identificador de vídeo não fornecido"})
+
   Video.findById(id, (err, video) => {
     ProductionInfo
       .find({"videoID": video._id})
@@ -98,17 +103,11 @@ router.get("/pages/portfolio.html", function(req,res, next) {
 
 router.get("/pages/profile.html", function(req,res, next) {
   const userID = req.query.id
-  console.log(userID)
-  // User.findById(userID, (err, user) => {
-  //   user.password = null
-  //   Video
-  //     .find({producerID: userID})
-  //     .exec( (err, videos) => {
-  //       res.render('pages/profile', {user: user, videosPosted: videos});
-  //     })
-  // })  
-
-  User
+  
+  if (!userID) {
+    res.send({err: "Identificador de usuário não fornecido"})
+  } else {
+    User
     .findById(userID)
     .populate("favorites")
     .populate("watchList")
@@ -123,8 +122,7 @@ router.get("/pages/profile.html", function(req,res, next) {
           res.render('pages/profile', {user: user, videosPosted: videos});
         })
     })
-    
-  
+  }
 })
 
 router.get("/pages/recommended.html", function(req,res, next) {
