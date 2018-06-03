@@ -13,7 +13,7 @@ jQuery(document).ready(async function($) {
       $(".block-logged").css("display", "block");
 
       document.getElementById("profileAnchor").href = `/pages/profile.html?id=${getCookie('userId')}`;
-
+      document.uploadForm.action = `/api/video/uploadVideo?id=${getCookie('userId')}`;
     } else {
       $(".block-logged").css("display", "none");
     }
