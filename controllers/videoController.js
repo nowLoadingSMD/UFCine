@@ -1,4 +1,5 @@
 const express = require("express")
+const fileUpload = require("express-fileupload")
 const jwt = require("jsonwebtoken")
 const path = require("path")
 const fs = require("fs")
@@ -9,7 +10,6 @@ const router = express.Router()
 
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
-
 
 router.get("/videoPlayer", (req, res) => {
 
@@ -75,12 +75,12 @@ router.post("/uploadVideo", async (req, res) => {
 
     let video = {
         name: req.body.name,
-        path: "",
-        producerID: req.body.producerID,
+        path: "assets",
+        producerID: "5b099c7318ab0f756ccc25bf",
         quantityOfApplauses: 0,
-        onExposition: req.body.onExposition,
+        onExposition: false,
         quantityOfViewLastWeek: 0,
-        private: req.body.private
+        private: false
     }
 
     Video.addVideo(video, (err, video) => {
@@ -91,21 +91,40 @@ router.post("/uploadVideo", async (req, res) => {
 
         let id = video._id
 
-        videoMP4.mv(`assets/${id}.mp4`, (error) => {
-            if (error)
-                return res.status(500).send({err: error})
-    
+        let productionInfo = {
+            videoID: video._id,
+            description: req.body.description,
+            classification: "16+",
+            tags: [],
+            genre: [],
+            directors: [
+                "Pocotó"
+            ],
+            script: [
+                "Jumento"
+            ],
+            cast: [
+                "Cavalinho"
+            ]
+        }
+
+        ProductionInfo.create(productionInfo, (err, productionInfo) => {
+            if (err) 
+                throw err
+
+            videoMP4.mv(`assets/${id}.mp4`, (error) => {
+                    if (error)
+                        return res.status(500).send({err: error})
+
+                    Video.findByIdAndUpdate(id, { $set: { path: `assets/${id}.mp4` }}, { new: true }, function (err, video) {
+                        if (err) return handleError(err);
+                        res.send({err: null});
+                    });
+            })
+
         })
-
-        Video.findByIdAndUpdate(id, { $set: { path: `assets/${id}.mp4` }}, { new: true }, function (err, video) {
-            if (err) return handleError(err);
-            res.send({err: nil});
-          });
     
-
     })
-    
-    res.json({ res: "Ok"})
 
 })
 

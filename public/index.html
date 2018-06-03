@@ -75,28 +75,29 @@
 					<div class="upload-left">
 						<h1>ENVIAR VÍDEO</h1>
 						<article id="img-upload"><i class="fas fa-upload"></i></article>
-						<form>
-							<input type="text" class="textfield" placeholder="Título do filme"/>
-							<textarea placeholder="Descrição"></textarea>
-			
-						</form>
+						<form
+							action='/api/video/uploadVideo'
+							method='post' 
+							encType="multipart/form-data">
+							<input type="file" name="videoMP4" />
+							<input type="text" class="textfield" placeholder="Título do filme" name="name"/>
+							<textarea placeholder="Descrição" name="description"></textarea>
 						
 					</div>
 					<div class="upload-right">
 							<span class="close">&times;</span><br/>
-						<form>
 							<input type="text" class="textfield" placeholder="Direção"/>
 							<input type="text" class="textfield" placeholder="Roteiro"/>
 							<div class="grid-itens">
 								<div>
 									<select id="select-clas">
 										<option value="" disabled>Classificação</option>
-										<option value="">Livre</option>
-										<option value="">+10</option>
-										<option value="">+12</option>
-										<option value="">+14</option>
-										<option value="">+16</option>
-										<option value="">+18</option>
+										<option value="Livre">Livre</option>
+										<option value="+10">+10</option>
+										<option value="+12">+12</option>
+										<option value="+14">+14</option>
+										<option value="+16">+16</option>
+										<option value="+18">+18</option>
 									</select>
 									<h3>Elenco</h3>
 									<i class="fas fa-plus-circle" id="addItem"></i>

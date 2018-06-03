@@ -1,11 +1,14 @@
 var express = require("express")
 var path = require('path');
+var fileUpload = require("express-fileupload")
 var bodyParser = require("body-parser")
 
 var app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+app.use(fileUpload())
 
 app.use(express.static(path.join(__dirname, 'public')));
 
