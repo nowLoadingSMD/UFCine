@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+const User = require("../models/user")
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
 
@@ -96,7 +97,17 @@ router.get("/pages/portfolio.html", function(req,res, next) {
 })
 
 router.get("/pages/profile.html", function(req,res, next) {
-  res.render('pages/profile');
+  const userID = req.query.id
+  console.log(userID)
+  User.findById(userID, (err, user) => {
+    user.password = null
+    Video
+      .find({producerID: userID})
+      .exec( (err, videos) => {
+        res.render('pages/profile', {user: user, videosPosted: videos});
+      })
+  })  
+  
 })
 
 router.get("/pages/recommended.html", function(req,res, next) {

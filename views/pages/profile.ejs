@@ -25,8 +25,8 @@
                 <article class="titles">Perfil</article>
                 <div class="infos">
                     <article id="imgProfile"></article>
-                    <h1>Nome de Usuário</h1>
-					<h1 id="email">useremail@email.com</h1>
+                    <h1><%= user.name %></h1>
+					<h1 id="email"><%= user.email %></h1>
 					<a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
                 </div>
                 <ul>
@@ -35,55 +35,19 @@
                     <li id="btn-watchlist">WATCHLIST</li>
                 </ul>
                 <div class="group-films" id="posted">
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="uploadedFilms.html"><div class="viewMore">
-                        <i class="fas fa-angle-right"></i>
-                    </div></a>
+                    <% videosPosted.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
                 </div>
                 <div class="group-films" id="favorites">
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme jj</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="player.html"><div class="film">
-                        <div><img src="../img/films/movie.jpg"></div>
-                        <article>Nome do filme</article>
-                    </div></a>
-                    <a href="favorites.html"><div class="viewMore">
-                        <i class="fas fa-angle-right"></i>
-                    </div></a>
+                    <% videosPosted.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
                 </div>
                 <div class="group-films" id="watchlist">
-					<a href="player.html"><div class="film">
-						<div><img src="../img/films/movie.jpg"></div>
-						<article>Nome do filme kk</article>
-					</div></a>
-					<a href="player.html"><div class="film">
-						<div><img src="../img/films/movie.jpg"></div>
-						<article>Nome do filme</article>
-					</div></a>
-					<a href="player.html"><div class="film">
-						<div><img src="../img/films/movie.jpg"></div>
-						<article>Nome do filme</article>
-					</div></a>
-					<a href="watchList.html"><div class="viewMore">
-						<i class="fas fa-angle-right"></i>
-					</div></a>
+                    <% videosPosted.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
 				</div>
             </div>
             <div class="content-notifications">

@@ -11,6 +11,9 @@ jQuery(document).ready(async function($) {
       document.getElementById("btn-user").style.display = "block";
 
       $(".block-logged").css("display", "block");
+
+      document.getElementById("profileAnchor").href = `/pages/profile.html?id=${getCookie('userId')}`;
+
     } else {
       $(".block-logged").css("display", "none");
     }
