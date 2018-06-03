@@ -26,17 +26,17 @@ const ProductionInfoSchema = mongoose.Schema({
     ],
     directors: [
         {
-            type: Schema.Types.ObjectId, rel: 'User'
+            type: String
         }
     ],
     script: [
         {
-            type: Schema.Types.ObjectId, rel: 'User'
+            type: String
         }
     ],
     cast: [
         {
-            type: Schema.Types.ObjectId, rel: 'User'
+            type: String
         }
     ]
 })

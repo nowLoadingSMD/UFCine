@@ -1,4 +1,5 @@
 const express = require("express")
+const fileUpload = require("express-fileupload")
 const jwt = require("jsonwebtoken")
 const path = require("path")
 const fs = require("fs")
@@ -9,7 +10,6 @@ const router = express.Router()
 
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
-
 
 router.get("/videoPlayer", (req, res) => {
 
@@ -68,10 +68,20 @@ router.get("/videoStream", (req, res) => {
 
 router.post("/uploadVideo", async (req, res) => {
 
-    const video = req.body
-    video.path = "../assets/sample.mp4"
+    if (!req.files)
+        return res.send({err: "No files uploaded"})
+    
+    let videoMP4 = req.files.videoMP4
 
-    console.log(video)
+    let video = {
+        name: req.body.name,
+        path: "assets",
+        producerID: "5b099c7318ab0f756ccc25bf",
+        quantityOfApplauses: 0,
+        onExposition: false,
+        quantityOfViewLastWeek: 0,
+        private: false
+    }
 
     Video.addVideo(video, (err, video) => {
 
@@ -79,9 +89,42 @@ router.post("/uploadVideo", async (req, res) => {
             throw err
         }
 
-    })
+        let id = video._id
+
+        let productionInfo = {
+            videoID: video._id,
+            description: req.body.description,
+            classification: "16+",
+            tags: [],
+            genre: [],
+            directors: [
+                "Pocotó"
+            ],
+            script: [
+                "Jumento"
+            ],
+            cast: [
+                "Cavalinho"
+            ]
+        }
+
+        ProductionInfo.create(productionInfo, (err, productionInfo) => {
+            if (err) 
+                throw err
+
+            videoMP4.mv(`assets/${id}.mp4`, (error) => {
+                    if (error)
+                        return res.status(500).send({err: error})
+
+                    Video.findByIdAndUpdate(id, { $set: { path: `assets/${id}.mp4` }}, { new: true }, function (err, video) {
+                        if (err) return handleError(err);
+                        res.send({err: null});
+                    });
+            })
+
+        })
     
-    res.json({ res: "Ok"})
+    })
 
 })
 
