@@ -68,6 +68,8 @@ router.get("/videoStream", (req, res) => {
 
 router.post("/uploadVideo", async (req, res) => {
 
+    const userID = req.query.id
+
     if (!req.files)
         return res.send({err: "No files uploaded"})
     
@@ -76,9 +78,10 @@ router.post("/uploadVideo", async (req, res) => {
     let video = {
         name: req.body.name,
         path: "assets",
-        producerID: "5b099c7318ab0f756ccc25bf",
+        producerID: userID,
         quantityOfApplauses: 0,
         onExposition: false,
+        quantityOfView: 0,
         quantityOfViewLastWeek: 0,
         private: false
     }

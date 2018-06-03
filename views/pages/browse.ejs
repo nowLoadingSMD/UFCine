@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+    <script src="../lib/jquery-3.3.1.min.js"></script>	
+    <script src="../lib/jqcloud.min.js"></script>
+
+	<title>Navegar</title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/browse.css">
+    <link rel="stylesheet" type="text/css" href="../css/jqcloud.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="../js/cookieLibrary.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/browse.js"></script>
+</head>
+<body>
+
+	<% include ../partials/navBar %>
+
+	<% include ../partials/modals/modals %>
+
+	<section class="principal">
+        <div class="grid-content">
+            <div>
+                <article class="titles">Tags</article>
+                <div class="grid-tags"></div>
+            </div>
+            <div>
+                <article class="titles">Aleatório</article>
+                <div class="grid-random">
+                    <img src="../img/icons/random.svg" id="random">
+                    <img src="../img/icons/filmRandom.svg" id="filmRandom">
+                </div>
+                <article id="textRandom">Deixa a gente te ajuda a escolher um filme. Clique no botão abaixo.</article>
+                <button id="btn-randomize">RANDOMIZAR</button>
+            </div>
+            <div>
+                <article class="titles">Gêneros</article>
+                <div class="grid-genre">
+                    <a href="genre.html"><article>Ação</article></a>
+                    <a href="genre.html"></a><article>Animação</article></a>
+                    <a href="genre.html"></a><article>Aventura</article></a>
+                    <a href="genre.html"></a><article>Curtas</article></a>
+                    <a href="genre.html"></a><article>Documentários</article></a>
+                    <a href="genre.html"></a><article>Drama</article></a>
+                    <a href="genre.html"></a><article>Fantasia</article></a>
+                    <a href="genre.html"></a><article>Ficção Científica</article></a>
+                    <a href="genre.html"></a><article>Suspense</article></a>
+                    <a href="genre.html"></a><article>Terror</article></a>
+                </div>
+            </div>
+        </div>
+	</section>
+	
+	<nav class="tabBar">
+		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
+	</nav>
+    <footer><h1>©Now Loading</h1></footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/browse.js"></script>
+    
+</body>
+</html>
