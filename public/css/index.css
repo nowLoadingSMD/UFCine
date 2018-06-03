@@ -1,6 +1,11 @@
-.principal{
+html{
     background-color: var(--dark-blue-grey);
     background-image: url("../img/background-index.png");
+    background-size: cover;
+	height: 100%;
+}
+.principal{
+    
     width: 100%;
     height: 100%;
     background-size: 100%;

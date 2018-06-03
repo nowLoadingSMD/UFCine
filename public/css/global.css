@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: CourierNew;
-    src: url(../fonts/CourierNewPSMT.ttf);
+    font-family: CircularBook;
+    src: url(../fonts/CircularStd-Book.otf);
 }
 
 *{
@@ -36,9 +36,17 @@
 	--dull-purple: rgb(135, 88, 126);
 }
 
-body{
+html{
 	background-color: var(--dark-blue-grey);
 	background-image: linear-gradient(rgba(0, 216, 255, 0.53), rgba(155, 233, 235, 0.22) 32%, rgba(63, 212, 228, 0) 64%, rgba(221, 48, 96, 0.44) 100%, rgba(63, 212, 228, 0), rgba(95, 21, 98, 0));
+}
+
+.principal .titles{
+    font-size: 34px;
+    color: #fff;
+    margin-top: 15px;
+    float: left;
+    font-family: CircularBlack;
 }
 
 .navbar{
@@ -54,14 +62,7 @@ body{
 	font-size: 1.4em;
 	color: #fff;
 	float: left;
-}
-
-.navbar i{
-	padding: 15px;
-	float: right;
-	position: relative;
-	color: #fff;
-	font-size: 1.3em;
+	font-family: CircularBlack;
 }
 
 .navbar #search{
@@ -82,14 +83,15 @@ body{
 	width: 96px;
   	height: 34px;	
 	border-radius: 2px;
-	border: solid 2px #30d0dd;
-	color: #30d0dd;
-	transition: background 0.5s;
+	border: solid 2px var(--aqua-marine);
+	color: var(--aqua-marine);
+	transition: background 0.5s, border 0.5s;
 }
 
 .navbar #btn-login:hover{
 	color: #fff;
 	background: var(--darkish-pink);
+	border-color: var(--darkish-pink);
 }
 
 .navbar #btn-user{
@@ -224,16 +226,23 @@ footer{
 		display: block;
 		position: absolute;
 		margin: 17px 120px;
-		border-radius: 50px;
-		padding: 3px 15px;  
-		border-radius: 17px;
-		border: solid 2px #30d0dd;
-		background: rgba(0, 0, 0, 0);
-		color: #30d0dd;
+		padding: 3px 40px;  
+		font-family: CircularBook;
+		border-bottom: solid 2px var(--aqua-marine);
+		background: none;
+		color: white;
 		width: 300px;
+		transition: border 0.5s;
+	}
+	.navbar #search:focus{
+		border-color: var(--darkish-pink);
 	}
 	.navbar #searchIcon{
-		display: none;
+		position: absolute;
+		font-size: 20px;
+		margin-left: 130px;
+		margin-top: 18px;
+		color: var(--aqua-marine);
 	}
 	.navbar #btn-user{
 		height: 55px;
@@ -249,9 +258,6 @@ footer{
 		font-size: 2em;
 		padding: 0;
 	}*/
-	.topbar{
-		padding: 10px 100px;
-	}
 	#iconLogin{
 		display: none;
 	}
@@ -332,7 +338,7 @@ footer{
     cursor: pointer;
 }
 
-.modal h1{
+/* .modal h1{
 	font-size: 2.15em;
 	color: #fff;
 	float: left; 
@@ -347,9 +353,9 @@ footer{
 #modal-signUp form{
 	width: 90%;
 	margin-left: 5%;
-}
+} */
 
-form .textfield{
+/* form .textfield{
 	width: 100%;
 	margin-top: 20px;
 	padding: 5px 15px;
@@ -427,7 +433,7 @@ form #btn-goLogin{
 
 #modal-upload{
 	display: none;
-}
+} */
 
 .grid-upload{
 	display: grid;
@@ -505,6 +511,7 @@ a{
 	color: #000;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #30d0dd;
+	color: rgba(255, 255, 255, 0.7);
+	font-family: CircularBook;
     opacity: 1; /* Firefox */
 }
