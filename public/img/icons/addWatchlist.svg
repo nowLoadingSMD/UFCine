@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve">
+<style type="text/css">
+	.Sombra{fill:none;}
+	._x0035__x0020_pontos_x0020__x002D__x0020_Brilho_x0020_externo{fill:none;}
+	.Neon_x0020_azul_x0020_{fill:none;stroke:#8AACDA;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.Realce_x0020_cromo_x0020_{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.3629;stroke-miterlimit:1;}
+	.Jive_GS{fill:#FFDD00;}
+	.Alyssa_GS{fill:#A6D0E4;}
+	.st0{fill:none;stroke:#30D0DD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="6.123234e-17" y2="-1">
+	<stop  offset="0" style="stop-color:#656565"/>
+	<stop  offset="0.618" style="stop-color:#1B1B1B"/>
+	<stop  offset="0.6292" style="stop-color:#545454"/>
+	<stop  offset="0.9831" style="stop-color:#3E3E3E"/>
+</linearGradient>
+<g>
+	<path class="st0" d="M15.8,2.4C10,0.8,3.9,4.3,2.4,10.2h0C0.8,16,4.3,22.1,10.2,23.6c5.9,1.6,11.9-1.9,13.5-7.8h0
+		C25.2,10,21.7,3.9,15.8,2.4z"/>
+	<polygon class="st0" points="13,13 13,20.2 13,13 5.8,13 13,13 13,5.8 13,13 20.2,13 	"/>
+</g>
+</svg>

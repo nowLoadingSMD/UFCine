@@ -50,9 +50,7 @@
   margin-top: 13%;
   display: none;
 }
-.grid-item:hover .img-film{
 
-}
 .grid-item:hover .icon-play{
   display: block;
 }

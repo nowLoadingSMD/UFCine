@@ -127,21 +127,27 @@
 
 	<section class="principal">
 		<div id="left">
-			<article class="titles" id="videoName">Nome do filme</article>
 			<div class="video">
 				<video controls id="videoPlayer">
 		  			<source src="" type="video/mp4">
 				Your browser does not support the video tag.
 				</video><br/>
-				<button class="btn-addVideo block-logged" id="btn-watchlist">WatchList</button>
+				<article class="titles" id="videoName"></article>
+				<article id="views">158 visualizações</article>
+				<div class="content-functions">
+					<img src="../img/icons/applause.svg">
+					<img src="../img/icons/addWatchList.svg">
+					<img src="../img/icons/favorite.svg">
+					<img src="../img/icons/download.svg">
+				</div>
+				<!-- <button class="btn-addVideo block-logged" id="btn-watchlist">WatchList</button>
 				<button class="btn-addVideo block-logged" id="btn-favorite">Favoritar</button>
-				<i class="fas fa-thumbs-up"></i>50
+				<i class="fas fa-thumbs-up"></i>50 -->
 			</div>
-			<article class="titlesMedium">Comentários</article>
+			<article id="textComment" class="titlesMedium">Comentários</article>
 			<div class="comment block-logged">
-				<i class="fas fa-user-circle"></i>
-				<h1>Nome de usuário</h1>
-				<textarea rows="5" cols="28" placeholder="Escreva aqui seu comentário..." id="commentContent"></textarea>
+				<article class="imgProfile"><img src="../img/authors/Camila.jpg"></article>
+				<textarea placeholder="Escreva aqui seu comentário..." id="commentContent"></textarea>
 				<button class="btn-comment" id="btn-comment">Comentar</button>
 			</div>
 			<div id="commentList"></div>
@@ -157,24 +163,24 @@
 			-->
 		</div>
 		<div id="right">
-			<article class="titles">Descrição</article>
+			<article class="titlesMedium">Descrição</article>
 			<article class="content" id="productionInfoDescription"></article>
-			<article class="titles">Informações</article>
+			<article class="titlesMedium">Informações</article>
 			<article class="content" id="productionInfoGenres">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
-			<article class="titles">Direção</article>
+			<article class="titlesMedium">Direção</article>
 			<article class="content">- pocoto<br/>- louro josé</article>
-			<article class="titles">Roteiro</article>
+			<article class="titlesMedium">Roteiro</article>
 			<article class="content">- pocoto<br/>- louro josé</article>
-			<article class="titles">Elenco</article>
+			<article class="titlesMedium">Elenco</article>
 			<article class="content">- pocoto<br/>- louro josé</article>
 		</div>
 	</section>
 	
 	<nav class="tabBar">
-		<a href="../index.html" id="tagHome"><article id="iconHome" class="icons"></article>Início</a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article>Navegar</a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
-		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
+		<a href="../index.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
 	</nav>
 	<footer><h1>©Now Loading</h1></footer>
 

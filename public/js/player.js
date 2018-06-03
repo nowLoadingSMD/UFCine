@@ -91,7 +91,7 @@ var populateCommentList = function(comments) {
     comments.forEach( comment => {
 
         let item = `		
-            <i class="fas fa-user-circle"></i>
+            <article class="imgProfile"><img src="../img/authors/Camila.jpg"></article>
             <h1>Nome de usuário</h1>
             <div class="contentComment">
                 <p>${comment.content}</p>

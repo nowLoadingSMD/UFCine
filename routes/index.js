@@ -37,11 +37,11 @@ router.get('/index.html', function(req, res, next) {
 });
 
 router.get("/pages/recommended.html", function(req,res, next) {
-  res.render('recommended');
+  res.render('pages/recommended');
 })
 
 router.get("/pages/releases.html", function(req,res, next) {
-  res.render('releases');
+  res.render('pages/releases');
 })
 
 module.exports = (app) => app.use("/", router) 

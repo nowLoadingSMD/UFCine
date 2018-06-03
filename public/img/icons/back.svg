@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.6 21.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #30d0dd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 4.004;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_360" data-name="Group 360" transform="translate(0.5 0.5)">
+    <line id="Line_863" data-name="Line 863" class="cls-1" x2="27.3" transform="translate(1.8 10.4)"/>
+    <path id="Path_3265" data-name="Path 3265" class="cls-1" d="M9.9,20.3.5,10.4,10,.5"/>
+  </g>
+</svg>

@@ -1,14 +1,18 @@
 .principal .titles{
-    font-size: 1.5em;
-    width: 400px;
-    padding: 10px;
-    background: #ddd;
-    text-align: center;
+    font-size: 2.125em;
+    color: #fff;
     margin-top: 50px;
 }
 
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
+}
+
  #img-edit{
-    background: #aaa;
+    background-image: url("../img/authors/Camila.jpg");
+    background-size: 110%;
     width: 200px;
     height: 200px;
     margin: 50px;
@@ -32,10 +36,14 @@
 .grid-edit .grid-values input{
     width: 100%;
     margin-bottom: 21px;
-    padding: 8px;
-    background: #ddd;
+    padding: 6px 10px;
+    background: none;
+    border-radius: 16px;
+    border: solid 2px rgb(48, 208, 221);
+    color: #30d0dd;
 }
 .grid-edit .grid-values article{
+    color: #fff;
     font-size: 1.3em;
     float: left;
     height: 34px;
@@ -47,6 +55,15 @@
     font-size: 0.8em;
     padding: 5px;
     float: right;
+    border: solid 2px rgb(48, 208, 221);
+    background: none;
+    border-radius: 2px;
+    color: #30d0dd;
+}
+
+.grid-edit .grid-values button:hover{
+    background: #30d0dd;
+    color: #fff;
 }
 
 #editPortfolio{
@@ -54,34 +71,32 @@
 }
 
 .slideOne {
-    width: 35px;
-    height: 10px;
-    background: #333;
-    margin: 10px auto;
+    width: 30px;
+    height: 13px;
+    background: #999;
+    margin: 8px auto;
     position: relative;
     border-radius: 50px;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
     float: right;
 }
   .slideOne label {
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     position: absolute;
-    top: -3px;
+    top: -2px;
     left: -3px;
     cursor: pointer;
-    background: #fcfff4;
-    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: #dd3060;
     border-radius: 50px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
   }
   .slideOne input[type=checkbox] {
     visibility: hidden;
   }
   .slideOne input[type=checkbox]:checked + label {
-    left: 20px;
+    left: 15px;
+    background: #30d0dd;
   }
 
   footer{

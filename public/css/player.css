@@ -6,20 +6,27 @@
 }
 
 .principal .titles{
-	font-size: 1.5em;
-	width: 97%;
-	padding: 10px;
-	background: #ddd;
+	font-size: 2em;
 	text-align: left;
-	margin-top: 15px;
+	color: #fff;
 	word-wrap: break-word;
+	margin-bottom: 10px;
+}
+
+.principal #views{
+	color: #fff;
+	font-size: 1.2em;
+	float: left;
+}
+
+.principal #textComment{
+	margin-top: 100px;
+	margin-bottom: 10px;
 }
 
 .principal .titlesMedium{
-	font-size: 1.5em;
-	width: 48%;
-	padding: 10px;
-	background: #ddd;
+	font-size: 1.75em;
+	color: #fff;
 	text-align: left;
 	margin-top: 15px;
 }
@@ -28,9 +35,8 @@
 	font-size: 1.2em;
 	width: 97%;
 	padding: 10px;
-	background: #ddd;
+	color: #fff;
 	text-align: left;
-	margin-top: 15px;
 	word-wrap: break-word;
 }
 
@@ -51,6 +57,18 @@ video{
 	margin-bottom: 15px;
 }
 
+.content-functions{
+	float: right;
+	margin-right: 20px;
+}
+
+.content-functions img{
+	width: 25px;
+	height: 25px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
 .video i{
 	font-size: 1.7em;
 	color: #333;
@@ -60,42 +78,65 @@ video{
 
 .comment{
 	width: 97%;
-	background: #ddd;
-	margin-top: 10px;
-	padding: 15px;
+	background: rgba(0, 0, 0, 0.5);
 	word-wrap: break-word;
+	height: 150px;
+	color: #fff;
+	margin-top: 10px;
 }
 
-.comment i{
-	font-size: 3em;
+.imgProfile{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
 	position: absolute;
 }
 
+.imgProfile img{
+	height: 100%;
+}
+
 .comment textarea{
-	margin-left: 60px;
-	width:85%;
+	margin-left: 110px;
+	width:79%;
+	height: 100px;
 	font-size: 1em;
-	padding: 5px;
+	padding: 10px;
 	resize: none;
+	background: #646464;
+	color: #fff;
 }
 
 .comment h1{
-	margin-left: 60px;
+	padding-top: 20px;
+	margin-left: 115px;
 	font-size: 1.2em;
 	margin-bottom: 5px;
 }
 
 .comment .btn-comment{
-	background: #555;
-	padding: 10px 15px;
+	background: none;
+	padding: 5px 15px;
 	margin-left: 78%;
-	color: #fff;
+	border-radius: 2px;
+	border: solid 2px rgb(48, 208, 221);
+	color: #30d0dd;
+	width: 115px;
+	margin-top: 40px;
+}
+
+#btn-comment{
 	margin-top: 5px;
 }
 
 .comment .contentComment{
-	margin-left: 60px;
+	margin-left: 115px;
 	width:85%;
 	font-size: 1em;
 	word-wrap: break-word;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
 }
