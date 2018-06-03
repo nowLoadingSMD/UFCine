@@ -1,7 +1,6 @@
 .principal .titles{
-    font-size: 2.125em;
-    color: #fff;
-    margin-top: 50px;
+    float:none;
+    margin-top: 60px;
 }
 
 .principal .titles img{

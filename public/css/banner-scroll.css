@@ -57,6 +57,7 @@
 	background: none;
 	height: 100%;
 	position: absolute;
+	background: #fff;
 }
 .img-banner{
 	width: 100%;
@@ -91,7 +92,7 @@
 
 @media screen and (min-width: 450px){
 	.banner-player{
-		width: 2.2%;
+		width: 2.5%;
 	}
 	.slider__frame article{
 		display: block;
@@ -109,7 +110,7 @@
 
 @media screen and (min-width: 1080px){
 	.banner-player{
-		width: 2.2%;
+		width: 2.5%;
 	}
 	.slider__frame article{
 		display: block;

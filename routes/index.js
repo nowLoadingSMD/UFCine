@@ -167,4 +167,8 @@ router.get("/pages/watchList.html", function(req,res, next) {
   res.render('pages/watchList');
 })
 
+router.get("/pages/upload.html", function(req,res, next) {
+  res.render('pages/upload');
+})
+
 module.exports = (app) => app.use("/", router) 

@@ -19,13 +19,13 @@
 	<% include ../partials/navBar %>
 	
 	<section class="principal">
-		<article class="titleInitial"><h1>Em cartaz</h1></article>
+		<article class="titleInitial">Em cartaz</article>
 
 		<%- include('../partials/slider', {emCartazList: emCartazList}); %>
 
 		<div class="banners">
 			<div class="left">
-				<article class="titles"><h1>Lançamentos</h1></article>
+				<article class="titles">Lançamentos</article>
 				<a href="releases.html"><button class="btn-viewMore">Mais</button></a>
 				<div class="releases">
 					<% releasesList.forEach(function(item){ %>
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 				<div id="right">
-				<article class="titles"><h1>Recomendados</h1></article>
+				<article class="titles">Recomendados</article>
 				<a href="recommended.html"><button class="btn-viewMore">Mais</button></a>
 				<div class="recommended">
 					<% recommendedList.forEach(function(item){ %>

@@ -1,0 +1,162 @@
+.content-principal{
+    margin: 100px 30px 0 30px;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding: 40px;
+}
+
+.principal .titles{
+    margin-top: 35px;
+}
+
+.principal .titleMedium{
+    color: white;
+    font-size: 26px;
+    font-family: CircularBlack;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
+}
+.grid-upload{
+	display: grid;
+	grid-gap: 10px 40px;
+	grid-template-columns: 48% 48%;
+}
+.grid-upload form{
+	width: 100%;
+	float: left;
+}
+.grid-upload form textarea{
+	width: 100%;
+	height: 200px;
+    resize: none;
+    border-radius: 8px;
+    border: solid 2px rgb(40, 181, 193);  
+    background: none;
+    color: white;
+    padding: 5px 10px;
+    transition: border 0.5s;
+}
+
+.grid-upload form textarea:focus{
+    border-color: var(--darkish-pink);
+}
+
+.grid-upload #img-upload{
+	width: 60%;
+    height: 179px;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    margin-top: 10px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.grid-upload #img-upload img{
+    width: 30%;
+    margin: 65px 35%;
+}
+
+.grid-upload #img-banner{
+    width: 30%;
+    height: 179px;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    float: right;
+    margin-top: 10px;
+}
+
+.grid-upload #img-banner img{
+    width: 50%;
+    margin: 55px 25%;
+}
+
+.textfield{
+    background: none;
+    border-bottom: solid 2px rgb(40, 181, 193);
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border 0.5s;
+}
+
+.textfield:focus{
+    border-color: var(--darkish-pink);
+}
+
+#titleFilm{
+    width: 100%;
+}
+
+.grid-itens select{
+	width: 100%;
+    margin-bottom: 20px;
+    background: none;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    padding: 4.5px 10px;
+    color: var(--aqua-marine);
+    cursor: pointer;
+}
+
+#list input, #list2 input{
+    background: none;
+    border-bottom: solid 2px rgb(40, 181, 193);
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.grid-itens{
+	display: grid;
+	grid-gap: 10px 4%;
+    grid-template-columns: 48% 48%;
+    margin-top: 30px;
+}
+
+.grid-itens i{
+    float: right;
+    font-size: 20px;
+    color: var(--aqua-marine);
+    margin-top: 6px; 
+    cursor: pointer;
+}
+
+.btn-confirm{
+	background: none;
+    padding: 10px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: solid 2px var(--aqua-marine);
+    color: var(--aqua-marine);
+    margin-right: 10px;
+}
+
+#btn-cancel{
+    margin-left: 35%;
+    transition: border 0.5s, color 0.5s;
+}
+
+#btn-cancel:hover{
+    border-color: var(--darkish-pink);
+    color: var(--darkish-pink);
+}
+
+#btn-publish{
+    background: var(--aqua-marine);
+    color: white;
+    transition: border 0.5s, background 0.5s;
+}
+
+#btn-publish:hover{
+    border-color: var(--darkish-pink);
+    background: var(--darkish-pink);
+}

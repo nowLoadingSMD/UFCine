@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<script src="../lib/jquery-3.3.1.min.js"></script>	
+
+	<title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/css/upload.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="../js/cookieLibrary.js"></script>
+	<script src="../js/auth.js"></script> 
+	
+</head>
+<body>
+	<% include ../partials/navBar %>
+	
+	<section class="principal">
+        <article class="titles"><a href="browse.html"><img src="../img/icons/back.svg"></a> Enviar Vídeo</article>
+		<div class="content-principal">
+            <div class="grid-upload">
+                <div class="upload-left">
+                    <article class="titleMedium">Vídeo</article><br/><br/><br/>
+                    <article id="img-upload">
+                        <img src="../img/icons/imgUploadFilm.svg">
+                    </article>
+                    <article id="img-banner">
+                        <img src="../img/icons/imgUploadBanner.svg">
+                    </article>
+                    <form>
+                        <input type="text" id="titleFilm" class="textfield" placeholder="Título do filme"/>
+                        <textarea placeholder="Descrição"></textarea>
+                    </form>
+                </div>
+                <div class="upload-right">
+                    <form>
+                        <div class="grid-itens">
+                            <div>
+                                <input type="text" class="textfield" placeholder="Direção"/>
+                                <input type="text" class="textfield" placeholder="Roteiro"/>
+                                <article class="titleMedium">Elenco</article>
+                                <i class="fas fa-plus-circle" id="addItem"></i>
+                                <article id="list"></article>
+                            </div>
+                            <div>
+                                <select>
+                                    <option value="">Classificação</option>
+                                    <option value="">Livre</option>
+                                    <option value="">+10</option>
+                                    <option value="">+12</option>
+                                    <option value="">+14</option>
+                                    <option value="">+16</option>
+                                    <option value="">+18</option>
+                                </select>
+                                <select>
+                                    <option value="">Ano</option>
+                                    <option value="">2018</option>
+                                    <option value="">2017</option>
+                                    <option value="">2016</option>
+                                    <option value="">2015</option>
+                                    <option value="">2014</option>
+                                    <option value="">2013</option>
+                                    <option value="">2012</option>
+                                    <option value="">2011</option>
+                                    <option value="">2010</option>
+                                    <option value="">2009</option>
+                                    <option value="">2008</option>
+                                    <option value="">2007</option>
+                                    <option value="">2006</option>
+                                </select>
+                                <article class="titleMedium">Gênero</article>
+                                <i class="fas fa-plus-circle" id="addItem2"></i>
+                                <article id="list2"></article>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <button id="btn-cancel" class="btn-confirm">CANCELAR</button>
+        <button id="btn-publish" class="btn-confirm">PUBLICAR</button>
+	</section>
+
+	<nav class="tabBar">
+		<a href="#" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
+	</nav>
+
+	<footer><h1>©Now Loading</h1></footer>
+
+	<script src="../lib/glide.min.js"></script>
+	<script src="../js/scrollbar.js"></script>
+	<script src="../js/global.js"></script>
+
+</body>
+</html>

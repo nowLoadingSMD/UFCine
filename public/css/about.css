@@ -3,7 +3,7 @@
 }
 
 .tabBar #tagAbout{
-    color: #30d0dd;
+    color: var(--aqua-marine);
 }
 .logoCinema{
     width: 400px;
