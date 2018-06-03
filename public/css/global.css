@@ -57,6 +57,14 @@ html{
 	z-index: 5;
 }
 
+.navbar i{
+	padding: 15px;
+	float: right;
+	position: relative;
+	color: #fff;
+	font-size: 1.3em;
+}
+
 .navbar h1{
 	padding: 10px;
 	font-size: 1.4em;

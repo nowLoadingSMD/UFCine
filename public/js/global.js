@@ -92,10 +92,10 @@ var btnLogout = document.getElementById("btn-logout");
 logar.onclick = async function(){
 
   if ( await login() ){
-      // modal.style.display = "none";
-      // btn.style.display = "none";
-      // user.style.display = "block";
-      // logarMobile.style.display = "none";
+      modal.style.display = "none";
+      btn.style.display = "none";
+      user.style.display = "block";
+      logarMobile.style.display = "none";
   // } else {
   //   alert("Erro ao logar")
   // }
