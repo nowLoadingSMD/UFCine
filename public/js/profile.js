@@ -33,3 +33,39 @@ btnWatchlist.onclick = function(){
     btnWatchlist.className = "active";
 };
 
+// MENU NOTIFICATIONS
+
+var answered = document.getElementById("answered");
+var unanswered = document.getElementById("unanswered");
+var comments = document.getElementById("comments");
+
+var btnAnswered = document.getElementById("btn-answered");
+var btnUnanswered = document.getElementById("btn-unanswered");
+var btnComments = document.getElementById("btn-comments");
+
+btnAnswered.onclick = function(){
+    answered.style.display = "block";
+    unanswered.style.display = "none";
+    comments.style.display = "none";
+    btnAnswered.className = "active";
+    btnUnanswered.className = "";
+    btnComments.className = "";
+};
+
+btnUnanswered.onclick = function(){
+    answered.style.display = "none";
+    unanswered.style.display = "block";
+    comments.style.display = "none";
+    btnAnswered.className = "";
+    btnUnanswered.className = "active";
+    btnComments.className = "";
+};
+
+btnComments.onclick = function(){
+    answered.style.display = "none";
+    unanswered.style.display = "none";
+    comments.style.display = "block";
+    btnAnswered.className = "";
+    btnUnanswered.className = "";
+    btnComments.className = "active";
+};

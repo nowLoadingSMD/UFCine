@@ -5,3 +5,62 @@
 .tabBar #tagAbout{
     color: #30d0dd;
 }
+.principal .titles{
+    font-size: 2.125em;
+    margin-top: 30px;
+    float: left;
+    color: #fff;
+}
+.logoCinema{
+    width: 400px;
+    height: 150px;
+    margin-top: 100px;
+    margin-left: 30%;
+    background: #fff;
+    margin-bottom: 30px;
+}
+.aboutCinema{
+    color: #fff;
+    font-size: 1.3em;
+    padding: 10px;
+}
+.titlesMedium{
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.group-team{
+    display: grid;
+    grid-gap: 20px 2%;
+    grid-template-columns: 18.4% 18.4% 18.4% 18.4% 18.4%;
+    margin-top: 20px;
+}
+
+.group-team .members{
+    width: 100%;
+    height: 40%;
+    float: left;
+    text-align: center;
+}
+
+.group-team .members div{
+    width: 100%;
+    height: 14vw;
+    overflow: hidden;
+}
+
+.group-team .members div img{
+    width: 100%;
+}
+
+.group-team .members article{
+    font-size: 1em;
+    color: #fff;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.group-team .members:hover article{
+    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
+}

@@ -9,7 +9,7 @@
 .principal .content-principal{
     display: grid;
     grid-gap: 20px 20px;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
 }
 
 #btn-editProfile{
@@ -70,7 +70,7 @@
     display: block;
     color: #30d0dd;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
     border: solid 2px rgb(48, 208, 221);
 }
@@ -151,32 +151,73 @@
 .content-notifications ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #999;
+    background-color: none;
     margin-top: 120px;
     width: 95%;
+    cursor: pointer;
 }
 
 .content-notifications li {
     float: left;
+    font-size: 0.9em;
     width: 33.3%;
-}
-
-.content-notifications li a {
+    border: solid 2px rgb(48, 208, 221);
     display: block;
-    color: white;
+    color: #30d0dd;
     text-align: center;
     padding: 10px 0;
-    text-decoration: none;
 }
 
-.content-notifications li a:hover {
-    background-color: #111;
+.content-notifications li:hover {
+    background-color: #30d0dd;
+    color: #fff;
 }
 
-.content-notifications li .active {
-    background-color: #111;
+.content-notifications .active {
+    background-color: #30d0dd;
+    color: #fff;
 }
 
 #favorites, #watchlist{
     display: none;
+}
+
+.group-notifications{
+    width: 95%;
+    height: 400px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding-top: 10px;
+    overflow-y: scroll;
+}
+
+.notifications{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#answered, #comments{
+    display: none;
+}
+
+.notifications .profileNotifications{
+    width: 100px;
+    height: 100%;
+    float: left;
+}
+.notifications .profileNotifications img{
+    height: 100%;
+}
+.notifications h1{
+    font-size: 1.2em;
+    color: #fff;
+    margin-left: 120px;
+    padding-top: 5px;
+}
+
+.notifications h6{
+    font-size: 1em;
+    color: #fff;
+    margin-left: 120px;
+    padding-top: 5px;
 }

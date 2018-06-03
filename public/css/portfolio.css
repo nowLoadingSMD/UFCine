@@ -1,21 +1,21 @@
 .principal .titles{
-    font-size: 1.5em;
-    width: 400px;
-    padding: 10px;
-    background: #ddd;
-    text-align: center;
+    font-size: 2.125em;
     margin-top: 30px;
     float: left;
+    color: #fff;
+}
+
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
 }
 
 .principal .titlesMedium{
-    font-size: 1.3em;
-    width: 150px;
-    padding: 10px;
-    background: #ddd;
+    font-size: 1.75em;
     text-align: center;
-    /* margin-top: 30px; */
     float: left;
+    color: #fff;
 }
 
 #infos-central{
@@ -27,34 +27,49 @@
 }
 
 #infos-central article{
-    background: #aaa;
+    color: #fff;
     margin-top: 10px;
-    font-size: 1.2em;
-    padding: 5px;
+    font-size: 2.125em;
+}
+
+#infos-central #function{
+    font-size: 1.75em;
 }
 
 #infos-central #img-author{
     width: 150px;
     height: 150px;
-    align-content: center;
     margin-left:75px; 
+    overflow: hidden;
+}
+
+#infos-central #img-author img{
+    height: 110%;
 }
 
 .biography{
     width: 100%;
     padding: 10px;
     margin-top: 50px;
-    background: #ddd;
-    font-size: 1em;
+    font-size: 1.125em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 #btn-more{
-    font-size: 1.3em;
-    padding: 10px;
-    background: #ccc;
+    font-size: 1em;
+    padding: 5px 10px;
+    background: none;
     text-align: center;
     float: right;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    color: #30d0dd;
+}
+
+#btn-more:hover{
+    background: #30d0dd;
+    color: #fff;
 }
 
 .group-films{
@@ -71,21 +86,77 @@
     text-align: center;
 }
 
-.group-films .film i{
-    font-size: 2em;
-    color: #333;
-    margin-top: 35%;
-}
-
 .group-films .film div{
     width: 100%;
-    height: 13vw;
-    background: #999;
+    height: 15vw;
+    overflow: hidden;
+}
+
+.group-films .film div .img-film{
+    width: 100%;
 }
 
 .group-films .film article{
     font-size: 1.2em;
-    color: #000;
-    background: #fff;
+    color: #fff;
     padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.group-films .film:hover article{
+    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
+}
+
+/* EDIT PORTFOLIO */
+
+.edit-biography{
+    color: #30d0dd;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.125em;
+    margin-bottom: 40px;
+    resize: none;
+    background: none;
+    border-radius: 8px;
+    border: solid 2px rgb(48, 208, 221);
+    height: 400px;
+}
+
+.addFilm{
+    width: 100%;
+    height: 40%;
+    float: left;
+    text-align: center;
+}
+
+.group-films .addFilm div{
+    width: 100%;
+    height: 12vw;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    background-image: url("../img/icons/addWatchlist.svg");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position-x: 53%;
+    background-position-y: 53%;
+}
+
+.group-films .addFilm article{
+    font-size: 1.2em;
+    color: #fff;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.icons-film{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    margin-left: 10%;
+    margin-top: 12.8vw;
+}
+
+#icon-remove{
+    margin-left: 13%;
 }

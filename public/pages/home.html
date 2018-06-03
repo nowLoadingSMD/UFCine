@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<script src="../lib/jquery-3.3.1.min.js"></script>	
+
+	<title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="../css/banner-scroll.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="../js/cookieLibrary.js"></script>
+	<script src="../js/auth.js"></script> 
+	
+</head>
+<body>
+	<!-- NAVBAR-->
+	<header class="navbar">
+            <input type="text" id="search" placeholder="Pesquisar" />
+            <h1>LOGO</h1>
+            <i class="fas fa-sign-in-alt" id="iconLogin"></i>
+            <div id="dropdown">
+                <i id="btn-user" class="fas fa-user"></i>
+                <div class="dropdown-content">
+                    <a href="profile.html">Perfil</a>
+                    <a href="#">Notificações</a>
+                    <a href="#" id="btn-upload">Enviar filme</a>
+                    <a href="#">Configurações da conta</a>
+                    <a href="#" id="btn-logout">Sair</a>
+                </div>
+            </div>
+            <button type="button" id="btn-login">Entrar</button>
+            <i class="fas fa-search" id="searchIcon"></i>
+        </header>
+    
+    <!-- MODAL LOGIN/SIGNUP -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<!-- MODAL LOGIN -->
+			<div id="modal-login">
+				<h1>LOGIN</h1>
+				<span class="close">&times;</span><br/>
+				<form>
+					<input type="text" id="loginEmail" class="textfield" placeholder="Email"/><br/>
+					<input type="password" id="loginPassword" class="textfield" placeholder="Senha"/><br/>
+					<input type="button" id="btn-recoverPassword" class="btn-go" value="Esqueceu sua senha?">
+					<input type="button" id="btn-goLogin" class="btn-go" value="Entrar"/><br/>
+					<input type="button" id="btn-modal-signUp" class="btn-go" value="Cadastre-se"></button>
+				</form>
+			</div>
+			<!-- MODAL SIGNUP -->
+			<div id="modal-signUp">
+				<h1>CADASTRO</h1>
+				<span class="close">&times;</span><br/>
+				<form id="form-signUp">
+					<div id="form-left">
+						<input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
+						<input type="text" id="signEmail" class="textfield" placeholder="E-mail"/><br/>
+						<input type="password" id="signPassword" class="textfield" placeholder="Senha"/><br/>
+						<input type="button" id="btn-modal-login" class="btn-go" value="Já é cadastrado?"></button>
+					</div>
+					<div id="form-right">
+						<input type="text" id="signUserName" class="textfield" placeholder="Nome de usuário"/><br/>
+						<input type="text" id="signMatriculation" class="textfield" placeholder="Matrícula"/><br/>
+						<input type="password" id="signUpConfirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
+						<input type="submit" id="btn-goSignUp" class="btn-go" value="Cadastrar"/><br/>
+					</div>
+				</form>
+            </div>
+            <!-- MODAL UPLOAD -->
+			<div id="modal-upload">
+				<div class="grid-upload">
+					<div class="upload-left">
+						<h1>ENVIAR VÍDEO</h1>
+						<article id="img-upload"><i class="fas fa-upload"></i></article>
+						<form>
+							<input type="text" class="textfield" placeholder="Título do filme"/>
+							<textarea placeholder="Descrição"></textarea>
+			
+						</form>
+						
+					</div>
+					<div class="upload-right">
+							<span class="close">&times;</span><br/>
+						<form>
+							<input type="text" class="textfield" placeholder="Direção"/>
+							<input type="text" class="textfield" placeholder="Roteiro"/>
+							<div class="grid-itens">
+								<div>
+									<select id="select-clas">
+										<option value="" disabled>Classificação</option>
+										<option value="">Livre</option>
+										<option value="">+10</option>
+										<option value="">+12</option>
+										<option value="">+14</option>
+										<option value="">+16</option>
+										<option value="">+18</option>
+									</select>
+									<h3>Elenco</h3>
+									<i class="fas fa-plus-circle" id="addItem"></i>
+									<article id="list"></article>
+								</div>
+								<div>
+									<select id="select-public">
+										<option value="" disabled>Classificação</option>
+										<option value="">Livre</option>
+										<option value="">+10</option>
+										<option value="">+12</option>
+										<option value="">+14</option>
+										<option value="">+16</option>
+										<option value="">+18</option>
+									</select>
+									<h3>Gênero</h3>
+									<i class="fas fa-plus-circle" id="addItem2"></i>
+									<article id="list2"></article>
+								</div>
+							</div>
+							<button id="btn-enviar">Enviar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="principal">
+		<article class="titleInitial"><h1>Em cartaz</h1></article>
+		<div id="intro" class="slider glide">
+  			<div class="slider__track glide__track" data-glide-el="track">
+    			<ul class="slider__slides glide__slides">
+			        <li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>  
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>    
+					<li class="slider__frame glide__slide">
+						<div class="banner-player">
+							<img src="../img/films/movie.jpg" class="img-banner">
+						</div>
+						<article class="titleFilm">Nome do filme</article>
+						<article><p>Descrição:</p>çlkasdlakdçlaksdaçskdalçsfjaskfjsalfjasflçjsdflskdjfalskçdfjasdlçfkjasklfjsdfklajhfklajdflasdhfjlasdhfkçasjdfasldfkjasdlfkajsfklas</article>
+						<article><p>Local de Exibição:</p>casa do caralho</article>
+					</li>        
+    			</ul>
+  			</div>
+	  		<div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">    
+		      <button class="slider__bullet glide__bullet" data-glide-dir="=0"></button>
+		      <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>
+		      <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>    
+		      <button class="slider__bullet glide__bullet" data-glide-dir="=3"></button>    
+		      <button class="slider__bullet glide__bullet" data-glide-dir="=4"></button>    
+	  		</div>
+		</div>
+		
+
+		<div class="banners">
+			<div class="left">
+				<article class="titles"><h1>Lançamentos</h1></article>
+				<a href="releases.html"><button class="btn-viewMore">Mais</button></a>
+				<div class="releases">
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film">
+						</div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+				</div>
+			</div>
+				<div id="right">
+				<article class="titles"><h1>Recomendados</h1></article>
+				<a href="recommended.html"><button class="btn-viewMore">Mais</button></a>
+				<div class="recommended">
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+					<a href="player.html?id=5b09a72be6643d78fc55f11a"><div class="grid-item">
+						<div>
+							<img src="../img/icons/play.svg" class="icon-play">
+							<img src="../img/icons/favorite.svg" class="functions">
+							<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
+							<img src="../img/films/movie.jpg" class="img-film"></div>
+						<article>Nome do filme</article>
+					</div></a>
+				</div>
+			</div>
+		</div>
+		
+
+		
+	</section>
+
+	<nav class="tabBar">
+		<a href="#" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
+	</nav>
+
+	<footer><h1>©Now Loading</h1></footer>
+
+	<script src="../lib/glide.min.js"></script>
+	<script src="../js/scrollbar.js"></script>
+	<script src="../js/global.js"></script>
+
+</body>
+</html>
