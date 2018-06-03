@@ -23,9 +23,6 @@ jQuery(document).ready(async function($) {
 // Get the modal
 var modal = document.getElementById('myModal');
 		
-// // Get the button that opens the modal
-// var btn = document.getElementById("btn-login");
-
 // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
 // var span2 = document.getElementsByClassName("close")[1];
@@ -86,10 +83,13 @@ var modal = document.getElementById('myModal');
 // }
 
 // 
-// var user = document.getElementById("btn-user");
+
 // var logarMobile = document.getElementById("iconLogin");
 
 var btnLogout = document.getElementById("btn-logout");
+var user = document.getElementById("btn-user");
+// // Get the button that opens the login
+var btn = document.getElementById("btn-login");
 
 btnLogout.onclick = function(e){
   // e.preventDefault()
