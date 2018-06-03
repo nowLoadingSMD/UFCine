@@ -29,24 +29,18 @@
 		<article class="titles"><h1>Lançamentos</h1></article>
 		<a href="pages/releases.html"><button class="btn-viewMore">Mais</button></a>
 		<div class="releases">
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
+			<% releasesList.forEach(function(item){ %>
+				<%- include("./partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+			<% }); %>
 		</div>
 
 		<div id="group">
 		<article class="titles"><h1>Recomendados</h1></article>
 		<a href="pages/recommended.html"><button class="btn-viewMore">Mais</button></a>
 		<div class="recommended">
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
-			<% include ./partials/cards/movieCard %>
+			<% recommendedList.forEach(function(item){ %>
+				<%- include("./partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+			<% }); %>
 		</div>
 
 		</div>

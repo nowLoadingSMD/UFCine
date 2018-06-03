@@ -79,6 +79,7 @@ router.post("/uploadVideo", async (req, res) => {
         producerID: "5b099c7318ab0f756ccc25bf",
         quantityOfApplauses: 0,
         onExposition: false,
+        quantityOfView: 0,
         quantityOfViewLastWeek: 0,
         private: false
     }

@@ -24,11 +24,11 @@
 		<div id="left">
 			<div class="video">
 				<video controls id="videoPlayer">
-		  			<source src="" type="video/mp4">
+		  			<source src="/api/video/videoStream?id=<%= video._id %>" type="video/mp4">
 				Your browser does not support the video tag.
 				</video><br/>
-				<article class="titles" id="videoName"></article>
-				<article id="views">158 visualizações</article>
+				<article class="titles" id="videoName"><%= video.name %></article>
+				<article id="views"><%= video.quantityOfView %> visualizações</article>
 				<div class="content-functions">
 					<img src="../img/icons/applause.svg">
 					<img src="../img/icons/addWatchList.svg">
@@ -59,7 +59,7 @@
 		</div>
 		<div id="right">
 			<article class="titlesMedium">Descrição</article>
-			<article class="content" id="productionInfoDescription"></article>
+			<article class="content" id="productionInfoDescription"><%= productionInfo.description %></article>
 			<article class="titlesMedium">Informações</article>
 			<article class="content" id="productionInfoGenres">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
 			<article class="titlesMedium">Direção</article>

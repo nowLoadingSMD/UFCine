@@ -23,9 +23,9 @@
 	<section class="principal">
         <article class="titles"><a href="../index.html">INÍCIO</a> > LANÇAMENTOS</article>
         <div class="grid-films">
-			<% include ../partials/cards/movieCard %>
-			<% include ../partials/cards/movieCard %>
-			<% include ../partials/cards/movieCard %>
+                <% releasesList.forEach(function(item){ %>
+                    <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+                <% }); %>
             <!-- <div class="film">
                 <div class="actions">
                     <i class="far fa-heart"></i>

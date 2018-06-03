@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+const Video = require("../models/Video")
+const ProductionInfo = require("../models/ProductionInfo")
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
 
   let emCartazItem = {
     "name": "PQPQP",
@@ -15,11 +18,39 @@ router.get('/', function(req, res, next) {
   for (let i = 0; i < 5; i++){
     emCartaz.push(emCartazItem);
   }
-  
-  res.render('index', {emCartazList: emCartaz});
+
+  let releases = []
+
+  let d = new Date()
+
+  d.setDate(d.getDate() - 30)
+
+  console.log(d)
+
+  await Video
+    .find({ "created_on": d.getDate })
+    .limit(6)
+    .exec ( async (err, result) => {
+
+      let resultReleases = result
+
+      await Video
+        .find({ "quantityOfViewLastWeek": 0 })
+        .limit(6)
+        .exec( (err, result) => {
+
+          res.render('index', {
+            emCartazList: emCartaz,
+            releasesList: resultReleases,
+            recommendedList: result
+          });
+        })
+    })
+
 });
 
-router.get('/index.html', function(req, res, next) {
+router.get('/index.html', async function(req, res, next) {
+
 
   let emCartazItem = {
     "name": "PQPQP",
@@ -32,8 +63,35 @@ router.get('/index.html', function(req, res, next) {
   for (let i = 0; i < 5; i++){
     emCartaz.push(emCartazItem);
   }
+
+  let releases = []
+
+  let d = new Date()
+
+  d.setDate(d.getDate() - 30)
+
+  console.log(d)
+
+  await Video
+    .find({ "created_on": d.getDate })
+    .limit(6)
+    .exec ( async (err, result) => {
+
+      let resultReleases = result
+
+      await Video
+        .find({ "quantityOfViewLastWeek": 0 })
+        .limit(6)
+        .exec( (err, result) => {
+
+          res.render('index', {
+            emCartazList: emCartaz,
+            releasesList: resultReleases,
+            recommendedList: result
+          });
+        })
+    })
   
-  res.render('index', {emCartazList: emCartaz});
 });
 
 router.get("/pages/about.html", function(req,res, next) {
@@ -61,7 +119,21 @@ router.get("/pages/genre.html", function(req,res, next) {
 })
 
 router.get("/pages/player.html", function(req,res, next) {
-  res.render('pages/player');
+
+  var id = req.query.id
+
+  Video.findById(id, (err, video) => {
+    ProductionInfo
+      .find({"videoID": video._id})
+      .exec( (err, productionInfo) => {
+        console.log(productionInfo)
+        res.render('pages/player', {
+                                    video: video,
+                                    productionInfo: productionInfo[0]
+                                    });
+      })
+  })
+  
 })
 
 router.get("/pages/portfolio.html", function(req,res, next) {
@@ -73,11 +145,25 @@ router.get("/pages/profile.html", function(req,res, next) {
 })
 
 router.get("/pages/recommended.html", function(req,res, next) {
-  res.render('pages/recommended');
+  
+  let d = new Date()
+  Video
+    .find({"created_on": d.getDate })
+    .exec( (err, result) => {
+      res.render('pages/recommended', {recommendedList: result});
+    })
+
 })
 
 router.get("/pages/releases.html", function(req,res, next) {
-  res.render('pages/releases');
+
+  let d = new Date()
+  Video
+    .find({"created_on": d.getDate })
+    .exec( (err, result) => {
+      res.render('pages/releases', {releasesList: result});
+    })
+
 })
 
 router.get("/pages/tag.html", function(req,res, next) {
