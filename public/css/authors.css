@@ -10,20 +10,20 @@ a{
     text-decoration: none;
 }
 #alphabet{
-    width: 40px;
+    width: 35px;
     background: none;
     text-align: center;
     margin-top: 80px; 
     padding: 8px 2px 0 0;
     position: absolute;
-    right: 20px;
+    right: 2%;
     overflow-y: scroll;
     height: 70%;
     position: fixed;
 }
 
 .letters{
-    font-size: 1.8em;
+    font-size: 1.3em;
     background: none;
     color: #30d0dd;
     margin-bottom: 10px;
@@ -53,7 +53,7 @@ a{
 }
 
 .blockAuthors{
-    width: 95%;
+    width: 87%;
     height: 200px;
     display: flex;
     flex-wrap: nowrap;
@@ -88,4 +88,17 @@ a{
     margin-top: 10px;
     font-size: 1.2em;
     color: #fff;
+}
+
+@media screen and (min-width: 1080px){
+    #alphabet{
+        width: 40px;
+        right: 20px;
+    }
+    .letters{
+        font-size: 1.8em;
+    }
+    .blockAuthors{
+        width: 95%; 
+    }
 }

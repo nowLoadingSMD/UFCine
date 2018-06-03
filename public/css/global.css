@@ -1,3 +1,23 @@
+@font-face {
+    font-family: CircularMedium;
+    src: url(../fonts/CircularStd-Medium.otf);
+}
+
+@font-face {
+    font-family: CircularBlack;
+    src: url(../fonts/CircularStd-Black.otf);
+}
+
+@font-face {
+    font-family: CircularBold;
+    src: url(../fonts/CircularStd-Bold.otf);
+}
+
+@font-face {
+    font-family: CourierNew;
+    src: url(../fonts/CourierNewPSMT.ttf);
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -6,11 +26,18 @@
 	outline: none;
 	font-weight: 300;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "CircularMedium";
+}
+
+:root {
+	--dark-blue-grey: rgb(17, 29, 56);
+	--aqua-marine: rgb(40, 181, 193);
+	--darkish-pink: rgb(221, 48, 96);
+	--dull-purple: rgb(135, 88, 126);
 }
 
 body{
-	background-color: #2D243F;
+	background-color: var(--dark-blue-grey);
 	background-image: linear-gradient(rgba(0, 216, 255, 0.53), rgba(155, 233, 235, 0.22) 32%, rgba(63, 212, 228, 0) 64%, rgba(221, 48, 96, 0.44) 100%, rgba(63, 212, 228, 0), rgba(95, 21, 98, 0));
 }
 
@@ -47,9 +74,8 @@ body{
 
 .navbar #btn-login{
 	display: none;
-	font-size: 1.2em;
+	font-size: 1em;
 	background: none;
-	padding: 5px;
 	float: right;
 	margin: 15px 25px;
 	cursor: pointer;
@@ -58,12 +84,12 @@ body{
 	border-radius: 2px;
 	border: solid 2px #30d0dd;
 	color: #30d0dd;
-	transition: background 0.2s;
+	transition: background 0.5s;
 }
 
 .navbar #btn-login:hover{
 	color: #fff;
-	background: #30d0dd;
+	background: var(--darkish-pink);
 }
 
 .navbar #btn-user{
@@ -165,7 +191,7 @@ footer{
 	color: #fff;
 	text-align: center;
 	padding: 15px;
-	font-size: 1.3em;
+	font-size: 20px;
 	margin-bottom: 60px;
 }
 

@@ -6,8 +6,12 @@
   color: #30d0dd;
 }
 
+.banners{
+  display: block;
+}
+
 .releases{
-  margin-top: 15px;
+  margin-top: 60px;
   display: grid;
   width: 100%;
   grid-gap: 20px 2%;
@@ -15,7 +19,7 @@
 }
 
 .recommended{
-  margin-top: 15px;
+  margin-top: 60px;
   display: grid;
   width: 100%;
   grid-gap: 20px 2%;
@@ -37,7 +41,7 @@
 }
 
 .grid-item div{
-	height: 240px;
+	height: 200px;
   overflow:hidden;
 }
 .grid-item div .img-film{
@@ -46,13 +50,26 @@
 .grid-item div .icon-play{
   position: absolute;
   width: 70px;
-  margin-left: 10%;
-  margin-top: 13%;
+  /* margin-left: 4%;
+  margin-top: 5%; */
+  margin-left: 11%;
+  margin-top: 22%;
   display: none;
 }
 
 .grid-item:hover .icon-play{
   display: block;
+}
+.functions{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-left: 8%;
+  margin-top: 165px;
+  display: none;
+}
+#icon-addWatchList{
+  margin-left: 11%;
 }
 .grid-item article{
 	padding: 5px;
@@ -70,44 +87,66 @@
 }
 
 .principal .titles{
-  font-size: 2.125em;
+  font-size: 1.5em;
+  width: 170px;
+  margin-top: 15px;
+  color: #fff;
+  float: left;
+}
+
+.principal .titleInitial{
+  font-size: 2em;
   width: 170px;
   margin-top: 15px;
   color: #fff;
 }
 
-
-@media screen and (min-width: 1080px){
-  .releases{
-    width: 43%;
-    position: absolute;
-    grid-template-columns: 32% 32% 32%;
-  }
-  .recommended{
-    grid-template-columns: 32% 32% 32%;
-  }
-  #group{
-    margin-top: -52px;
-    margin-left: 53%;
-  }
-}
-
 .btn-viewMore{
-  padding: 5px;
+  padding: 3px;
   font-size: 1em;
-  position: absolute;
-  margin-left: 37%;
-  margin-top: -35px;
-  width: 6%;
-  border-radius: 2px;
+  width: 60px;
   border: solid 2px #30d0dd;
   color: #30d0dd;
   background: none;
   border-radius: 2px;
   transition: 0.2s background;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
+
+@media screen and (min-width: 1080px){
+  .banners{
+    display: grid;
+    grid-gap: 20px 2%;
+    grid-template-columns: 50% 50%;
+  }
+  .releases{
+    grid-template-columns: 32% 32% 32%;
+  }
+  .recommended{
+    grid-template-columns: 32% 32% 32%;
+  }
+  .principal .titles{
+    font-size: 2.125em;
+  }
+  .grid-item:hover .functions{
+    display: block;
+  }
+  .btn-viewMore{
+    padding: 5px;
+    margin-top: 20px;
+  }
+  .grid-item div .icon-play{
+    margin-left: 4.5%;
+    margin-top: 5%; 
+  }
+}
+
+
 
 .btn-viewMore:hover{
   background:#30d0dd;
   color: #fff;
 }
+

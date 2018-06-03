@@ -32,7 +32,44 @@
 }
 
 .grid-random{
+    padding: 0;
+    height: auto;
     background: none;
+}
+
+#textRandom{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-top: 350px;
+    font-size: 1.1em;
+}
+
+#btn-randomize{
+    padding: 5px 8px;
+    margin-top: 20px;
+    margin-left: 40%;
+    background: none;
+    border-radius: 2px;
+    border: solid 2px rgb(48, 208, 221);
+    color: #30d0dd;
+}
+
+#btn-randomize:hover{
+    background: #30d0dd;
+    color: #fff;
+}
+
+#random{
+    margin-top: 50px;
+    float: left;
+}
+
+#filmRandom{
+    width: 33%;
+    margin-right: 33.5%;
+    float: right;
+    margin-top: -25.5%;
 }
 
 .grid-genre{
