@@ -27,6 +27,10 @@ const VideoSchema = mongoose.Schema({
         type: Boolean,
         required: true
     },
+    quantityOfView: {
+        type: Number, 
+        required: true
+    },
     quantityOfViewLastWeek: {
         type: Number,
         required: true

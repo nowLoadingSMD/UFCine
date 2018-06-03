@@ -21,6 +21,7 @@ require("./routes/index.js")(app)
 //Require Controllers
 require("./controllers/authController")(app)
 require("./controllers/videoController")(app)
+require("./controllers/userController")(app)
 require("./controllers/tagController")(app)
 require("./controllers/genreController")(app)
 require("./controllers/productionInfoController")(app)

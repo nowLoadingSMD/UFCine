@@ -24,35 +24,36 @@ jQuery(document).ready(async function($){
        video = data;
     }) 
 
-    await $.get(`/api/productionInfo/?videoID=${video._id}`, (data) => {
-        productionInfo = data
-    });
+    // await $.get(`/api/productionInfo/?videoID=${video._id}`, (data) => {
+    //     productionInfo = data
+    // });
 
     await $.get(`/api/comment/?videoID=${video._id}`, (data) => {
         comments = data
     })
 
     videoID = video.videoID;
-    displayVideo(video, productionInfo, comments);
+    // displayVideo(video, productionInfo, comments);
+    populateCommentList(comments);
    
 });
 
 
-var displayVideo = function(video, productionInfo, comments) {
+// var displayVideo = function(video, productionInfo, comments) {
 
-    let videoName = document.getElementById("videoName");
-    let productionInfoDescription = document.getElementById("productionInfoDescription");
+//     let videoName = document.getElementById("videoName");
+//     let productionInfoDescription = document.getElementById("productionInfoDescription");
 
-    videoName.innerHTML = video.name;
-    productionInfoDescription.innerHTML = productionInfo.description;
+//     videoName.innerHTML = video.name;
+//     productionInfoDescription.innerHTML = productionInfo.description;
 
-    $("#videoPlayer source").attr("src", `/api/video/videoStream?id=${video._id}`);
-    document.getElementById("videoPlayer").load()
+//     $("#videoPlayer source").attr("src", `/api/video/videoStream?id=${video._id}`);
+//     document.getElementById("videoPlayer").load()
 
 
-    populateCommentList(comments);
+//     populateCommentList(comments);
     
-}
+// }
 
 btnComment.onclick = async function(){
 
@@ -105,5 +106,58 @@ var populateCommentList = function(comments) {
 
         $("#commentList").append(itemNode);
     });
+
+}
+
+var favoriteIcon = document.getElementById("favoriteIcon")
+
+favoriteIcon.onclick = function() {
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    const data = {
+        videoID: id,
+        userID: getCookie("userId")
+    }
+
+    $.post("/api/user/addToFavorite", data, (response) => {
+        const err = response.err
+
+        if (err) {
+            alert("Problema ao favoritar");
+        } else {
+            alert("Video favoritado");
+        }
+    })
+}
+
+var watchListIcon = document.getElementById("watchListIcon")
+
+watchListIcon.onclick = function() {
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    const data = {
+        videoID: id,
+        userID: getCookie("userId")
+    }
+
+    $.post("/api/user/addToWatchlist", data, (response) => {
+        const err = response.err
+
+        if (err) {
+            alert("Problema a adicioanr na watchlist");
+        } else {
+            alert("Video adicionar na watchlist");
+        }
+    })
+
+}
+
+var addApplause = function() {
 
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<script src="../lib/jquery-3.3.1.min.js"></script>	
+
+	<title>Perfil</title>
+	<link rel="stylesheet" type="text/css" href="../css/global.css">
+	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="../js/cookieLibrary.js"></script>
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+
+	<% include ../partials/navBar %>
+
+	<section class="principal">
+        <div class="content-principal">
+            <div class="content-profile">
+                <article class="titles">Perfil</article>
+                <div class="infos">
+                    <article id="imgProfile"></article>
+                    <h1><%= user.name %></h1>
+					<h1 id="email"><%= user.email %></h1>
+					<a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
+                </div>
+                <ul>
+                    <li id="btn-favorites">FAVORITOS</li>
+                    <li id="btn-posted" class="active">POSTADOS</li>
+                    <li id="btn-watchlist">WATCHLIST</li>
+                </ul>
+                <div class="group-films" id="posted">
+                    <% videosPosted.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
+                </div>
+                <div class="group-films" id="favorites">
+                    <% user.favorites.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
+                </div>
+                <div class="group-films" id="watchlist">
+                    <% user.watchList.forEach(function(item){ %>
+                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                    <% }); %>
+				</div>
+            </div>
+            <div class="content-notifications">
+                <article class="titles">NOTIFICAÇÕES</article>
+                <ul>
+                    <li><a href="#">RESPONDIDAS</a></li>
+                    <li><a class="active" href="#">NÃO RESPONDIDAS</a></li>
+                    <li><a href="#">COMENTÁRIOS</a></li>
+                </ul>
+            </div>
+        </div>
+        
+	</section>
+	
+	<nav class="tabBar">
+		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
+		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
+	</nav>
+    <footer><h1>©Now Loading</h1></footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
