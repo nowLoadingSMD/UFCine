@@ -108,3 +108,56 @@ var populateCommentList = function(comments) {
     });
 
 }
+
+var favoriteIcon = document.getElementById("favoriteIcon")
+
+favoriteIcon.onclick = function() {
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    const data = {
+        videoID: id,
+        userID: getCookie("userId")
+    }
+
+    $.post("/api/user/addToFavorite", data, (response) => {
+        const err = response.err
+
+        if (err) {
+            alert("Problema ao favoritar");
+        } else {
+            alert("Video favoritado");
+        }
+    })
+}
+
+var watchListIcon = document.getElementById("watchListIcon")
+
+watchListIcon.onclick = function() {
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    const data = {
+        videoID: id,
+        userID: getCookie("userId")
+    }
+
+    $.post("/api/user/addToWatchlist", data, (response) => {
+        const err = response.err
+
+        if (err) {
+            alert("Problema a adicioanr na watchlist");
+        } else {
+            alert("Video adicionar na watchlist");
+        }
+    })
+
+}
+
+var addApplause = function() {
+
+}

@@ -40,12 +40,12 @@
                     <% }); %>
                 </div>
                 <div class="group-films" id="favorites">
-                    <% videosPosted.forEach(function(item){ %>
+                    <% user.favorites.forEach(function(item){ %>
                         <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
                     <% }); %>
                 </div>
                 <div class="group-films" id="watchlist">
-                    <% videosPosted.forEach(function(item){ %>
+                    <% user.watchList.forEach(function(item){ %>
                         <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
                     <% }); %>
 				</div>

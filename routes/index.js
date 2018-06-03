@@ -99,14 +99,31 @@ router.get("/pages/portfolio.html", function(req,res, next) {
 router.get("/pages/profile.html", function(req,res, next) {
   const userID = req.query.id
   console.log(userID)
-  User.findById(userID, (err, user) => {
-    user.password = null
-    Video
-      .find({producerID: userID})
-      .exec( (err, videos) => {
-        res.render('pages/profile', {user: user, videosPosted: videos});
-      })
-  })  
+  // User.findById(userID, (err, user) => {
+  //   user.password = null
+  //   Video
+  //     .find({producerID: userID})
+  //     .exec( (err, videos) => {
+  //       res.render('pages/profile', {user: user, videosPosted: videos});
+  //     })
+  // })  
+
+  User
+    .findById(userID)
+    .populate("favorites")
+    .populate("watchList")
+    .exec( (err, user) => {
+      user.password = null
+
+      console.log(user)
+      
+      Video
+        .find({producerID: userID})
+        .exec( (err, videos) => {
+          res.render('pages/profile', {user: user, videosPosted: videos});
+        })
+    })
+    
   
 })
 
