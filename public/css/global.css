@@ -57,12 +57,13 @@ html{
 	z-index: 5;
 }
 
-.navbar i{
+.navbar #btn-user{
 	padding: 15px;
 	float: right;
 	position: relative;
 	color: #fff;
 	font-size: 1.3em;
+	display: none;
 }
 
 .navbar h1{
@@ -100,10 +101,6 @@ html{
 	color: #fff;
 	background: var(--darkish-pink);
 	border-color: var(--darkish-pink);
-}
-
-.navbar #btn-user{
-	display: none;
 }
 
 .navbar #btn-user:hover{

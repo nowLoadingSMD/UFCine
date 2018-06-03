@@ -16,6 +16,7 @@
     text-align: center;
     float: left;
     color: #fff;
+    font-family: CircularBlack;
 }
 
 #infos-central{
@@ -30,6 +31,7 @@
     color: #fff;
     margin-top: 10px;
     font-size: 2.125em;
+    font-family: CircularBlack;
 }
 
 #infos-central #function{
@@ -54,6 +56,7 @@
     font-size: 1.125em;
     margin-bottom: 20px;
     color: #fff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #btn-more{
