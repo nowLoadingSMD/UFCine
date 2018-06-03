@@ -5,7 +5,7 @@ const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/pages/home.html', async function(req, res, next) {
 
   let emCartazItem = {
     "name": "PQPQP",
@@ -39,7 +39,7 @@ router.get('/', async function(req, res, next) {
         .limit(6)
         .exec( (err, result) => {
 
-          res.render('index', {
+          res.render('pages/home', {
             emCartazList: emCartaz,
             releasesList: resultReleases,
             recommendedList: result
@@ -47,51 +47,6 @@ router.get('/', async function(req, res, next) {
         })
     })
 
-});
-
-router.get('/index.html', async function(req, res, next) {
-
-
-  let emCartazItem = {
-    "name": "PQPQP",
-    "description": "HUE",
-    "exibitionLocation": "Caralho's house"
-  };
-
-  let emCartaz = [];
-
-  for (let i = 0; i < 5; i++){
-    emCartaz.push(emCartazItem);
-  }
-
-  let releases = []
-
-  let d = new Date()
-
-  d.setDate(d.getDate() - 30)
-
-  console.log(d)
-
-  await Video
-    .find({ "created_on": d.getDate })
-    .limit(6)
-    .exec ( async (err, result) => {
-
-      let resultReleases = result
-
-      await Video
-        .find({ "quantityOfViewLastWeek": 0 })
-        .limit(6)
-        .exec( (err, result) => {
-
-          res.render('index', {
-            emCartazList: emCartaz,
-            releasesList: resultReleases,
-            recommendedList: result
-          });
-        })
-    })
-  
 });
 
 router.get("/pages/about.html", function(req,res, next) {
