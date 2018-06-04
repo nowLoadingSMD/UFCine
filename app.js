@@ -27,6 +27,6 @@ require("./controllers/genreController")(app)
 require("./controllers/productionInfoController")(app)
 require("./controllers/commentController")(app)
 
-app.listen(3000)
+// app.listen(3000)
 
 console.log("Server Running on port 3000....")
