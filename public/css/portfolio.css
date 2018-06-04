@@ -20,11 +20,11 @@
 }
 
 #infos-central{
-    width: 300px;
+    width: 50%;
     height: 300px;
     text-align: center;
     margin-top: 100px;
-    margin-left: 35%;
+    margin-left: 25%;
 }
 
 #infos-central article{
@@ -41,7 +41,7 @@
 #infos-central #img-author{
     width: 150px;
     height: 150px;
-    margin-left:75px; 
+    margin-left: 37%; 
     overflow: hidden;
 }
 
