@@ -75,12 +75,13 @@ form #btn-goSignUp{
     padding: 5px 15px;
     color: var(--aqua-marine);
     cursor: pointer;
-    transition: border 0.5s, color 0.5s;
+    transition: border 0.5s, background 0.5s, color 0.5s;
 }
 
 form #btn-goSignUp:hover{
     border: solid 2px var(--darkish-pink);
-    color: var(--darkish-pink);
+    background: var(--darkish-pink);
+    color: #fff;
 }
 
 footer{

@@ -9,6 +9,7 @@ jQuery(document).ready(async function($) {
     if (await checkLogged()) {
       document.getElementById("btn-login").style.display = "none";
       document.getElementById("btn-user").style.display = "block";
+      document.getElementById("showDropdown").style.display = "block";
 
       $(".block-logged").css("display", "block");
 
@@ -94,12 +95,16 @@ var btnLogout = document.getElementById("btn-logout");
 var user = document.getElementById("btn-user");
 // // Get the button that opens the login
 var btn = document.getElementById("btn-login");
+var showDropdown = document.getElementById("showDropdown");
+var dropdown = document.getElementById("dropdown-content");
 
 btnLogout.onclick = function(e){
   // e.preventDefault()
   logout();
   btn.style.display = "block";
   user.style.display = "none";
+  showDropdown.style.display = "none";
+  dropdown.style.display = "none"
   // modalLogin.style.display = "block";
   // modalUpload.style.display = "none";
   // modalContent.style.width = "40%";

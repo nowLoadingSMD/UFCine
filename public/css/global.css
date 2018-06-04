@@ -84,7 +84,7 @@ html{
 	position: relative;
 	color: var(--aqua-marine);
 	margin: 20px 40px 0 10px;
-	/* display: none; */
+	display: none;
 }
 
 .navbar h1{
