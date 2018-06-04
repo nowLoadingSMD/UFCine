@@ -19,7 +19,7 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
-        <article class="titles"><a href="../index.html"><img src="../img/icons/back.svg"></a> Lançamentos</article>
+        <article class="titles"><img src="../img/icons/back.svg" id="iconBack"> Lançamentos</article>
         <div class="grid-films">
                 <% releasesList.forEach(function(item){ %>
                     <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id}); %> 

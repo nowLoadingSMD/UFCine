@@ -212,6 +212,10 @@ html{
 	padding: 50px 10px 40px 10px;
 }
 
+#iconBack{
+	cursor: pointer;
+}
+
 footer{
 	width: 100%;
 	height: 50px;
@@ -226,12 +230,12 @@ footer{
 @media screen and (min-width: 1080px){
 	.tabBar{
 		height: 100%;
-		width: 100px;
+		width: 110px;
 		display: block;
 		padding: 0;
 	}
 	.tabBar .icons{
-		margin: 12vh 0 5px 30px !important;
+		margin: 12vh 0 5px 36px !important;
 		float: left !important;
 	}
 	.tabBar a h1{
