@@ -63,12 +63,28 @@ html{
 }
 
 .navbar #btn-user{
-	padding: 15px;
 	float: right;
 	position: relative;
-	color: #fff;
-	font-size: 1.3em;
 	display: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	border: 2px solid var(--aqua-marine);
+	margin: 15px 0;
+	overflow: hidden;
+}
+
+.navbar #btn-user img{
+	height: 100%;
+}
+
+.navbar #dropdown i{
+	font-size: 1.3em;
+	float: right;
+	position: relative;
+	color: var(--aqua-marine);
+	margin: 20px 40px 0 10px;
+	/* display: none; */
 }
 
 .navbar h1{
@@ -255,7 +271,7 @@ footer{
 		color: var(--aqua-marine);
 	}
 	.navbar #btn-user{
-		height: 55px;
+		height: 40px;
 	}
 	.dropdown-content {
 		margin-top: 60px;

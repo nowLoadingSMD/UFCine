@@ -19,14 +19,14 @@ html{
     color: white;
 }
 #logo{
-    font-size: 100px;
+    font-size: 90px;
     color: white;
     margin: 8% 0 40px 5%;
 }
 .slogan{
     color: var(--dull-purple);
     font-family: TitleBold;
-    font-size: 46px;
+    font-size: 40px;
     margin-left: 5%;
     width: auto;
     background: white;
