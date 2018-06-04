@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<script src="../lib/jquery-3.3.1.min.js"></script>	
 
-	<title>Player</title>
+	<title>Configurações da Conta</title>
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
 	<link rel="stylesheet" type="text/css" href="../css/editProfile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -31,7 +31,10 @@
                         <input type="text" id="editMatr" placeholder="Matrícula">
                     </form>
                     <article>Desativar conta
-                        <button>Desativar</button>
+                        <div class="slide">  
+                            <input type="checkbox" value="None" id="slide" name="check" onclick="checkPortfolio()"/>
+                            <label for="slide"></label>
+                        </div>
                     </article>
                     <article>Ativar Portfólio
                         <div class="slideOne">  
@@ -40,18 +43,16 @@
                         </div>
                     </article>
                     <article id="editPortfolio">Editar Portfólio
-                        <button>Editar</button>
+                        <a href="editPortfolio.html"><button>Editar</button></a>
                     </article>
                 </div>
             </div>
+            <a href="profile.html"><button class="btn-dialog" id="btn-cancel">CANCELAR</button></a>
+			<a href="profile.html"><button class="btn-dialog" id="btn-confirm">SALVAR</button></a>
 	</section>
 	
-	<nav class="tabBar">
-		<a href="home.index.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
-		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
-	</nav>
+    <% include ../partials/tabBar %>
+    
     <footer><h1>©Now Loading</h1></footer>
 
     <script src="../js/global.js"></script>

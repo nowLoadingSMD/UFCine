@@ -99,7 +99,7 @@
   font-size: 1em;
   width: 60px;
   border: solid 2px var(--aqua-marine);
-  color: #30d0dd;
+  color: var(--aqua-marine);
   background: none;
   border-radius: 2px;
   transition: 0.2s background;

@@ -36,7 +36,7 @@
 	height: 200px;
     resize: none;
     border-radius: 8px;
-    border: solid 2px rgb(40, 181, 193);  
+    border: solid 2px var(--aqua-marine);  
     background: none;
     color: white;
     padding: 5px 10px;
@@ -51,7 +51,7 @@
 	width: 60%;
     height: 179px;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     margin-top: 10px;
     float: left;
     margin-bottom: 20px;
@@ -66,7 +66,7 @@
     width: 30%;
     height: 179px;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     float: right;
     margin-top: 10px;
 }
@@ -78,7 +78,7 @@
 
 .textfield{
     background: none;
-    border-bottom: solid 2px rgb(40, 181, 193);
+    border-bottom: solid 2px var(--aqua-marine);
     color: white;
     padding: 5px 10px;
     width: 100%;
@@ -99,7 +99,7 @@
     margin-bottom: 20px;
     background: none;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     padding: 4.5px 10px;
     color: var(--aqua-marine);
     cursor: pointer;
@@ -107,7 +107,7 @@
 
 #list input, #list2 input{
     background: none;
-    border-bottom: solid 2px rgb(40, 181, 193);
+    border-bottom: solid 2px var(--aqua-marine);
     color: white;
     padding: 5px 10px;
     width: 100%;

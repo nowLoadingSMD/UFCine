@@ -3,7 +3,7 @@
 }
 
 .tabBar #tagBrowse{
-    color: #30d0dd;
+    color: var(--aqua-marine);
 }
 
 .grid-content{
@@ -42,12 +42,12 @@
     margin-left: 40%;
     background: none;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
-    color: #30d0dd;
+    border: solid 2px var(--aqua-marine);
+    color: var(--aqua-marine);
 }
 
 #btn-randomize:hover{
-    background: #30d0dd;
+    background: var(--aqua-marine);
     color: #fff;
 }
 
@@ -70,11 +70,11 @@
 
 .grid-genre article{
     font-size: 1.2em;
-    color: #30d0dd;
+    color: var(--aqua-marine);
     padding: 15px 25px;
     cursor: pointer;
 }
 
 .grid-genre article:hover{
-    color: #dd3060;
+    color: var(--darkish-pink);
 }

@@ -2,15 +2,21 @@
 .principal{
 	display: grid;
 	grid-gap: 20px 20px;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 55% 45%;
+}
+
+.principal #right{
+	padding-top: 50px;
 }
 
 .principal .titles{
-	font-size: 2em;
-	text-align: left;
-	color: #fff;
-	word-wrap: break-word;
 	margin-bottom: 10px;
+}
+
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
 }
 
 .principal #views{
@@ -29,6 +35,7 @@
 	color: #fff;
 	text-align: left;
 	margin-top: 15px;
+	font-family: CircularBlack;
 }
 
 .principal .content{
@@ -38,6 +45,33 @@
 	color: #fff;
 	text-align: left;
 	word-wrap: break-word;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.principal .grid-infos{
+	display: grid;
+	grid-gap: 20px 20px;
+	grid-template-columns: 50% 50%;
+}
+
+.grid-infos div .newInfo{
+	color: var(--aqua-marine);
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.2em;
+	margin: 10px;
+}
+
+.classification{
+	margin: 10px;
+	font-size: 1.2em;
+	width: 50px;
+	height: 35px;
+	color: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	background: var(--darkish-pink);
+	text-align: center;
 }
 
 .video{
@@ -82,7 +116,6 @@ video{
 	word-wrap: break-word;
 	height: 150px;
 	color: #fff;
-	margin-top: 10px;
 }
 
 .imgProfile{
@@ -119,10 +152,16 @@ video{
 	padding: 5px 15px;
 	margin-left: 78%;
 	border-radius: 2px;
-	border: solid 2px rgb(48, 208, 221);
-	color: #30d0dd;
+	border: solid 2px var(--aqua-marine);
+	color: var(--aqua-marine);
 	width: 115px;
 	margin-top: 40px;
+	transition: background 0.5s, color 0.5s;
+}
+
+.comment .btn-comment:hover{
+	background: var(--aqua-marine);
+	color: #fff;
 }
 
 #btn-comment{

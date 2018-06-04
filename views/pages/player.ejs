@@ -21,11 +21,11 @@
 	<section class="principal">
 		<div id="left">
 			<div class="video">
+					<article class="titles"><a href="browse.html"><img src="../img/icons/back.svg"></a><%= video.name %></article>
 				<video controls id="videoPlayer">
 		  			<source src="/api/video/videoStream?id=<%= video._id %>" type="video/mp4">
 				Your browser does not support the video tag.
 				</video><br/>
-				<article class="titles" id="videoName"><%= video.name %></article>
 				<article id="views"><%= video.quantityOfView %> visualizações</article>
 				<div class="content-functions">
 					<img src="../img/icons/applause.svg" id="applauseIcon">
@@ -58,23 +58,34 @@
 		<div id="right">
 			<article class="titlesMedium">Descrição</article>
 			<article class="content" id="productionInfoDescription"><%= productionInfo.description %></article>
-			<article class="titlesMedium">Informações</article>
-			<article class="content" id="productionInfoGenres">Gênero: dedo no cu e gritaria.<br/> Classificação: +18</article>
-			<article class="titlesMedium">Direção</article>
-			<article class="content">- pocoto<br/>- louro josé</article>
-			<article class="titlesMedium">Roteiro</article>
-			<article class="content">- pocoto<br/>- louro josé</article>
-			<article class="titlesMedium">Elenco</article>
-			<article class="content">- pocoto<br/>- louro josé</article>
+			<div class="grid-infos">
+				<div>
+					<article class="titlesMedium">Gênero</article>
+					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
+					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
+					<article class="titlesMedium">Direção</article>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<article class="titlesMedium">Roteiro</article>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<article class="titlesMedium">Elenco</article>
+					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+				</div>
+				<div>
+					<article class="titlesMedium">Ano</article>
+					<article class="newInfo">2017</article>
+					<article class="titlesMedium">Classificação</article>
+					<article class="classification">+16</article>
+				</div>
+			</div>
+			
 		</div>
 	</section>
 	
-	<nav class="tabBar">
-		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><h1>Início</h1></a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><h1>Navegar</h1></a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><h1>Produtores</h1></a>
-		<a href="about.html" id="tabAbout"><article id="iconAbout" class="icons"></article><h1>Sobre</h1></a>
-	</nav>
+	<% include ../partials/tabBar %>
+	
 	<footer><h1>©Now Loading</h1></footer>
 
 	<script src="../js/player.js"></script>

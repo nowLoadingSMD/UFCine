@@ -63,12 +63,12 @@
     text-align: center;
     float: right;
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
-    color: #30d0dd;
+    border: solid 2px var(--aqua-marine);
+    color: var(--aqua-marine);
 }
 
 #btn-more:hover{
-    background: #30d0dd;
+    background: var(--aqua-marine);
     color: #fff;
 }
 

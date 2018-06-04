@@ -14,9 +14,9 @@
 
 #btn-editProfile{
     background: none;
-    color: #30d0dd;
+    color: var(--aqua-marine);
     border-radius: 2px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     padding: 5px;
     width: 80px;
     margin-top: 85px;
@@ -25,7 +25,7 @@
 }
 
 #btn-editProfile:hover{
-    background: #30d0dd;
+    background: var(--aqua-marine);
     color: #fff;
 }
 
@@ -69,20 +69,20 @@
     float: left;
     width: 33.332%;
     display: block;
-    color: #30d0dd;
+    color: var(--aqua-marine);
     text-align: center;
     padding: 5px;
     text-decoration: none;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
 }
 
 .content-profile li:hover {
-    background-color: #30d0dd;
+    background-color: var(--aqua-marine);
     color: #fff;
 }
 
 .content-profile .active {
-    background-color: #30d0dd;
+    background-color: var(--aqua-marine);
     color: #fff;
 }
 
@@ -129,13 +129,13 @@
 .group-films .viewMore{
     width: 7%;
     height: 60px;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     margin-top: 100px;
     float: right;
 }
 
 .group-films .viewMore:hover{
-    background: #30d0dd;
+    background: var(--aqua-marine);
 }
 
 .group-films .viewMore:hover i{
@@ -143,7 +143,7 @@
 }
 
 .group-films .viewMore i{
-    color: #30d0dd;
+    color: var(--aqua-marine);
     font-size: 2em;
     margin-top: 13px;
     margin-left: 15px;
@@ -163,20 +163,20 @@
     float: left;
     font-size: 0.9em;
     width: 33.3%;
-    border: solid 2px rgb(48, 208, 221);
+    border: solid 2px var(--aqua-marine);
     display: block;
-    color: #30d0dd;
+    color: var(--aqua-marine);
     text-align: center;
     padding: 5px 0;
 }
 
 .content-notifications li:hover {
-    background-color: #30d0dd;
+    background-color: var(--aqua-marine);
     color: #fff;
 }
 
 .content-notifications .active {
-    background-color: #30d0dd;
+    background-color: var(--aqua-marine);
     color: #fff;
 }
 

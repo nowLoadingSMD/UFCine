@@ -37,7 +37,7 @@
 	text-align: center;}
 .glide__bullet{
 	background: rgba(0, 0, 0, 0);
-	border: solid 2px #30d0dd;
+	border: solid 2px var(--aqua-marine);
 	padding: 5px;
 	border-radius: 10px;
 }
@@ -50,7 +50,7 @@
 	cursor: pointer;
 }
 .glide__bullet--active{
-	background: #30d0dd;
+	background: var(--aqua-marine);
 }
 .banner-player{
 	width: 5.5%;

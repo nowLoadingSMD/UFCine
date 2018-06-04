@@ -17,43 +17,43 @@
     padding: 0;
   }
   .jqcloud-word.w1 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 100%;
   }
   .jqcloud-word.w2 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 150%;
   }
   .jqcloud-word.w3 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 200%;
   }
   .jqcloud-word.w4 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 250%;
   }
   .jqcloud-word.w5 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 300%;
   }
   .jqcloud-word.w6 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 350%;
   }
   .jqcloud-word.w7 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 400%;
   }
   .jqcloud-word.w8 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 450%;
   }
   .jqcloud-word.w9 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 500%;
   }
   .jqcloud-word.w10 {
-    color: #00ccff;
+    color: var(--aqua-marine);
     font-size: 550%;
   }
   .jqcloud-word a {
@@ -62,6 +62,6 @@
     text-decoration: none;
   }
   .jqcloud-word a:hover {
-    color: #dd3060;
+    color:  var(--darkish-pink);
   }
   

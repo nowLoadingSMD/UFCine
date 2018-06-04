@@ -125,7 +125,7 @@ html{
 	cursor: pointer;
 }
 
-.dropdown-content a:hover {color: #30d0dd;}
+.dropdown-content a:hover {color: var(--aqua-marine);}
 
 #dropdown:hover .dropdown-content{
 	display: block;
@@ -301,7 +301,7 @@ footer{
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #dd3060; 
+    background: var(--darkish-pink); 
 }
 
 /* The Modal (background) */

@@ -68,6 +68,10 @@ router.get("/pages/editProfile.html", function(req,res, next) {
   res.render('pages/editProfile');
 })
 
+router.get("/pages/editPortfolio.html", function(req,res, next) {
+  res.render('pages/editPortfolio');
+})
+
 router.get("/pages/favorites.html", function(req,res, next) {
   res.render('pages/favorites');
 })
