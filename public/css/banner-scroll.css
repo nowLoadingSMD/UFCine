@@ -73,7 +73,7 @@
 }
 .slider__frame article p{
 	font-size: 20px;
-	font-family: CircularBlack;
+	font-family: TitleBold;
 }
 .slider__frame article{
 	float: right;
@@ -83,11 +83,11 @@
 	margin: 10px 10px 0 0;
 	display: none;
 	word-wrap: break-word;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: BodyText;
 }
 .slider__frame .titleFilm{
 	font-size: 26px;
-	font-family: CircularBlack;
+	font-family: TitleBold;
 }
 
 @media screen and (min-width: 450px){

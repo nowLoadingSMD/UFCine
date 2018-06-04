@@ -215,7 +215,7 @@
     color: var(--aqua-marine);
     margin-left: 120px;
     padding-top: 5px;
-    font-family: CircularBold;
+    font-family: TitleBold;
 }
 
 .notifications h6{
@@ -223,5 +223,5 @@
     color: #fff;
     margin-left: 120px;
     padding-top: 5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: BodyText;
 }

@@ -16,7 +16,7 @@
     text-align: center;
     float: left;
     color: #fff;
-    font-family: CircularBlack;
+    font-family: TitleBold;
 }
 
 #infos-central{
@@ -31,7 +31,7 @@
     color: #fff;
     margin-top: 10px;
     font-size: 2.125em;
-    font-family: CircularBlack;
+    font-family: TitleBold;
 }
 
 #infos-central #function{
@@ -56,7 +56,7 @@
     font-size: 1.125em;
     margin-bottom: 20px;
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: BodyText;
 }
 
 #btn-more{
@@ -124,7 +124,7 @@
     border-radius: 8px;
     border: solid 2px var(--aqua-marine);
     height: 400px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: BodyText;
 }
 
 .addFilm{

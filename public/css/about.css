@@ -19,17 +19,17 @@
     padding: 10px;
 }
 .aboutCinema p{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: BodyText;
 }
 .aboutCinema p a{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: BodyText;
     color: var(--aqua-marine);
 }
 .titlesMedium{
     font-size: 1.5em;
     margin-top: 30px;
     color: #fff;
-    font-family: CircularBlack;
+    font-family: TitleBold;
 }
 
 .group-team{

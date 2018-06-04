@@ -25,7 +25,7 @@ html{
 }
 .slogan{
     color: var(--dull-purple);
-    font-family: CircularBold;
+    font-family: TitleBold;
     font-size: 46px;
     margin-left: 5%;
     width: auto;

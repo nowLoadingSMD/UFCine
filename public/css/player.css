@@ -35,7 +35,7 @@
 	color: #fff;
 	text-align: left;
 	margin-top: 15px;
-	font-family: CircularBlack;
+	font-family: TitleBold;
 }
 
 .principal .content{
@@ -45,7 +45,7 @@
 	color: #fff;
 	text-align: left;
 	word-wrap: break-word;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: BodyText;
 }
 
 .principal .grid-infos{
@@ -150,11 +150,12 @@ video{
 .comment .btn-comment{
 	background: none;
 	padding: 5px 15px;
-	margin-left: 78%;
+	margin-left: 75.8%;
 	border-radius: 2px;
 	border: solid 2px var(--aqua-marine);
 	color: var(--aqua-marine);
-	width: 115px;
+	width: 130px;
+	text-align: center;
 	margin-top: 40px;
 	transition: background 0.5s, color 0.5s;
 }
