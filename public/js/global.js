@@ -112,23 +112,23 @@ btnLogout.onclick = function(e){
   // modalContent.style.marginTop = "auto";
 }
 
-var addItem = document.getElementById("addItem");
-var list = document.getElementById("list");
-var addItem2 = document.getElementById("addItem2");
-var list2 = document.getElementById("list2");
+// var addItem = document.getElementById("addItem");
+// var list = document.getElementById("list");
+// // var addItem2 = document.getElementById("addItem2");
+// // var list2 = document.getElementById("list2");
 
-addItem.onclick = function(){
-  var textfield = document.createElement("input");
-  textfield.type = "text";
-  textfield.placeholder = "Nome";
-  list.appendChild(textfield);
-}
+// addItem.onclick = function(){
+//   var textfield = document.createElement("input");
+//   textfield.type = "text";
+//   textfield.placeholder = "Nome";
+//   list.appendChild(textfield);
+// }
 
-addItem2.onclick = function(){
-  var textfield = document.createElement("input");
-  textfield.type = "text";
-  textfield.placeholder = "Nome";
-  list2.appendChild(textfield);
+// addItem2.onclick = function(){
+//   var textfield = document.createElement("input");
+//   textfield.type = "text";
+//   textfield.placeholder = "Nome";
+//   list2.appendChild(textfield);
 
-  // $(".block-logged").css("display", "none");
-}
+//   // $(".block-logged").css("display", "none");
+// }

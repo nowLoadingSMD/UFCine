@@ -64,20 +64,17 @@
 					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
 					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
 					<article class="titlesMedium">Direção</article>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo"><%= productionInfo.directors[0] %></article></a>
 					<article class="titlesMedium">Roteiro</article>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo"><%= productionInfo.script[0] %></article></a>
 					<article class="titlesMedium">Elenco</article>
 					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
 				</div>
 				<div>
 					<article class="titlesMedium">Ano</article>
-					<article class="newInfo">2017</article>
+					<article class="newInfo"><%= productionInfo.year %></article>
 					<article class="titlesMedium">Classificação</article>
-					<article class="classification">+16</article>
+					<article class="classification"><%= productionInfo.classification %></article>
 				</div>
 			</div>
 			

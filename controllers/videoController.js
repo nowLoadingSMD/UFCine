@@ -2,6 +2,7 @@ const express = require("express")
 const fileUpload = require("express-fileupload")
 const jwt = require("jsonwebtoken")
 const path = require("path")
+const formidable = require("formidable")
 const fs = require("fs")
 
 const authConfig = require("../config/auth")
@@ -66,9 +67,23 @@ router.get("/videoStream", (req, res) => {
 
 })
 
+router.post("/upload", (req, res) => {
+
+    if(req.body.name){
+        console.log(req.body.name)
+    } else {
+        console.log("Nada")
+        console.log(req)
+    }
+
+})
+
 router.post("/uploadVideo", async (req, res) => {
 
     const userID = req.query.id
+    console.log(userID)
+
+    console.log(req.body)
 
     if (!req.files)
         return res.send({err: "No files uploaded"})
@@ -98,13 +113,14 @@ router.post("/uploadVideo", async (req, res) => {
             videoID: video._id,
             description: req.body.description,
             classification: "16+",
+            year: req.body.year,
             tags: [],
             genre: [],
             directors: [
-                "Pocotó"
+                req.body.director
             ],
             script: [
-                "Jumento"
+                req.body.script
             ],
             cast: [
                 "Cavalinho"
@@ -135,17 +151,14 @@ router.get("/", async (req, res) => {
 
     const limit = req.query.limit
 
-    if (limit) {
-        // console.log(limit)
-        Video.getVideos((err, videos) => {
+    Video.getVideos((err, videos) => {
 
-            if (err) {
-                throw err
-            }
+        if (err) {
+            throw err
+        }
 
-            res.json(videos)
-        }, limit)
-    }
+        res.json(videos)
+    }, limit)
 
 })
 

@@ -14,6 +14,10 @@ const ProductionInfoSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    year: {
+        type: String,
+        required: true
+    },
     tags: [
         {
             type: Schema.Types.ObjectId, ref: 'Tag'

@@ -2,17 +2,22 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<script src="../lib/jquery-3.3.1.min.js"></script>	
+    <script src="../lib/jquery-3.3.1.min.js"></script>
+    
+    <script src="../lib/vendor/jquery.ui.widget.js"></script>
+    <script src="../lib/jquery.iframe-transport.js"></script>
+    <script src="../lib/jquery.fileupload.js"></script>
 
-	<title>Inicio</title>
+    <title>Inicio</title>
+
 	<link rel="stylesheet" type="text/css" href="/css/global.css">
 	<link rel="stylesheet" type="text/css" href="/css/upload.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<script src="../js/cookieLibrary.js"></script>
-	<script src="../js/auth.js"></script> 
-	
+    <script src="../js/auth.js"></script> 
+    
 </head>
 <body>
 	<% include ../partials/navBar %>
@@ -22,66 +27,69 @@
 		<div class="content-principal">
             <div class="grid-upload">
                 <div class="upload-left">
+                    <form ref='uploadForm' 
+                        id='uploadForm' 
+                        action='/api/video/videoUpload' 
+                        method='post' 
+                        name="uploadForm"
+                        encType="multipart/form-data">
                     <article class="titleMedium">Vídeo</article><br/><br/><br/>
                     <article id="img-upload">
-                        <img src="../img/icons/imgUploadFilm.svg">
+                        <input type="file" name="videoMP4" />
                     </article>
                     <article id="img-banner">
                         <img src="../img/icons/imgUploadBanner.svg">
                     </article>
-                    <form>
-                        <input type="text" id="titleFilm" class="textfield" placeholder="Título do filme"/>
-                        <textarea placeholder="Descrição"></textarea>
-                    </form>
+                        <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
+                        <textarea placeholder="Descrição" name="description" id="description"></textarea>
                 </div>
                 <div class="upload-right">
-                    <form>
                         <div class="grid-itens">
                             <div>
-                                <input type="text" class="textfield" placeholder="Direção"/>
-                                <input type="text" class="textfield" placeholder="Roteiro"/>
+                                <input type="text" class="textfield" placeholder="Direção" name="director"/>
+                                <input type="text" class="textfield" placeholder="Roteiro" name="script"/>
                                 <article class="titleMedium">Elenco</article>
                                 <i class="fas fa-plus-circle" id="addItem"></i>
                                 <article id="list"></article>
                             </div>
                             <div>
-                                <select>
+                                <select id="classification" name="classification">
                                     <option value="">Classificação</option>
                                     <option value="">Livre</option>
-                                    <option value="">+10</option>
-                                    <option value="">+12</option>
-                                    <option value="">+14</option>
-                                    <option value="">+16</option>
-                                    <option value="">+18</option>
+                                    <option value="+10">+10</option>
+                                    <option value="+12">+12</option>
+                                    <option value="+14">+14</option>
+                                    <option value="+16">+16</option>
+                                    <option value="+18">+18</option>
                                 </select>
-                                <select>
+                                <select id="year" name="year">
                                     <option value="">Ano</option>
-                                    <option value="">2018</option>
-                                    <option value="">2017</option>
-                                    <option value="">2016</option>
-                                    <option value="">2015</option>
-                                    <option value="">2014</option>
-                                    <option value="">2013</option>
-                                    <option value="">2012</option>
-                                    <option value="">2011</option>
-                                    <option value="">2010</option>
-                                    <option value="">2009</option>
-                                    <option value="">2008</option>
-                                    <option value="">2007</option>
-                                    <option value="">2006</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
                                 </select>
-                                <select>
+                                <select id="genre" name="genre">
                                     <option value="">Gênero</option>
-                                    <option value="">Ação</option>
-                                    <option value="">Animação</option>
-                                    <option value="">Aventura</option>
-                                    <option value="">Curta</option>
-                                    <option value="">Documentário</option>
-                                    <option value="">Drama</option>
-                                    <option value="">Fantasia</option>
-                                    <option value="">Ficção Científica</option>
-                                    <option value="">Suspense</option>
-                                    <option value="">Terror</option>
+                                    <option value="Ação">Ação</option>
+                                    <option value="Animação">Animação</option>
+                                    <option value="Aventura">Aventura</option>
+                                    <option value="Curta">Curta</option>
+                                    <option value="Documentário">Documentário</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Fantasia">Fantasia</option>
+                                    <option value="Ficção Científica">Ficção Científica</option>
+                                    <option value="Suspense">Suspense</option>
+                                    <option value="Terror">Terror</option>
                                 </select>
                                 <!-- <article class="titleMedium">Gênero</article>
                                 <i class="fas fa-plus-circle" id="addItem2"></i>
@@ -99,11 +107,12 @@
 
 	<% include ../partials/tabBar %>
 
-	<footer><h1>©Now Loading</h1></footer>
+    <footer><h1>©Now Loading</h1></footer>
 
 	<script src="../lib/glide.min.js"></script>
 	<script src="../js/scrollbar.js"></script>
-	<script src="../js/global.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/upload.js"></script>
 
 </body>
 </html>

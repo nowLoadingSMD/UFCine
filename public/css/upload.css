@@ -160,3 +160,8 @@
     border-color: var(--darkish-pink);
     background: var(--darkish-pink);
 }
+
+.bar {
+    height: 18px;
+    background: green;
+}
