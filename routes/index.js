@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const GenreEnum = require("../config/genreEnum")
+
 const User = require("../models/user")
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
@@ -77,7 +79,23 @@ router.get("/pages/favorites.html", function(req,res, next) {
 })
 
 router.get("/pages/genre.html", function(req,res, next) {
-  res.render('pages/genre');
+  const genreName = req.query.genre
+
+  const id = GenreEnum[genreName]
+
+  ProductionInfo.find({"genre": id })
+    .populate("videoID")
+    .populate("genre")
+    .exec( (err, productionInfo) => {
+
+      const videos = productionInfo.map( item => item.videoID)
+      console.log(productionInfo)
+      res.render('pages/genre', {
+        genre: genreName,
+        videos: videos
+      });
+
+    })
 })
 
 router.get("/pages/login.html", function(req, res, next) {
@@ -94,6 +112,7 @@ router.get("/pages/player.html", function(req,res, next) {
   Video.findById(id, (err, video) => {
     ProductionInfo
       .find({"videoID": video._id})
+      .populate("genre")
       .exec( (err, productionInfo) => {
         console.log(productionInfo)
         res.render('pages/player', {

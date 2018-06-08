@@ -61,12 +61,11 @@
 			<div class="grid-infos">
 				<div>
 					<article class="titlesMedium">Gênero</article>
-					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
-					<a href="genre.ejs"><article class="newInfo" id="productionInfoGenres">Gênero desconhecido</article></a>
+					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
 					<article class="titlesMedium">Direção</article>
-					<a href="portfolio.ejs"><article class="newInfo"><%= productionInfo.directors[0] %></article></a>
+					<a href="portfolio.ejs"><article class="newInfo"><%=productionInfo.directors[0] %></article></a>
 					<article class="titlesMedium">Roteiro</article>
-					<a href="portfolio.ejs"><article class="newInfo"><%= productionInfo.script[0] %></article></a>
+					<a href="portfolio.ejs"><article class="newInfo"><%=productionInfo.script[0] %></article></a>
 					<article class="titlesMedium">Elenco</article>
 					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
 				</div>
@@ -74,7 +73,7 @@
 					<article class="titlesMedium">Ano</article>
 					<article class="newInfo"><%= productionInfo.year %></article>
 					<article class="titlesMedium">Classificação</article>
-					<article class="classification"><%= productionInfo.classification %></article>
+					<article class="classification"><%=productionInfo.classification %></article>
 				</div>
 			</div>
 			

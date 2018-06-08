@@ -7,6 +7,8 @@ const fs = require("fs")
 
 const authConfig = require("../config/auth")
 
+const GenreEnum = require("../config/genreEnum")
+
 const router = express.Router()
 
 const Video = require("../models/Video")
@@ -81,9 +83,11 @@ router.post("/upload", (req, res) => {
 router.post("/uploadVideo", async (req, res) => {
 
     const userID = req.query.id
-    console.log(userID)
+    // console.log(userID)
 
-    console.log(req.body)
+    // console.log(req.body)
+
+    console.log(GenreEnum[req.body.genre])
 
     if (!req.files)
         return res.send({err: "No files uploaded"})
@@ -115,7 +119,7 @@ router.post("/uploadVideo", async (req, res) => {
             classification: "16+",
             year: req.body.year,
             tags: [],
-            genre: [],
+            genre: GenreEnum[req.body.genre],
             directors: [
                 req.body.director
             ],

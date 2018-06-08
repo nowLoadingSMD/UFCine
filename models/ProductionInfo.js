@@ -23,11 +23,9 @@ const ProductionInfoSchema = mongoose.Schema({
             type: Schema.Types.ObjectId, ref: 'Tag'
         }
     ],
-    genres: [
-        {
+    genre: {
            type: Schema.Types.ObjectId, ref: 'Genre' 
-        }
-    ],
+    },
     directors: [
         {
             type: String
