@@ -124,11 +124,14 @@ favoriteIcon.onclick = function() {
 
     $.post("/api/user/addToFavorite", data, (response) => {
         const err = response.err
+        const favorited = response.favorited
 
         if (err) {
             alert("Problema ao favoritar");
-        } else {
+        } else if (favorited) {
             alert("Video favoritado");
+        } else {
+            alert("Removido dos favoritos");
         }
     })
 }
@@ -148,11 +151,14 @@ watchListIcon.onclick = function() {
 
     $.post("/api/user/addToWatchlist", data, (response) => {
         const err = response.err
+        const addedToWatchList = response.addedToWatchList
 
         if (err) {
             alert("Problema a adicioanr na watchlist");
+        } else if (addedToWatchList) {
+            alert("Video adicionada na watchlist");
         } else {
-            alert("Video adicionar na watchlist");
+            alert("Video Removido da watchlist");
         }
     })
 
