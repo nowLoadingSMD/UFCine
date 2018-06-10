@@ -6,7 +6,7 @@
       }
 
       .cls-2, .cls-3 {
-        stroke: #30d0dd;
+        stroke: #28b5c1;
         stroke-miterlimit: 10;
         stroke-width: 2.5px;
       }
@@ -17,7 +17,7 @@
       }
     </style>
   </defs>
-  <g id="Group_323" data-name="Group 323" transform="translate(-47 -251)">
+  <g id="explorar" transform="translate(-47 -251)">
     <rect id="Rectangle_84" data-name="Rectangle 84" class="cls-1" width="39.895" height="39.895" transform="translate(47 251)"/>
     <g id="Group_187" data-name="Group 187" transform="translate(50.49 254.49)">
       <path id="Path_3258" data-name="Path 3258" class="cls-2" d="M9.8,22.564l8.054-5.576L10.667,12.9l7.186,4.089L18.721,7.2l-8.054,5.7Z" transform="translate(2.22 1.599)"/>
