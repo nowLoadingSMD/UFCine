@@ -45,7 +45,6 @@ html{
 	background-color: var(--dark-blue-grey);
 	background-image: linear-gradient(rgba(0, 216, 255, 0.53), rgba(155, 233, 235, 0.22) 32%, rgba(63, 212, 228, 0) 64%, rgba(221, 48, 96, 0.44) 100%, rgba(63, 212, 228, 0), rgba(95, 21, 98, 0));
 	background-size: cover;
-	height: 100%;
 }
 
 .principal .titles{
@@ -226,7 +225,6 @@ footer{
 	text-align: center;
 	padding: 15px;
 	font-size: 20px;
-	margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1080px){

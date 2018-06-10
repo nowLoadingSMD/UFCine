@@ -6,14 +6,14 @@
       }
 
       .cls-2 {
-        stroke: #30d0dd;
+        stroke: #28b5c1;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 2.5px;
       }
     </style>
   </defs>
-  <g id="Group_175" data-name="Group 175" transform="translate(-46.75 -55)">
+  <g id="início" transform="translate(-46.75 -55)">
     <rect id="Rectangle_84" data-name="Rectangle 84" class="cls-1" width="39.895" height="39.895" transform="translate(47 55)"/>
     <g id="Group_169" data-name="Group 169" transform="translate(521 -568)">
       <path id="Path_3246" data-name="Path 3246" class="cls-2" d="M13.2,30.405V20.288A4.852,4.852,0,0,1,18.088,15.4h0a4.852,4.852,0,0,1,4.888,4.888V30.405" transform="translate(-471.763 628.595)"/>
