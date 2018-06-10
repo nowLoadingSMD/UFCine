@@ -158,7 +158,7 @@ watchListIcon.onclick = function() {
         } else if (addedToWatchList) {
             alert("Video adicionada na watchlist");
         } else {
-            alert("Video Removido da watchlist");
+            alert("Video Removido da watchl");
         }
     })
 

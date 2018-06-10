@@ -39,17 +39,24 @@
 		.tabBar #iconHome{
 			width: 40px;
 			height: 40px;
-			background-image: url("../img/icons/home.svg");
 			margin: 0 auto;
+
+			<% if (currentPage == "home") { %>
+				background-image: url("../img/icons/home-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/home.svg");
+			<% } %> 
 		}
 
 		.tabBar #iconAuthors{
 			width: 40px;
 			height: 40px;
-			background-image: url("../img/icons/authors.svg");
 			margin: 0 auto;
-			/* float: right; */
-			/* margin-right: 15%; */
+			<% if (currentPage == "authors") { %>
+				background-image: url("../img/icons/authors-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/authors.svg");
+			<% } %> 
 		}
 
 		.tabBar #iconBrowse{
@@ -57,7 +64,11 @@
 			height: 40px;
 			background-image: url("../img/icons/browse.svg");
 			margin: 0 auto;
-			/* margin-left: 15%; */
+			<% if (currentPage == "browse") { %>
+				background-image: url("../img/icons/browse-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/browse.svg");
+			<% } %> 
 		}
 
 		.tabBar #iconAbout{
@@ -65,7 +76,11 @@
 			height: 40px;
 			background-image: url("../img/icons/about.svg");
 			margin: 0 auto;
-			/* float: right; */
+			<% if (currentPage == "about") { %>
+				background-image: url("../img/icons/about-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/about.svg");
+			<% } %> 
 		}
 
 		@media screen and (min-width: 1080px){
