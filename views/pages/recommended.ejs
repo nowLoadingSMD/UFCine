@@ -22,74 +22,8 @@
         <article class="titles"><img src="../img/icons/back.svg" id="iconBack"> Recomendados</article>
         <div class="grid-films">
             <% recommendedList.forEach(function(item){ %>
-                <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id}); %> 
-            <% }); %>
-            <!-- <div class="film">
-                <div class="actions">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-plus-circle"></i>
-                </div>
-                <article class="imgFilm"></article>
-                <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div>
-            <div class="film">
-                    <div class="actions">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <article class="imgFilm"></article>
-                    <article class="nameFilm">Nome do filme</article>
-            </div> -->
-            
-           
+                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+            <% }); %>           
         </div>
 	</section>
 	

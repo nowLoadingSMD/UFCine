@@ -5,3 +5,77 @@
 		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
 		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
 	</nav>
+
+	<style>
+		.tabBar{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 60px;
+			background-color: #111738;
+			position: fixed;
+			text-align: center;
+			z-index: 6;
+			display: grid;
+			grid-gap: 10px 0;
+			grid-template-columns: 25% 25% 25% 25%;
+			padding: 0 5%;
+		}
+
+		.tabBar .icons{
+			float: left;
+			margin: 10px 2% 0 8%;
+		}
+
+		.tabBar a h1{
+			display: none;
+		}
+
+		.tabBar a{
+			color: #fff;
+		}
+
+		.tabBar #iconHome{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/home.svg");
+		}
+
+		.tabBar #iconAuthors{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/authors.svg");
+			float: right;
+			margin-right: 15%;
+		}
+
+		.tabBar #iconBrowse{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/browse.svg");
+			margin-left: 15%;
+		}
+
+		.tabBar #iconAbout{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/about.svg");
+			float: right;
+		}
+
+		@media screen and (min-width: 1080px){
+			.tabBar{
+				height: 100%;
+				width: 110px;
+				display: block;
+				padding: 0;
+			}
+			.tabBar .icons{
+				margin: 12vh 0 5px 36px !important;
+				float: left !important;
+			}
+			.tabBar a h1{
+				display: block;
+			}
+		}
+	</style>

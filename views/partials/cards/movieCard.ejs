@@ -1,9 +1,84 @@
-<a href="player.html?id=<%= id %>"><div class="grid-item">
-        <div>
-            <img src="../img/icons/play.svg" class="icon-play">
-            <img src="../img/icons/favorite.svg" class="functions">
-            <img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-            <img src="../img/films/movie.jpg" class="img-film">
+<a href="player.html?id=<%= id %>">
+    <div class="grid-item">
+        <div class="iconsContainer">
+            <img src="../img/icons/play.svg" class="playIcon">
+            <div class="actionIcons">
+                <img src="../img/icons/favorite.svg" class="favoriteIcon">
+                <img src="../img/icons/addWatchlist.svg" class="watchlistIcon">
+            </div>
+            <!-- <img src="../img/films/movie.jpg" class="img-film"> -->
         </div>
         <article><%= name %></article>
-    </div></a>
+    </div>
+</a>
+
+<style>
+
+    .grid-item .iconsContainer{
+        height: 250px;
+        overflow:hidden;
+        background-size: cover;
+        background-position: top;
+        background-image: url(../img/films/movie.jpg);
+
+        display: grid;
+        justify-items: center;  
+        align-items: center;    
+    }
+
+    .playIcon {
+        width: 40%;
+        display: none;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    
+    .grid-item:hover .playIcon {
+        display: block;
+    }
+
+    .actionIcons {
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+        display: grid;
+        grid-column-gap: 0;
+        grid-template-columns: 30% 30%;
+        justify-self: end;
+    }
+
+    .favoriteIcon {
+        width: 80%;
+        display: none;
+        /* grid-column-start: 6;
+        grid-column-end: 7; */
+    }
+
+    .grid-item:hover .favoriteIcon {
+        display: block;
+    }
+
+    .watchlistIcon {
+        width: 80%;
+        display: none;
+        /* grid-column-start: 7;
+        grid-column-end: 8; */
+    }
+
+    .grid-item:hover .watchlistIcon {
+        display: block;
+    }
+
+    .grid-item article{
+        padding: 5px;
+        text-align: center; 
+        text-decoration: none !important;
+        color: #fff;
+        font-size: 1.3em;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        }
+        .grid-item:hover article{
+        background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
+    }
+    
+</style>
