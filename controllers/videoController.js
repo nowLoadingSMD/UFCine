@@ -124,6 +124,8 @@ router.post("/uploadVideo", async (req, res) => {
 
         let id = video._id
 
+        console.log(GenreEnum[req.body.genre])
+
         let productionInfo = {
             videoID: video._id,
             description: req.body.description,
