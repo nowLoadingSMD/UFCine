@@ -1,7 +1,101 @@
 
 	<nav class="tabBar">
-		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article>Início</a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article>Navegar</a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
-		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
+		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><span>Início</span></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><span>Navegar</span></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><span>Produtores</span></a>
+		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article><span>Sobre</span></a>
 	</nav>
+
+	<style>
+		.tabBar{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 60px;
+			background-color: #111738;
+			position: fixed;
+			text-align: center;
+			z-index: 6;
+			display: grid;
+			grid-gap: 10px 0;
+			grid-template-columns: 25% 25% 25% 25%;
+			padding: 0 5%;
+		}
+
+		.tabBar .icons{
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+
+		.tabBar a h1{
+			display: none;
+		}
+
+		.tabBar a{
+			color: #fff;
+		}
+
+		.tabBar #iconHome{
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+
+			<% if (currentPage == "home") { %>
+				background-image: url("../img/icons/home-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/home.svg");
+			<% } %> 
+		}
+
+		.tabBar #iconAuthors{
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+			<% if (currentPage == "authors") { %>
+				background-image: url("../img/icons/authors-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/authors.svg");
+			<% } %> 
+		}
+
+		.tabBar #iconBrowse{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/browse.svg");
+			margin: 0 auto;
+			<% if (currentPage == "browse") { %>
+				background-image: url("../img/icons/browse-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/browse.svg");
+			<% } %> 
+		}
+
+		.tabBar #iconAbout{
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/about.svg");
+			margin: 0 auto;
+			<% if (currentPage == "about") { %>
+				background-image: url("../img/icons/about-active.svg");
+			<% } else {  %>
+				background-image: url("../img/icons/about.svg");
+			<% } %> 
+		}
+
+		@media screen and (min-width: 1080px){
+			.tabBar{
+				height: 100%;
+				width: 110px;
+				display: block;
+				padding: 0;
+			}
+			.tabBar .icons{
+				margin: 12vh 0 5px 36px !important;
+				float: left !important;
+			}
+			.tabBar a h1{
+				display: block;
+			}
+		}
+	</style>

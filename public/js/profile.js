@@ -7,7 +7,7 @@ var btnFavorites = document.getElementById("btn-favorites");
 var btnWatchlist = document.getElementById("btn-watchlist");
 
 btnFavorites.onclick = function(){
-    favorites.style.display = "block";
+    favorites.style.display = "grid";
     posted.style.display = "none";
     watchlist.style.display = "none";
     btnFavorites.className = "active";
@@ -17,7 +17,7 @@ btnFavorites.onclick = function(){
 
 btnPosted.onclick = function(){
     favorites.style.display = "none";
-    posted.style.display = "block";
+    posted.style.display = "grid";
     watchlist.style.display = "none";
     btnFavorites.className = "";
     btnPosted.className = "active";
@@ -27,7 +27,7 @@ btnPosted.onclick = function(){
 btnWatchlist.onclick = function(){
     favorites.style.display = "none";
     posted.style.display = "none";
-    watchlist.style.display = "block";
+    watchlist.style.display = "grid";
     btnFavorites.className = "";
     btnPosted.className = "";
     btnWatchlist.className = "active";

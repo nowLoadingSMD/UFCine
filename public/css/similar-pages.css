@@ -12,84 +12,17 @@
 }
 
 .grid-films{
-    margin-left: 2%; 
+    margin-left: 0px; 
     display: grid;
     grid-gap: 40px 10px;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(auto-fit, 180px);
     margin-top: 100px;
 }
 
-.film{
-    width: 90%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8)80%, rgba(0, 0, 0, 0));
-}
 
-.imgFilm{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.imgFilm img{
-    width: 100%;
-}
-
-.nameFilm{
-    font-size: 1.4em;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-}
-
-.film:hover{
-    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8)80%, rgba(111, 24, 48, 0));
-}
-
-.film .actions{
-    margin-left: 58%;
-}
-.functions{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    margin-left: 9%;
-    margin-top: 210px;
-    display: none;
-}
-#icon-addWatchList{
-    margin-left: 12.3%;
-}
-.film .icon-play{
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    margin-left: 5.5%;
-    margin-top: 6.5%;
-    display: none;
-}
-.film:hover .icon-play{
-    display: block;
-}
-
-@media screen and (min-width: 750px){
-    .grid-films{
-        grid-gap: 40px 3px;
-        grid-template-columns: 25% 25% 25% 25%;
-        margin-left: 1%; 
-    }
-    .imgFilm{
-        height: 250px;
-    }
-}
 
 @media screen and (min-width: 1080px){
-    .grid-films{
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        margin-left: 0; 
-        grid-gap: 40px 10px;
-    }
-
+    
     .principal .titles{
         font-size: 2.1em;
     }
@@ -99,10 +32,5 @@
         height: 19.8px;
         margin-right: 10px;
     }
-    .imgFilm{
-        height: 250px;
-    }
-    .film:hover .functions{
-        display: block;
-    }
+
 }

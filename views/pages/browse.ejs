@@ -33,7 +33,7 @@
                     <img src="../img/icons/filmRandom.svg" id="filmRandom">
                 </div>
                 <article id="textRandom">Deixa a gente te ajudar a escolher um filme. Clique no botão abaixo.</article>
-                <button id="btn-randomize">RANDOMIZAR</button>
+                <a href="/api/video/randomVideo"><button id="btn-randomize">RANDOMIZAR</button></a>
             </div>
             <div>
                 <article class="titles">Gêneros</article>
@@ -53,7 +53,7 @@
         </div>
 	</section>
 	
-    <% include ../partials/tabBar %>
+    <%- include('../partials/tabBar', {currentPage: "browse"}); %>
     
     <footer><h1>©Now Loading</h1></footer>
 

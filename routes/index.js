@@ -106,22 +106,28 @@ router.get("/pages/player.html", function(req,res, next) {
 
   var id = req.query.id
 
-  if (!id)
-    res.send({err: "Identificador de vídeo não fornecido"})
+  if (!id) {
 
-  Video.findById(id, (err, video) => {
-    ProductionInfo
-      .find({"videoID": video._id})
-      .populate("genre")
-      .exec( (err, productionInfo) => {
-        console.log(productionInfo)
-        res.render('pages/player', {
-                                    video: video,
-                                    productionInfo: productionInfo[0]
-                                    });
-      })
-  })
-  
+    res.send({err: "Identificador de vídeo não fornecido"})
+    
+  } else {
+
+    Video.findById(id, (err, video) => {
+
+      ProductionInfo
+        .find({"videoID": video._id})
+        .populate("genre")
+        .exec( (err, productionInfo) => {
+          console.log(productionInfo)
+          res.render('pages/player', {
+                                      video: video,
+                                      productionInfo: productionInfo[0]
+                                      });
+        })
+    })
+
+  }
+
 })
 
 router.get("/pages/portfolio.html", function(req,res, next) {
@@ -151,6 +157,7 @@ router.get("/pages/profile.html", function(req,res, next) {
     })
   }
 })
+
 
 router.get("/pages/recommended.html", function(req,res, next) {
   

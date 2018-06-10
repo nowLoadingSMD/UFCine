@@ -25,7 +25,17 @@ router.get("/videoPlayer", (req, res) => {
         });
     })
 
+})
 
+router.get("/randomVideo", (req, res, next) => {
+
+    Video.find({}, (err, videos) => {
+  
+      const index =  Math.floor((Math.random() * videos.length - 1) + 1);
+    
+      res.redirect(`/pages/player.html?id=${videos[index]._id}`)
+    })
+  
 })
 
 router.get("/videoStream", (req, res) => {
@@ -33,36 +43,40 @@ router.get("/videoStream", (req, res) => {
     const id = req.query.id;
 
     Video.findById(id, (err, video) => {
-        console.log(video.path)
-        const path = 'assets/sample.mp4'
-        const stat = fs.statSync(path)
-        const fileSize = stat.size
-        const range = req.headers.range
-        if (range) {
-          const parts = range.replace(/bytes=/, "").split("-")
-          const start = parseInt(parts[0], 10)
-          const end = parts[1]
-            ? parseInt(parts[1], 10)
-            : fileSize-1
-          const chunksize = (end-start)+1
-          const file = fs.createReadStream(path, {start, end})
-          const head = {
-            'Content-Range': `bytes ${start}-${end}/${fileSize}`,
-            'Accept-Ranges': 'bytes',
-            'Content-Length': chunksize,
-            'Content-Type': 'video/mp4',
-          }
-          res.writeHead(206, head);
-          file.pipe(res);
-        } else {
-          const head = {
-            'Content-Length': fileSize,
-            'Content-Type': 'video/mp4',
-          }
-          res.writeHead(200, head)
-          fs.createReadStream(path).pipe(res)
+        try {
+            console.log(video.path)
+            const path = video.path
+            const stat = fs.statSync(path)
+            const fileSize = stat.size
+            const range = req.headers.range
+            if (range) {
+              const parts = range.replace(/bytes=/, "").split("-")
+              const start = parseInt(parts[0], 10)
+              const end = parts[1]
+                ? parseInt(parts[1], 10)
+                : fileSize-1
+              const chunksize = (end-start)+1
+              const file = fs.createReadStream(path, {start, end})
+              const head = {
+                'Content-Range': `bytes ${start}-${end}/${fileSize}`,
+                'Accept-Ranges': 'bytes',
+                'Content-Length': chunksize,
+                'Content-Type': 'video/mp4',
+              }
+              res.writeHead(206, head);
+              file.pipe(res);
+            } else {
+              const head = {
+                'Content-Length': fileSize,
+                'Content-Type': 'video/mp4',
+              }
+              res.writeHead(200, head)
+              fs.createReadStream(path).pipe(res)
+            }
+        } catch(e) {
+            console.log(e)
+            res.status(500).send({ err: 'Problema ao carregar o vídeo!' });
         }
-
     })
 
 
@@ -83,10 +97,7 @@ router.post("/upload", (req, res) => {
 router.post("/uploadVideo", async (req, res) => {
 
     const userID = req.query.id
-    // console.log(userID)
-
-    // console.log(req.body)
-
+   
     console.log(GenreEnum[req.body.genre])
 
     if (!req.files)
@@ -113,10 +124,12 @@ router.post("/uploadVideo", async (req, res) => {
 
         let id = video._id
 
+        console.log(GenreEnum[req.body.genre])
+
         let productionInfo = {
             videoID: video._id,
             description: req.body.description,
-            classification: "16+",
+            classification: req.body.classification,
             year: req.body.year,
             tags: [],
             genre: GenreEnum[req.body.genre],

@@ -47,6 +47,10 @@ html{
 	background-size: cover;
 }
 
+body {
+	min-height: 100vh;
+}
+
 .principal .titles{
     font-size: 34px;
     color: #fff;
@@ -63,31 +67,6 @@ html{
 	z-index: 5;
 }
 
-.navbar #btn-user{
-	float: right;
-	position: relative;
-	display: none;
-	width: 40px;
-	height: 40px;
-	border-radius: 50px;
-	border: 2px solid var(--aqua-marine);
-	margin: 15px 0;
-	overflow: hidden;
-}
-
-.navbar #btn-user img{
-	height: 100%;
-}
-
-.navbar #dropdown i{
-	font-size: 1.3em;
-	float: right;
-	position: relative;
-	color: var(--aqua-marine);
-	margin: 20px 40px 0 10px;
-	display: none;
-}
-
 .navbar h1{
 	padding: 10px;
 	font-size: 1.4em;
@@ -96,121 +75,10 @@ html{
 	font-family: TitleBold;
 }
 
-.navbar #search{
-	display: none;
-}
-
-.navbar #searchIcon{
-	display: block;
-}
-
-.navbar #btn-login{
-	display: none;
-	font-size: 1em;
-	background: none;
-	float: right;
-	margin: 15px 25px;
-	cursor: pointer;
-	width: 96px;
-  	height: 34px;	
-	border-radius: 2px;
-	border: solid 2px var(--aqua-marine);
-	color: var(--aqua-marine);
-	transition: background 0.5s, border 0.5s;
-}
-
-.navbar #btn-login:hover{
-	color: #fff;
-	background: var(--darkish-pink);
-	border-color: var(--darkish-pink);
-}
-
-.navbar #btn-user:hover{
-	cursor: pointer;
-}
-
-.dropdown-content {
-	display: none;
-	margin-top: 50px; 
-	position: absolute;
-	right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 250px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-	display: block;
-	cursor: pointer;
-}
-
-.dropdown-content a:hover {color: var(--aqua-marine);}
-
-#dropdown:hover .dropdown-content{
-	display: block;
-}
-
-.tabBar{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #111738;
-	position: fixed;
-	text-align: center;
-	z-index: 6;
-	display: grid;
-	grid-gap: 10px 0;
-	grid-template-columns: 25% 25% 25% 25%;
-	padding: 0 5%;
-}
-
-.tabBar .icons{
-	float: left;
-	margin: 10px 2% 0 8%;
-}
-
-.tabBar a h1{
-	display: none;
-}
-
-.tabBar a{
-	color: #fff;
-}
-
-.tabBar #iconHome{
-	width: 40px;
-	height: 40px;
-	background-image: url("../img/icons/home.svg");
-}
-
-.tabBar #iconAuthors{
-	width: 40px;
-	height: 40px;
-	background-image: url("../img/icons/authors.svg");
-	float: right;
-	margin-right: 15%;
-}
-
-.tabBar #iconBrowse{
-	width: 40px;
-	height: 40px;
-	background-image: url("../img/icons/browse.svg");
-	margin-left: 15%;
-}
-
-.tabBar #iconAbout{
-	width: 40px;
-	height: 40px;
-	background-image: url("../img/icons/about.svg");
-	float: right;
-}
-
 .principal{
 	padding: 50px 10px 40px 10px;
+	min-height: 100vh;
+	margin-bottom: -50px;
 }
 
 #iconBack{
@@ -225,80 +93,16 @@ footer{
 	text-align: center;
 	padding: 15px;
 	font-size: 20px;
+	margin-bottom: 0;
 }
 
 @media screen and (min-width: 1080px){
-	.tabBar{
-		height: 100%;
-		width: 110px;
-		display: block;
-		padding: 0;
-	}
-	.tabBar .icons{
-		margin: 12vh 0 5px 36px !important;
-		float: left !important;
-	}
-	.tabBar a h1{
-		display: block;
-	}
-	.navbar{
-		height: 70px;
-	}
-	.navbar h1{
-		text-align: center;
-		padding-top: 15px;
-		padding-left: 50%;
-	}
-	.navbar i{
-		margin: 5px 30px; 
-	}
-	.navbar #search{
-		display: block;
-		position: absolute;
-		margin: 17px 120px;
-		padding: 3px 40px;  
-		font-family: TitleBook;
-		border-bottom: solid 2px var(--aqua-marine);
-		background: none;
-		color: white;
-		width: 300px;
-		transition: border 0.5s;
-	}
-	.navbar #search:focus{
-		border-color: var(--darkish-pink);
-	}
-	.navbar #searchIcon{
-		position: absolute;
-		font-size: 20px;
-		margin-left: 130px;
-		margin-top: 18px;
-		color: var(--aqua-marine);
-	}
-	.navbar #btn-user{
-		height: 40px;
-	}
-	.dropdown-content {
-		margin-top: 56px;
-	}
+
 	.principal{
 		margin-left: 70px;
 		padding: 60px 50px 40px 80px;
 	}
-/*	.principal h1{
-		font-size: 2em;
-		padding: 0;
-	}*/
-	#iconLogin{
-		display: none;
-	}
-	.navbar #btn-login{
-		display: block;
-	}
-	/* form{
-		width: 50%;
-		margin-left: 25%; 
-		margin-top: 50px;
-	} */
+
 	footer{
 		margin-bottom: 0;
 	}
@@ -328,144 +132,6 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darkish-pink); 
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-	background-color: rgb(52, 63, 65);
-	border-radius: 8px;
-    margin: auto;
-    padding: 20px;
-	width: 40%;
-	height: 400px;
-}
-
-/* The Close Button */
-.close {
-    float: right;
-	margin: 25px;
-	background-image: url("../img/btn-close.png");
-	width: 32px;
-	height: 32px;
-}
-
-.close:hover, .close:focus {
-    background-image: url("../img/btn-close-hover.png");
-    cursor: pointer;
-}
-
-/* .modal h1{
-	font-size: 2.15em;
-	color: #fff;
-	float: left; 
-	padding: 26px;
-}
-
-#modal-login form{
-	width: 90%;
-	margin-left: 5%;
-}
-
-#modal-signUp form{
-	width: 90%;
-	margin-left: 5%;
-} */
-
-/* form .textfield{
-	width: 100%;
-	margin-top: 20px;
-	padding: 5px 15px;
-	border-radius: 16px;
-	border: solid 2px rgb(48, 208, 221);
-	color: #30d0dd;
-	background: none;
-}
-
-form .go{
-	margin-top: 15px; 
-	padding: 5px;
-	font-size: 0.9em;
-	border-radius: 5px;
-}
-
-form a{
-	text-decoration: none;
-	color: #fff;
-	cursor: pointer;
-}
-
-form a:hover{
-	color: #dd3060;
-}
-
-form h5{
-	font-size: 1.125em;
-	margin-top: 20px;
-}
-
-form h2{
-	font-size: 1.125em;
-	margin-top: 50px;
-	float: left;
-}
-
-form h3{
-	font-size: 1.125em;
-	margin-top: 70px;
-	float: left;
-}
-
-form .btn-go{
-	border-radius: 2px;
-  	border: solid 2px rgb(48, 208, 221);
-	color: #30d0dd;
-	padding: 10px;
-	margin-top: 60px; 
-	background: none;
-	cursor: pointer;
-}
-
-form #btn-signUp{
-	float: left;
-}
-
-form #btn-goLogin{
-	float: right;
-}
-
-#modal-signUp{
-	display: none;
-}
-
-#form-signUp{
-	display: grid;
-	grid-gap: 10px 10px;
-  	grid-template-columns: auto auto;
-}
-
-#btn-goSignUp{
-	float: right;
-}
-
-#modal-upload{
-	display: none;
-} */
-
-
 
 button{
     cursor: pointer;

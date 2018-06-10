@@ -20,3 +20,153 @@
     <a href="login.html"><button type="button" id="btn-login">ENTRAR</button></a>
     <i class="fas fa-search" id="searchIcon"></i>
 </header>
+
+<style>
+.navbar{
+	width: 100%;
+	height: 50px;
+	background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
+	position: fixed;
+	z-index: 5;
+}
+
+.navbar #btn-user{
+	float: right;
+	position: relative;
+	display: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	border: 2px solid var(--aqua-marine);
+	margin: 15px 0;
+	overflow: hidden;
+}
+
+.navbar #btn-user img{
+	height: 100%;
+}
+
+.navbar #dropdown i{
+	font-size: 1.3em;
+	float: right;
+	position: relative;
+	color: var(--aqua-marine);
+	margin: 20px 40px 0 10px;
+	display: none;
+}
+
+.navbar h1{
+	padding: 10px;
+	font-size: 1.4em;
+	color: #fff;
+	float: left;
+	font-family: TitleBold;
+}
+
+.navbar #search{
+	display: none;
+}
+
+.navbar #searchIcon{
+	display: block;
+}
+
+.navbar #btn-login{
+	display: none;
+	font-size: 1em;
+	background: none;
+	float: right;
+	margin: 15px 25px;
+	cursor: pointer;
+	width: 96px;
+  	height: 34px;	
+	border-radius: 2px;
+	border: solid 2px var(--aqua-marine);
+	color: var(--aqua-marine);
+	transition: background 0.5s, border 0.5s;
+}
+
+.navbar #btn-login:hover{
+	color: #fff;
+	background: var(--darkish-pink);
+	border-color: var(--darkish-pink);
+}
+
+.navbar #btn-user:hover{
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1100px){
+	.navbar{
+		height: 70px;
+	}
+	.navbar h1{
+		text-align: center;
+		padding-top: 15px;
+		padding-left: 50%;
+	}
+	.navbar i{
+		margin: 5px 30px; 
+	}
+	.navbar #search{
+		display: block;
+		position: absolute;
+		margin: 17px 120px;
+		padding: 3px 40px;  
+		font-family: TitleBook;
+		border-bottom: solid 2px var(--aqua-marine);
+		background: none;
+		color: white;
+		width: 300px;
+		transition: border 0.5s;
+	}
+	.navbar #search:focus{
+		border-color: var(--darkish-pink);
+	}
+	.navbar #searchIcon{
+		position: absolute;
+		font-size: 20px;
+		margin-left: 130px;
+		margin-top: 18px;
+		color: var(--aqua-marine);
+	}
+	.navbar #btn-user{
+		height: 40px;
+	}
+	.dropdown-content {
+		margin-top: 56px;
+    }
+    
+	#iconLogin{
+		display: none;
+	}
+	.navbar #btn-login{
+		display: block;
+	}
+}
+
+.dropdown-content {
+	display: none;
+	margin-top: 50px; 
+	position: absolute;
+	right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 250px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+
+.dropdown-content a:hover {color: var(--aqua-marine);}
+
+#dropdown:hover .dropdown-content{
+	display: block;
+}
+
+</style>

@@ -20,8 +20,6 @@
 
 	<% include ../partials/navBar %>
 
-	<% include ../partials/modals/modals %>
-
 	<section class="principal">
 			<article class="titles"><h1>Sobre o curso</h1></article>
 			<div class="logoCinema"></div>
@@ -70,7 +68,7 @@
 			</div>
 		</section>
 	
-	<% include ../partials/tabBar %>
+		<%- include('../partials/tabBar', {currentPage: "about"}); %>
 
     <footer><h1>©Now Loading</h1></footer>
 
