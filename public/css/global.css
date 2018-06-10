@@ -45,7 +45,10 @@ html{
 	background-color: var(--dark-blue-grey);
 	background-image: linear-gradient(rgba(0, 216, 255, 0.53), rgba(155, 233, 235, 0.22) 32%, rgba(63, 212, 228, 0) 64%, rgba(221, 48, 96, 0.44) 100%, rgba(63, 212, 228, 0), rgba(95, 21, 98, 0));
 	background-size: cover;
-	height: 100%;
+}
+
+body {
+	min-height: 100vh;
 }
 
 .principal .titles{
@@ -74,6 +77,8 @@ html{
 
 .principal{
 	padding: 50px 10px 40px 10px;
+	min-height: 100vh;
+	margin-bottom: -50px;
 }
 
 #iconBack{
@@ -88,7 +93,7 @@ footer{
 	text-align: center;
 	padding: 15px;
 	font-size: 20px;
-	margin-bottom: 60px;
+	margin-bottom: 0;
 }
 
 @media screen and (min-width: 1080px){

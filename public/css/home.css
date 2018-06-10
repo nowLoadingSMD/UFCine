@@ -14,8 +14,8 @@
   margin-top: 60px;
   display: grid;
   width: 100%;
-  grid-gap: 20px 2%;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 10px;
+  grid-template-columns: repeat(auto-fit, 180px);
 }
 
 .movieCardContainer a{
@@ -51,9 +51,6 @@
     display: grid;
     grid-gap: 20px 2%;
     grid-template-columns: 50% 50%;
-  }
-  .movieCardContainer{
-    grid-template-columns: 32% 32% 32%;
   }
 
   .principal .titles{
