@@ -116,7 +116,7 @@ router.post("/uploadVideo", async (req, res) => {
         let productionInfo = {
             videoID: video._id,
             description: req.body.description,
-            classification: "16+",
+            classification: req.body.classification,
             year: req.body.year,
             tags: [],
             genre: GenreEnum[req.body.genre],

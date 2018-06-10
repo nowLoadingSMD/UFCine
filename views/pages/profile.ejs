@@ -34,17 +34,17 @@
                 </ul>
                 <div class="group-films" id="posted">
                     <% videosPosted.forEach(function(item){ %>
-                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                        <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
                     <% }); %>
                 </div>
                 <div class="group-films" id="favorites">
                     <% user.favorites.forEach(function(item){ %>
-                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                        <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
                     <% }); %>
                 </div>
                 <div class="group-films" id="watchlist">
                     <% user.watchList.forEach(function(item){ %>
-                        <%- include("../partials/cards/movieCardOnProfile", {name: item.name, id: item._id}); %> 
+                        <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
                     <% }); %>
 				</div>
             </div>

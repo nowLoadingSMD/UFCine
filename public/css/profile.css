@@ -91,7 +91,15 @@
     height: 300px;
 }
 
-.group-films .film{
+.group-films{
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    grid-gap: 20px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+/* .group-films .film{
     margin: 2% 2% 0 0;
     width: 29%;
     height: 40%;
@@ -107,6 +115,7 @@
     color: #333;
     margin-top: 35%;
 }
+
 
 .group-films .film div{
     width: 100%;
@@ -147,7 +156,7 @@
     font-size: 2em;
     margin-top: 13px;
     margin-left: 15px;
-}
+} */
 
 .content-notifications ul {
     list-style-type: none;

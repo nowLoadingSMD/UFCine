@@ -1,9 +1,9 @@
 
 	<nav class="tabBar">
-		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article>Início</a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article>Navegar</a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article>Produtores</a>
-		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article>Sobre</a>
+		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><span>Início</span></a>
+		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><span>Navegar</span></a>
+		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><span>Produtores</span></a>
+		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article><span>Sobre</span></a>
 	</nav>
 
 	<style>
@@ -23,8 +23,9 @@
 		}
 
 		.tabBar .icons{
-			float: left;
-			margin: 10px 2% 0 8%;
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
 		}
 
 		.tabBar a h1{
@@ -39,28 +40,32 @@
 			width: 40px;
 			height: 40px;
 			background-image: url("../img/icons/home.svg");
+			margin: 0 auto;
 		}
 
 		.tabBar #iconAuthors{
 			width: 40px;
 			height: 40px;
 			background-image: url("../img/icons/authors.svg");
-			float: right;
-			margin-right: 15%;
+			margin: 0 auto;
+			/* float: right; */
+			/* margin-right: 15%; */
 		}
 
 		.tabBar #iconBrowse{
 			width: 40px;
 			height: 40px;
 			background-image: url("../img/icons/browse.svg");
-			margin-left: 15%;
+			margin: 0 auto;
+			/* margin-left: 15%; */
 		}
 
 		.tabBar #iconAbout{
 			width: 40px;
 			height: 40px;
 			background-image: url("../img/icons/about.svg");
-			float: right;
+			margin: 0 auto;
+			/* float: right; */
 		}
 
 		@media screen and (min-width: 1080px){

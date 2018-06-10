@@ -3,7 +3,7 @@ const GenreEnum = Object.freeze({
     "Animação": "5b1ada42b971dca32281810c",
     "Aventura": "5b1ada47b971dca32281810d",
     "Curtas": "5b1ada4db971dca32281810e",
-    "Documentários": "5b1ada52b971dca32281810f",
+    "Documentário": "5b1ada52b971dca32281810f",
     "Drama": "5b1ada58b971dca322818110",
     "Fantasia": "5b1ada5cb971dca322818111",
     "FicçãoCientífica": "5b1ada63b971dca322818112",
