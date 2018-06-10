@@ -113,6 +113,7 @@ router.get("/pages/player.html", function(req,res, next) {
   } else {
 
     Video.findById(id, (err, video) => {
+
       ProductionInfo
         .find({"videoID": video._id})
         .populate("genre")
@@ -156,6 +157,7 @@ router.get("/pages/profile.html", function(req,res, next) {
     })
   }
 })
+
 
 router.get("/pages/recommended.html", function(req,res, next) {
   

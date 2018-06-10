@@ -25,7 +25,17 @@ router.get("/videoPlayer", (req, res) => {
         });
     })
 
+})
 
+router.get("/randomVideo", (req, res, next) => {
+
+    Video.find({}, (err, videos) => {
+  
+      const index =  Math.floor((Math.random() * videos.length - 1) + 1);
+    
+      res.redirect(`/pages/player.html?id=${videos[index]._id}`)
+    })
+  
 })
 
 router.get("/videoStream", (req, res) => {
@@ -34,7 +44,7 @@ router.get("/videoStream", (req, res) => {
 
     Video.findById(id, (err, video) => {
         console.log(video.path)
-        const path = 'assets/sample.mp4'
+        const path = video.path
         const stat = fs.statSync(path)
         const fileSize = stat.size
         const range = req.headers.range
