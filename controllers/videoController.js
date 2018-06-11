@@ -248,4 +248,23 @@ router.post("/getVideosByProducerID", (req, res) => {
 
 })
 
+router.post("/setApplauses", (req, res) => {
+    const videoID = req.body.videoID
+
+        if (videoID) {        
+        Video.findById(videoID, (err, video) => {
+            if (err)
+                throw err
+
+            //else
+            Video.findByIdAndUpdate(videoID, { $set: { quantityOfApplauses: video.quantityOfApplauses + 1 }}, { new: true }, function (err, video) {
+                        if (err) return handleError(err);
+                        res.send({err: null});
+                    });
+            })
+        }
+})
+
+
+
 module.exports = (app) => app.use("/api/video", router) 
