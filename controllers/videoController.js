@@ -216,7 +216,6 @@ router.post("/getVideosByGenrerID", (req, res) => {
     const genreID = req.body.genreID
 
     if (genreID) {
-        
         ProductionInfo
             .find( {genres: genreID })
             .populate('videoID')
@@ -231,5 +230,22 @@ router.post("/getVideosByGenrerID", (req, res) => {
 
 })
 
+router.post("/getVideosByProducerID", (req, res) => {
+    const producerID = req.body.producerID
+
+    if (producerID) {
+        Video
+            .find( {producerID: producerID })
+            .populate('videoID')
+            .select("videoID")
+            .exec( (err, result) => {
+                if (err)
+                    throw err
+
+                res.json(result)
+            })
+    }
+
+})
 
 module.exports = (app) => app.use("/api/video", router) 
