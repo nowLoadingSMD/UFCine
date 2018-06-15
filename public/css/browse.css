@@ -23,11 +23,11 @@
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: rgba(21,21,21, 0.3);
+    background-color: var(--black-opac);
     padding: 28px 75px 25px 57px;
 }
 
-.aleatorio h2 {
+.tituloCard {
     font-family: TitleBold;
     font-size: 36px;
     font-weight: 900;
@@ -40,8 +40,8 @@
     padding-bottom: 17px;
 }
 
-.aleatorio p {
-    font-family: BodyText;
+.subTituloCard {
+    font-family: TitleMedium;
     font-size: 22px;
     font-weight: normal;
     font-style: normal;
@@ -61,16 +61,16 @@
     width: 33%;
 } 
 
-#btn-randomize{
+.btn{
     padding: 5px 8px;
     margin: 0 auto;
     background: none;
     border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    color: var(--aqua-marine);
+    border: solid 2px var(--tealish);
+    color: var(--tealish);
 }
 
-#btn-randomize:hover{
+.btn:hover{
     background: var(--aqua-marine);
     color: #fff;
 }
@@ -78,31 +78,134 @@
 .generos {
     grid-area: generos;
     height: 309px;
-    opacity: 0.3;
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: #151515;
+    background-color: var(--black-opac);
+}
+
+.generos .tituloCard {
+    padding-left: 54px;
+    padding-top: 28px;
+    padding-bottom: 37px;
+}
+
+.generos li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 18px;
+    text-align: center;
+    padding-bottom: 56px;
+    padding-left: 54px; 
+    padding-right: 55px; 
+}
+
+.generos ul {
+    font-family: BodyText;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.iconBrowse {
+    width: 32px;
+    height: 32px;
+    /* background-color: red; */
+    background-image: url("../img/icons/browse-active.svg");
 }
 
 .anos {
     grid-area: anos;
     height: 309px;
-    opacity: 0.3;
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: #151515;
+    background-color: var(--black-opac);
+    padding: 28px 75px 25px 57px;
 }
 
 .tags {
     grid-area: tags;
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                         "grid-left grid-right";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 180px;
+    grid-template-rows: 1fr 10fr; 
     height: 342px;
-    opacity: 0.3;
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: #151515;
+    background-color: var(--black-opac);
+    padding: 28px 75px 25px 57px;
+}
+
+.tags .tituloCard {
+    grid-area: titulo;
+}
+
+.grid-left {
+    grid-area: grid-left;
+}
+
+.grid-right {
+    grid-area: grid-right;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tagTextInput {
+    height: 65px;
+    width: 431px;
+    background-color:rgba(40,181,193, 0.3);
+}
+
+.selectedTagsBox {
+    height: 100px;
+}
+
+.grid-right button {
+    align-self: center;
+}
+
+.tagsBox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+
+.tag {
+    margin: 12px 8px;
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+    padding-top: 0.25rem; 
+    padding-right: 0.25rem;
+    padding-left: 0.5rem;
+    text-align: center;
+
+    border-radius: 17px;
+    background-color: #f2f2f2;
+    height: 25px;
+    display: inline-block;
+    align-items: center;
+
+    font-family: TitleBold;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: #111d38;
+
 }
 
 /* .principal
