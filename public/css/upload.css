@@ -9,6 +9,7 @@
     margin-top: 35px;
 }
 
+
 .principal .titleMedium{
     color: white;
     font-size: 26px;
@@ -103,6 +104,7 @@
     padding: 4.5px 10px;
     color: var(--aqua-marine);
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 #list input, #list2 input{

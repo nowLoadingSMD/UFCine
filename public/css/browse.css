@@ -6,6 +6,107 @@
     color: var(--aqua-marine);
 }
 
+.grid {
+    width: 100%;
+    margin-top: 40px; 
+    display: grid;
+    grid-gap: 34px;
+    grid-template-areas: "aleatorio aleatorio"
+                         "generos anos"
+                         "tags tags";
+    grid-template-columns: 1fr 1fr;
+}
+
+.aleatorio {
+    grid-area: aleatorio;
+    height: 408px;
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: rgba(21,21,21, 0.3);
+    padding: 28px 75px 25px 57px;
+}
+
+.aleatorio h2 {
+    font-family: TitleBold;
+    font-size: 36px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding-bottom: 17px;
+}
+
+.aleatorio p {
+    font-family: BodyText;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding-bottom: 28px; 
+}
+
+/* .random {
+    width: 33%;
+}
+*/
+.filmRandom {
+    width: 33%;
+} 
+
+#btn-randomize{
+    padding: 5px 8px;
+    margin: 0 auto;
+    background: none;
+    border-radius: 2px;
+    border: solid 2px var(--aqua-marine);
+    color: var(--aqua-marine);
+}
+
+#btn-randomize:hover{
+    background: var(--aqua-marine);
+    color: #fff;
+}
+
+.generos {
+    grid-area: generos;
+    height: 309px;
+    opacity: 0.3;
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #151515;
+}
+
+.anos {
+    grid-area: anos;
+    height: 309px;
+    opacity: 0.3;
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #151515;
+}
+
+.tags {
+    grid-area: tags;
+    height: 342px;
+    opacity: 0.3;
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #151515;
+}
+
+/* .principal
+
 .grid-content{
     display: grid;
     grid-gap: 20px 20px;
@@ -77,4 +178,4 @@
 
 .grid-genre article:hover{
     color: var(--darkish-pink);
-}
+} */
