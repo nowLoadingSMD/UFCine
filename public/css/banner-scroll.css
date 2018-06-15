@@ -36,14 +36,15 @@
 	user-select:none; 
 	text-align: center;}
 .glide__bullet{
-	background: rgba(0, 0, 0, 0);
+	background: none;
+	margin-top: 10px;
 	border: solid 2px var(--aqua-marine);
-	padding: 5px;
-	border-radius: 10px;
+	padding: 8px;
+	border-radius: 20px;
 }
 .slider__frame{
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0));
-	height: 300px;
+	height: 278px;
 }
 .slider__frame:hover{
 	background: linear-gradient(to right, rgba(221, 48, 96, 0.8) 40%, rgba(111, 24, 48, 0));
@@ -52,15 +53,10 @@
 .glide__bullet--active{
 	background: var(--aqua-marine);
 }
-.banner-player{
-	width: 5.5%;
-	background: none;
-	height: 100%;
-	position: absolute;
-	background: none;
-}
 .img-banner{
 	width: 100%;
+	margin-top: -100px;
+	float: left;
 }
 .slider__frame .banner-player .icon-play{
 	position: absolute;
@@ -71,7 +67,7 @@
 .slider__frame:hover .icon-play{
 	display: block;
 }
-.slider__frame article p{
+/* .slider__frame article p{
 	font-size: 20px;
 	font-family: TitleBold;
 }
@@ -84,34 +80,58 @@
 	display: none;
 	word-wrap: break-word;
 	font-family: BodyText;
-}
+}*/
 .slider__frame .titleFilm{
 	font-size: 26px;
-	font-family: TitleBold;
+	padding: 8px;
+	color: white;
+	float: left;
+}
+
+.slider__frame .description{
+	background-color: rgba(221, 48, 96, 0.8);
+	position: absolute;
+	height: 50px;
+	width: 6.57%;
+	bottom: 0;
+	display: none;
+}
+
+.slider__frame:hover .description{
+	display: block;
+}
+
+.slider__frame .description #addlist{
+	color: white;
+	font-family: TitleBook;
+	float: right;
+	padding: 17px;
+	margin-right: 25px;
+	font-size: 14px;
+}
+
+.slider__frame .description img{
+	width: 25px;
+	height: 25px;
+	margin: 13px 10px;
+	float: right;
+	position: absolute;
+	right: 0;
 }
 
 @media screen and (min-width: 450px){
-	.banner-player{
-		width: 2.5%;
-	}
 	.slider__frame article{
 		display: block;
 	}
 }
 
 @media screen and (min-width: 700px){
-	.banner-player{
-		width: 5.5%;
-	}
 	.slider__frame article{
 		display: none;
 	}
 }
 
 @media screen and (min-width: 1080px){
-	.banner-player{
-		width: 2.5%;
-	}
 	.slider__frame article{
 		display: block;
 	}

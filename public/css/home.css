@@ -18,22 +18,21 @@
 .principal .titleInitial{
   font-family: TitleBold;
   font-size: 2em;
-  width: 170px;
-  margin-top: 15px;
+  margin-top: 40px;
   color: #fff;
 }
 
 .btn-viewMore{
-  padding: 3px;
+  padding: 5px;
   font-size: 1em;
-  width: 60px;
+  width: 90px;
   border: solid 2px var(--aqua-marine);
   color: var(--aqua-marine);
   background: none;
   border-radius: 2px;
-  transition: 0.2s background;
+  transition: 0.5s background, 0.5s border, 0.5s color;
   float: right;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
 
@@ -42,7 +41,54 @@
   display: grid;
   width: 100%;
   grid-gap: 20px 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.movieCardExhibition{
+  margin-top: 60px;
+  display: grid;
+  width: 100%;
+  grid-gap: 20px 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.movieCardExhibition .filmExhibition{
+  cursor: pointer;
+}
+.movieCardExhibition .filmExhibition:hover div{
+  background-color: rgba(221, 48, 96, 0.8);
+}
+.movieCardExhibition .filmExhibition .imgFilmExhibition{
+  width: 40%;
+  height: 230px;
+  overflow: hidden;
+  float: left;
+}
+.movieCardExhibition .filmExhibition .imgFilmExhibition img{
+  height: 100%;
+}
+.movieCardExhibition .filmExhibition div{
+  padding: 30px 20px;
+  width: 60%;
+  margin-left: 40%;
+  height: 230px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.filmExhibition div h1{
+  font-size: 22px;
+  font-family: TitleBold;
+}
+.filmExhibition div h5{
+  font-size: 16px;
+  font-family: TitleBook;
+  margin-top: 5px;
+}
+.filmExhibition div h3{
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: TitleBold;
 }
 
 @media screen and (min-width: 450px) {
@@ -85,21 +131,24 @@
   }
 
   .movieCardContainer{
-    margin-top: 60px;
+    margin-top: 100px;
     display: grid;
     width: 100%;
-    grid-gap: 20px 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   .principal .titles{
     font-size: 2.125em;
+    margin-bottom: 10px;
+    margin-top: 30px;
   }
 
 }
 
 .btn-viewMore:hover{
-  background:var(--aqua-marine);
+  background:var(--darkish-pink);
   color: #fff;
+  border: 2px solid var(--darkish-pink);
 }
 

@@ -1,9 +1,10 @@
 <header class="navbar">
     <input type="text" id="search" placeholder="Pesquisar" />
     <h1>LOGO</h1>
-    <i class="fas fa-sign-in-alt" id="iconLogin"></i>
+	<i class="fas fa-sign-in-alt" id="iconLogin"></i>
+	<a href="/pages/upload.html"><button id="uploadVideo">ENVIAR VÍDEO</button></a>
     <div id="dropdown">
-        <!-- <i id="btn-user" class="fas fa-user"></i> -->
+		<!-- <i id="btn-user" class="fas fa-user"></i> -->
         <i class="fas fa-sort-down" id="showDropdown"></i>
         <article id="btn-user">
             <img src="/img/authors/Camila.jpg">
@@ -12,7 +13,7 @@
         <div class="dropdown-content" id="dropdown-content">
             <a href="/pages/profile.html" id="profileAnchor">Perfil</a>
             <!-- <a href="#">Notificações</a> -->
-            <a href="/pages/upload.html" id="btn-upload">Enviar filme</a>
+            <!-- <a href="/pages/upload.html" id="btn-upload">Enviar filme</a> -->
             <a href="/pages/editProfile.html">Configurações da conta</a>
             <a href="#" id="btn-logout">Sair</a>
         </div>
@@ -25,7 +26,11 @@
 .navbar{
 	width: 100%;
 	height: 50px;
-	background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
+	/* background-image: linear-gradient(#000000, rgba(0, 0, 0, 0)); */
+	/* -webkit-backdrop-filter: blur(30px); */
+	/* filter: blur(3px); */
+	-webkit-backdrop-filter: blur(30px);
+	background-color: rgba(255, 255, 255, 0.1);
 	position: fixed;
 	z-index: 5;
 }
@@ -53,6 +58,22 @@
 	color: var(--aqua-marine);
 	margin: 20px 40px 0 10px;
 	display: none;
+}
+
+.navbar #uploadVideo{
+	margin: 17px 130px;
+	position: absolute;
+	right: 0;
+	padding: 8px;
+	color: #fff;
+	background: var(--aqua-marine);
+	border-radius: 2px;
+	transition: 0.5s background;
+	display: none;
+}
+
+.navbar #uploadVideo:hover{
+	background: var(--darkish-pink);
 }
 
 .navbar h1{
@@ -111,7 +132,7 @@
 	.navbar #search{
 		display: block;
 		position: absolute;
-		margin: 17px 120px;
+		margin: 17px 150px;
 		padding: 3px 40px;  
 		font-family: TitleBook;
 		border-bottom: solid 2px var(--aqua-marine);
@@ -126,7 +147,7 @@
 	.navbar #searchIcon{
 		position: absolute;
 		font-size: 20px;
-		margin-left: 130px;
+		margin-left: 150px;
 		margin-top: 18px;
 		color: var(--aqua-marine);
 	}
