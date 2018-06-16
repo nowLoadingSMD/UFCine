@@ -5,7 +5,6 @@ html{
 	height: 100%;
 }
 .principal{
-    
     width: 100%;
     height: 100%;
     background-size: 100%;
@@ -14,9 +13,21 @@ html{
     padding: 0;
 }
 .navbar #btn-login{
-    background: var(--aqua-marine);
-    border: none;
-    color: white;
+	background: var(--aqua-marine);
+	float: right;
+	margin: 15px 25px;
+	cursor: pointer;
+	width: 96px;
+  	height: 34px;	
+	border-radius: 2px;
+	border: solid 2px var(--aqua-marine);
+	color: #fff;
+	transition: background 0.5s, border 0.5s;
+}
+
+.navbar #btn-login:hover{
+	background: var(--darkish-pink);
+	border-color: var(--darkish-pink);
 }
 #logo{
     font-size: 90px;
@@ -24,9 +35,6 @@ html{
     margin: 8% 0 40px 5%;
 }
 .slogan{
-    color: var(--dull-purple);
-    font-family: TitleBold;
-    font-size: 40px;
     margin-left: 5%;
     width: auto;
     background: white;
@@ -37,7 +45,7 @@ html{
     width: 640px;
 }
 #slogan2{
-    width: 795px;
+    width: 800px;
 }
 .principal button{
     background: none;
@@ -60,6 +68,5 @@ html{
 footer{
     position: absolute;
     bottom: 0;
-    height: 70px;
-    padding-top: 35px; 
+    height: 50px; 
 }
