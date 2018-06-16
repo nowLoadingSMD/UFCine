@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   perView: 2,
   autoplay: 3500,
   hoverpause: true,
+  
   breakpoints: {
     1500: {
       perView: 2

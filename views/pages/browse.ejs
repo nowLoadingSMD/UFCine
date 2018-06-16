@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/browse.css">
+    <link rel="stylesheet" type="text/css" href="../css/carousel.css">
     <link rel="stylesheet" type="text/css" href="../css/jqcloud.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +29,22 @@
                 <p class="subTituloCard sectionSubHeader">Deixe que a gente escolhe para você. Basta clicar em Randomizar</p>
                 <!-- <img src="../img/icons/random.svg" id="random" class="random">
                 <img src="../img/icons/filmRandom.svg" id="filmRandom" class="filmRandom"> -->
-                <a href="/api/video/randomVideo"<button id="btn-randomize" class="btn buttonLabel">RANDOMIZAR</button></a>
+                <div class="wraper">
+                    <div class="window">
+                    </ul>
+                        <ul class="list">
+                            <li><img src="../img/films/movie.jpg" alt=""></li>
+                            <li><img src="../img/videoImg/5b2572bcf142b4b73ef7c64b.jpg" alt=""></li>
+                            <li><img src="../img/videoImg/5b25751369f46c8b4c9d9036.jpg" alt=""></li>
+                            <li><img src="../img/films/movie.jpg" alt=""></li>
+                            <li><img src="../img/videoImg/5b25751369f46c8b4c9d9036.jpg" alt=""></li>
+                            <li><img src="../img/videoImg/5b2572bcf142b4b73ef7c64b.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>       
+                <article id="imgSelect"></article>  
+                <!-- <a href="/api/video/randomVideo"<button id="btn-randomize" class="btn buttonLabel">RANDOMIZAR</button></a> -->
+                <button id="btn-randomize" class="btn buttonLabel button">RANDOMIZAR</button>
             </div>
             <div class="generos">
                 <h2 class="tituloCard sectionHeader">Gêneros</h2>
@@ -96,7 +112,9 @@
     <%- include('../partials/tabBar', {currentPage: "browse"}); %>
     
     <footer><h1 class="footer">©Now Loading</h1></footer>
-
+    <script src="../js/carousel.js"></script>
+    <script src="../lib/glide.min.js"></script>
+    <script src="../js/carousel.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/browse.js"></script>
     

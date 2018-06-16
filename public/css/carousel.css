@@ -48,7 +48,7 @@
 }
 .slider__frame{
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0));
-	height: 278px;
+	height: 200px;
 }
 .slider__frame:hover{
 	background: linear-gradient(to right, rgba(221, 48, 96, 0.8) 40%, rgba(111, 24, 48, 0));
@@ -59,7 +59,6 @@
 }
 .img-banner{
 	width: 100%;
-	margin-top: -100px;
 	float: left;
 }
 .slider__frame .banner-player .icon-play{
