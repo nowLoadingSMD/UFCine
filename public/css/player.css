@@ -105,6 +105,14 @@ video{
 	cursor: pointer;
 }
 
+.content-functions #viewApplauses{
+	float: left;
+	margin-right: -10px;
+	color: #fff;
+	font-size: 23px;
+	font-family: CircularStd-Black;
+}
+
 .video i{
 	font-size: 1.7em;
 	color: #333;

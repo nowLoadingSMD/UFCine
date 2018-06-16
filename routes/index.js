@@ -157,6 +157,29 @@ router.get("/pages/profile.html", function(req,res, next) {
   }
 })
 
+router.get("/pages/profileGeneral.html", function(req,res, next) {
+  const userID = req.query.id
+  
+  if (!userID) {
+    res.send({err: "Identificador de usuário não fornecido"})
+  } else {
+    User
+    .findById(userID)
+    .populate("favorites")
+    .exec( (err, user) => {
+      user.password = null
+
+      console.log(user)
+      
+      Video
+        .find({producerID: userID})
+        .exec( (err, videos) => {
+          res.render('pages/profileGeneral', {user: user, videosPosted: videos});
+        })
+    })
+  }
+})
+
 
 router.get("/pages/recommended.html", function(req,res, next) {
   

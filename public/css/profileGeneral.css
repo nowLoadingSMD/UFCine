@@ -1,0 +1,75 @@
+.principal .titles{
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 44px;
+}
+
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
+}
+
+.content-principal {
+    clear: both;
+}
+
+.infos {
+    width: 45%;
+}
+
+#imgProfile img{
+    height: 100%;
+    float: left;
+}
+
+.imgDiv {
+    position: relative;
+}
+
+#imgProfile{
+    width: 130px;
+    height: 130px;
+    float: left;
+    border-radius: 50%;
+    background-image: url("../img/authors/Camila.jpg");
+    background-size: 110%;
+    position: relative;
+}
+
+.profileRect {
+    background-color: rgba(21, 21, 21, 0.3);
+    height: 130px;
+    padding: 10px 0 0 85px;
+    margin-left: 60px;
+}
+
+.usernameLabel, .userEmailLabel {
+    margin-bottom: 0.55rem;
+}
+
+.titleLine {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.videosList {
+    display: grid;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, 200px);
+}
+
+#btn-editProfile{
+    background: none;
+    border-radius: 2px;
+    border: solid 2px var(--aqua-marine);
+    padding: 5px;
+    width: 80px;
+}
+
+#btn-editProfile:hover{
+    background: var(--aqua-marine);
+    color: #fff;
+}
