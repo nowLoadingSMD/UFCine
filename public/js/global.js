@@ -26,6 +26,43 @@ jQuery(document).ready(async function($) {
 
 });
 
+$(document).ready(async function(){
+        
+  if ( await checkLogged()) {
+
+      const userID = getCookie("userId");
+
+      $.get(`/api/user/getWatchList?id=${userID}`, (response) => {
+
+          $(".actionLabel").each(function(){
+
+              const videoID = $(this).attr("id").replace("ActionLabel", "");
+
+              console.log(videoID);
+
+              if ( response.watchList.indexOf(videoID) == -1 ) {
+              
+                 $(this).html("Adicionar a lista");
+
+              } else if ( response.watchList.indexOf(videoID) != -1 ) {
+
+                  $(this).html("Remover da lista");
+
+              }
+              
+          })
+
+
+
+      })
+
+      
+  } else {
+      $(".addBlock").hide();
+  }
+
+})
+
 // Get the modal
 var modal = document.getElementById('myModal');
 		
