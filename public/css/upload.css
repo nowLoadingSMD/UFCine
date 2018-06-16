@@ -28,11 +28,13 @@
 	display: grid;
     grid-gap: 10px 40px;
     grid-column-gap: 75px;
+    grid-row-gap: 16px;
 	grid-template-columns: 1fr 1fr;
 }
 
 .upload-left {
     display: grid;
+    grid-row-gap: 16px;
     grid-template-areas: "videoLabel capaLabel"
                          "video capa"
                          "titulo titulo"
@@ -69,6 +71,7 @@
 .upload-right {
     display: grid;
     grid-column-gap: 56px;
+    grid-row-gap: 16px;
     grid-template-areas: "tagsLabel tagsLabel"
                          "tags selectBoxes"
                          "cast cast";

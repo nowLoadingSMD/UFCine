@@ -26,6 +26,13 @@
 	<section class="principal">
         <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Enviar Vídeo</article>
 		<div class="content-principal">
+            <form 
+                ref='uploadForm' 
+                id='uploadForm' 
+                name='uploadForm'
+                action='/api/video/uploadVideo' 
+                method='post' 
+                encType="multipart/form-data">
             <div class="grid-upload">
                 <div class="upload-left">
                     <article class="sectionHeader2" id="VideoLabel">Vídeo</article>
@@ -34,6 +41,7 @@
                         <input type="file" name="videoMP4" />
                     </article>
                     <article id="img-banner">
+                        <input type="file" name="thumbnail" />
                         <img src="../img/icons/imgUploadBanner.svg">
                     </article>
                     <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
@@ -107,10 +115,12 @@
                             </div>
                 </div>
             </div>
+            <button id="btn-cancel" class="btn-confirm">CANCELAR</button>
+            <button id="btn-publish" class="btn-confirm">PUBLICAR</button>
+            </form>
         </div>
         </div>
-        <button id="btn-cancel" class="btn-confirm">CANCELAR</button>
-        <button id="btn-publish" class="btn-confirm">PUBLICAR</button>
+        
     </section>
     
     <%- include('../partials/tabBar', {currentPage: "home"}); %>

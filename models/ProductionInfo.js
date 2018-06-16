@@ -18,6 +18,13 @@ const ProductionInfoSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    colaborative: {
+        type: Boolean,
+        required: true
+    },
+    colaborativeList: {
+        type: String
+    },
     tags: [
         {
             type: Schema.Types.ObjectId, ref: 'Tag'
