@@ -22,13 +22,13 @@
 	<section class="principal">
 		<article class="titleInitial sectionHeader">Acabou de chegar</article>
 
-		<%- include('../partials/slider', {emCartazList: emCartazList}); %>
+		<%- include('../partials/slider', {releasesList: releasesList}); %>
 
 		<div class="recommended">
 			<article class="titles sectionHeader">Nós recomendamos</article>
 			<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 			<div class="movieCardContainer">
-					<% releasesList.forEach(function(item){ %>
+					<% recommendedList.forEach(function(item){ %>
 						<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
 					<% }); %>
 			</div>

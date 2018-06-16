@@ -97,10 +97,37 @@ router.post("/upload", (req, res) => {
 router.post("/uploadVideo", async (req, res) => {
 
     const userID = req.query.id
+    const directorsArr = []
+    const scriptArr = []
+    const castArr = []
 
-    console.log(req.body)
-   
-    console.log(GenreEnum[req.body.genre])
+    const propsNames = Object.getOwnPropertyNames(req.body)
+
+    propsNames.forEach(function(item){
+
+        if ( item.includes("role") ) {
+
+            let index =  item.replace("role", "")
+            
+            switch ( req.body[item] ) {
+                case "director": 
+                    index = "studentName" + index
+                    directorsArr.push(req.body[index])
+                    break;
+                case "script":
+                    index = "studentName" + index
+                    scriptArr.push(req.body[index])
+                    break;
+                case "actor": 
+                    index = "studentName" + index
+                    castArr.push(req.body[index])
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    })
 
     if (!req.files)
         return res.send({err: "No files uploaded"})
@@ -139,9 +166,9 @@ router.post("/uploadVideo", async (req, res) => {
             genre: GenreEnum[req.body.genre],
             colaborative: true,
             colaborativeList: req.body.colaborative,
-            directors: [],
-            script: [],
-            cast: []
+            directors: directorsArr,
+            script: scriptArr,
+            cast: castArr
         }
 
         ProductionInfo.create(productionInfo, (err, productionInfo) => {

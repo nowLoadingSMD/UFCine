@@ -1,8 +1,12 @@
+var qtdListItens; 
+
 jQuery(document).ready(function($) { 
       document.uploadForm.action = `/api/video/uploadVideo?id=${getCookie('userId')}`;
 
       $("#descriptionList").hide();
       $("#colaborativeList").hide();
+
+      qtdListItens = 0;
 });
 
 var addItem = document.getElementById("addItem");
@@ -36,7 +40,7 @@ addItem.onclick = function(){
 
   var select = document.createElement("select");
   select.setAttribute("id", "role");
-  select.setAttribute("name", "role");
+  select.setAttribute("name", `role${qtdListItens}`);
 
   var op1 = document.createElement("option");
   op1.setAttribute("value", "");
@@ -61,7 +65,7 @@ addItem.onclick = function(){
 
   var input = document.createElement("input");
   input.setAttribute("type", "text");
-  input.setAttribute("name", "studentName");
+  input.setAttribute("name", `studentName${qtdListItens}`);
   input.setAttribute("class", "textfield");
   input.setAttribute("placeholder", "Nome do aluno(a)");
   
@@ -72,6 +76,7 @@ addItem.onclick = function(){
   div.appendChild(input);
 
   list.appendChild(div);
+  qtdListItens++;
 }
 
 $('#btn-publish').on('click', function (){

@@ -64,11 +64,23 @@
 					<article class="titlesMedium">Gênero</article>
 					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
 					<article class="titlesMedium">Direção</article>
-					<a href="portfolio.ejs"><article class="newInfo"><%=productionInfo.directors[0] %></article></a>
+					<a href="portfolio.ejs"><article class="newInfo">
+						<% productionInfo.directors.forEach(function(item){ %>
+							<%= item %> <br>
+						<% }) %> 
+					</article></a>
 					<article class="titlesMedium">Roteiro</article>
-					<a href="portfolio.ejs"><article class="newInfo"><%=productionInfo.script[0] %></article></a>
+					<a href="portfolio.ejs"><article class="newInfo">
+						<% productionInfo.script.forEach(function(item){ %>
+							<%= item %> <br>
+						<% }) %> 
+					</article></a>
 					<article class="titlesMedium">Elenco</article>
-					<a href="portfolio.ejs"><article class="newInfo">Pessoa Desconhecida</article></a>
+					<a href="portfolio.ejs"><article class="newInfo">
+						<% productionInfo.cast.forEach(function(item){ %>
+							<%= item %> <br>
+						<% }) %> 
+					</article></a>
 				</div>
 				<div>
 					<article class="titlesMedium">Ano</article>

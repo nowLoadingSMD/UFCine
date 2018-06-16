@@ -1,17 +1,16 @@
 <div id="intro" class="slider glide">
     <div class="slider__track glide__track" data-glide-el="track">
       <ul class="slider__slides glide__slides">
-        <% emCartazList.forEach(function(item, index){ %>
-          <%- include("cards/emCartazCard", {name: item.name, description: item.description, exibitionLocation: item.exibitionLocation, index: index}); %> 
+        <% releasesList.forEach(function(item, index){ %>
+          <%- include("cards/emCartazCard", {name: item.name, description: item.description, img: item.thumbnailPath, exibitionLocation: item.exibitionLocation, index: index}); %> 
         <% }); %>       
       </ul>
     </div>
-    <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">    
-      <button class="slider__bullet glide__bullet" data-glide-dir="=0"></button>
-      <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>
-      <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>    
-      <button class="slider__bullet glide__bullet" data-glide-dir="=3"></button>    
-      <button class="slider__bullet glide__bullet" data-glide-dir="=4"></button>    
+    <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">  
+      <% for(var i = 0 ; i < releasesList.length; i += 2 ) { %>
+        <button class="slider__bullet glide__bullet" data-glide-dir="=<% i %>"></button>
+      <% } %>  
+   
     </div>
 </div>
 
