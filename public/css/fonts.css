@@ -15,82 +15,27 @@
  */
 
  @font-face {
-	font-family: sectionHeader;
+	font-family: CircularStd-Black;
 	src: url(../fonts/Circular/CircularStd-Black.otf);
 }
 
 @font-face {
-	font-family: sectionHeader2;
-	src: url(../fonts/Circular/CircularStd-Black.otf);
-}
-
-@font-face {
-	font-family: releaseName;
+	font-family: CircularStd-Medium;
 	src: url(../fonts/Circular/CircularStd-Medium.otf);
 }
 
 @font-face {
-	font-family: sectionHeader3;
+	font-family: CircularStd-Bold;
 	src: url(../fonts/Circular/CircularStd-Bold.otf);
 }
 
 @font-face {
-	font-family: dropdownLabel;
-	src: url(../fonts/Circular/CircularStd-Medium.otf);
-}
-
-@font-face {
-	font-family: sectionSubHeader;
+	font-family: CircularStd-Book;
 	src: url(../fonts/Circular/CircularStd-Book.otf);
-}
-
-@font-face {
-	font-family: placeholderLabel;
-	src: url(../fonts/Circular/CircularStd-Book.otf);
-}
-
-@font-face {
-	font-family: movieCardName;
-	src: url(../fonts/Circular/CircularStd-Medium.otf);
-}
-
-@font-face {
-	font-family: ctaButtonLabel;
-	src: url(../fonts/Circular/CircularStd-Bold.otf);
-}
-
-@font-face {
-	font-family: buttonHoverLabel;
-	src: url(../fonts/Circular/CircularStd-Medium.otf);
-}
-
-@font-face {
-	font-family: buttonLabel;
-	src: url(../fonts/Circular/CircularStd-Medium.otf);
-}
-
-@font-face {
-	font-family: actionLabel;
-	src: url(../fonts/Circular/CircularStd-Book.otf);
-}
-
-@font-face {
-	font-family: tagLabel;
-	src: url(../fonts/Circular/CircularStd-Book.otf);
-}
-
-@font-face {
-  font-family: tabBarLabel;
-  src: url(../fonts/Circular/CircularStd-Black.otf);
-}
-
-@font-face {
-  font-family: footer;
-  src: url(../fonts/Circular/CircularStd-Medium.otf);
 }
 
 .sectionHeader {
-  font-family: sectionHeader;
+  font-family: CircularStd-Black;
   font-size: 36px;
   font-weight: 900;
   font-style: normal;
@@ -102,7 +47,7 @@
 }
 
 .releaseName {
-  font-family: releaseName;
+  font-family: CircularStd-Medium;
   font-size: 26px;
   font-weight: 500;
   font-style: normal;
@@ -114,7 +59,7 @@
 }
 
 .actionLabel {
-  font-family: actionLabel;
+  font-family: CircularStd-Book;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -127,7 +72,7 @@
 }
 
 .movieCardName {
-  font-family: movieCardName;
+  font-family: CircularStd-Medium;
   font-size: 17px;
   font-weight: 500;
   font-style: normal;
@@ -139,7 +84,7 @@
 }
 
 .buttonHoverLabel {
-  font-family: buttonHoverLabel;
+  font-family: CircularStd-Medium;
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -152,7 +97,7 @@
 }
 
 .buttonLabel {
-  font-family: buttonLabel;
+  font-family: CircularStd-Medium;
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -165,7 +110,7 @@
 }
 
 .dropdownLabel {
-  font-family: dropdownLabel;
+  font-family: CircularStd-Medium;
   font-size: 22px;
   font-weight: 500;
   font-style: normal;
@@ -177,7 +122,7 @@
 }
 
 .ctaButtonLabel {
-  font-family: ctaButtonLabel;
+  font-family: CircularStd-Bold;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -189,7 +134,7 @@
 }
 
 .sectionSubHeader {
-  font-family: sectionSubHeader;
+  font-family: CircularStd-Book;
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
@@ -201,7 +146,7 @@
 }
 
 .tagLabel {
-  font-family: tagLabel;
+  font-family: CircularStd-Black;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -214,7 +159,7 @@
 }
 
 .placerholderLabel {
-  font-family: placerholderLabel;
+  font-family: CircularStd-Book;
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
@@ -226,7 +171,7 @@
 }
 
 .sectionHeader3 {
-  font-family: sectionHeader3;
+  font-family: CircularStd-Bold;
   font-size: 22px;
   font-weight: bold;
   font-style: normal;
@@ -238,7 +183,7 @@
 }
 
 .sectionHeader2 {
-  font-family: sectionHeader2;
+  font-family: CircularStd-Black;
 	src: url(../fonts/Circular/CircularStd-Black.otf);
   font-size: 30px;
   font-weight: 900;
@@ -251,7 +196,7 @@
 }
 
 .tabBarLabel {
-  font-family: tabBarLabel;
+  font-family: CircularStd-Black;
   font-size: 16px;
   font-weight: 900;
   font-style: normal;
@@ -263,7 +208,7 @@
 }
 
 .footer {
-  font-family: footer;
+  font-family: CircularStd-Medium;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -271,5 +216,41 @@
   line-height: 1.25;
   letter-spacing: normal;
   text-align: center;
+  color: #ffffff;
+}
+
+.onExibitionName {
+  font-family: CircularStd-Bold;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.text {
+  font-family: CircularStd-Book;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e5e5e5;
+}
+
+.sectionHeader4 {
+  font-family: CircularStd-Bold;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
   color: #ffffff;
 }
