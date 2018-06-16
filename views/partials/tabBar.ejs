@@ -1,9 +1,9 @@
 
 	<nav class="tabBar tabBarLabel">
-		<a href="home.html" id="tagHome"><article id="iconHome" class="icons"></article><span>Início</span></a>
-		<a href="browse.html" id="tagBrowse"><article id="iconBrowse" class="icons"></article><span>Navegar</span></a>
-		<a href="authors.html" id="tagAuthors"><article id="iconAuthors" class="icons"></article><span>Produtores</span></a>
-		<a href="about.html" id="tagAbout"><article id="iconAbout" class="icons"></article><span>Sobre</span></a>
+		<a href="home.html" id="tagHome" class="icons"><article id="iconHome"></article><span>Início</span></a>
+		<a href="browse.html" id="tagBrowse" class="icons"><article id="iconBrowse" class="icons"></article><span>Navegar</span></a>
+		<a href="authors.html" id="tagAuthors" class="icons"><article id="iconAuthors" class="icons"></article><span>Produtores</span></a>
+		<a href="about.html" id="tagAbout" class="icons"><article id="iconAbout" class="icons"></article><span>Sobre</span></a>
 	</nav>
 
 	<style>
@@ -88,13 +88,13 @@
 			.tabBar{
 				height: 100%;
 				width: 110px;
-				display: block;
 				padding: 0;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr 1fr 1fr;
+				align-items: center;
 			}
-			.tabBar .icons{
-				margin: 12vh 0 5px 36px !important;
-				float: left !important;
-			}
+			
 			.tabBar a h1{
 				display: block;
 			}
