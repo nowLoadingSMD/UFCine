@@ -1,12 +1,24 @@
 var qtdListItens; 
+const tagsOnServer = []
+const sugestedTags = []
+const selectedTags = []
 
-jQuery(document).ready(function($) { 
+jQuery(document).ready(async function($) { 
       document.uploadForm.action = `/api/video/uploadVideo?id=${getCookie('userId')}`;
 
       $("#descriptionList").hide();
       $("#colaborativeList").hide();
 
       qtdListItens = 0;
+      
+      await $.get("/api/tag", (data) => {
+        tags = data.map((item) => { 
+          return item.name
+        })
+        console.log(tags)
+        autocomplete(document.getElementById("tagsInput"), tags);
+      })
+      
 });
 
 var addItem = document.getElementById("addItem");
@@ -99,3 +111,53 @@ $('#castType').change(function(){
   }
 
 });
+
+var tagsInput = document.getElementById("tagsInput");
+
+let checkIcon = document.getElementById("checkIcon");
+
+checkIcon.onclick = function() {
+
+
+  const tag = {
+    name: tagsInput.value
+  }
+
+  selectedTags.push(tag)
+
+  document.getElementById("tagsInputForSending").value = "";
+    
+  selectedTags.forEach(function(tag) {
+    document.getElementById("tagsInputForSending").value += tag.name + ",";
+  })
+
+  let div = document.createElement("div");
+  div.setAttribute("class", "tag tagLabel");
+
+  let p = document.createElement("p");
+  p.innerHTML = tagsInput.value;
+
+  div.appendChild(p);
+
+  let img = document.createElement("img");
+  img.setAttribute("src", "../img/icons/removeFilm.svg");
+  img.setAttribute("class", "tagIcon");
+  div.appendChild(img);
+
+  document.getElementById("selectedTags").appendChild(div)
+
+  tagsInput.value = ""
+
+  img.addEventListener("click", function(){
+    selectedTags.pop(tag);
+    this.parentNode.parentNode.removeChild(this.parentElement);
+
+    document.getElementById("tagsInputForSending").value = "";
+
+    selectedTags.forEach(function(tag) {
+      document.getElementById("tagsInputForSending").value += tag.name + ",";
+    })
+
+  })
+
+}
