@@ -22,14 +22,14 @@
 	<section class="principal">
         <div class="content-principal">
             <div class="content-profile">
-                <article class="titles sectionHeader">Perfil</article>
+				<article class="titles sectionHeader">Perfil</article>
                 <div class="infos">
-                    <article id="imgProfile"></article>
                     <h1><%= user.name %></h1>
 					<h1 id="email"><%= user.email %></h1>
 					<a href="editProfile.html"><button id="btn-editProfile">EDITAR</button></a>
-                </div>
-                <ul>
+				</div>
+				
+                <!-- <ul>
                     <li id="btn-favorites">FAVORITOS</li>
                     <li id="btn-posted" class="active">POSTADOS</li>
                     <li id="btn-watchlist">WATCHLIST</li>
@@ -48,7 +48,7 @@
                     <% user.watchList.forEach(function(item){ %>
                         <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
                     <% }); %>
-				</div>
+				</div> -->
             </div>
             <div class="content-notifications">
                 <article class="titles">Notificações</article>
