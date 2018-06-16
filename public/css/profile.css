@@ -1,7 +1,5 @@
 .principal .titles{
-    font-size: 2.1em;
     width: 200px;
-    color: #fff;
     margin-top: 50px;
     float: left;
   }
@@ -14,14 +12,12 @@
 
 #btn-editProfile{
     background: none;
-    color: var(--aqua-marine);
     border-radius: 2px;
     border: solid 2px var(--aqua-marine);
     padding: 5px;
     width: 80px;
     margin-top: 85px;
     margin-left: 20px;
-    text-align: center;
 }
 
 #btn-editProfile:hover{
@@ -45,11 +41,9 @@
 }
 
 .infos h1{
-    font-size: 20px;
     margin-left: 150px;
     margin-top: 15px;
     position: absolute;
-    color: #fff;
 }
 
 .infos #email{
@@ -99,7 +93,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-/* .group-films .film{
+/* .g
+roup-films .film{
     margin: 2% 2% 0 0;
     width: 29%;
     height: 40%;
@@ -170,7 +165,6 @@
 
 .content-notifications li {
     float: left;
-    font-size: 0.9em;
     width: 33.3%;
     border: solid 2px var(--aqua-marine);
     display: block;
@@ -220,17 +214,12 @@
     height: 100%;
 }
 .notifications h1{
-    font-size: 18px;
     color: var(--aqua-marine);
     margin-left: 120px;
     padding-top: 5px;
-    font-family: TitleBold;
 }
 
 .notifications h6{
-    font-size: 16px;
-    color: #fff;
     margin-left: 120px;
     padding-top: 5px;
-    font-family: BodyText;
 }

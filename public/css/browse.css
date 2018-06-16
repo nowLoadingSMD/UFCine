@@ -28,28 +28,10 @@
 }
 
 .tituloCard {
-    font-family: TitleBold;
-    font-size: 36px;
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.28;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
     padding-bottom: 17px;
 }
 
 .subTituloCard {
-    font-family: TitleMedium;
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.27;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
     padding-bottom: 28px; 
 }
 
@@ -67,12 +49,11 @@
     background: none;
     border-radius: 2px;
     border: solid 2px var(--tealish);
-    color: var(--tealish);
 }
 
 .btn:hover{
     background: var(--aqua-marine);
-    color: #fff;
+    color: #ffffff
 }
 
 .generos {
@@ -188,23 +169,12 @@
     padding-top: 0.25rem; 
     padding-right: 0.25rem;
     padding-left: 0.5rem;
-    text-align: center;
 
     border-radius: 17px;
     background-color: #f2f2f2;
     height: 25px;
     display: inline-block;
     align-items: center;
-
-    font-family: TitleBold;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-    text-align: left;
-    color: #111d38;
 
 }
 

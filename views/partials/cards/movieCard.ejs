@@ -4,13 +4,13 @@
             <div class="actionIcons">
                 <img src="../img/icons/play.svg" class="playIcon"><br/>
                 <div>
-                    <h1>Adicionar à lista</h1>
+                    <h1 class="actionLabel">Adicionar à lista</h1>
                     <img src="../img/icons/addWatchlist.svg" class="watchlistIcon">
                 </div>
             </div>
             <!-- <img src="../img/films/movie.jpg" class="img-film"> -->
         </div>
-        <article><%= name %></article>
+        <article class="movieCardName"><%= name %></article>
     </div>
 </a>
 
@@ -39,9 +39,6 @@
     }
 
     .actionIcons h1{
-        color: #fff;
-        font-family: TitleBook;
-        font-size: 14px;
         float: left;
         margin-left: 10px;
     }
@@ -73,8 +70,6 @@
         padding: 15px;
         text-align: center; 
         text-decoration: none !important;
-        color: #fff;
-        font-size: 17px;
         backdrop-filter: blur(30px);
         background-color: rgba(255, 255, 255, 0.1);
         }

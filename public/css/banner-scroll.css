@@ -1,7 +1,9 @@
 #intro{
 	margin-top: 10px;
 }
+
 .glide__track{overflow:hidden}
+
 .glide__slides{position:relative;
 	width:100%;
 	list-style:none;
@@ -103,11 +105,9 @@
 
 .slider__frame .description #addlist{
 	color: white;
-	font-family: TitleBook;
 	float: right;
 	padding: 17px;
 	margin-right: 25px;
-	font-size: 14px;
 }
 
 .slider__frame .description img{

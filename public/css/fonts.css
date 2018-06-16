@@ -79,6 +79,11 @@
 	src: url(../fonts/Circular/CircularStd-Book.otf);
 }
 
+@font-face {
+  font-family: tabBarLabel;
+  src: url(../fonts/Circular/CircularStd-Black.otf);
+}
+
 .sectionHeader {
   font-family: sectionHeader;
   font-size: 36px;
@@ -101,7 +106,6 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  color: var(--white);
 }
 
 .actionLabel {
@@ -113,8 +117,8 @@
   line-height: 1.29;
   letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
-  color: var(--white);
+  color: #fff;
+
 }
 
 .movieCardName {
@@ -127,7 +131,6 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  color: var(--white);
 }
 
 .buttonHoverLabel {
@@ -140,7 +143,7 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  color: var(--white);
+
 }
 
 .buttonLabel {
@@ -178,7 +181,6 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  color: var(--white);
 }
 
 .sectionSubHeader {
@@ -191,7 +193,6 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  color: var(--white);
 }
 
 .tagLabel {
@@ -229,7 +230,6 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  color: var(--white);
 }
 
 .sectionHeader2 {
@@ -243,5 +243,16 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  color: var(--white);
+}
+
+.tabBarLabel {
+  font-family: tabBarLabel;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
 }

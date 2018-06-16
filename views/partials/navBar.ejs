@@ -2,7 +2,7 @@
     <input type="text" id="search" placeholder="Pesquisar" />
     <h1>LOGO</h1>
 	<i class="fas fa-sign-in-alt" id="iconLogin"></i>
-	<a href="/pages/upload.html"><button id="uploadVideo">ENVIAR VÍDEO</button></a>
+	<a href="/pages/upload.html"><button id="uploadVideo" class="ctaButtonLabel">ENVIAR VÍDEO</button></a>
     <div id="dropdown">
 		<!-- <i id="btn-user" class="fas fa-user"></i> -->
         <i class="fas fa-sort-down" id="showDropdown"></i>
@@ -11,14 +11,14 @@
         </article>
         
         <div class="dropdown-content" id="dropdown-content">
-            <a href="/pages/profile.html" id="profileAnchor">Perfil</a>
+            <a href="/pages/profile.html" id="profileAnchor" class="dropdownLabel">Perfil</a>
             <!-- <a href="#">Notificações</a> -->
             <!-- <a href="/pages/upload.html" id="btn-upload">Enviar filme</a> -->
-            <a href="/pages/editProfile.html">Configurações da conta</a>
-            <a href="#" id="btn-logout">Sair</a>
+            <a href="/pages/editProfile.html" class="dropdownLabel">Configurações da conta</a>
+            <a href="#" id="btn-logout" class="dropdownLabel">Sair</a>
         </div>
     </div>
-    <a href="login.html"><button type="button" id="btn-login">ENTRAR</button></a>
+    <a href="login.html"><button type="button" id="btn-login" class="buttonLabel">ENTRAR</button></a>
     <i class="fas fa-search" id="searchIcon"></i>
 </header>
 
@@ -51,7 +51,6 @@
 }
 
 .navbar #dropdown i{
-	font-size: 1.3em;
 	float: right;
 	position: relative;
 	color: var(--aqua-marine);
@@ -77,10 +76,8 @@
 
 .navbar h1{
 	padding: 10px;
-	font-size: 1.4em;
 	color: #fff;
 	float: left;
-	font-family: TitleBold;
 }
 
 .navbar #search{
@@ -93,7 +90,6 @@
 
 .navbar #btn-login{
 	display: none;
-	font-size: 1em;
 	background: none;
 	float: right;
 	margin: 15px 25px;
@@ -133,7 +129,6 @@
 		position: absolute;
 		margin: 17px 150px;
 		padding: 3px 40px;  
-		font-family: TitleBook;
 		border-bottom: solid 2px var(--aqua-marine);
 		background: none;
 		color: white;
@@ -145,7 +140,6 @@
 	}
 	.navbar #searchIcon{
 		position: absolute;
-		font-size: 20px;
 		margin-left: 150px;
 		margin-top: 18px;
 		color: var(--aqua-marine);

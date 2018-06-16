@@ -26,7 +26,7 @@
 
 		<div class="recommended">
 			<article class="titles sectionHeader">Nós recomendamos</article>
-			<a href="recommended.html"><button class="btn-viewMore">MAIS</button></a>
+			<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 			<div class="movieCardContainer">
 					<% releasesList.forEach(function(item){ %>
 						<%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
