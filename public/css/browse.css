@@ -170,22 +170,6 @@
 }
 
 
-.tag {
-    margin: 12px 8px;
-    -webkit-flex: 1 auto;
-    flex: 1 auto;
-    padding-top: 0.25rem; 
-    padding-right: 0.25rem;
-    padding-left: 0.5rem;
-
-    border-radius: 17px;
-    background-color: #f2f2f2;
-    height: 25px;
-    display: inline-block;
-    align-items: center;
-
-}
-
 /* .principal
 
 .grid-content{

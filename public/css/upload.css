@@ -130,7 +130,7 @@
     border-radius: 2px;
     border: solid 2px var(--aqua-marine);
     margin-top: 10px;
-}
+} 
 
 .grid-upload #img-banner img{
     width: 50%;
@@ -149,6 +149,16 @@
 
 .textfield:focus{
     border-color: var(--darkish-pink);
+}
+
+.autocomplete {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+}
+
+.checkIcon {
+    width: 28px;
 }
 
 select {

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223 27.1">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;font-size:16px;font-family:CircularStd-Medium,Circular Std;font-weight:500;opacity:.7}.cls-2,.cls-3,.cls-5{fill:none}.cls-2{stroke:#28b5c1;stroke-width:2px}.cls-3{stroke:#dd3060}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="Group_983" data-name="Group 983" transform="translate(-467.5 -299.4)">
+        <text id="Buscar" class="cls-1" transform="translate(467.853 315.4)">
+            <tspan x="0" y="0">ex.: distopia, política</tspan>
+        </text>
+        <path id="Line_865" d="M0 0h223" class="cls-2" data-name="Line 865" transform="translate(467.5 325.5)"/>
+        <g id="Check" transform="translate(-203 -116.6)">
+            <g id="Ellipse_487" class="cls-3" data-name="Ellipse 487" transform="translate(874 421)">
+                <circle cx="7.5" cy="7.5" r="7.5" class="cls-4"/>
+                <circle cx="7.5" cy="7.5" r="7" class="cls-5"/>
+            </g>
+            <path id="Path_3406" d="M5806.822 11210.693l3 2.836 4.77-5.271" class="cls-3" data-name="Path 3406" transform="translate(-4929 -10782)"/>
+        </g>
+    </g>
+</svg>

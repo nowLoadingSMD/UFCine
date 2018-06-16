@@ -11,6 +11,7 @@ const GenreEnum = require("../config/genreEnum")
 
 const router = express.Router()
 
+const Tag = require("../models/Tag")
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
 
@@ -100,8 +101,31 @@ router.post("/uploadVideo", async (req, res) => {
     const directorsArr = []
     const scriptArr = []
     const castArr = []
+    let tagsArr = []
+    let tagsID = []
 
     const propsNames = Object.getOwnPropertyNames(req.body)
+
+    tagsArr = req.body.tags.split(",")
+    tagsArr.pop(tagsArr[tagsArr.length - 1])
+
+    tagsArr.forEach(async function(item){
+        Tag
+            .find({name: item})
+            .exec( async (err, tag) => {
+                if (tag.length) {
+                    tagsID.push(tag[0]._id)
+                } else {
+                    var tag = new Tag()
+                    tag.name = item
+                    var id
+                    tag.save(async function(err, tag) {
+                        id = await tag.id
+                    })
+                    tagsID.push(await id)
+                }
+            })
+    })
 
     propsNames.forEach(function(item){
 
@@ -147,7 +171,7 @@ router.post("/uploadVideo", async (req, res) => {
         private: false
     }
 
-    Video.addVideo(video, (err, video) => {
+    Video.addVideo(video, async (err, video) => {
 
         if (err) {
             throw err
@@ -155,14 +179,12 @@ router.post("/uploadVideo", async (req, res) => {
 
         let id = video._id
 
-        console.log(GenreEnum[req.body.genre])
-
         let productionInfo = {
             videoID: video._id,
             description: req.body.description,
             classification: req.body.classification,
             year: req.body.year,
-            tags: [],
+            tags: await tagsID,
             genre: GenreEnum[req.body.genre],
             colaborative: true,
             colaborativeList: req.body.colaborative,

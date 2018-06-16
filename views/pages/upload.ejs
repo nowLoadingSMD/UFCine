@@ -50,12 +50,12 @@
                 <div class="upload-right">
                         <article class="sectionHeader2" id="tagsLabel">Tags</article>
                         <div class="tagsBox">
-                            <input type="text" class="textfield" placeholder="ex: Distopia, política" name="tags"/>
-                            <div class="tags">
-                                <div class="tag tagLabel">Catinga de Hexa</div>
-                                <div class="tag tagLabel">Exausta</div>
-                                <div class="tag tagLabel">Pombo</div>
-                                <div class="tag tagLabel">Shrekpoint</div>
+                            <div class="autocomplete">
+                                <input type="text" class="textfield" id="tagsInput" placeholder="ex: Distopia, política"/>
+                                <img src="../img/icons/check.svg" class="checkIcon" id="checkIcon">
+                            </div>
+                            <div class="tags" id="selectedTags">
+                                <input type="text" name="tags" id="tagsInputForSending" style="display: none">
                             </div>
                         </div>
                             <div class="selectBoxes">
@@ -99,7 +99,7 @@
                                 </select>
                                 <!-- <article class="titleMedium">Gênero</article>
                                 <i class="fas fa-plus-circle" id="addItem2"></i>
-                                <article id="list2"></article> -->
+                                <article id="list2"></article> --> 
                             </div>
                             <div id="castBox">
                                 <select id="castType">
