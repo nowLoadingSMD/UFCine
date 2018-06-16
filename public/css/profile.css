@@ -4,6 +4,12 @@
     margin-bottom: 44px;
 }
 
+.principal .titles img{
+    width: 28.6px;
+    height: 19.8px;
+    margin-right: 10px;
+}
+
 .content-principal {
     clear: both;
 }
