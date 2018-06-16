@@ -10,37 +10,77 @@
 }
 
  #img-edit{
-    background-image: url("../img/authors/Camila.jpg");
-    background-size: 110%;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
-    float: left;
+    width: 140px;
+    height: 140px;
+    border: 6px solid rgba(21, 21, 21, 0.3);
+    border-radius: 100px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+#img-edit article{
+    position: absolute;
+    color: #fff;
+    margin-top: 55px;
+    margin-left: 14px;
+    font-size: 14px;
+    display: none;
+    z-index: 2;
+}
+#img-edit:hover article{
+    display: block;
+}
+#img-edit img{
+    height: 100%;
+    z-index: 1;
+}
+#img-edit:hover img{
+    filter: brightness(80%);
 }
 
-
 .grid-edit{
-    width: 70%;
-    height: 200px;
-    margin: 50px 300px;
+    width: 100%;
+    height: 430px;
+    margin-top: 20px;
     display: grid;
     grid-gap: 20px 2%;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 15% 40% 40%;
+    background-color: rgba(21, 21, 21, 0.3);
+    border-radius: 30px;
+    padding: 50px;
 }
 
 .grid-edit .grid-values{
     width: 100%;
     height: 100%;
+    padding-top: 20px;
 }
 
-.grid-edit .grid-values input{
-    width: 100%;
-    margin-bottom: 21px;
-    padding: 6px 10px;
+.grid-edit .grid-values input[type="text"]{
+    width: 70%;
+    margin-bottom: 40px;
+    padding: 6px 0;
     background: none;
-    border-radius: 16px;
-    border: solid 2px var(--aqua-marine);
+    border-bottom: solid 2px var(--aqua-marine);
+    color: #fff;
+    transition: 0.5s border;
+}
+.grid-edit .grid-values input[type="text"]:focus{
+    border-bottom: solid 2px var(--darkish-pink);
+}
+.grid-edit .grid-values .buttons{
+    padding: 7px 10px;
+    background: none;
     color: var(--aqua-marine);
+    border: 2px solid var(--aqua-marine);
+    border-radius: 3px;
+    transition: 0.5s background, 0.5s border, 0.5s color; 
+    cursor: pointer;
+}
+.grid-edit .grid-values .buttons:hover{
+    background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
+    color: #fff;
 }
 .grid-edit .grid-values article{
     color: #fff;
@@ -51,19 +91,8 @@
     width: 100%;
     padding: 2px;
 }
-.grid-edit .grid-values button{
-    font-size: 0.8em;
-    padding: 5px;
+.grid-edit .grid-values #btn-edit{
     float: right;
-    border: solid 2px var(--aqua-marine);
-    background: none;
-    border-radius: 2px;
-    color: var(--aqua-marine);
-}
-
-.grid-edit .grid-values button:hover{
-    background: var(--aqua-marine);
-    color: #fff;
 }
 
 #editPortfolio{
@@ -102,27 +131,34 @@
       margin-top: 9%;
   }
 .btn-dialog{
-    padding: 10px;
-    background: none;
-    width: 150px;
+    padding: 6px;
+    width: 120px;
     text-align: center;
     border-radius: 2px;
+    margin-top: -80px;
+    position: absolute;
 }
 #btn-cancel{
-    border: solid 2px var(--darkish-pink);
-    color: #dd3060;
-    margin-left: 34%;
+    border: solid 2px var(--aqua-marine);
+    color: var(--aqua-marine);
+    margin-left: 33%;
+    background: none;
+    transition: 0.5s background, 0.5s border, 0.5s color;
 }
 #btn-cancel:hover{
     background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
     color: #fff;
 }
 #btn-confirm{
     margin-left: 15px;
     border: solid 2px var(--aqua-marine);
-    color: var(--aqua-marine);
-}
-#btn-confirm:hover{
     background: var(--aqua-marine);
     color: #fff;
+    transition: 0.5s background, 0.5s border;
+    margin-left: 43%;
+}
+#btn-confirm:hover{
+    background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
 }

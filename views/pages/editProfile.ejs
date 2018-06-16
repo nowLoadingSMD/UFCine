@@ -17,26 +17,20 @@
 
 	<section class="principal">
         <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Configurações da Conta</article>
-            <article id="img-edit"></article>
             <div class="grid-edit">
+                <article id="img-edit"><article class="tagLabel">TROCAR FOTO</article><img src="../img/authors/Camila.jpg">
+                
+                </article>
                 <div class="grid-values">
                     <form>
-                        <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo">
-                        <input type="text" id="editUser" class="placerholderLabel" placeholder="Nome de usuário">
-                        <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email">
-                        <input type="password" id="editPassword" class="placerholderLabel" placeholder="Senha">
+                        <label class="sectionHeader3">Nome</label><br/>
+                        <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo"><br/>
+                        <label class="sectionHeader3">E-mail</label><br/>
+                        <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email"><br/>
+                        <input type="button" class="buttonHoverLabel buttons" value="MUDAR SENHA">
                     </form>
                 </div>
                 <div class="grid-values">
-                    <form>
-                        <input type="text" id="editMatr" class="placerholderLabel" placeholder="Matrícula">
-                    </form>
-                    <article class="sectionHeader2">Desativar conta
-                        <div class="slide">  
-                            <input type="checkbox" value="None" id="slide" name="check" onclick="checkPortfolio()"/>
-                            <label for="slide"></label>
-                        </div>
-                    </article>
                     <article class="sectionHeader2">Ativar Portfólio
                         <div class="slideOne">  
                             <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
@@ -44,8 +38,9 @@
                         </div>
                     </article>
                     <article id="editPortfolio" class="sectionHeader2">Editar Portfólio
-                        <a href="editPortfolio.html"><button class="buttonLabel">Editar</button></a>
+                        <a href="editPortfolio.html"><button id="btn-edit" class="buttons buttonHoverLabel">EDITAR</button></a>
                     </article>
+                    <a href=""><button class="buttonHoverLabel buttons">EXCLUIR CONTA</button></a>
                 </div>
             </div>
             <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-cancel">CANCELAR</button></a>

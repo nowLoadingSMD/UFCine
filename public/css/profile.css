@@ -20,17 +20,6 @@
     grid-template-columns: 45% 45%;
 }
 
-/* #btn-editProfile{
-    background: none;
-    border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    padding: 5px;
-    width: 80px;
-    margin-top: 85px;
-    margin-left: 85px;
-} */
-
-
 /* DE ONDE É ISSO AQUi??? */
 
     /* grid-template-columns: 1fr 1fr;
@@ -49,34 +38,9 @@
     grid-template-columns: 1fr 3fr;
 }
 
-/* .content-profile .infos{
-    margin-top: 110px;
-    backdrop-filter: blur(30px);
-    background-color: rgba(21, 21, 21, 0.3);
-    width: 90%;
-    margin-left: 70px;
-    height: 140px;
-} */
-
-/* #imgProfile{
-    width: 140px;
-    height: 140px;
-    border-radius: 100px;
-    border: 7px solid rgba(21, 21, 21, 0.3);
-    float: left;
-    overflow: hidden;
-    margin-top: 110px;
-    position: absolute;
-} */
-
 #imgProfile img{
     height: 100%;
 }
-/* 
-.infos h1{
-    margin-left: 85px;
-    margin-top: 15px;
-    position: absolute; */
 
 .imgDiv {
     position: relative;
