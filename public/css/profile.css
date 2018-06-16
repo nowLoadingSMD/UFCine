@@ -1,13 +1,75 @@
 .principal .titles{
     width: 200px;
     margin-top: 50px;
-    float: left;
-  }
+    margin-bottom: 44px;
+}
 
-.principal .content-principal{
+.content-principal {
+    clear: both;
+}
+
+.grid {
     display: grid;
-    grid-gap: 20px 20px;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10rem;
+}
+
+.grid-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-row-gap: 50px;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.imgDiv {
+    position: relative;
+}
+
+#imgProfile{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: url("../img/authors/Camila.jpg");
+    background-size: 110%;
+    position: relative;
+}
+
+.backgroundImg {
+    height: 130px;
+    width: 50%;
+    background-color: rgba(21, 21, 21, 0.3);
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 50%;
+}
+
+.profileRect {
+    background-color: rgba(21, 21, 21, 0.3);
+    height: 130px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.usernameLabel, .userEmailLabel {
+    margin-bottom: 0.55rem;
+}
+
+.titleLine {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.videosList {
+    display: grid;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, 200px);
 }
 
 #btn-editProfile{
@@ -16,82 +78,12 @@
     border: solid 2px var(--aqua-marine);
     padding: 5px;
     width: 80px;
-    margin-top: 85px;
-    margin-left: 20px;
 }
 
 #btn-editProfile:hover{
     background: var(--aqua-marine);
     color: #fff;
 }
-
-.content-profile .infos{
-    margin-top: 110px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-    width: 100%;
-    height: 130px;
-}
-
-#imgProfile{
-    width: 130px;
-    height: 130px;
-    background-image: url("../img/authors/Camila.jpg");
-    background-size: 110%;
-    float: left;
-}
-
-.infos h1{
-    margin-left: 150px;
-    margin-top: 15px;
-    position: absolute;
-}
-
-.infos #email{
-    margin-top: 50px;
-}
-
-.content-profile ul {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: none;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.content-profile li {
-    float: left;
-    width: 33.332%;
-    display: block;
-    color: var(--aqua-marine);
-    text-align: center;
-    padding: 5px;
-    text-decoration: none;
-    border: solid 2px var(--aqua-marine);
-}
-
-.content-profile li:hover {
-    background-color: var(--aqua-marine);
-    color: #fff;
-}
-
-.content-profile .active {
-    background-color: var(--aqua-marine);
-    color: #fff;
-}
-
-.content-profile .posted{
-    width: 100%;
-    height: 300px;
-}
-
-.group-films{
-    margin-top: 10px;
-    display: grid;
-    width: 100%;
-    grid-gap: 20px 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
 /* .g
 roup-films .film{
@@ -153,73 +145,3 @@ roup-films .film{
     margin-left: 15px;
 } */
 
-.content-notifications ul {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: none;
-    margin-top: 120px;
-    width: 95%;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.content-notifications li {
-    float: left;
-    width: 33.3%;
-    border: solid 2px var(--aqua-marine);
-    display: block;
-    color: var(--aqua-marine);
-    text-align: center;
-    padding: 5px 0;
-}
-
-.content-notifications li:hover {
-    background-color: var(--aqua-marine);
-    color: #fff;
-}
-
-.content-notifications .active {
-    background-color: var(--aqua-marine);
-    color: #fff;
-}
-
-#favorites, #watchlist{
-    display: none;
-}
-
-.group-notifications{
-    width: 95%;
-    height: 400px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-    padding-top: 10px;
-    overflow-y: scroll;
-}
-
-.notifications{
-    height: 100px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#answered, #comments{
-    display: none;
-}
-
-.notifications .profileNotifications{
-    width: 100px;
-    height: 90%;
-    float: left;
-}
-.notifications .profileNotifications img{
-    height: 100%;
-}
-.notifications h1{
-    color: var(--aqua-marine);
-    margin-left: 120px;
-    padding-top: 5px;
-}
-
-.notifications h6{
-    margin-left: 120px;
-    padding-top: 5px;
-}

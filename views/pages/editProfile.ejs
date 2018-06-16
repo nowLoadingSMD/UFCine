@@ -21,35 +21,35 @@
             <div class="grid-edit">
                 <div class="grid-values">
                     <form>
-                        <input type="text" id="editName" placeholder="Nome completo">
-                        <input type="text" id="editUser" placeholder="Nome de usuário">
-                        <input type="text" id="editEmail" placeholder="Email">
-                        <input type="password" id="editPassword" placeholder="Senha">
+                        <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo">
+                        <input type="text" id="editUser" class="placerholderLabel" placeholder="Nome de usuário">
+                        <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email">
+                        <input type="password" id="editPassword" class="placerholderLabel" placeholder="Senha">
                     </form>
                 </div>
                 <div class="grid-values">
                     <form>
-                        <input type="text" id="editMatr" placeholder="Matrícula">
+                        <input type="text" id="editMatr" class="placerholderLabel" placeholder="Matrícula">
                     </form>
-                    <article>Desativar conta
+                    <article class="sectionHeader2">Desativar conta
                         <div class="slide">  
                             <input type="checkbox" value="None" id="slide" name="check" onclick="checkPortfolio()"/>
                             <label for="slide"></label>
                         </div>
                     </article>
-                    <article>Ativar Portfólio
+                    <article class="sectionHeader2">Ativar Portfólio
                         <div class="slideOne">  
                             <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
                             <label for="slideOne"></label>
                         </div>
                     </article>
-                    <article id="editPortfolio">Editar Portfólio
-                        <a href="editPortfolio.html"><button>Editar</button></a>
+                    <article id="editPortfolio" class="sectionHeader2">Editar Portfólio
+                        <a href="editPortfolio.html"><button class="buttonLabel">Editar</button></a>
                     </article>
                 </div>
             </div>
-            <a href="profile.html"><button class="btn-dialog" id="btn-cancel">CANCELAR</button></a>
-			<a href="profile.html"><button class="btn-dialog" id="btn-confirm">SALVAR</button></a>
+            <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-cancel">CANCELAR</button></a>
+			<a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-confirm">SALVAR</button></a>
 	</section>
 	
     <%- include('../partials/tabBar', {currentPage: "none"}); %>
