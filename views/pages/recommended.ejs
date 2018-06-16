@@ -20,10 +20,10 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
-        <article class="titles"><img src="../img/icons/back.svg" id="iconBack"> Recomendados</article>
-        <div class="grid-films">
+        <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Recomendados</article>
+        <div class="movieCardContainer">
             <% recommendedList.forEach(function(item){ %>
-                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
             <% }); %>           
         </div>
 	</section>

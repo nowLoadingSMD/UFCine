@@ -19,16 +19,6 @@
   margin-top: 40px;
 }
 
-
-
-.movieCardContainer{
-  margin-top: 60px;
-  display: grid;
-  width: 100%;
-  grid-gap: 20px 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .movieCardExhibition{
   margin-top: 60px;
   display: grid;
@@ -68,7 +58,7 @@
   margin-top: 30px;
 }
 
-@media screen and (min-width: 450px) {
+/* @media screen and (min-width: 450px) {
   .movieCardContainer{
     margin-top: 60px;
     display: grid;
@@ -97,7 +87,7 @@
     grid-gap: 20px 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
-}
+} */
 
 @media screen and (min-width: 1100px){
   
@@ -107,13 +97,13 @@
     grid-template-columns: 50% 50%;
   }
 
-  .movieCardContainer{
+  /* .movieCardContainer{
     margin-top: 100px;
     display: grid;
     width: 100%;
     grid-gap: 20px 40px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
+  } */
 
   .principal .titles{
     font-size: 2.125em;

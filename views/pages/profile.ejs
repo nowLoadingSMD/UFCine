@@ -41,9 +41,9 @@
 							<article class="sectionHeader">Minha Lista</article>
 							<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 						</div>
-						<div class="videosList">
-							<% user.favorites.forEach(function(item){ %>
-								<%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+						<div class="movieCardContainer">
+							<% user.watchList.forEach(function(item){ %>
+								<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
 							<% }); %>
 						</div>
 					</div>
@@ -53,9 +53,9 @@
 						<article class="sectionHeader">Videos Enviados</article>
 						<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 					</div>
-					<div class="videosList">
+					<div class="movieCardContainer">
 						<% videosPosted.forEach(function(item){ %>
-							<%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+							<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
 						<% }); %>
 					</div>
 				</div>
