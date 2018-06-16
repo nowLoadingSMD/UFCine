@@ -63,6 +63,8 @@ jQuery(document).ready(async function($){
     $(document).mouseup(function() {
         clearInterval(interval);
 
+        $("#applauses").text(applauses + " aplausos");
+
         var url_string = window.location.href;
         var url = new URL(url_string);
         var id = url.searchParams.get("id");
