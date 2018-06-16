@@ -6,6 +6,11 @@ const VideoSchema = mongoose.Schema({
       type: String,
       required: true  
     },
+    thumbnailPath: {
+        type: String,
+        required: true,
+        lowercase: true
+    },
     path: {
         type: String,
         required: true,

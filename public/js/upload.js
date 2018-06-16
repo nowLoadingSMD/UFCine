@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) { 
-      // document.uploadForm.action = `/api/video/uploadVideo?id=${getCookie('userId')}`;
+      document.uploadForm.action = `/api/video/uploadVideo?id=${getCookie('userId')}`;
 
       $("#descriptionList").hide();
       $("#colaborativeList").hide();
