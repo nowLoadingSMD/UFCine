@@ -289,6 +289,8 @@ router.post("/getVideosByProducerID", (req, res) => {
 router.post("/setApplauses", (req, res) => {
     const videoID = req.body.videoID
 
+    console.log(req.body.applauses)
+
         if (videoID) {     
     
         Video.findById(videoID, (err, video) => {
@@ -296,7 +298,7 @@ router.post("/setApplauses", (req, res) => {
                 throw err
 
             //else
-            Video.findByIdAndUpdate(videoID, { $set: { quantityOfApplauses: video.quantityOfApplauses + 1 }}, { new: true }, function (err, video) {
+            Video.findByIdAndUpdate(videoID, { $set: { quantityOfApplauses: parseInt(video.quantityOfApplauses) + parseInt(req.body.applauses) }}, { new: true }, function (err, video) {
                         if (err) return handleError(err);
                         res.send({
                                     err: null,
@@ -305,6 +307,16 @@ router.post("/setApplauses", (req, res) => {
                     });
             })
         }
+})
+
+router.get("/getApplauses", (req, res) => {
+    
+    Video.findById(req.query.id, (err, video) => {
+        if (err) throw err
+
+        res.json({applauses: video.quantityOfApplauses})
+    })
+
 })
 
 

@@ -37,20 +37,46 @@ jQuery(document).ready(async function($){
     populateCommentList(comments);
 
     var valor = 0;
+    var applauses = 0;
+
+    await $.get(`/api/video/getApplauses?id=${video._id}`, (data) => {
+        applauses = data.applauses
+    })
+
+    console.log(applauses);
+
     $("#applauseIcon").mousedown(function(){
         if(valor<50){
-            valor = valor + 1;
+            valor++
+            applauses++
             $("#viewApplauses").text(valor);
         }
         interval = setInterval(function() {
             if(valor<50){
-                valor = valor + 1;
+                valor++
+                applauses++
                 $("#viewApplauses").text(valor);
             }
-         }, 100);
+         }, 250);
     })
-    $("#applauseIcon").mouseup(function() {
+
+    $(document).mouseup(function() {
         clearInterval(interval);
+
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var id = url.searchParams.get("id");
+    
+        const data = {
+            applauses: valor,
+            videoID: id,
+            userID: getCookie("userId")
+        }
+    
+        $.post("/api/video/setApplauses", data, (response) => {
+
+        })
+
     })
    
 });
@@ -154,26 +180,8 @@ watchListIcon.onclick = function() {
 
 }
 
-var applauseIcon = document.getElementById("applauseIcon");
+// var applauseIcon = document.getElementById("applauseIcon");
   
-    // var url_string = window.location.href;
-    // var url = new URL(url_string);
-    // var id = url.searchParams.get("id");
-
-    // const data = {
-    //     videoID: id,
-    //     userID: getCookie("userId")
-    // }
-
-    // $.post("/api/video/setApplauses", data, (response) => {
-
-    //     if (response.err) {
-    //         alert("Problema ao aplaudir este vídeo");
-    //     } else {
-    //         $("#applauses").html(`${response.quantityOfApplauses} aplausos`);
-    //     }
-
-    // })
 
 
 
