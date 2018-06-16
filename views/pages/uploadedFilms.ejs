@@ -19,64 +19,11 @@
     <% include ../partials/navBar %>
     
 	<section class="principal">
-        <article class="titles"><img src="../img/icons/back.svg" id="iconBack"> Filmes Enviados</article>
-        <div class="grid-films">
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
-			<a href="player.html"><div class="film">
-				<img src="../img/icons/play.svg" class="icon-play">
-				<img src="../img/icons/favorite.svg" class="functions">
-				<img src="../img/icons/addWatchlist.svg" class="functions" id="icon-addWatchList">
-				<article class="imgFilm"><img src="../img/films/movie.jpg"></article>
-				<article class="nameFilm">Nome do filme</article>
-			</div></a>
+        <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Filmes Enviados</article>
+        <div class="movieCardContainer">
+			<% uploadedFilms.forEach(function(item){ %>
+				<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
+			<% }); %>  
         </div>
 	</section>
 	

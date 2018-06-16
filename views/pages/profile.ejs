@@ -39,7 +39,7 @@
 					<div>
 						<div class="titleLine">
 							<article class="sectionHeader">Minha Lista</article>
-							<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
+							<a href="recommended.html" id="minhaListaAnchor"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 						</div>
 						<div class="movieCardContainer">
 							<% user.watchList.forEach(function(item){ %>
@@ -51,7 +51,7 @@
 				<div class="grid-right">
 					<div class="titleLine">
 						<article class="sectionHeader">Videos Enviados</article>
-						<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
+						<a href="recommended.html" id="videosEnviadosAnchor"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 					</div>
 					<div class="movieCardContainer">
 						<% videosPosted.forEach(function(item){ %>

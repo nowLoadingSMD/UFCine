@@ -212,11 +212,28 @@ router.get("/pages/tag.html", function(req,res, next) {
 })
 
 router.get("/pages/uploadedFilms.html", function(req,res, next) {
-  res.render('pages/uploadedFilms');
+
+  Video
+    .find({producerID: req.query.id})
+    .exec( (err, videos) => {
+      res.render("pages/uploadedFilms", {uploadedFilms: videos})
+    })
 })
 
 router.get("/pages/watchList.html", function(req,res, next) {
-  res.render('pages/watchList');
+  
+  User.findById(req.query.id)
+      .populate("watchList")
+      .exec( (err, user) => {
+        
+        if (err) {
+          console.log(err)
+          res.send(500).json({Error: "Erro Interno"})
+        } else {
+          res.render('pages/watchList', { watchList: user.watchList });
+        }
+      }) 
+  
 })
 
 router.get("/pages/upload.html", function(req,res, next) {
