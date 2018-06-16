@@ -102,7 +102,7 @@
 	display: block;
 }
 
-.slider__frame .description #addlist{
+.slider__frame .description .actionLabel{
 	color: white;
 	float: right;
 	padding: 17px;
