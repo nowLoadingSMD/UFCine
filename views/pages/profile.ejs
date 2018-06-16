@@ -20,7 +20,9 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
+		<article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack">Perfil</article>
         <div class="content-principal">
+
             <div class="content-profile">
 				<article class="titles sectionHeader">Perfil</article>
                 <div class="infos">
@@ -72,75 +74,47 @@
 						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
 						<h1>Nome usuário</h1>
 						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+
+            <div class="grid">
+				<div class="grid-left">
+					<div class="infos">
+						<div class="imgDiv">
+							<article id="imgProfile"></article>
+							<div class="backgroundImg"></div>
+						</div>
+						<div class="profileRect">
+							<h1 class="usernameLabel"><%= user.name %></h1>
+							<h1 id="email" class="userEmailLabel"><%= user.email %></h1>
+							<a href="editProfile.html"><button id="btn-editProfile" class="buttonLabel">EDITAR</button></a>
+						</div>
 					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-				</div>
-				<div class="group-notifications" id="unanswered">
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+					<div>
+						<div class="titleLine">
+							<article class="sectionHeader">Minha Lista</article>
+							<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
+						</div>
+						<div class="videosList">
+							<% user.favorites.forEach(function(item){ %>
+								<%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+							<% }); %>
+						</div>
 					</div>
 				</div>
-				<div class="group-notifications" id="comments">
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuáriokk</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+				<div class="grid-right">
+					<div class="titleLine">
+						<article class="sectionHeader">Videos Enviados</article>
+						<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-					</div>
-					<div class="notifications">
-						<article class="profileNotifications"><img src="../img/authors/Camila.jpg"></article>
-						<h1>Nome usuário</h1>
-						<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+					<div class="videosList">
+						<% videosPosted.forEach(function(item){ %>
+							<%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+						<% }); %>
 					</div>
 				</div>
             </div>
+            
         </div>
-        
+
 	</section>
 	
 	<%- include('../partials/tabBar', {currentPage: "none"}); %>

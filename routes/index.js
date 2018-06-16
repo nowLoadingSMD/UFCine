@@ -143,7 +143,6 @@ router.get("/pages/profile.html", function(req,res, next) {
     User
     .findById(userID)
     .populate("favorites")
-    .populate("watchList")
     .exec( (err, user) => {
       user.password = null
 
