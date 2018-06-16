@@ -1,28 +1,3 @@
-@font-face {
-    font-family: TitleMedium;
-    src: url(../fonts/GothamRounded-Medium.otf);
-}
-
-@font-face {
-    font-family: TitleBold;
-    src: url(../fonts/GothamRounded-Bold.otf);
-}
-
-/* @font-face {
-    font-family: TitleBold;
-    src: url(../fonts/CircularStd-Bold.otf);
-} */
-
-@font-face {
-    font-family: TitleBook;
-    src: url(../fonts/GothamRounded-Book.otf);
-}
-
-@font-face {
-    font-family: BodyText;
-    src: url(../fonts/IBMPlexMono-Regular.ttf);
-}
-
 *{
 	margin: 0;
 	padding: 0;
@@ -57,11 +32,9 @@ body {
 }
 
 .principal .titles{
-    font-size: 34px;
     color: #fff;
     margin-top: 15px;
     float: left;
-    font-family: TitleBold;
 }
 
 .navbar{

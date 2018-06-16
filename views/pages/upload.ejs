@@ -27,32 +27,29 @@
 		<div class="content-principal">
             <div class="grid-upload">
                 <div class="upload-left">
-                    <form ref='uploadForm' 
-                        id='uploadForm' 
-                        action='/api/video/videoUpload' 
-                        method='post' 
-                        name="uploadForm"
-                        encType="multipart/form-data">
-                    <article class="titleMedium">Vídeo</article><br/><br/><br/>
+                    <article class="titleMedium" id="VideoLabel">Vídeo</article>
+                    <article class="titleMedium" id="CapaLabel">Capa</article>
                     <article id="img-upload">
                         <input type="file" name="videoMP4" />
                     </article>
                     <article id="img-banner">
                         <img src="../img/icons/imgUploadBanner.svg">
                     </article>
-                        <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
-                        <textarea placeholder="Descrição" name="description" id="description"></textarea>
+                    <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
+                    <textarea placeholder="Descrição" name="description" id="description"></textarea>
                 </div>
                 <div class="upload-right">
-                        <div class="grid-itens">
-                            <div>
-                                <input type="text" class="textfield" placeholder="Direção" name="director"/>
-                                <input type="text" class="textfield" placeholder="Roteiro" name="script"/>
-                                <article class="titleMedium">Elenco</article>
-                                <i class="fas fa-plus-circle" id="addItem"></i>
-                                <article id="list"></article>
+                        <article class="titleMedium" id="tagsLabel">Tags</article>
+                        <div class="tagsBox">
+                            <input type="text" class="textfield" placeholder="ex: Distopia, política" name="tags"/>
+                            <div class="tags">
+                                <div class="tag">Catinga de Hexa</div>
+                                <div class="tag">Exausta</div>
+                                <div class="tag">Pombo</div>
+                                <div class="tag">Shrekpoint</div>
                             </div>
-                            <div>
+                        </div>
+                            <div class="selectBoxes">
                                 <select id="classification" name="classification">
                                     <option value="">Classificação</option>
                                     <option value="Livre">Livre</option>
@@ -95,15 +92,27 @@
                                 <i class="fas fa-plus-circle" id="addItem2"></i>
                                 <article id="list2"></article> -->
                             </div>
-                        </div>
-                    </form>
+                            <div id="castBox">
+                                <select id="castType">
+                                        <option value="">Tipo de ficha técnica</option>
+                                        <option value="descriptionList">Descrever ficha técnica</option>
+                                        <option value="colaborativeList">Realização colaborativa</option>
+                                </select>
+                                <textarea placeholder="Alunos participantes" name="colaborativeList" id="colaborativeList"></textarea>
+                                <article id="descriptionList">
+
+                                    <i class="fas fa-plus-circle" id="addItem"></i>
+                                </article>
+                            </div>
                 </div>
             </div>
         </div>
         </div>
         <button id="btn-cancel" class="btn-confirm">CANCELAR</button>
         <button id="btn-publish" class="btn-confirm">PUBLICAR</button>
-	</section>
+    </section>
+    
+    <%- include('../partials/tabBar', {currentPage: "home"}); %>
 
     <footer><h1>©Now Loading</h1></footer>
 
