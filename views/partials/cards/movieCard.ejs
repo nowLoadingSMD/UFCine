@@ -1,10 +1,12 @@
-<a href="player.html?id=<%= id %>">
+
     <div class="grid-item">
         <div class="iconsContainer">
             <div class="actionIcons">
-                <img src="../img/icons/play.svg" class="playIcon"><br/>
-                <div>
-                    <h1 class="actionLabel">Adicionar à lista</h1>
+                <a href="player.html?id=<%= id %>">
+                    <img src="../img/icons/play.svg" class="playIcon"><br/>
+                </a>
+                <div id="<%= id %>" class="addBlock">
+                    <h1 class="actionLabel" id="<%= id %>ActionLabel">Adicionar à lista</h1>
                     <img src="../img/icons/addWatchlist.svg" class="watchlistIcon">
                 </div>
             </div>
@@ -12,7 +14,34 @@
         </div>
         <article class="movieCardName"><%= name %></article>
     </div>
-</a>
+
+<script>
+    
+    $("#<%= id %>").click( function(){
+
+        const id = $(this).attr("id");
+
+        const data = {
+            videoID: id,
+            userID: getCookie("userId")
+        }
+        
+        $.post("/api/user/addToWatchlist", data, (response) => {
+            const err = response.err
+            const addedToWatchList = response.addedToWatchList
+
+            if (err) {
+                alert("Problema a adicioanr na watchlist");
+            } else if (addedToWatchList) {
+                $(`#${id}ActionLabel`).html("Remover da lista");
+            } else {
+                $(`#${id}ActionLabel`).html("Adicionar na lista");
+            }
+        })
+
+    })
+
+</script>
 
 <style>
 
@@ -72,7 +101,7 @@
         text-decoration: none !important;
         backdrop-filter: blur(30px);
         background-color: rgba(255, 255, 255, 0.1);
-        }
+    }
         .grid-item:hover article{
             backdrop-filter: blur(30px);
             background-color: rgba(221, 48, 96, 0.8);

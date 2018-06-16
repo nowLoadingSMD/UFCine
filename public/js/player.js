@@ -109,33 +109,6 @@ var populateCommentList = function(comments) {
 
 }
 
-var favoriteIcon = document.getElementById("favoriteIcon")
-
-favoriteIcon.onclick = function() {
-
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var id = url.searchParams.get("id");
-
-    const data = {
-        videoID: id,
-        userID: getCookie("userId")
-    }
-
-    $.post("/api/user/addToFavorite", data, (response) => {
-        const err = response.err
-        const favorited = response.favorited
-
-        if (err) {
-            alert("Problema ao favoritar");
-        } else if (favorited) {
-            alert("Video favoritado");
-        } else {
-            alert("Removido dos favoritos");
-        }
-    })
-}
-
 var watchListIcon = document.getElementById("watchListIcon")
 
 watchListIcon.onclick = function() {
@@ -164,6 +137,27 @@ watchListIcon.onclick = function() {
 
 }
 
-var addApplause = function() {
+var applauseIcon = document.getElementById("applauseIcon");
+
+applauseIcon.onclick = function() {
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    const data = {
+        videoID: id,
+        userID: getCookie("userId")
+    }
+
+    $.post("/api/video/setApplauses", data, (response) => {
+
+        if (response.err) {
+            alert("Problema ao aplaudir este vídeo");
+        } else {
+            $("#applauses").html(`${response.quantityOfApplauses} aplausos`);
+        }
+
+    })
 
 }

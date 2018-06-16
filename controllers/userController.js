@@ -78,4 +78,16 @@ router.post("/addToWatchlist", (req, res) => {
 
 })
 
+router.get("/getWatchList", (req, res) => {
+
+    const userID = req.query.id
+
+    console.log(userID);
+
+    User.findById(userID, (err, user) => {
+        res.json({ watchList: user.watchList})
+    })
+
+})
+
 module.exports = (app) => app.use("/api/user", router) 

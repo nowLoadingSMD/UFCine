@@ -68,7 +68,12 @@
   letter-spacing: normal;
   text-align: center;
   color: #fff;
+  transition: color 0.25s;
 
+}
+
+.actionLabel:hover {
+  color: var(--darkish-pink);
 }
 
 .movieCardName {

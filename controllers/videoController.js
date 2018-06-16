@@ -251,7 +251,8 @@ router.post("/getVideosByProducerID", (req, res) => {
 router.post("/setApplauses", (req, res) => {
     const videoID = req.body.videoID
 
-        if (videoID) {        
+        if (videoID) {     
+    
         Video.findById(videoID, (err, video) => {
             if (err)
                 throw err
@@ -259,7 +260,10 @@ router.post("/setApplauses", (req, res) => {
             //else
             Video.findByIdAndUpdate(videoID, { $set: { quantityOfApplauses: video.quantityOfApplauses + 1 }}, { new: true }, function (err, video) {
                         if (err) return handleError(err);
-                        res.send({err: null});
+                        res.send({
+                                    err: null,
+                                    quantityOfApplauses: video.quantityOfApplauses
+                                });
                     });
             })
         }

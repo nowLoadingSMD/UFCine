@@ -20,9 +20,11 @@
 }
 
 .principal #views{
-	color: #fff;
-	font-size: 1.2em;
 	float: left;
+}
+
+.principal #applauses {
+	float: right;
 }
 
 .principal #textComment{
@@ -79,7 +81,7 @@
 }
 
 video{
-	width: 97%;
+	width: 100%;
 	padding-bottom: 10px;
 }
 
