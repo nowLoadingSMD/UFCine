@@ -67,10 +67,7 @@ footer{
 	-webkit-backdrop-filter: blur(30px);
   	backdrop-filter: blur(30px);
   	background-color: rgba(21, 21, 21, 0.3);
-	color: #fff;
-	text-align: center;
 	padding: 15px;
-	font-size: 20px;
 	margin-bottom: 0;
 	margin-top: 50px;
 }
@@ -122,6 +119,5 @@ a{
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgba(255, 255, 255, 0.7);
-	font-family: TitleBook;
     opacity: 1; /* Firefox */
 }

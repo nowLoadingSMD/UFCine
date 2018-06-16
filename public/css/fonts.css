@@ -84,6 +84,11 @@
   src: url(../fonts/Circular/CircularStd-Black.otf);
 }
 
+@font-face {
+  font-family: footer;
+  src: url(../fonts/Circular/CircularStd-Medium.otf);
+}
+
 .sectionHeader {
   font-family: sectionHeader;
   font-size: 36px;
@@ -249,6 +254,18 @@
   font-family: tabBarLabel;
   font-size: 16px;
   font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer {
+  font-family: footer;
+  font-size: 20px;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;

@@ -18,13 +18,10 @@ html{
 }
 
 .principal .titles{
-    font-size: 34px;
     margin-top: 50px;
     float: left;
-    color: #fff;
     text-decoration: none;
     margin-left: 10%;
-    font-family: TitleBold;
 }
 
 .principal .titles img{

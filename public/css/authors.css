@@ -33,7 +33,6 @@ a{
     margin-bottom: 10px;
     border-radius: 2px;
     border: solid 2px var(--aqua-marine);
-    font-family: TitleBold;
     padding-top: 3px;
 }
 
@@ -43,13 +42,11 @@ a{
 }
 
 .titleLetter{
-    font-size: 1.8em;
     width: 40px;
     padding: 5px;
     color: #fff;
     text-align: center;
     margin-top: 25px;
-    font-family: TitleBold;
 }
 
 .blockAuthors{
@@ -86,8 +83,6 @@ a{
 
 .blockAuthors h1{
     margin-top: 10px;
-    font-size: 1.1em;
-    color: #fff;
 }
 
 @media screen and (min-width: 1080px){
