@@ -22,17 +22,16 @@
 	<section class="principal">
 		<div id="left">
 			<div class="video">
-					<article class="titles"><img src="../img/icons/back.svg" id="iconBack"> <%= video.name %></article>
+					<article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> <%= video.name %></article>
 				<video controls id="videoPlayer">
 		  			<source src="/api/video/videoStream?id=<%= video._id %>" type="video/mp4">
 				Your browser does not support the video tag.
 				</video><br/>
-				<article id="views"><%= video.quantityOfView %> visualizações</article>
+				<article id="views" class="sectionHeader3"><%= video.quantityOfView %> visualizações</article>
+				<article id="applauses" class="sectionHeader3"><%= video.quantityOfApplauses%> aplausos</article>
 				<div class="content-functions">
 					<img src="../img/icons/applause.svg" id="applauseIcon">
 					<img src="../img/icons/addWatchList.svg" id="watchListIcon">
-					<img src="../img/icons/favorite.svg" id="favoriteIcon">
-					<img src="../img/icons/download.svg">
 				</div>
 				<!-- <button class="btn-addVideo block-logged" id="btn-watchlist">WatchList</button>
 				<button class="btn-addVideo block-logged" id="btn-favorite">Favoritar</button>
