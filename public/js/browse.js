@@ -67,10 +67,14 @@ var words = [
   
     selectedTags.push(tag)
   
-    document.getElementById("tagsInputForSending").value = "";
-      
+    var tagSearchAnchor = document.getElementById("tagSearchAnchor")
+
+    tagSearchAnchor.setAttribute("href", "tag.html?tags=");
+
     selectedTags.forEach(function(tag) {
-      document.getElementById("tagsInputForSending").value += tag.name + ",";
+      
+      tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name);
+
     })
   
     let div = document.createElement("div");
@@ -94,12 +98,24 @@ var words = [
       selectedTags.pop(tag);
       this.parentNode.parentNode.removeChild(this.parentElement);
   
-      document.getElementById("tagsInputForSending").value = "";
-  
+      var tagSearchAnchor = document.getElementById("tagSearchAnchor")
+
+      tagSearchAnchor.setAttribute("href", "tag.html?tags=");
+
       selectedTags.forEach(function(tag) {
-        document.getElementById("tagsInputForSending").value += tag.name + ",";
+        console.log(tag)
+        tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name);
+
       })
   
     })
    
+  }
+
+  var tagsInputForSending = document.getElementById("tagsInputForSending")
+
+  tagsInputForSending.onchange = function() {
+    var tagSearchAnchor = document.getElementById("tagSearchAnchor")
+    tagSearchAnchor.setAttribute("href", this.value)
+
   }

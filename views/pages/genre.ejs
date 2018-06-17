@@ -20,9 +20,9 @@
     
 	<section class="principal">
         <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"><%= genre %></article>
-        <div class="grid-films">
+        <div class="movieCardContainer">
 			<% videos.forEach(function(item){ %>
-                <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
+                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
             <% }); %>
         </div>
 	</section>

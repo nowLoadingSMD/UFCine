@@ -89,7 +89,7 @@ router.get("/pages/genre.html", function(req,res, next) {
     .exec( (err, productionInfo) => {
 
       const videos = productionInfo.map( item => item.videoID)
-      console.log(productionInfo)
+      console.log(videos)
       res.render('pages/genre', {
         genre: genreName,
         videos: videos
@@ -208,6 +208,17 @@ router.get("/pages/signUp.html", function(req, res, next) {
 })
 
 router.get("/pages/tag.html", function(req,res, next) {
+
+  const tags = []
+
+  if (req.query.tags.split(",").length > 1) {
+    tags = req.query.tags.split(",")
+    tags.pop(tags[tags.length - 1])
+  } else {
+    tags.push(req.query.tags)
+  }
+
+  console.log(tags)
   res.render('pages/tag');
 })
 
