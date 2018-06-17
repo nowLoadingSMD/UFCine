@@ -63,30 +63,41 @@
 				<div>
 					<article class="titlesMedium TitleComment">Gênero</article>
 					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo DescriptionComment" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
-					<article class="titlesMedium TitleComment">Direção</article>
+					<article class="titlesMedium TitleComment" id="titleReal">Realização</article>
+					<article class="titlesMedium onExibitionName" id="titleDirection">Direção</article>
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.directors.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
-					<article class="titlesMedium TitleComment">Roteiro</article>
+					<article class="titlesMedium onExibitionName">Roteiro</article>
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.script.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
-					<article class="titlesMedium TitleComment">Elenco</article>
+					<article class="titlesMedium onExibitionName">Fotografia</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+					<article class="titlesMedium onExibitionName">Edição</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+					<article class="titlesMedium onExibitionName">Maquiagem</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+					<article class="titlesMedium onExibitionName">Trilha sonoroa</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+					<article class="titlesMedium onExibitionName">Filmagem</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
+				</div>
+				<div>
+					<article class="titlesMedium TitleComment">Classificação</article>
+					<article class="classification DescriptionComment"><%=productionInfo.classification %></article>
+					<article class="newInfo TitleComment"><%= productionInfo.year %></article>
+					<article class="titlesMedium onExibitionName" id="titleCast">Elenco</article>
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.cast.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
-				</div>
-				<div>
-					<article class="titlesMedium TitleComment">Ano</article>
-					<article class="newInfo DescriptionComment"><%= productionInfo.year %></article>
-					<article class="titlesMedium TitleComment">Classificação</article>
-					<article class="classification DescriptionComment"><%=productionInfo.classification %></article>
 				</div>
 			</div>
 			
