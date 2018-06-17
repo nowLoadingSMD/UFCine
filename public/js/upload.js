@@ -118,7 +118,7 @@ let checkIcon = document.getElementById("checkIcon");
 
 checkIcon.onclick = function() {
 
-
+ 
   const tag = {
     name: tagsInput.value
   }

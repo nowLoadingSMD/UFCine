@@ -43,7 +43,7 @@
 						</div>
 						<div class="movieCardContainer">
 							<% user.watchList.forEach(function(item){ %>
-								<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
+								<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
 							<% }); %>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 					</div>
 					<div class="movieCardContainer">
 						<% videosPosted.forEach(function(item){ %>
-							<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
+							<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
 						<% }); %>
 					</div>
 				</div>

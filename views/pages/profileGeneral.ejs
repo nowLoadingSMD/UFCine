@@ -40,7 +40,7 @@
                 </div>
                 <div class="videosList">
                     <% user.favorites.forEach(function(item){ %>
-                        <%- include("../partials/cards/movieCard", {name: item.name, id: item._id}); %> 
+                        <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
                     <% }); %>
                 </div>
             </div>            

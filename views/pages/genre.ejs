@@ -19,10 +19,10 @@
     <% include ../partials/navBar %>
     
 	<section class="principal">
-        <article class="titles"><img src="../img/icons/back.svg" id="iconBack"><%= genre %></article>
+        <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"><%= genre %></article>
         <div class="grid-films">
 			<% videos.forEach(function(item){ %>
-                <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id}); %> 
+                <%- include("../partials/cards/movieCardOnList", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
             <% }); %>
         </div>
 	</section>

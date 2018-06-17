@@ -23,7 +23,7 @@
         <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Recomendados</article>
         <div class="movieCardContainer">
             <% recommendedList.forEach(function(item){ %>
-                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
+                <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
             <% }); %>           
         </div>
 	</section>
