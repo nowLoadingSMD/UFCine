@@ -11,7 +11,7 @@
 	--aqua-marine: rgb(40, 181, 193);
 	--darkish-pink: rgb(221, 48, 96);
 	--dull-purple: rgb(135, 88, 126);
-	--black-opac: rgba(21,21,21, 0.3);
+	--white-opac: rgba(255,255,255, 5%);
 
 	/* HEX Colors */
 	--tealish: #28b5c1; 
@@ -65,7 +65,7 @@ footer{
 	/* background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0)); */
 	-webkit-backdrop-filter: blur(30px);
   	backdrop-filter: blur(30px);
-  	background-color: rgba(21, 21, 21, 0.3);
+  	background: var(--white-opac);
 	padding: 15px;
 	margin-bottom: 0;
 	margin-top: 50px;
@@ -205,7 +205,8 @@ a{
 
 .tag img {
 	margin-left: 1rem; 
-	width: 20px;
+	width: 9px;
+	height: 9px;
 }
 
 select {
@@ -217,7 +218,6 @@ select {
     padding: 4.5px 10px;
     color: var(--aqua-marine);
     cursor: pointer;
-    -webkit-appearance: none;
     font-family: CircularStd-Black;
     font-size: 16px;
     font-weight: 900;

@@ -23,7 +23,7 @@
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: var(--black-opac);
+    background-color: var(--white-opac);
     padding: 28px 75px 25px 57px;
 }
 
@@ -70,7 +70,7 @@
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: var(--black-opac);
+    background-color: var(--white-opac);
 }
 
 .generos .tituloCard {
@@ -115,7 +115,7 @@
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: var(--black-opac);
+    background-color: var(--white-opac);
     padding: 28px 75px 25px 57px;
 }
 
@@ -131,7 +131,7 @@
     border-radius: 16px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: var(--black-opac);
+    background-color: var(--white-opac);
     padding: 28px 75px 25px 57px;
 }
 

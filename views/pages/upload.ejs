@@ -56,49 +56,41 @@
                         </div>
                     </div>
                     <div class="capaDiv">
-                        <article class="sectionHeader2" id="CapaLabel">Capa</article>
+                        <article class="sectionHeader2" id="CapaLabel">Capas</article>
                         <div>
-                                <input type="file" name="thumbnailVertical" id="thumbnail1" class="inputFile" onchange="readURL(this, 'bannerImg1');"/>
-                                <input type="file" name="thumbnailHorizontal" id="thumbnail2" class="inputFile" onchange="readURL(this, 'bannerImg2');"/>
-                                <div class="bannerGrid">
-                                    <label for="thumbnail1">
-                                        <article class="img-banner">
-                                            <img src="../img/icons/imgUploadBanner.svg" id="bannerImg1">
-                                        </article>
-                                    </label>
-                                    <label for="thumbnail2">
-                                        <article class="img-banner">
-                                            <img src="../img/icons/imgUploadBanner.svg" id="bannerImg2">
-                                        </article>
-                                    </label>
-                                </div>
+                            <input type="file" name="thumbnailVertical" id="thumbnail1" class="inputFile" onchange="readURL(this, 'bannerImg1');"/>
+                            <input type="file" name="thumbnailHorizontal" id="thumbnail2" class="inputFile" onchange="readURL(this, 'bannerImg2');"/>
+                            <div class="bannerGrid">
+                                <label for="thumbnail1">
+                                    <article class="img-banner">
+                                        <img src="../img/icons/imgUploadBanner.svg" id="bannerImg1">
+                                    </article>
+                                </label>
+                                <label for="thumbnail2">
+                                    <article class="img-banner banner2">
+                                        <img src="../img/icons/imgUploadBanner.svg" id="bannerImg2">
+                                    </article>
+                                </label>
+                            </div>
                         </div>
                     </div>
  
-                    <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
-                    <textarea placeholder="Descrição" name="description" id="description"></textarea>
+                    <input type="text" id="titleFilm" name="name" class="textfield placerholderLabel" placeholder="Título do filme"/>
+                    <textarea placeholder="Sinopse/Descrição" class="placerholderLabel" name="description" id="description"></textarea>
                 </div>
                 <div class="upload-right">
                         <article class="sectionHeader2" id="tagsLabel">Tags</article>
                         <div class="tagsBox">
                             <div class="autocomplete">
-                                <input type="text" class="textfield" id="tagsInput" placeholder="ex: Distopia, política"/>
+                                <input type="text" class="textfield placerholderLabel" id="tagsInput" placeholder="ex: Distopia, política"/>
                                 <img src="../img/icons/check.svg" class="checkIcon" id="checkIcon">
                             </div>
                             <div class="tags" id="selectedTags">
                                 <input type="text" name="tags" id="tagsInputForSending" style="display: none">
                             </div>
+                            
                         </div>
                             <div class="selectBoxes">
-                                <select id="classification" name="classification">
-                                    <option value="">Classificação</option>
-                                    <option value="Livre">Livre</option>
-                                    <option value="+10">+10</option>
-                                    <option value="+12">+12</option>
-                                    <option value="+14">+14</option>
-                                    <option value="+16">+16</option>
-                                    <option value="+18">+18</option>
-                                </select>
                                 <select id="year" name="year">
                                     <option value="">Ano</option>
                                     <option value="2018">2018</option>
@@ -114,6 +106,15 @@
                                     <option value="2008">2008</option>
                                     <option value="2007">2007</option>
                                     <option value="2006">2006</option>
+                                </select>
+                                <select id="classification" name="classification">
+                                    <option value="">Classificação</option>
+                                    <option value="Livre">Livre</option>
+                                    <option value="+10">+10</option>
+                                    <option value="+12">+12</option>
+                                    <option value="+14">+14</option>
+                                    <option value="+16">+16</option>
+                                    <option value="+18">+18</option>
                                 </select>
                                 <select id="genre" name="genre">
                                     <option value="">Gênero</option>
@@ -138,10 +139,10 @@
                                         <option value="descriptionList">Descrever ficha técnica</option>
                                         <option value="colaborativeList">Realização colaborativa</option>
                                 </select>
-                                <textarea placeholder="Alunos participantes" name="colaborativeList" id="colaborativeList"></textarea>
+                                <textarea placeholder="Alunos participantes" class="placerholderLabel" name="colaborativeList" id="colaborativeList"></textarea>
                                 <article id="descriptionList">
-
-                                    <i class="fas fa-plus-circle" id="addItem"></i>
+                                    <img src="../img/icons/addWatchlist.svg" id="addItem">
+                                    <h1>Adicionar função</h1>
                                 </article>
                             </div>
                 </div>

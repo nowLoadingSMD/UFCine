@@ -1,7 +1,7 @@
 .content-principal{
     margin: 100px 30px 0 30px;
     border-radius: 8px;
-    background-color: var(--black-opac);
+    background-color: var(--white-opac);
     padding: 40px;
     max-width: 1234px;
 }
@@ -21,7 +21,7 @@
     grid-gap: 10px 40px;
     grid-column-gap: 75px;
     grid-row-gap: 16px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 40% 50%;
 }
 
 .upload-left {
@@ -110,7 +110,9 @@
 #castBox {
     grid-area: cast;
 }
-
+#castType{
+    width: 50%;
+}
 .grid-upload textarea{
 	width: 100%;
 	height: 200px;
@@ -136,14 +138,16 @@
     align-items: center;
     justify-items: center;
     transition: border 0.5s;
+    cursor: pointer;
 }
 
 #img-upload:hover {
     border-color: var(--darkish-pink);
 }
 
-#videoMP4Img, #bannerImg1 {
-    height: 100%;
+#videoMP4Img, #bannerImg1, #bannerImg2 {
+    margin-left: 5px;
+    width: 40px;
 }
 
 .img-banner{
@@ -154,10 +158,15 @@
     align-items: center;
     justify-items: center;
     transition: border 0.5s;
+    cursor: pointer;
 } 
 
 .img-banner:hover {
     border-color: var(--darkish-pink);
+}
+
+.banner2{
+    height: 100px;
 }
 
 .bannerGrid {
@@ -176,12 +185,10 @@
     height: 100%;
 }
 
-
 .textfield{
     background: none;
     border-bottom: solid 2px var(--tealish);
     color: white;
-    padding: 5px 10px;
     width: 100%;
     transition: border 0.5s;
 }
@@ -220,11 +227,20 @@
     margin-bottom: 10px;
 }
 
-
-i{
-    font-size: 20px;
-    color: var(--tealish);
+#addItem{
+    width: 22px;
+    height: 22px;
     cursor: pointer;
+    float: left;
+}
+
+#descriptionList h1{
+    color: #fff;
+    font-family: CircularStd-Medium;
+    font-size: 16px;
+    margin-left: 30px;
+    padding-top: 2px; 
+    margin-bottom: 10px;
 }
 
 .btn-confirm{

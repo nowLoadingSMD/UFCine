@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0.298;
+      }
+
+      .cls-2 {
+        font-size: 15px;
+        font-family: CircularStd-Book, Circular Std;
+        opacity: 0.499;
+      }
+    </style>
+  </defs>
+  <g id="Help" transform="translate(-819 -253)">
+    <circle id="Ellipse_486" data-name="Ellipse 486" class="cls-1" cx="10" cy="10" r="10" transform="translate(819 253)"/>
+    <text id="_" data-name="?" class="cls-2" transform="translate(825 269)"><tspan x="0" y="0">?</tspan></text>
+  </g>
+</svg>

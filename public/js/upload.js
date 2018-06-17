@@ -41,9 +41,7 @@ addItem.onclick = function(){
 
   div.setAttribute("class", "descriptionListItem");
 
-  var icon = document.createElement("i");
-  icon.classList.add("fas");
-  icon.classList.add("fa-plus-circle");
+  var icon = document.createElement("img");
   icon.setAttribute("id", "addItem");
 
   icon.addEventListener("click", function(){
@@ -118,7 +116,6 @@ let checkIcon = document.getElementById("checkIcon");
 
 checkIcon.onclick = function() {
 
- 
   const tag = {
     name: tagsInput.value
   }

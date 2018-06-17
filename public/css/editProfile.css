@@ -12,7 +12,7 @@
  #img-edit{
     width: 140px;
     height: 140px;
-    border: 6px solid rgba(21, 21, 21, 0.3);
+    border: 6px solid var(--white-opac);
     border-radius: 100px;
     overflow: hidden;
     text-align: center;
@@ -45,7 +45,7 @@
     display: grid;
     grid-gap: 20px 2%;
     grid-template-columns: 15% 40% 40%;
-    background-color: rgba(21, 21, 21, 0.3);
+    background-color: var(--white-opac);
     border-radius: 30px;
     padding: 50px;
 }

@@ -50,15 +50,19 @@
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background-image: url("../img/authors/Camila.jpg");
-    background-size: 110%;
     position: relative;
+    border: 6px solid var(--white-opac);
+    overflow: hidden;
+}
+
+#imgProfile img{
+    height: 100%;
 }
 
 .backgroundImg {
     height: 130px;
     width: 50%;
-    background-color: rgba(21, 21, 21, 0.3);
+    background-color: var(--white-opac);
     position: absolute;
     z-index: -1;
     top: 0%;
@@ -66,7 +70,7 @@
 }
 
 .profileRect {
-    background-color: rgba(21, 21, 21, 0.3);
+    background-color: var(--white-opac);
     height: 130px;
     padding-top: 1rem;
     padding-left: 1rem;
