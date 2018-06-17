@@ -59,6 +59,30 @@
     margin-top: 425px;
 }
 
+#helpIcon{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#tagsLabel div{
+    display: none;
+    width: 180px;
+    background: var(--dark-blue-grey);
+    border-radius: 8px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 110px;
+    padding: 8px;
+    z-index: 5;
+}
+
+#tagsLabel div img{
+    width: 15px;
+    position: absolute;
+    margin-left: 1px;
+}
+
 .videoDiv {
     grid-area: video;
 }

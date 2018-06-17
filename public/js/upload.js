@@ -18,6 +18,13 @@ jQuery(document).ready(async function($) {
         console.log(tags)
         autocomplete(document.getElementById("tagsInput"), tags);
       })      
+
+      $("#helpIcon").hover(function() {
+        $("#helpInfo").show();
+      })
+      $("#helpIcon").mouseleave(function() {
+        $("#helpInfo").hide();
+      })
 });
 
 var addItem = document.getElementById("addItem");
