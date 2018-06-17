@@ -73,7 +73,7 @@ var words = [
 
     selectedTags.forEach(function(tag) {
       
-      tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name);
+      tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name + ",");
 
     })
   
@@ -104,7 +104,7 @@ var words = [
 
       selectedTags.forEach(function(tag) {
         console.log(tag)
-        tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name);
+        tagSearchAnchor.setAttribute("href", tagSearchAnchor.getAttribute("href") + tag.name + ",");
 
       })
   
