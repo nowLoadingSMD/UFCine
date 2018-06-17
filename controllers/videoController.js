@@ -33,8 +33,13 @@ router.get("/randomVideo", (req, res, next) => {
     Video.find({}, (err, videos) => {
   
       const index =  Math.floor((Math.random() * videos.length - 1) + 1);
+
+      res.json({
+            videoImg: videos[index].thumbnailHorizontalPath,
+            videoID: videos[index]._id
+        })
     
-      res.redirect(`/pages/player.html?id=${videos[index]._id}`)
+    //   res.redirect(`/pages/player.html?id=${videos[index]._id}`)
     })
   
 })
