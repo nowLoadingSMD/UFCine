@@ -116,7 +116,7 @@
 
 .dropdownLabel {
   font-family: CircularStd-Medium;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -293,4 +293,43 @@
   letter-spacing: normal;
   text-align: left;
   color: var(--dull-purple);
+}
+
+.TitleComment {
+  font-family: CircularStd-Bold;
+  font-size: 26px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  color: var(--white);
+}
+
+.Comments {
+  font-family: CircularStd-Book;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  color: var(--white);
+}
+
+.DescriptionComment {
+  font-family: CircularStd-Book;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  color: var(--white);
 }

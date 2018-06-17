@@ -1,12 +1,15 @@
 /* Player */
 .principal{
 	display: grid;
-	grid-gap: 20px 20px;
-	grid-template-columns: 55% 45%;
+	grid-gap: 20px 6%;
+	grid-template-columns: 46% 50%;
 }
 
 .principal #right{
-	padding-top: 50px;
+	padding:30px;
+	margin-top: 85px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 5%);
 }
 
 .principal .titles{
@@ -28,26 +31,21 @@
 }
 
 .principal #textComment{
-	margin-top: 100px;
+	margin-top: 80px;
 	margin-bottom: 10px;
 }
 
 .principal .titlesMedium{
-	font-size: 1.75em;
 	color: #fff;
 	text-align: left;
-	margin-top: 15px;
-	font-family: TitleBold;
 }
 
 .principal .content{
-	font-size: 1.2em;
 	width: 97%;
 	padding: 10px;
 	color: #fff;
 	text-align: left;
 	word-wrap: break-word;
-	font-family: BodyText;
 }
 
 .principal .grid-infos{
@@ -57,16 +55,14 @@
 }
 
 .grid-infos div .newInfo{
-	color: var(--aqua-marine);
+	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 1.2em;
 	margin: 10px;
 }
 
 .classification{
 	margin: 10px;
-	font-size: 1.2em;
 	width: 50px;
 	height: 35px;
 	color: #fff;
@@ -121,17 +117,26 @@ video{
 }
 
 .comment{
-	width: 97%;
-	background: rgba(0, 0, 0, 0.5);
+	width: 92%;
+	float: right;
+	background: rgba(255, 255, 255, 5%);
 	word-wrap: break-word;
-	height: 150px;
+	height: 80px;
 	color: #fff;
+	margin-bottom: 60px;
+}
+
+.newComments{
+	margin-bottom: 15px;
 }
 
 .imgProfile{
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	border: 5px solid rgba(255, 255, 255, 5%);
 	overflow: hidden;
+	margin-left: -42px;
 	position: absolute;
 }
 
@@ -140,49 +145,45 @@ video{
 }
 
 .comment textarea{
-	margin-left: 110px;
-	width:79%;
-	height: 100px;
-	font-size: 1em;
+	margin-left: 40px;
+	width:90%;
+	height: 70px;
 	padding: 10px;
 	resize: none;
-	background: #646464;
+	background: none;
 	color: #fff;
 }
 
 .comment h1{
-	padding-top: 20px;
-	margin-left: 115px;
-	font-size: 1.2em;
+	padding-top: 10px;
+	margin-left: 50px;
 	margin-bottom: 5px;
+	font-family: CircularStd-Bold;
+	font-size: 18px;
 }
 
 .comment .btn-comment{
-	background: none;
+	background: var(--aqua-marine);
 	padding: 5px 15px;
-	margin-left: 75.8%;
 	border-radius: 2px;
 	border: solid 2px var(--aqua-marine);
-	color: var(--aqua-marine);
-	width: 130px;
+	color: #fff;
+	width: 120px;
+	float: right;
 	text-align: center;
-	margin-top: 40px;
-	transition: background 0.5s, color 0.5s;
+	transition: background 0.5s, color 0.5s, border 0.5s;
+	margin-top: 15px;
 }
 
 .comment .btn-comment:hover{
-	background: var(--aqua-marine);
+	background: var(--darkish-pink);
+	border: 2px solid var(--darkish-pink);
 	color: #fff;
 }
 
-#btn-comment{
-	margin-top: 5px;
-}
-
 .comment .contentComment{
-	margin-left: 115px;
+	margin-left: 50px;
 	width:85%;
-	font-size: 1em;
 	word-wrap: break-word;
 }
 

@@ -30,9 +30,8 @@ html{
 	border-color: var(--darkish-pink);
 }
 #logo{
-    font-size: 90px;
-    color: white;
-    margin: 8% 0 40px 5%;
+    width: 30%;
+    margin: 6% 0 40px 5%;
 }
 .slogan{
     margin-left: 5%;

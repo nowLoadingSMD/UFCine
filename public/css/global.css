@@ -118,6 +118,8 @@ a{
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgba(255, 255, 255, 0.7);
+	font-family: CircularStd-Book;
+	font-size: 16px;
     opacity: 1; /* Firefox */
 }
 

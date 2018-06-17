@@ -140,13 +140,12 @@ var populateCommentList = function(comments) {
             <article class="imgProfile"><img src="../img/authors/Camila.jpg"></article>
             <h1>Nome de usuário</h1>
             <div class="contentComment">
-                <p>${comment.content}</p>
+                <p class="Comments">${comment.content}</p>
             </div>
-            <button class="btn-comment">Responder</button>
         `
 
         let itemNode = document.createElement("div");
-        itemNode.className = "comment";
+        itemNode.className = "comment newComments";
         itemNode.innerHTML = item;
 
         $("#commentList").append(itemNode);

@@ -1,6 +1,6 @@
 <header class="navbar">
     <input type="text" id="search" class="placerholderLabel" placeholder="Pesquisar" />
-    <h1>LOGO</h1>
+    <img id="imgLogo" src="/img/icons/logo.svg">
 	<i class="fas fa-sign-in-alt" id="iconLogin"></i>
 	<a href="/pages/upload.html"><button id="uploadVideo" class="ctaButtonLabel">ENVIAR VÍDEO</button></a>
     <div id="dropdown">
@@ -50,6 +50,13 @@
 	height: 100%;
 }
 
+.navbar #imgLogo{
+	width: 120px;
+	float: left;
+	margin-left: 49%;
+	margin-top: 15px;
+}
+
 .navbar #dropdown i{
 	float: right;
 	position: relative;
@@ -77,7 +84,6 @@
 .navbar h1{
 	padding: 10px;
 	color: #fff;
-	float: left;
 }
 
 .navbar #search{

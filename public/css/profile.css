@@ -88,10 +88,12 @@
     border: solid 2px var(--aqua-marine);
     padding: 5px;
     width: 80px;
+    transition: 0.5s background, 0.5s color, 0.5s border;
 }
 
 #btn-editProfile:hover{
-    background: var(--aqua-marine);
+    background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
     color: #fff;
 }
 

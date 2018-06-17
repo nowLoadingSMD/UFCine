@@ -38,11 +38,11 @@
 				<button class="btn-addVideo block-logged" id="btn-favorite">Favoritar</button>
 				<i class="fas fa-thumbs-up"></i>50 -->
 			</div>
-			<article id="textComment" class="titlesMedium">Comentários</article>
+			<article id="textComment" class="titlesMedium TitleComment">Comentários</article>
 			<div class="comment block-logged">
 				<article class="imgProfile"><img src="../img/authors/Camila.jpg"></article>
-				<textarea placeholder="Escreva aqui seu comentário..." id="commentContent"></textarea>
-				<button class="btn-comment" id="btn-comment">Comentar</button>
+				<textarea placeholder="Escreva aqui seu comentário..." id="commentContent" class="Comment"></textarea>
+				<button class="btn-comment buttonLabel" id="btn-comment">COMENTAR</button>
 			</div>
 			<div id="commentList"></div>
 			<!--
@@ -57,36 +57,36 @@
 			-->
 		</div>
 		<div id="right">
-			<article class="titlesMedium">Descrição</article>
-			<article class="content" id="productionInfoDescription"><%= productionInfo.description %></article>
+			<article class="titlesMedium TitleComment">Descrição</article>
+			<article class="content DescriptionComment" id="productionInfoDescription"><%= productionInfo.description %></article>
 			<div class="grid-infos">
 				<div>
-					<article class="titlesMedium">Gênero</article>
-					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
-					<article class="titlesMedium">Direção</article>
-					<a href="portfolio.ejs"><article class="newInfo">
+					<article class="titlesMedium TitleComment">Gênero</article>
+					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo DescriptionComment" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
+					<article class="titlesMedium TitleComment">Direção</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.directors.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
-					<article class="titlesMedium">Roteiro</article>
-					<a href="portfolio.ejs"><article class="newInfo">
+					<article class="titlesMedium TitleComment">Roteiro</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.script.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
-					<article class="titlesMedium">Elenco</article>
-					<a href="portfolio.ejs"><article class="newInfo">
+					<article class="titlesMedium TitleComment">Elenco</article>
+					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.cast.forEach(function(item){ %>
 							<%= item %> <br>
 						<% }) %> 
 					</article></a>
 				</div>
 				<div>
-					<article class="titlesMedium">Ano</article>
-					<article class="newInfo"><%= productionInfo.year %></article>
-					<article class="titlesMedium">Classificação</article>
-					<article class="classification"><%=productionInfo.classification %></article>
+					<article class="titlesMedium TitleComment">Ano</article>
+					<article class="newInfo DescriptionComment"><%= productionInfo.year %></article>
+					<article class="titlesMedium TitleComment">Classificação</article>
+					<article class="classification DescriptionComment"><%=productionInfo.classification %></article>
 				</div>
 			</div>
 			
