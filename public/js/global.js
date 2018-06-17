@@ -129,7 +129,11 @@ var modal = document.getElementById('myModal');
 
 // var logarMobile = document.getElementById("iconLogin");
 
-var btnLogout = document.getElementById("btn-logout");
+var showModal = document.getElementById("btn-logout");
+var modal = document.getElementById("myModal");
+var cancelLogout = document.getElementById("cancelLogout");
+var closeModal = document.getElementsByClassName("close")[0];
+var btnLogout = document.getElementById("confirmLogout");
 var user = document.getElementById("btn-user");
 var uploadVideo = document.getElementById("uploadVideo");
 // // Get the button that opens the login
@@ -137,9 +141,24 @@ var btn = document.getElementById("btn-login");
 var showDropdown = document.getElementById("showDropdown");
 var dropdown = document.getElementById("dropdown-content");
 
+showModal.onclick = function(){
+  modal.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+closeModal.onclick = function(){
+  modal.style.display = "none";
+}
+cancelLogout.onclick = function(){
+  modal.style.display = "none";
+}
 btnLogout.onclick = function(e){
   // e.preventDefault()
   logout();
+  modal.style.display = "none";
   btn.style.display = "block";
   user.style.display = "none";
   showDropdown.style.display = "none";
