@@ -2,7 +2,7 @@
     <div class="slider__track glide__track" data-glide-el="track">
       <ul class="slider__slides glide__slides">
         <% releasesList.forEach(function(item, index){ %>
-          <%- include("cards/emCartazCard", {name: item.name, description: item.description, img: item.thumbnailPath, exibitionLocation: item.exibitionLocation, index: index}); %> 
+          <%- include("cards/emCartazCard", {name: item.name, description: item.description, img: item.thumbnailHorizontalPath, exibitionLocation: item.exibitionLocation, index: index}); %> 
         <% }); %>       
       </ul>
     </div>

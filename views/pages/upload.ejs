@@ -35,15 +35,46 @@
                 encType="multipart/form-data">
             <div class="grid-upload">
                 <div class="upload-left">
-                    <article class="sectionHeader2" id="VideoLabel">Vídeo</article>
-                    <article class="sectionHeader2" id="CapaLabel">Capa</article>
-                    <article id="img-upload">
-                        <input type="file" name="videoMP4" />
-                    </article>
-                    <article id="img-banner">
-                        <input type="file" name="thumbnail" />
-                        <img src="../img/icons/imgUploadBanner.svg">
-                    </article>
+                    <div class="videoDiv">
+                        <article class="sectionHeader2" id="VideoLabel">Vídeo</article>
+                        <div class="inlineGrid">
+                            <label for="videoMP4">
+                                <input type="file" name="videoMP4" id="videoMP4" class="inputFile" onchange="readURL(this, 'videoMP4Img');" />
+                                <article id="img-upload">
+                                    <img src="../img/icons/imgUploadFilm.svg" id="videoMP4Img">
+                                </article>
+                            </label>
+                            <div class="articleBox">
+                                <article class="sectionHeader4" id="nameLabel">Nome do arquivo</article>
+                                <article class="text" id="videoName"></article>
+                                <article class="sectionHeader4" id="privateLabel">Este vídeo é privado?</article>
+                                <div class="slideOne" id="privateSwitch">  
+                                    <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
+                                    <label for="slideOne"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="capaDiv">
+                        <article class="sectionHeader2" id="CapaLabel">Capa</article>
+                        <div>
+                                <input type="file" name="thumbnailVertical" id="thumbnail1" class="inputFile" onchange="readURL(this, 'bannerImg1');"/>
+                                <input type="file" name="thumbnailHorizontal" id="thumbnail2" class="inputFile" onchange="readURL(this, 'bannerImg2');"/>
+                                <div class="bannerGrid">
+                                    <label for="thumbnail1">
+                                        <article class="img-banner">
+                                            <img src="../img/icons/imgUploadBanner.svg" id="bannerImg1">
+                                        </article>
+                                    </label>
+                                    <label for="thumbnail2">
+                                        <article class="img-banner">
+                                            <img src="../img/icons/imgUploadBanner.svg" id="bannerImg2">
+                                        </article>
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+
                     <input type="text" id="titleFilm" name="name" class="textfield" placeholder="Título do filme"/>
                     <textarea placeholder="Descrição" name="description" id="description"></textarea>
                 </div>

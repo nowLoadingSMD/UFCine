@@ -29,7 +29,7 @@
 			<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 			<div class="movieCardContainer">
 					<% recommendedList.forEach(function(item){ %>
-						<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailPath}); %> 
+						<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
 					<% }); %>
 			</div>
 		</div>

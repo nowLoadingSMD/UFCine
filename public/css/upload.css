@@ -1,21 +1,13 @@
 .content-principal{
     margin: 100px 30px 0 30px;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-color: var(--black-opac);
     padding: 40px;
     max-width: 1234px;
 }
 
 .principal .titles{
     margin-top: 35px;
-}
-
-
-.principal .titleMedium{
-    color: white;
-    font-size: 26px;
-    font-family: TitleBold;
-    margin-bottom: 10px;
 }
 
 .principal .titles img{
@@ -34,30 +26,54 @@
 
 .upload-left {
     display: grid;
-    grid-row-gap: 16px;
-    grid-template-areas: "videoLabel capaLabel"
-                         "video capa"
+    grid-row-gap: 2rem;
+    grid-template-areas: "video video"
+                         "capa capa"
                          "titulo titulo"
                          "descricao descricao";
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 33px 2fr 45px 3fr;
+    grid-template-rows: 130px 180px 45px 3fr;
 }
 
-#videoLabel {
-    grid-area: videoLabel;
-}
-
-#capaLabel {
-    grid-auto-columns: capaLabel;
-}
-
-#img-upload {
+.videoDiv {
     grid-area: video;
 }
 
-#img-banner {
+.capaDiv {
     grid-area: capa;
-    width: 100%;
+}
+
+.inlineGrid {
+    margin-top: 1rem;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 3fr;   
+}
+
+.articleBox {
+    display: grid;
+    grid-row-gap: 0.5rem;
+    grid-template-areas: "header header"
+                         "videoName videoName"
+                         "privateLabel privateSwitch" 
+}
+
+.articleBox #nameLabel {
+    grid-area: header;
+}
+
+.articleBox text {
+    grid-area: videoName;
+}
+
+.articleBox #privateLabel {
+    grid-area: privateLabel;
+    display: flex;
+    align-items: center;
+} 
+
+.articleBox #privateSwitch {
+    grid-area: privateSwitch;
 }
 
 #titleFilm {
@@ -100,7 +116,7 @@
 	height: 200px;
     resize: none;
     border-radius: 8px;
-    border: solid 2px var(--aqua-marine);  
+    border: solid 2px var(--tealish);  
     background: none;
     color: white;
     padding: 5px 10px;
@@ -111,39 +127,62 @@
     border-color: var(--darkish-pink);
 }
 
-.grid-upload #img-upload{
-	width: 90%;
-    height: 177px;
+#img-upload{
+	width: 100%;
+    height: 80px;
     border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    margin-top: 10px;
-    margin-bottom: 20px;
+    border: solid 2px var(--tealish);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: border 0.5s;
 }
 
-.grid-upload #img-upload img{
-    width: 30%;
-    margin: 65px 35%;
+#img-upload:hover {
+    border-color: var(--darkish-pink);
 }
 
-.grid-upload #img-banner{
-    height: 179px;
+#videoMP4Img, #bannerImg1 {
+    height: 100%;
+}
+
+.img-banner{
+    height: 128px;
     border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    margin-top: 10px;
+    border: solid 2px var(--tealish);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: border 0.5s;
 } 
 
-.grid-upload #img-banner img{
-    width: 50%;
-    margin: 55px 25%;
+.img-banner:hover {
+    border-color: var(--darkish-pink);
 }
+
+.bannerGrid {
+    margin-top: 1rem;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-end;
+}
+
+.img-banner:nth-child(2) {
+    height: 70%;
+}
+
+#bannerImg1, #bannerImg2 {
+    height: 100%;
+}
+
 
 .textfield{
     background: none;
-    border-bottom: solid 2px var(--aqua-marine);
+    border-bottom: solid 2px var(--tealish);
     color: white;
     padding: 5px 10px;
     width: 100%;
-    margin-bottom: 20px;
     transition: border 0.5s;
 }
 
@@ -160,19 +199,7 @@
 .checkIcon {
     width: 28px;
 }
-
-select {
-    width: 100%;
-    margin-bottom: 1rem;
-    background: none;
-    border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    padding: 4.5px 10px;
-    color: var(--aqua-marine);
-    cursor: pointer;
-    -webkit-appearance: none;
-}
-
+ 
 .descriptionListItem {
     display: grid;
     grid-column-gap: 1rem;
@@ -186,7 +213,7 @@ select {
 
 #descriptionList input, #list2 input{
     background: none;
-    border-bottom: solid 2px var(--aqua-marine);
+    border-bottom: solid 2px var(--tealish);
     color: white;
     padding: 5px 10px;
     width: 100%;
@@ -196,7 +223,7 @@ select {
 
 i{
     font-size: 20px;
-    color: var(--aqua-marine);
+    color: var(--tealish);
     cursor: pointer;
 }
 
@@ -204,10 +231,10 @@ i{
 	background: none;
     padding: 10px;
     width: 150px;
-    margin-top: 10px;
+    margin-top: 2rem;
     border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    color: var(--aqua-marine);
+    border: solid 2px var(--tealish);
+    color: var(--tealish);
     margin-right: 10px;
 }
 
@@ -222,7 +249,7 @@ i{
 }
 
 #btn-publish{
-    background: var(--aqua-marine);
+    background: var(--tealish);
     color: white;
     transition: border 0.5s, background 0.5s;
 }
@@ -252,4 +279,38 @@ i{
     display: inline-block;
     align-items: center;
 
+}
+
+.inputFile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputFile + label {
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputFile:focus + label,
+.inputFile + label:hover {
+    background-color: red;
+}
+
+::placeholder {
+    font-family: CircularStd-Medium;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
 }

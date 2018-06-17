@@ -99,34 +99,6 @@
     display: none;
 }
 
-.slideOne, .slide{
-    width: 30px;
-    height: 13px;
-    background: #999;
-    margin: 8px auto;
-    position: relative;
-    border-radius: 50px;
-    float: right;
-}
-  .slideOne label, .slide label {
-    display: block;
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: -2px;
-    left: -3px;
-    cursor: pointer;
-    background: #db002a;
-    border-radius: 50px;
-    transition: all 0.4s ease;
-  }
-  .slideOne input[type=checkbox], .slide input[type=checkbox]{
-    visibility: hidden;
-  }
-  .slideOne input[type=checkbox]:checked + label, .slide input[type=checkbox]:checked + label{
-    left: 15px;
-    background: #00db5d;
-  }
   footer{
       margin-top: 9%;
   }
