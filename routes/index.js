@@ -3,6 +3,7 @@ var router = express.Router();
 
 const GenreEnum = require("../config/genreEnum")
 
+const Tag = require("../models/Tag")
 const User = require("../models/user")
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
@@ -201,7 +202,7 @@ router.get("/pages/releases.html", function(req,res, next) {
       res.render('pages/releases', {releasesList: result});
     })
 
-})
+}) 
 
 router.get("/pages/signUp.html", function(req, res, next) {
   res.render('pages/signUp')
@@ -209,17 +210,28 @@ router.get("/pages/signUp.html", function(req, res, next) {
 
 router.get("/pages/tag.html", function(req,res, next) {
 
-  const tags = []
+  let tags = []
 
-  if (req.query.tags.split(",").length > 1) {
+  if (req.query.tags.split(",").length >= 1) {
     tags = req.query.tags.split(",")
     tags.pop(tags[tags.length - 1])
   } else {
     tags.push(req.query.tags)
   }
 
-  console.log(tags)
-  res.render('pages/tag');
+  Tag.find({'name': { $in: tags } }, function(err, data){
+
+    const tagsID = data.map((item) => item._id)
+
+    ProductionInfo.find({ 'tags': { $all: tagsID } }).populate("videoID").exec((err, prodInfo) => {
+
+      const moviesArr = prodInfo.map((item) => item.videoID)
+
+      res.render('pages/tag', { movies: moviesArr, tags: tags });
+    })
+
+  })
+
 })
 
 router.get("/pages/uploadedFilms.html", function(req,res, next) {
