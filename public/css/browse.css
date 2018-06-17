@@ -151,7 +151,8 @@
 .tagTextInput {
     height: 65px;
     width: 431px;
-    background-color:rgba(40,181,193, 0.3);
+    background:var(--white-opac);
+    padding-left: 20px;
 }
 
 .selectedTagsBox {
@@ -160,6 +161,10 @@
 
 .grid-right button {
     align-self: center;
+}
+
+#buscarBtn{
+    width: 112px;
 }
 
 /* .tagsBox {
