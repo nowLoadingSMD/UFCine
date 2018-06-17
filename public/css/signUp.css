@@ -50,11 +50,17 @@ html{
 form .textfield{
     border-bottom: solid 2px var(--aqua-marine);
     background: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
     padding: 5px 10px;
     color: #fff;
     transition: border 0.5s;
+}
+
+.error{
+    display: none;
+    position: absolute;
+    margin-top: -35px;
 }
 
 form .textfield:focus{

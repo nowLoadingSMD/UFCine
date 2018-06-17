@@ -6,6 +6,9 @@ btnGoSignUp.onclick = async function(){
       alert("Cadastrado")
       window.location.href = "/pages/home.html";
     } else {
-      alert("Erro ao cadastrar")
+      document.getElementById("errorName").style.display = "block";
+      document.getElementById("errorEmail").style.display = "block";
+      document.getElementById("errorPassword").style.display = "block";
+      document.getElementById("errorUser").style.display = "block";
     }
 }

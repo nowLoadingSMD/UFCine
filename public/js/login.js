@@ -6,7 +6,8 @@ logar.onclick = async function(){
         alert("Logado")
         window.location.href = "/pages/home.html"
     } else {
-      alert("Erro ao logar")
+      document.getElementById("errorEmail").style.display = "block";
+      document.getElementById("errorPassword").style.display = "block";
     }
   
   }

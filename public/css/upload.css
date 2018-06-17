@@ -35,6 +35,30 @@
     grid-template-rows: 130px 180px 45px 3fr;
 }
 
+.error{
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.errorSelect{
+    display: none;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.errorDescription{
+    display: none;
+    position: absolute;
+    margin-top: 655px;
+}
+
+.errorTitle{
+    display: none;
+    position: absolute;
+    margin-top: 425px;
+}
+
 .videoDiv {
     grid-area: video;
 }

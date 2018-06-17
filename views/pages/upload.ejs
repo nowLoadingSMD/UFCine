@@ -43,7 +43,9 @@
                                 <article id="img-upload">
                                     <img src="../img/icons/imgUploadFilm.svg" id="videoMP4Img">
                                 </article>
+                                <article id="errorVideo" class="error errorMessage">Filme inválido</article>
                             </label>
+                            
                             <div class="articleBox">
                                 <article class="sectionHeader4" id="nameLabel">Nome do arquivo</article>
                                 <article class="text" id="videoName"></article>
@@ -65,18 +67,21 @@
                                     <article class="img-banner">
                                         <img src="../img/icons/imgUploadBanner.svg" id="bannerImg1">
                                     </article>
+                                    <article id="errorBanner1" class="error errorMessage">Capa inválida</article>
                                 </label>
                                 <label for="thumbnail2">
                                     <article class="img-banner banner2">
                                         <img src="../img/icons/imgUploadBanner.svg" id="bannerImg2">
                                     </article>
+                                    <article id="errorBanner2" class="error errorMessage">Capa inválida</article>
                                 </label>
                             </div>
                         </div>
                     </div>
- 
                     <input type="text" id="titleFilm" name="name" class="textfield placerholderLabel" placeholder="Título do filme"/>
+                    <article id="errorTitle" class="errorTitle errorMessage">Título inválido</article>
                     <textarea placeholder="Sinopse/Descrição" class="placerholderLabel" name="description" id="description"></textarea>
+                    <article id="errorDescription" class="errorDescription errorMessage">Descrição inválida</article>
                 </div>
                 <div class="upload-right">
                         <article class="sectionHeader2" id="tagsLabel">Tags</article>
@@ -107,6 +112,7 @@
                                     <option value="2007">2007</option>
                                     <option value="2006">2006</option>
                                 </select>
+                                <article id="errorYear" class="errorSelect errorMessage">Selecione uma opção</article>
                                 <select id="classification" name="classification">
                                     <option value="">Classificação</option>
                                     <option value="Livre">Livre</option>
@@ -116,6 +122,7 @@
                                     <option value="+16">+16</option>
                                     <option value="+18">+18</option>
                                 </select>
+                                <article id="errorClassification" class="errorSelect errorMessage">Selecione uma opção</article>
                                 <select id="genre" name="genre">
                                     <option value="">Gênero</option>
                                     <option value="Ação">Ação</option>
@@ -129,6 +136,7 @@
                                     <option value="Suspense">Suspense</option>
                                     <option value="Terror">Terror</option>
                                 </select>
+                                <article id="errorGenre" class="errorSelect errorMessage">Selecione uma opção</article>
                                 <!-- <article class="titleMedium">Gênero</article>
                                 <i class="fas fa-plus-circle" id="addItem2"></i>
                                 <article id="list2"></article> --> 
@@ -147,8 +155,8 @@
                             </div>
                 </div>
             </div>
-            <button id="btn-cancel" class="btn-confirm">CANCELAR</button>
-            <button id="btn-publish" class="btn-confirm">PUBLICAR</button>
+            <button id="btn-cancel" class="btn-confirm buttonHoverLabel">CANCELAR</button>
+            <button id="btn-publish" class="btn-confirm buttonHoverLabel">PUBLICAR</button>
             </form>
         </div>
         </div>

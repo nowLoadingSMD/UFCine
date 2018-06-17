@@ -19,7 +19,7 @@ html{
 .navbar #imgLogo{
 	width: 150px;
 	float: left;
-	margin-left: 45%;
+	margin-left: 43%;
 	margin-top: 17px;
 }
 
@@ -28,7 +28,7 @@ html{
     width: 50%;
     border-radius: 8px;
     margin-top: 8%;
-    margin-left: 25%;
+    margin-left: 26%;
     padding: 5%;
     padding-bottom: 10%;
 }
@@ -48,11 +48,17 @@ html{
 form .textfield{
     border-bottom: solid 2px var(--aqua-marine);
     background: 0;
-    margin-bottom: 20px;
     width: 100%;
+    margin-bottom: 40px;
     padding: 5px 10px;
     color: #fff;
     transition: border 0.5s;
+}
+
+.error{
+    display: none;
+    position: absolute;
+    margin-top: -35px;
 }
 
 form .textfield:focus{
@@ -100,3 +106,4 @@ footer{
     position: absolute;
     bottom: 0;
 }
+

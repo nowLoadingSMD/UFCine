@@ -332,3 +332,9 @@
   color: rgb(255, 255, 255);
   color: var(--white);
 }
+
+.errorMessage{
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  color: var(--cherry);
+}

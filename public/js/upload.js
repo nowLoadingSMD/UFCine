@@ -17,8 +17,7 @@ jQuery(document).ready(async function($) {
         })
         console.log(tags)
         autocomplete(document.getElementById("tagsInput"), tags);
-      })
-      
+      })      
 });
 
 var addItem = document.getElementById("addItem");
