@@ -1,103 +1,108 @@
-<svg id="Group_1088" data-name="Group 1088" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.352 48.607">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 292 69">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        clip-path: url(#clip-UFCine_Logo);
       }
 
       .cls-2 {
-        fill: #525252;
+        fill: #00ebff;
       }
 
       .cls-3 {
-        fill: #28b5c1;
+        fill: #ff3b71;
       }
 
       .cls-4 {
-        fill: #dd3060;
+        filter: url(#Path_3475);
+      }
+
+      .cls-5 {
+        filter: url(#Path_3474);
+      }
+
+      .cls-6 {
+        filter: url(#Path_3473);
+      }
+
+      .cls-7 {
+        filter: url(#Path_3472);
+      }
+
+      .cls-8 {
+        filter: url(#Path_3471);
+      }
+
+      .cls-9 {
+        filter: url(#Path_3470);
       }
     </style>
+    <filter id="Path_3470" x="-3" y="-3" width="64.152" height="74.12" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#00ebff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3471" x="98.453" y="-3" width="77.26" height="74.312" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#00ebff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3472" x="47.877" y="-3" width="64.152" height="74.12" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#00ebff"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3473" x="181.145" y="8.36" width="64.152" height="63.306" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#dd3060"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3474" x="230.875" y="8.278" width="64.125" height="62.541" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="#dd3060"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3475" x="162.384" y="8.36" width="33.184" height="62.76" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-color="#dd3060"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-UFCine_Logo">
+      <rect width="292" height="69"/>
+    </clipPath>
   </defs>
-  <g id="Group_1083" data-name="Group 1083">
-    <g id="Group_1061" data-name="Group 1061" transform="translate(133.753)">
-      <rect id="Rectangle_277" data-name="Rectangle 277" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1062" data-name="Group 1062" transform="translate(120.381)">
-      <rect id="Rectangle_278" data-name="Rectangle 278" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1063" data-name="Group 1063" transform="translate(107.01)">
-      <rect id="Rectangle_279" data-name="Rectangle 279" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1064" data-name="Group 1064" transform="translate(93.626)">
-      <rect id="Rectangle_280" data-name="Rectangle 280" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1065" data-name="Group 1065" transform="translate(80.254)">
-      <rect id="Rectangle_281" data-name="Rectangle 281" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1066" data-name="Group 1066" transform="translate(66.882)">
-      <rect id="Rectangle_282" data-name="Rectangle 282" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1067" data-name="Group 1067" transform="translate(53.499)">
-      <rect id="Rectangle_283" data-name="Rectangle 283" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1068" data-name="Group 1068" transform="translate(40.127)">
-      <rect id="Rectangle_284" data-name="Rectangle 284" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1069" data-name="Group 1069" transform="translate(26.755)">
-      <rect id="Rectangle_285" data-name="Rectangle 285" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1070" data-name="Group 1070" transform="translate(13.372)">
-      <rect id="Rectangle_286" data-name="Rectangle 286" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1071" data-name="Group 1071">
-      <rect id="Rectangle_287" data-name="Rectangle 287" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1072" data-name="Group 1072" transform="translate(133.753 44.008)">
-      <rect id="Rectangle_288" data-name="Rectangle 288" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1073" data-name="Group 1073" transform="translate(120.381 44.008)">
-      <rect id="Rectangle_289" data-name="Rectangle 289" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1074" data-name="Group 1074" transform="translate(107.01 44.008)">
-      <rect id="Rectangle_290" data-name="Rectangle 290" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1075" data-name="Group 1075" transform="translate(93.626 44.008)">
-      <rect id="Rectangle_291" data-name="Rectangle 291" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1076" data-name="Group 1076" transform="translate(80.254 44.008)">
-      <rect id="Rectangle_292" data-name="Rectangle 292" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1077" data-name="Group 1077" transform="translate(66.882 44.008)">
-      <rect id="Rectangle_293" data-name="Rectangle 293" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1078" data-name="Group 1078" transform="translate(53.499 44.008)">
-      <rect id="Rectangle_294" data-name="Rectangle 294" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1079" data-name="Group 1079" transform="translate(40.127 44.008)">
-      <rect id="Rectangle_295" data-name="Rectangle 295" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1080" data-name="Group 1080" transform="translate(26.755 44.008)">
-      <rect id="Rectangle_296" data-name="Rectangle 296" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1081" data-name="Group 1081" transform="translate(13.372 44.008)">
-      <rect id="Rectangle_297" data-name="Rectangle 297" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <g id="Group_1082" data-name="Group 1082" transform="translate(0 44.008)">
-      <rect id="Rectangle_298" data-name="Rectangle 298" class="cls-1" width="4.598" height="4.598"/>
-    </g>
-    <path id="Path_3443" data-name="Path 3443" class="cls-1" d="M38.7,77.7v30.354H168V77.7Z" transform="translate(-34.149 -68.562)"/>
-  </g>
-  <g id="Group_1086" data-name="Group 1086" transform="translate(9.973 13.078)">
-    <path id="Path_3444" data-name="Path 3444" class="cls-2" d="M442.8,207.5" transform="translate(-400.697 -196.175)"/>
-    <g id="Group_1085" data-name="Group 1085">
-      <path id="Path_3445" data-name="Path 3445" class="cls-3" d="M275.4,116.122H286.37V111.3H273.833a5.365,5.365,0,0,0-5.433,5.269v16.923h4.822v-8.679H286.37v-4.822H273.234V118.3A2.158,2.158,0,0,1,275.4,116.122Z" transform="translate(-246.808 -111.288)"/>
-      <path id="Path_3446" data-name="Path 3446" class="cls-4" d="M944.692,156.834h11.949a.131.131,0,0,0,.129-.129v-4.575a.131.131,0,0,0-.129-.129H944.233a5.365,5.365,0,0,0-5.433,5.269v6.739a5.357,5.357,0,0,0,5.433,5.269h12.419a.13.13,0,0,0,.129-.129v-4.563a.13.13,0,0,0-.129-.129H944.692a1.074,1.074,0,0,1-1.07-1.07v-.318H956.77v-4.822H943.622v-.353A1.072,1.072,0,0,1,944.692,156.834Z" transform="translate(-838.364 -147.202)"/>
-      <path id="Path_3447" data-name="Path 3447" class="cls-3" d="M97.725,133.492H89.857a5.173,5.173,0,0,1-5.057-5.269V111.3h4.822v15.077a2.218,2.218,0,0,0,2.293,2.293h3.74a2.218,2.218,0,0,0,2.293-2.293V111.3h4.822v16.923A5.156,5.156,0,0,1,97.725,133.492Z" transform="translate(-84.8 -111.288)"/>
-      <path id="Path_3448" data-name="Path 3448" class="cls-4" d="M768.313,152.3a5.173,5.173,0,0,1,5.057,5.269v12.337h-4.822v-10.49a2.218,2.218,0,0,0-2.293-2.293h-6.033v12.784H755.4V152.3Z" transform="translate(-676.534 -147.466)"/>
-      <g id="Group_1084" data-name="Group 1084" transform="translate(70.328 4.834)">
-        <rect id="Rectangle_299" data-name="Rectangle 299" class="cls-4" width="4.822" height="17.37"/>
+  <g id="UFCine_Logo" class="cls-1">
+    <g id="UFCine04" transform="translate(-69 -199)">
+      <g class="cls-9" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3470-2" data-name="Path 3470" class="cls-2" d="M32.334,56.12H13.818A14.11,14.11,0,0,1,0,41.783V1.912A1.9,1.9,0,0,1,1.912,0H13.272a1.9,1.9,0,0,1,1.912,1.912V29.658a1.912,1.912,0,1,1-3.823,0V3.823H3.823v37.96a10.278,10.278,0,0,0,10,10.514H32.334a10.278,10.278,0,0,0,10-10.514V3.823H34.792V37.441a7.151,7.151,0,0,1-7.319,7.319H18.679a7.151,7.151,0,0,1-7.319-7.319,1.912,1.912,0,1,1,3.823,0,3.311,3.311,0,0,0,3.5,3.5H27.5a3.311,3.311,0,0,0,3.5-3.5V1.912A1.9,1.9,0,0,1,32.907,0H44.241a1.9,1.9,0,0,1,1.912,1.912V41.783A14.11,14.11,0,0,1,32.334,56.12Z" transform="translate(6 6)"/>
       </g>
-      <path id="Path_3449" data-name="Path 3449" class="cls-3" d="M456.734,126.736a1.908,1.908,0,0,0,1.929,1.929h9.891a1.931,1.931,0,0,0,2.046-1.929v-3l4.822,1.964v2.352a5.443,5.443,0,0,1-5.433,5.433H457.333a5.443,5.443,0,0,1-5.433-5.433v-11.42a5.443,5.443,0,0,1,5.433-5.433H470a5.443,5.443,0,0,1,5.433,5.433v2.352l-4.822,1.964v-3a1.938,1.938,0,0,0-2.046-1.929h-9.891a1.908,1.908,0,0,0-1.929,1.929v8.785Z" transform="translate(-408.727 -111.2)"/>
+      <g class="cls-8" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3471-2" data-name="Path 3471" class="cls-2" d="M416.014,56.311H386.192A14.7,14.7,0,0,1,371.5,41.619V14.692A14.727,14.727,0,0,1,386.083,0h.027a1.912,1.912,0,0,1,1.912,1.884,1.936,1.936,0,0,1-1.884,1.939,10.9,10.9,0,0,0-10.787,10.869v26.9A10.88,10.88,0,0,0,386.22,52.461h29.849a10.88,10.88,0,0,0,10.869-10.869v-4.26L419.4,34.246v4.206a6.445,6.445,0,0,1-6.745,6.445H389.36a6.371,6.371,0,0,1-6.445-6.445V17.833a6.371,6.371,0,0,1,6.445-6.445h23.295a6.461,6.461,0,0,1,6.745,6.445v4.206l7.537-3.086v-4.26A10.88,10.88,0,0,0,416.068,3.823H394.6a1.9,1.9,0,0,1-1.912-1.912A1.9,1.9,0,0,1,394.6,0h21.465a14.7,14.7,0,0,1,14.692,14.692v5.544a1.922,1.922,0,0,1-1.2,1.775L418.2,26.654a1.867,1.867,0,0,1-1.775-.191,1.944,1.944,0,0,1-.847-1.584V17.833a2.656,2.656,0,0,0-2.922-2.622H389.36a2.555,2.555,0,0,0-2.622,2.622V38.478A2.555,2.555,0,0,0,389.36,41.1h23.295a2.671,2.671,0,0,0,2.922-2.622V31.405a1.944,1.944,0,0,1,.847-1.584,1.875,1.875,0,0,1,1.775-.191l11.361,4.643a1.936,1.936,0,0,1,1.2,1.775v5.544A14.784,14.784,0,0,1,416.014,56.311Z" transform="translate(-264.05 6)"/>
+      </g>
+      <g class="cls-7" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3472-2" data-name="Path 3472" class="cls-2" d="M199.572,56.12H188.212a1.9,1.9,0,0,1-1.912-1.912V14.337A14.537,14.537,0,0,1,200.992,0h14.583a1.9,1.9,0,0,1,1.912,1.912,1.9,1.9,0,0,1-1.912,1.912H200.992a10.686,10.686,0,0,0-10.869,10.514V52.3h7.537V33.754a1.9,1.9,0,0,1,1.912-1.912h29.057V24.278H199.572a1.9,1.9,0,0,1-1.912-1.912V18.379a7.138,7.138,0,0,1,1.884-4.806,6.912,6.912,0,0,1,5.134-2.212h23.95V3.823h-4.615A1.9,1.9,0,0,1,222.1,1.912,1.9,1.9,0,0,1,224.014,0h6.527a1.9,1.9,0,0,1,1.912,1.912V13.272a1.9,1.9,0,0,1-1.912,1.912H204.679a3.177,3.177,0,0,0-3.2,3.2v2.075h29.057a1.9,1.9,0,0,1,1.912,1.912V33.727a1.9,1.9,0,0,1-1.912,1.912H201.484V54.181A1.941,1.941,0,0,1,199.572,56.12Z" transform="translate(-129.42 6)"/>
+      </g>
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3473-2" data-name="Path 3473" class="cls-3" d="M718.541,86.906H707.18a1.9,1.9,0,0,1-1.912-1.912V60.279a3.311,3.311,0,0,0-3.5-3.5H689.484v28.21a1.9,1.9,0,0,1-1.912,1.912H676.212a1.9,1.9,0,0,1-1.912-1.912V57.3a1.912,1.912,0,0,1,3.823,0v25.78h7.537V54.872a1.9,1.9,0,0,1,1.912-1.912h14.2a7.151,7.151,0,0,1,7.319,7.319v22.8h7.537V55.937a10.278,10.278,0,0,0-10-10.514H678.123v4.233a1.912,1.912,0,0,1-3.823,0V43.512a1.9,1.9,0,0,1,1.912-1.912h30.422a14.092,14.092,0,0,1,13.818,14.337V85.021A1.894,1.894,0,0,1,718.541,86.906Z" transform="translate(-484.16 -24.24)"/>
+      </g>
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3474-2" data-name="Path 3474" class="cls-3" d="M900.34,85.841H871.092A14.519,14.519,0,0,1,856.4,71.5V55.637A14.537,14.537,0,0,1,871.092,41.3h14.556a1.912,1.912,0,0,1,0,3.823H871.092a10.686,10.686,0,0,0-10.869,10.514V71.531a10.721,10.721,0,0,0,10.869,10.514h27.637V74.508H872.185a4.441,4.441,0,0,1-4.424-4.424v-.765a1.9,1.9,0,0,1,1.912-1.912h29.057V59.87H869.672a1.9,1.9,0,0,1-1.912-1.912v-.819a4.441,4.441,0,0,1,4.424-4.424h26.544V45.151h-4.643a1.912,1.912,0,0,1,0-3.823h6.226a2.2,2.2,0,0,1,2.212,2.212v40.09A2.163,2.163,0,0,1,900.34,85.841Z" transform="translate(-616.53 -24.02)"/>
+      </g>
+      <g class="cls-4" transform="matrix(1, 0, 0, 1, 69, 199)">
+        <path id="Path_3475-2" data-name="Path 3475" class="cls-3" d="M618.872,86.359h-11.36a1.9,1.9,0,0,1-1.912-1.912V78.877a1.912,1.912,0,0,1,3.823,0v3.659h7.537V45.423h-7.537V71.23a1.912,1.912,0,0,1-3.823,0V43.512a1.9,1.9,0,0,1,1.912-1.912h11.36a1.9,1.9,0,0,1,1.912,1.912V84.421A1.923,1.923,0,0,1,618.872,86.359Z" transform="translate(-434.22 -24.24)"/>
+      </g>
     </g>
   </g>
 </svg>
