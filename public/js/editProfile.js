@@ -14,14 +14,17 @@ function checkPortfolio() {
 showModalType = document.getElementById("btn-editType");
 showModalConfirm = document.getElementById("btn-confirmModal");
 showModalPortfolio = document.getElementById("btn-edit");
+showModalDelete = document.getElementById("btn-delete");
 
 modalEdit = document.getElementById("modalEditType");
 modalEditConfirm = document.getElementById("modalEditTypeConfirm");
 modalEditPortfolio = document.getElementById("modalEditPortfolio");
+modalDeleteAccount = document.getElementById("modalDeleteAccount");
 
 exitModalType = document.getElementById("btn-cancelModal");
 exitModalConfirm = document.getElementById("btn-ok");
 exitModalPortfolio = document.getElementById("btn-cancelPortfolio");
+exitModalDelete = document.getElementById("btn-cancelDelete");
 
 showModalType.onclick = function(){
     modalEdit.style.display = "block";
@@ -36,6 +39,9 @@ showModalPortfolio.onclick = function(){
     modalEditPortfolio.style.display = "block";
 }
 
+showModalDelete.onclick = function(){
+    modalDeleteAccount.style.display = "block";
+}
 
 exitModalConfirm.onclick = function(){
     modalEditConfirm.style.display = "none";
@@ -47,4 +53,8 @@ exitModalType.onclick = function(){
 
 exitModalPortfolio.onclick = function(){
     modalEditPortfolio.style.display = "none";
+}
+
+exitModalDelete.onclick = function(){
+    modalDeleteAccount.style.display = "none";
 }
