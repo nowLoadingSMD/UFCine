@@ -244,13 +244,13 @@ router.post("/uploadVideo", async (req, res) => {
             if (err) 
                 throw err
 
-            thumbnailVertical.mv(`/img/videoImg/vertical/${id}.jpg`, (error) => {
+            thumbnailVertical.mv(`/public/img/videoImg/vertical/${id}.jpg`, (error) => {
                 if (error) throw error
 
                 Video.findByIdAndUpdate(id, { $set: { thumbnailVerticalPath: `/img/videoImg/vertical/${id}.jpg` }}, { new: true }, function (err, video) {
                     if (err) throw err
 
-                    thumbnailHorizontal.mv(`/img/videoImg/horizontal/${id}.jpg`, (error) => {
+                    thumbnailHorizontal.mv(`/public/img/videoImg/horizontal/${id}.jpg`, (error) => {
                         if (err) throw error
 
                         Video.findByIdAndUpdate(id, { $set: { thumbnailHorizontalPath: `/img/videoImg/horizontal/${id}.jpg` }}, { new: true }, function (err, video) {
