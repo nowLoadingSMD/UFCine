@@ -109,6 +109,15 @@ router.post("/uploadVideo", async (req, res) => {
     const castArr = []
     let tagsArr = []
     let tagsID = []
+    let private
+
+    if (req.body.private === "None") {
+        private = true
+    } else {
+        private = false
+    }
+
+    console.log(private)
 
     const propsNames = Object.getOwnPropertyNames(req.body)
 
@@ -176,7 +185,7 @@ router.post("/uploadVideo", async (req, res) => {
         onExposition: false,
         quantityOfView: 0,
         quantityOfViewLastWeek: 0,
-        private: false
+        private: private
     }
 
     Video.addVideo(video, async (err, video) => {

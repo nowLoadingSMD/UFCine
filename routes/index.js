@@ -11,28 +11,13 @@ const ProductionInfo = require("../models/ProductionInfo")
 /* GET home page. */
 router.get('/pages/home.html', async function(req, res, next) {
 
-  let emCartazItem = {
-    "name": "Nome do filme em cartaz",
-    "description": "Oi",
-    "exibitionLocation": "Algum lugar"
-  };
-
-  let emCartaz = [];
-
-  for (let i = 0; i < 5; i++){
-    emCartaz.push(emCartazItem);
-  }
-
-  let releases = []
-
   let d = new Date()
 
   d.setDate(d.getDate() - 30)
 
-  console.log(d)
-
   await Video
     .find({ "created_on": d.getDate })
+    .where({ "private": { $ne : true } })
     .limit(6)
     .exec ( async (err, result) => {
 
@@ -40,16 +25,25 @@ router.get('/pages/home.html', async function(req, res, next) {
 
       await Video
         .find({ "quantityOfViewLastWeek": 0 })
+        .where({ "private": { $ne : true } })
         .limit(6)
         .exec( (err, result) => {
 
           if (err) res.send({err: "Problema ao renderizar página"})
 
-          res.render('pages/home', {
-            emCartazList: emCartaz,
-            releasesList: resultReleases,
-            recommendedList: result
-          });
+          Video.find({ "private" : true })
+          .limit(3)
+          .exec( (err, onExibition) => {
+
+            if (err) res.send({err: "Problema ao renderizar página"})
+
+            res.render('pages/home', {
+              onExibitionList: onExibition,
+              releasesList: resultReleases,
+              recommendedList: result
+            });
+
+          })
         })
     })
 
@@ -187,6 +181,7 @@ router.get("/pages/recommended.html", function(req,res, next) {
   let d = new Date()
   Video
     .find({"created_on": d.getDate })
+    .where({ "private": { $ne : true } })
     .exec( (err, result) => {
       res.render('pages/recommended', {recommendedList: result});
     })
@@ -198,6 +193,7 @@ router.get("/pages/releases.html", function(req,res, next) {
   let d = new Date()
   Video
     .find({"created_on": d.getDate })
+    .where({ "private": { $ne : true } })
     .exec( (err, result) => {
       res.render('pages/releases', {releasesList: result});
     })

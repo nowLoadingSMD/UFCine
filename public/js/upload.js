@@ -160,7 +160,7 @@ checkIcon.onclick = function() {
     selectedTags.forEach(function(tag) {
       document.getElementById("tagsInputForSending").value += tag.name + ",";
     })
-
+ 
   })
  
 }
@@ -184,5 +184,21 @@ function readURL(input, id) {
         .attr('src', e.target.result)
     };
     reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function check() {
+  // Get the checkbox
+  var checkBox = document.getElementById("slideOne");
+  // Get the output text
+  // var btnDisplay = document.getElementById("editPortfolio");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+      // btnDisplay.style.display = "block";
+      alert(true)
+  } else {
+      // btnDisplay.style.display = "none";
+      alert(false)
   }
 }
