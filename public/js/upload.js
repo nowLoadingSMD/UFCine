@@ -248,7 +248,7 @@ checkIcon.onclick = function() {
   div.appendChild(p);
 
   let img = document.createElement("img");
-  img.setAttribute("src", "../img/icons/removeFilm.svg");
+  img.setAttribute("src", "../img/icons/remove.svg");
   img.setAttribute("class", "tagIcon");
   div.appendChild(img);
 

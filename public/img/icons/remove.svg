@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #dd3060;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #dd3060;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Remover" transform="translate(-748 -647)">
+    <g id="Ellipse_488" data-name="Ellipse 488" class="cls-1" transform="translate(748 647)">
+      <circle class="cls-3" cx="12" cy="12" r="12"/>
+      <circle class="cls-4" cx="12" cy="12" r="11"/>
+    </g>
+    <rect id="Rectangle_158" data-name="Rectangle 158" class="cls-2" width="16" height="2" rx="1" transform="translate(752 658)"/>
+  </g>
+</svg>
