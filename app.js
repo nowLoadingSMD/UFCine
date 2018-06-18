@@ -3,6 +3,8 @@ var path = require('path');
 var fileUpload = require("express-fileupload")
 var bodyParser = require("body-parser")
 
+var port = process.env.PORT || 3000;
+
 var app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -27,7 +29,7 @@ require("./controllers/genreController")(app)
 require("./controllers/productionInfoController")(app)
 require("./controllers/commentController")(app)
 
-app.listen(3000)
+app.listen(port)
 
 //HUEEEE
 
