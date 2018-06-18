@@ -26,6 +26,8 @@ exitModalConfirm = document.getElementById("btn-ok");
 exitModalPortfolio = document.getElementById("btn-cancelPortfolio");
 exitModalDelete = document.getElementById("btn-cancelDelete");
 
+savePortfolio = document.getElementById("btn-confirmPortfolio");
+
 showModalType.onclick = function(){
     modalEdit.style.display = "block";
 }
@@ -60,4 +62,19 @@ exitModalPortfolio.onclick = function(){
 
 exitModalDelete.onclick = function(){
     modalDeleteAccount.style.display = "none";
+}
+
+savePortfolio.onclick = function(){
+    modalEditPortfolio.style.display = "none";
+    $("#textFeedback").text("Alterações salvas");
+    $("#feedbackBar").animate({opacity: '1'});
+    $("#feedbackBar").show();
+    function esconder(){
+        $("#feedbackBar").animate({opacity: '0'});
+    }
+    function darHide(){
+        $("#feedbackBar").hide();
+    }
+    setTimeout(esconder, 3000);
+    setTimeout(darHide, 3200);
 }
