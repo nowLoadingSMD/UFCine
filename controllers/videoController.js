@@ -35,6 +35,7 @@ router.get("/randomVideo", (req, res, next) => {
       const index =  Math.floor((Math.random() * videos.length - 1) + 1);
 
       res.json({
+            name: videos[index].name,
             videoImg: videos[index].thumbnailHorizontalPath,
             videoID: videos[index]._id
         })

@@ -1,13 +1,45 @@
-<li class="slider__frame glide__slide">
+<li class="slider__frame glide__slide" style="background-image: url(<%= img %>)">
         <!-- <div class="banner-player"> -->
-        <img src="<%= img %>" class="img-banner">
+        <!-- <img src="<%= img %>" class="img-banner"> -->
         <!-- </div> -->
         <div class="description">
             <article class="titleFilm releaseName"><%= name %></article>
-            <article id="addlist<%= index %>" class="actionLabel">Adicionar à lista</article>
+            <article id="addlist<%= id %>" class="actionLabel">Adicionar à lista</article>
             <img src="../img/icons/addWatchlist.svg">
         </div>
         <!-- <article class="titleFilm"><%= name %></article>
         <article><p>Descrição:</p><%= description %></article>
         <article><p>Local de Exibição:</p><%= exibitionLocation %></article> -->
-</li>  
+
+        <script>
+    
+                $("#addlist<%= id %>").click( function(){
+            
+                    const id = $(this).attr("id").replace("addlist", "");
+        
+                    console.log(id)
+            
+                    const data = {
+                        videoID: id,
+                        userID: getCookie("userId")
+                    }
+                    
+                    $.post("/api/user/addToWatchlist", data, (response) => {
+                        const err = response.err
+                        const addedToWatchList = response.addedToWatchList
+            
+                        if (err) {
+                            alert("Problema a adicioanr na watchlist");
+                        } else if (addedToWatchList) {
+                            $(this).html("Remover da lista");
+                        } else {
+                            $(this).html("Adicionar na lista");
+                        }
+                    })
+            
+                })
+            
+        </script>
+
+</li> 
+
