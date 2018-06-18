@@ -19,33 +19,43 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
-        <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> Configurações da Conta</article>
-            <div class="grid-edit">
-                <article id="img-edit"><article class="tagLabel">TROCAR FOTO</article><img src="../img/authors/Camila.jpg"></article>
-                <div class="grid-values">
-                    <form>
-                        <label class="sectionHeader3">Nome</label><br/>
-                        <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo"><br/>
-                        <label class="sectionHeader3">E-mail</label><br/>
-                        <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email"><br/>
-                        <input type="button" class="buttonHoverLabel buttons" value="MUDAR SENHA">
-                    </form>
+        <article class="titles sectionHeader">Configurações da Conta</article>
+            <div class="gridPrincipal">
+                <div class="contentLeft">
+                    <article id="img-edit"><article class="tagLabel">TROCAR FOTO</article><img src="../img/authors/Camila.jpg"></article>
+                    <div class="values">
+                        <article class="TitleComment">Suas informações</article>
+                        <form>
+                            <label class="sectionHeader3">Nome</label><br/>
+                            <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo"><br/>
+                            <label class="sectionHeader3">E-mail</label><br/>
+                            <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email"><br/>
+                            <input type="button" class="buttonHoverLabel buttons" id="edit-password" value="MUDAR SENHA">
+                        </form>
+                        <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-cancel">CANCELAR</button></a>
+                        <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-confirm">SALVAR</button></a>
+                    </div>
                 </div>
-                <div class="grid-values">
-                    <article class="sectionHeader2">Ativar Portfólio
+                <div class="contentRight">
+                    <article class="TitleComment">Sua conta</article>
+                    <article class="titleRight sectionHeader3">Tipo de conta</article>
+                    <article class="typeAccount">Padrão</article>
+                    <button class="buttons buttonLabel" id="btn-editType">MUDAR TIPO</button>
+                    <article id="active" class="onExibitionName">Ativar Portfólio
                         <div class="slideOne">  
                             <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
                             <label for="slideOne"></label>
                         </div>
+                        <a href="editPortfolio.html"><button id="btn-edit" class="buttons buttonHoverLabel">EDITAR PORTFÓLIO</button></a>
                     </article>
-                    <article id="editPortfolio" class="sectionHeader2">Editar Portfólio
-                        <a href="editPortfolio.html"><button id="btn-edit" class="buttons buttonHoverLabel">EDITAR</button></a>
-                    </article>
-                    <a href=""><button class="buttonHoverLabel buttons">EXCLUIR CONTA</button></a>
+                    <a href=""><button class="buttonHoverLabel buttons" id="btn-delete">EXCLUIR CONTA</button></a>
                 </div>
             </div>
-            <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-cancel">CANCELAR</button></a>
-			<a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-confirm">SALVAR</button></a>
+            <!-- <div class="grid-values">
+                    
+                    
+                    
+                </div> -->
 	</section>
 	
     <%- include('../partials/tabBar', {currentPage: "none"}); %>

@@ -22,7 +22,7 @@
 	<section class="principal">
 		<div id="left">
 			<div class="video">
-					<article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack"> <%= video.name %></article>
+					<article class="titles sectionHeader"><%= video.name %></article>
 				<video controls id="videoPlayer">
 		  			<source src="/api/video/videoStream?id=<%= video._id %>" type="video/mp4">
 				Your browser does not support the video tag.

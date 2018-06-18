@@ -2,7 +2,7 @@ function checkPortfolio() {
     // Get the checkbox
     var checkBox = document.getElementById("slideOne");
     // Get the output text
-    var btnDisplay = document.getElementById("editPortfolio");
+    var btnDisplay = document.getElementById("btn-edit");
   
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){

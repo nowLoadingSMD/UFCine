@@ -8,8 +8,7 @@
     height: 19.8px;
     margin-right: 10px;
 }
-
- #img-edit{
+#img-edit{
     width: 140px;
     height: 140px;
     border: 6px solid var(--white-opac);
@@ -17,6 +16,7 @@
     overflow: hidden;
     text-align: center;
     cursor: pointer;
+    float: left;
 }
 #img-edit article{
     position: absolute;
@@ -37,27 +37,74 @@
 #img-edit:hover img{
     filter: brightness(80%);
 }
-
-.grid-edit{
+.gridPrincipal{
+    display: grid;
+	grid-gap: 20px 5%;
+	grid-template-columns: 66% 30%;
+}
+.contentLeft{
     width: 100%;
     height: 430px;
-    margin-top: 20px;
-    display: grid;
-    grid-gap: 20px 2%;
-    grid-template-columns: 15% 40% 40%;
+    margin-top: 10px;
     background-color: var(--white-opac);
     border-radius: 30px;
     padding: 50px;
 }
-
-.grid-edit .grid-values{
+.contentRight{
     width: 100%;
-    height: 100%;
-    padding-top: 20px;
+    height: 430px;
+    margin-top: 10px;
+    background-color: var(--white-opac);
+    border-radius: 30px;
+    padding: 20px 0 20px 13%;
+}
+.contentRight .TitleComment{
+    color: #fff;
+    margin-bottom: 30px;
+}
+.contentRight .sectionHeader3{
+    position: absolute;
+}
+.typeAccount{
+    font-family: CircularStd-Bold;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 60px;
+    opacity: 0.7;
+}
+#btn-editType{
+    width: 150px;
+    margin-top: 40px;
+    display: block;
+    /* mostrar */
+}
+#btn-editType:hover{
+    background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
+    color: #fff;
+}
+#btn-delete{
+    width: 150px;
+    margin-top: 120px;
+}
+#active{
+    margin-top: 30px;
+    display: none;
+    /* mostrar */
+}
+.slideOne{
+    margin-right: 45px;
+    display: none;
+    /* mostrar */
+}
+.contentLeft .values{
+    margin-left: 30px;
+    margin-top: -30px;
+    float: left;
 }
 
-.grid-edit .grid-values input[type="text"]{
-    width: 70%;
+.contentLeft .values input[type="text"]{
+    width: 100%;
     margin-bottom: 40px;
     padding: 6px 0;
     background: none;
@@ -65,10 +112,10 @@
     color: #fff;
     transition: 0.5s border;
 }
-.grid-edit .grid-values input[type="text"]:focus{
+.contentLeft .values input[type="text"]:focus{
     border-bottom: solid 2px var(--darkish-pink);
 }
-.grid-edit .grid-values .buttons{
+.buttons{
     padding: 7px 10px;
     background: none;
     color: var(--aqua-marine);
@@ -77,43 +124,44 @@
     transition: 0.5s background, 0.5s border, 0.5s color; 
     cursor: pointer;
 }
-.grid-edit .grid-values .buttons:hover{
+#edit-password{
+    margin-top: -28px;
+    position: absolute;
+}
+.buttons:hover{
     background: var(--darkish-pink);
     border: 2px solid var(--darkish-pink);
     color: #fff;
 }
-.grid-edit .grid-values article{
+.contentLeft .values article{
     color: #fff;
-    font-size: 1.3em;
     float: left;
     height: 34px;
     margin-bottom: 21px;
     width: 100%;
     padding: 2px;
 }
-.grid-edit .grid-values #btn-edit{
+.contentLeft .values #btn-edit{
     float: right;
 }
 
-#editPortfolio{
+#btn-edit{
     display: none;
+    margin-top: 10px;
 }
-
-  footer{
-      margin-top: 9%;
-  }
+footer{
+    margin-top: 9%;
+}
 .btn-dialog{
     padding: 6px;
     width: 120px;
     text-align: center;
     border-radius: 2px;
-    margin-top: -80px;
-    position: absolute;
+    margin-top: 70px;
 }
 #btn-cancel{
     border: solid 2px var(--aqua-marine);
     color: var(--aqua-marine);
-    margin-left: 33%;
     background: none;
     transition: 0.5s background, 0.5s border, 0.5s color;
 }
@@ -128,7 +176,6 @@
     background: var(--aqua-marine);
     color: #fff;
     transition: 0.5s background, 0.5s border;
-    margin-left: 43%;
 }
 #btn-confirm:hover{
     background: var(--darkish-pink);
