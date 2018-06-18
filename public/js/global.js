@@ -23,8 +23,8 @@ jQuery(document).ready(async function($) {
 });
 
 $(document).ready(async function(){
-        
   if ( await checkLogged()) {
+    
 
       const userID = getCookie("userId");
 
@@ -45,17 +45,15 @@ $(document).ready(async function(){
                   $(this).html("Remover da lista");
       
               }
-              
           })
-
-
 
       })
 
-      
   } else {
       $(".addBlock").hide();
   }
+
+  
 
 })
 // Get the modal
