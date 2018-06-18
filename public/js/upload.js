@@ -48,6 +48,7 @@ addItem.onclick = function(){
   div.setAttribute("class", "descriptionListItem");
 
   var icon = document.createElement("img");
+  icon.setAttribute("src", "../img/icons/remove.svg");
   icon.setAttribute("id", "addItem");
 
   icon.addEventListener("click", function(){
@@ -248,7 +249,7 @@ checkIcon.onclick = function() {
   div.appendChild(p);
 
   let img = document.createElement("img");
-  img.setAttribute("src", "../img/icons/remove.svg");
+  img.setAttribute("src", "../img/icons/removeFilm.svg");
   img.setAttribute("class", "tagIcon");
   div.appendChild(img);
 

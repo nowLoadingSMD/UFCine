@@ -194,8 +194,9 @@
 }
 
 #videoMP4Img, #bannerImg1, #bannerImg2 {
-    margin-left: 5px;
-    width: 40px;
+    /* margin-left: 5px; */
+    /* width: 40px; */
+    
 }
 
 .img-banner{
@@ -207,6 +208,7 @@
     justify-items: center;
     transition: border 0.5s;
     cursor: pointer;
+    overflow: hidden;
 } 
 
 .img-banner:hover {
@@ -229,8 +231,13 @@
     height: 70%;
 }
 
-#bannerImg1, #bannerImg2 {
+#bannerImg1{
     height: 100%;
+    overflow: hidden;
+}
+#bannerImg2 {
+    width: 100%;
+    overflow: hidden;
 }
 
 .textfield{
@@ -362,3 +369,4 @@
     text-align: left;
     color: rgba(255, 255, 255, 0.7);
 }
+
