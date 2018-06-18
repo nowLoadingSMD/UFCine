@@ -43,7 +43,7 @@ var signUp = async function(){
     isPortfolioActivated: false,
     portfolioDescription: ""
   }
-
+ 
   console.log(user)
 
   let signed;

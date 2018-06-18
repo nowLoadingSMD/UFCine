@@ -13,7 +13,7 @@ function generateToken(params = {}) {
         expiresIn: 86400
     })
 }
-
+ 
 router.post("/register", async (req, res) => {
     const { email } = req.body
 
