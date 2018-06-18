@@ -33,12 +33,37 @@ const ProductionInfoSchema = mongoose.Schema({
     genre: {
            type: Schema.Types.ObjectId, ref: 'Genre' 
     },
-    directors: [
+    directors: [ 
         {
             type: String
         }
     ],
     script: [
+        {
+            type: String
+        }
+    ],
+    photograph: [
+        {
+            type: String
+        }
+    ],
+    artDirection: [
+        {
+            type: String
+        }
+    ],
+    production: [
+        {
+            type: String
+        }
+    ],
+    sound: [
+        {
+            type: String
+        }
+    ],
+    editing: [
         {
             type: String
         }

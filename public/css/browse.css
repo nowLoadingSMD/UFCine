@@ -137,6 +137,33 @@
     padding: 28px 75px 25px 57px;
 }
 
+.grid-anos {
+    margin-top: 1.25rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    padding-bottom: 56px;
+}
+
+
+.item-start {
+    justify-self: start;
+}
+
+.item-end {
+    justify-self: end;
+}
+
+/* .grid-anos:nth-child(1), .grid-anos:nth-child(4), .grid-anos:nth-child(7) {
+    justify-self: start;
+}
+
+.grid-anos:nth-child(3), .grid-anos:nth-child(4), .grid-anos:nth-child(7) {
+    justify-self: end;
+} */
+
 .tagsBox {
     grid-area: tags;
     display: grid;

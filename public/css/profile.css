@@ -29,7 +29,7 @@
 .grid-left {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 147px 2fr;
     grid-row-gap: 50px;
 }
 

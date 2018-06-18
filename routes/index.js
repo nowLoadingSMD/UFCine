@@ -145,6 +145,7 @@ router.get("/pages/profile.html", function(req,res, next) {
       
       Video
         .find({producerID: userID})
+        .limit(6)
         .exec( (err, videos) => {
           res.render('pages/profile', {user: user, videosPosted: videos});
         })
@@ -168,6 +169,7 @@ router.get("/pages/profileGeneral.html", function(req,res, next) {
       
       Video
         .find({producerID: userID})
+        .limit(6)
         .exec( (err, videos) => {
           res.render('pages/profileGeneral', {user: user, videosPosted: videos});
         })

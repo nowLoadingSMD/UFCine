@@ -106,6 +106,11 @@ router.post("/uploadVideo", async (req, res) => {
     const userID = req.query.id
     const directorsArr = []
     const scriptArr = []
+    const photographArr = []
+    const artDirectionArr = []
+    const productionArr = []
+    const soundArr = []
+    const editingArr = []
     const castArr = []
     let tagsArr = []
     let tagsID = []
@@ -157,6 +162,26 @@ router.post("/uploadVideo", async (req, res) => {
                     index = "studentName" + index
                     scriptArr.push(req.body[index])
                     break;
+                case "photograph":
+                    index = "studentName" + index
+                    photographArr.push(req.body[index])
+                    break;
+                case "artDirection":
+                    index = "studentName" + index
+                    artDirectionArr.push(req.body[index])
+                    break;
+                case "production":
+                    index = "studentName" + index
+                    productionArr.push(req.body[index])
+                    break;
+                case "sound":
+                    index = "studentName" + index
+                    soundArr.push(req.body[index])
+                    break;
+                case "editing":
+                    index = "studentName" + index
+                    editingArr.push(req.body[index])
+                    break;
                 case "actor": 
                     index = "studentName" + index
                     castArr.push(req.body[index])
@@ -207,6 +232,11 @@ router.post("/uploadVideo", async (req, res) => {
             colaborativeList: req.body.colaborative,
             directors: directorsArr,
             script: scriptArr,
+            photograph: photographArr,
+            artDirection: artDirectionArr,
+            production: productionArr,
+            sound: soundArr,
+            editing: editingArr,
             cast: castArr
         }
 
