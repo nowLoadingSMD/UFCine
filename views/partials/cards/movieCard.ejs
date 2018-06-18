@@ -34,8 +34,22 @@
                 alert("Problema a adicioanr na watchlist");
             } else if (addedToWatchList) {
                 $(`#${id}ActionLabel`).html("Remover da lista");
+                $("#textFeedback").text("Vídeo adicionado na lista");
+                $("#feedbackBar").animate({opacity: '1'});
+                $("#feedbackBar").show();
+                function esconder(){
+                    $("#feedbackBar").animate({opacity: '0'});
+                }
+                setTimeout(esconder, 3000);
             } else {
                 $(`#${id}ActionLabel`).html("Adicionar na lista");
+                $("#textFeedback").text("Vídeo removido da lista");
+                $("#feedbackBar").animate({opacity: '1'});
+                $("#feedbackBar").show();
+                function esconder(){
+                    $("#feedbackBar").animate({opacity: '0'});
+                }
+                setTimeout(esconder, 3000);
             }
         })
 

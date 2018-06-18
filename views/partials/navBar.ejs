@@ -23,7 +23,7 @@
 	<i class="fas fa-search" id="searchIcon"></i>
 </header>
 <div id="feedbackBar">
-	<article class="dropdownLabel">Informação que será passada de feedback</article>
+	<article class="dropdownLabel" id="textFeedback">Informação que será passada de feedback</article>
 </div>
 <div id="myModal" class="modal">
 		<% include ../partials/modals/logoutModal %>
@@ -244,7 +244,7 @@
 #feedbackBar{
 	margin-top: 70px;
 	position: absolute;
-	width: 35%;
+	width: 25%;
 	right: 0;
 	height: 50px;
 	background-color: var(--darkish-pink);
@@ -254,6 +254,7 @@
 	position: fixed;
 	z-index: 20;
 	display: none;
+	opacity: 0;
 }
 
 #feedbackBar article{
