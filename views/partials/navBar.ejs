@@ -20,8 +20,11 @@
         </div>
     </div>
     <a href="login.html"><button type="button" id="btn-login" class="buttonLabel">ENTRAR</button></a>
-    <i class="fas fa-search" id="searchIcon"></i>
+	<i class="fas fa-search" id="searchIcon"></i>
 </header>
+<div id="feedbackBar">
+	<article class="dropdownLabel">Informação que será passada de feedback</article>
+</div>
 <div id="myModal" class="modal">
 		<% include ../partials/modals/logoutModal %>
 	<script>
@@ -237,5 +240,25 @@
     background: var(--darkish-pink);
     border: 2px solid var(--darkish-pink);
 }
+
+#feedbackBar{
+	margin-top: 70px;
+	position: absolute;
+	width: 35%;
+	right: 0;
+	height: 50px;
+	background-color: var(--darkish-pink);
+	padding-right: 50px;
+	padding-top: 12px;
+	border-radius: 50px 0 0 50px;
+	position: fixed;
+	z-index: 20;
+	display: none;
+}
+
+#feedbackBar article{
+	text-align: right;
+}
+
 
 </style>

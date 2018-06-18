@@ -43,7 +43,7 @@ $(document).ready(async function(){
               } else if ( response.watchList.indexOf(videoID) != -1 ) {
 
                   $(this).html("Remover da lista");
-
+      
               }
               
           })
@@ -58,7 +58,6 @@ $(document).ready(async function(){
   }
 
 })
-
 // Get the modal
 var modal = document.getElementById('myModal');
 		

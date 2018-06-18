@@ -93,11 +93,11 @@
 
 .slider__frame .description{
 	background-color: rgba(221, 48, 96, 0.8);
-	position: absolute;
 	height: 50px;
-	width: 16.45%;
-	bottom: 0;
+	width: 100%;
+	margin-top: 228px;
 	display: none;
+	float: left;
 }
 
 .slider__frame:hover .description{
@@ -108,16 +108,14 @@
 	color: white;
 	float: right;
 	padding: 17px;
-	margin-right: 25px;
+	/* margin-right: 25px; */
 }
 
 .slider__frame .description img{
 	width: 25px;
 	height: 25px;
-	margin: 13px 10px;
+	margin: 13px 10px 0 0;
 	float: right;
-	position: absolute;
-	right: 0;
 }
 
 @media screen and (min-width: 450px){
