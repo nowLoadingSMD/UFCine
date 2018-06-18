@@ -12,66 +12,54 @@
 }
 
 .principal .titlesMedium{
-    font-size: 1.75em;
     text-align: center;
     float: left;
     color: #fff;
-    font-family: TitleBold;
+    margin-top: 100px;
 }
 
 #infos-central{
     width: 50%;
     height: 300px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 25%;
 }
 
 #infos-central article{
     color: #fff;
     margin-top: 10px;
-    font-size: 2.125em;
-    font-family: TitleBold;
-}
-
-#infos-central #function{
-    font-size: 1.75em;
+    text-align: center;
 }
 
 #infos-central #img-author{
-    width: 150px;
-    height: 150px;
-    margin-left: 37%; 
+    width: 180px;
+    height: 180px;
+    margin-left: 34%; 
+    border-radius: 100px;
     overflow: hidden;
+    border: 6px solid var(--white-opac);
 }
 
 #infos-central #img-author img{
     height: 110%;
 }
 
-.biography{
-    width: 100%;
-    padding: 10px;
-    margin-top: 50px;
-    font-size: 1.125em;
-    margin-bottom: 20px;
-    color: #fff;
-    font-family: BodyText;
-}
-
 #btn-more{
-    font-size: 1em;
-    padding: 5px 10px;
+    padding: 5px 15px;
     background: none;
     text-align: center;
     float: right;
     border-radius: 2px;
-    border: solid 2px var(--aqua-marine);
-    color: var(--aqua-marine);
+    border: solid 2px var(--tealish);
+    color: var(--tealish);
+    margin-top: 100px;
+    transition: 0.5s background, 0.5s border, 0.5s color; 
 }
 
 #btn-more:hover{
-    background: var(--aqua-marine);
+    background: var(--darkish-pink);
+    border: 2px solid var(--darkish-pink);
     color: #fff;
 }
 
@@ -79,7 +67,7 @@
     display: grid;
     grid-gap: 20px 2%;
     grid-template-columns: 18.4% 18.4% 18.4% 18.4% 18.4%;
-    margin-top: 70px;
+    margin-top: 150px;
 }
 
 .group-films .film{
@@ -100,67 +88,7 @@
 }
 
 .group-films .film article{
-    font-size: 1.2em;
     color: #fff;
     padding: 10px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-}
-
-.group-films .film:hover article{
-    background-image: linear-gradient(to bottom, rgba(221, 48, 96, 0.8), rgba(111, 24, 48, 0));
-}
-
-/* EDIT PORTFOLIO */
-
-.edit-biography{
-    color: var(--aqua-marine);
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 1.125em;
-    margin-bottom: 40px;
-    resize: none;
-    background: none;
-    border-radius: 8px;
-    border: solid 2px var(--aqua-marine);
-    height: 400px;
-    font-family: BodyText;
-}
-
-.addFilm{
-    width: 100%;
-    height: 40%;
-    float: left;
-    text-align: center;
-}
-
-.group-films .addFilm div{
-    width: 100%;
-    height: 12vw;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.7);
-    background-image: url("../img/icons/addWatchlist.svg");
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position-x: 53%;
-    background-position-y: 53%;
-}
-
-.group-films .addFilm article{
-    font-size: 1.2em;
-    color: #fff;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.icons-film{
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    margin-left: 10%;
-    margin-top: 12.8vw;
-}
-
-#icon-remove{
-    margin-left: 13%;
+    background: var(--white-opac);
 }

@@ -19,49 +19,38 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
-        <article class="titles">Portfólio</article>
         <div id="infos-central">
             <article id="img-author"><img src="../img/authors/Camila.jpg"></article>
-            <article>Nome do produtor</article>
-            <article id="function">Função</article>
+            <article class="sectionHeader">Nome do produtor</article>
+            <article class="DescriptionComment" id="function">Proibido de ir aos jogos da Copa por determinação da Fifa, que não permite a participação de mascotes que não seja a do torneio, o Canarinho virou personagem de destaque nos amistosos preparatórios do Brasil para o Mundial.</article>
         </div>
-        <article class="titlesMedium">Biografia</article>
-        <article class="biography">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere malesuada cursus. Proin tortor leo, mattis ac ex eu, auctor interdum felis. Proin nec efficitur elit, eu eleifend est. Sed erat dui, sollicitudin nec lectus non, accumsan dictum justo. Praesent viverra pulvinar mauris dignissim posuere. Donec ac vulputate dui. Donec feugiat rhoncus sem, vitae fringilla purus convallis a. Etiam suscipit magna purus, vel sodales sapien elementum vitae. Etiam ultricies cursus ullamcorper. Duis a orci eget diam mattis laoreet. Sed viverra dui augue.
-
-            Phasellus facilisis, est sit amet bibendum venenatis, ante magna commodo tortor, eget vulputate orci tortor vitae arcu. Suspendisse quis justo non lorem aliquam venenatis. Pellentesque eu dolor et eros venenatis auctor sed quis libero. Cras sollicitudin orci sit amet lorem porta ultrices. Mauris egestas turpis a condimentum mattis. Nullam eget purus magna. Phasellus et justo semper tellus mollis imperdiet. Sed mollis sodales lorem, et rhoncus nisi bibendum vitae. Phasellus eget erat malesuada, suscipit sapien vitae, egestas ipsum. Mauris quis orci a velit congue ultricies eu sit amet massa.
-            
-            Ut bibendum purus at velit aliquet, at sodales nibh condimentum. Nam lectus nisi, porttitor nec commodo sit amet, hendrerit eget magna. Ut eu velit suscipit, accumsan sem volutpat, hendrerit felis. Cras sed ipsum est. Nullam in iaculis purus. Mauris a efficitur purus. Vivamus condimentum dolor et enim tempor, a luctus arcu accumsan.
-            
-            Praesent pretium est vitae magna tempus pharetra. Donec tristique, nibh aliquet fringilla euismod, eros risus congue neque, at pulvinar augue magna vel nisl. Integer vulputate diam justo, at semper mauris vestibulum sed. Nulla mattis diam et lacus viverra egestas. Fusce id accumsan nibh. Aenean bibendum libero id lorem volutpat, bibendum ornare felis hendrerit. In consectetur risus sit amet nunc efficitur aliquam. Aenean placerat nisi id scelerisque maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse varius et elit nec ullamcorper. Duis nulla mi, placerat eget mi eu, commodo sodales libero. Mauris iaculis lorem sem, ac faucibus risus porta vel. Phasellus euismod sapien at laoreet gravida.
-		</article>
-		<article class="titlesMedium">Trabalhos</article>
-		<button id="btn-more">Mais</button>
+		<article class="titlesMedium TitleComment">Trabalhos</article>
+		<button id="btn-more" class="buttonLabel">Mais</button>
         <div class="group-films">
             <a href="player.html"><div class="film">
                 <div><img src="../img/films/movie.jpg" class="img-film"></div>
-                <article>Nome do filme kk</article>
+                <article class="movieCardName">Nome do filme kk</article>
             </div></a>
             <a href="player.html"><div class="film">
 				<div><img src="../img/films/movie.jpg" class="img-film"></div>
-                <article>Nome do filme</article>
+                <article class="movieCardName">Nome do filme</article>
             </div></a>
             <a href="player.html"><div class="film">
 				<div><img src="../img/films/movie.jpg" class="img-film"></div>
-                <article>Nome do filme</article>
+                <article class="movieCardName">Nome do filme</article>
             </div></a>
             <a href="player.html"><div class="film">
 				<div><img src="../img/films/movie.jpg" class="img-film"></div>
-                <article>Nome do filme</article>
+                <article class="movieCardName">Nome do filme</article>
             </div></a>
             <a href="player.html"><div class="film">
 				<div><img src="../img/films/movie.jpg" class="img-film"></div>
-                <article>Nome do filme</article>
+                <article class="movieCardName">Nome do filme</article>
             </div></a>
         </div>
 	</section>
 	
-    <%- include('../partials/tabBar', {currentPage: "authors"}); %>
+    <%- include('../partials/tabBar', {currentPage: "none"}); %>
     
     <footer><h1 class="footer">©Now Loading</h1></footer>
 
