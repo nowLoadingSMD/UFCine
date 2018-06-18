@@ -12,3 +12,14 @@ btnGoSignUp.onclick = async function(){
       document.getElementById("errorUser").style.display = "block";
     }
 }
+
+function checkStudent() {
+  var checkBox = document.getElementById("slideOne");
+  var btnDisplay = document.getElementById("grid-author");
+
+  if (checkBox.checked == true){
+      btnDisplay.style.display = "block";
+  } else {
+      btnDisplay.style.display = "none";
+  }
+}

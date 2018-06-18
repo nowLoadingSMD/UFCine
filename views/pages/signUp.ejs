@@ -17,33 +17,49 @@
 <body>
 	<!-- NAVBAR-->
 	<header class="navbar">
-        <img id="imgLogo" src="/img/icons/logo.svg">
+        <a href="/pages/home.html"><img id="imgLogo" src="/img/icons/logo.svg"></a>
 	</header>
 
 	<section class="principal">
         <article class="titles sectionHeader">Cadastro</article>
 		<div id="content-signUp">
-            <div id="grid-signUp">
-                <form id="form-signUp">
-                    <div id="form-left">
-                        <input type="text" id="signUpName" class="textfield" placeholder="Nome completo"/><br/>
-                        <article id="errorName" class="error errorMessage">Nome incorreto</article>
-                        <input type="text" id="signUpEmail" class="textfield" placeholder="E-mail"/><br/>
-                        <article id="errorEmail" class="error errorMessage">E-mail incorreto</article>
-                        <input type="password" id="signUpPassword" class="textfield" placeholder="Senha"/><br/>
-                        <article id="errorPassword" class="error errorMessage">Senha incorreta</article>
-                        <a href="login.html"><article id="btn-login">Já é cadastrado?</article></a>
-                    </div>
-                    <div id="form-right">
-                        <input type="text" id="signUpUserName" class="textfield" placeholder="Nome de usuário"/><br/>
-                        <article id="errorUser" class="error errorMessage">Nome de usuário incorreto</article>
-                        <input type="text" id="signUpMatriculation" class="textfield" placeholder="Matrícula"/><br/>
-                        <input type="password" id="signUpConfirmPassword" class="textfield" placeholder="Confirmar senha"/><br/>
-                        <input type="button" id="btn-goSignUp" value="CADASTRAR"/><br/>
-                    </div>
-                </form>
+                    <div id="grid-signUp" class="grid-signUp">
+                            <form id="form-signUp">
+                                <div id="form-left">
+                                    <input type="text" id="signUpName" class="textfield placerholderLabel" placeholder="Nome completo"/><br/>
+                                    <article id="errorName" class="error errorMessage">Nome incorreto</article>
+                                    <input type="text" id="signUpEmail" class="textfield placerholderLabel" placeholder="E-mail"/><br/>
+                                    <article id="errorEmail" class="error errorMessage">E-mail incorreto</article>
+                                    <input type="password" id="signUpPassword" class="textfield placerholderLabel" placeholder="Senha"/><br/>
+                                    <article id="errorPassword" class="error errorMessage">Senha incorreta</article>
+                                    <input type="password" id="signUpConfirmPassword" class="textfield placerholderLabel" placeholder="Confirme sua senha"/><br/>
+                                    <a href="login.html"><article id="btn-login" class="sectionHeader3">Já tem cadastro?</article></a>
+                                </div>
+                                <div id="form-right">
+                                    <article class="sectionHeader3" id="textStudent">Sou aluno(a) do Cinema e Audiovisual da UFC</article>
+                                    <div class="slideOne">  
+                                        <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkStudent()"/>
+                                        <label for="slideOne"></label>
+                                    </div>
+                                    <!-- <input type="text" id="signUpUserName" class="textfield" placeholder="Nome de usuário"/><br/>
+                                    <article id="errorUser" class="error errorMessage">Nome de usuário incorreto</article>
+                                    <input type="text" id="signUpMatriculation" class="textfield" placeholder="Matrícula"/><br/>
+                                     -->
+                                    <input type="button" id="btn-goSignUp" class="buttonLabel" value="CADASTRAR"/><br/>
+                                </div>
+                            </form>
+                        </div>
+                    
+    
+            <div class="grid-signUp" id="grid-author">
+                <article id="textContent" class="buttonLabel">Para cadastrar-se como aluno, você precisa confirmar que está matriculado(a) no curso Cinema e Audiovisual da UFC. Para isso, informe o seu número de matrícula e envie um atestado da universidade.</article>
+                <article class="titleMatr">Número de matrícula</article>
+                <input type="text" id="matriculation" class="textfield placerholderLabel"/><br/>
+                <article class="titleMatr">Atestado</article>
+                <input type="button" id="btn-attestation" class="buttonLabel" value="ANEXAR ARQUIVO"/><br/>
             </div>
         </div>
+            
 	</section>
 	
     <footer><h1 class="footer">©Now Loading</h1></footer>

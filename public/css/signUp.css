@@ -23,23 +23,43 @@ html{
 }
 
 #content-signUp{
-    background: var(--white-opac);
-    width: 70%;
-    border-radius: 8px;
     margin-top: 8%;
-    margin-left: 15%;
+    margin-left: 25%;
+    display: grid;
+    grid-gap: 20px 2%;
+    grid-template-columns: 70% 25%;
+}
+
+.grid-signUp{
+    background: var(--white-opac);
+    border-radius: 16px;
     padding: 5%;
-    padding-bottom: 10%;
+}
+
+#grid-author{
+    display: none;
+    padding: 5% 10%;
+}
+
+#textContent{
+    text-align: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.titleMatr{
+    font-family: CircularStd-Bold;
+    font-size: 18px;
+    color: #fff;
 }
 
 .principal .titles{
-    font-size: 34px;
     margin-top: 50px;
     float: left;
     color: #fff;
     text-decoration: none;
     margin-left: 10%;
-    font-family: TitleBold;
 }
 
 .principal .titles img{
@@ -47,12 +67,12 @@ html{
     height: 20px;
 }
 
-form .textfield{
+.textfield{
     border-bottom: solid 2px var(--aqua-marine);
     background: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px 0;
     color: #fff;
     transition: border 0.5s;
 }
@@ -75,25 +95,54 @@ form a{
 
 form #btn-login{
     margin-top: 50px;
+    float: left;
 }
 
-form a:hover{
+form a #btn-login:hover{
     color: var(--darkish-pink);
+}
+
+#textStudent{
+    width: 70%;
+    text-align: left;
+    float: left;
+}
+
+#btn-attestation{
+    border-radius: 2px;
+    margin-top: 10px;
+    border: solid 2px var(--aqua-marine);
+    background: none;
+    padding: 7px 20px;
+    color: var(--aqua-marine);
+    cursor: pointer;
+    transition: border 0.5s, background 0.5s, color 0.5s;
+}
+
+#btn-attestation:hover{
+    border: solid 2px var(--darkish-pink);
+    background: var(--darkish-pink);
+    color: #fff;
+}
+
+.slideOne{
+    float: right;
+    margin-right: 15%;
 }
 
 #form-signUp{
     display: grid;
-    grid-gap: 20px 2%;
+    grid-gap: 20px 6%;
     grid-template-columns: 50% 50%;
 }
 
 form #btn-goSignUp{
-    margin-top: 45px;
-    float: right;
+    margin-top: 180px;
+    margin-left: 30%;
     border-radius: 2px;
     border: solid 2px var(--aqua-marine);
     background: none;
-    padding: 5px 15px;
+    padding: 7px 20px;
     color: var(--aqua-marine);
     cursor: pointer;
     transition: border 0.5s, background 0.5s, color 0.5s;

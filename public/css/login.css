@@ -19,16 +19,16 @@ html{
 .navbar #imgLogo{
 	width: 150px;
 	float: left;
-	margin-left: 43%;
+	margin-left: 45%;
 	margin-top: 17px;
 }
 
 #content-login{
     background: var(--white-opac);
-    width: 50%;
+    width: 40%;
     border-radius: 8px;
     margin-top: 8%;
-    margin-left: 26%;
+    margin-left: 31%;
     padding: 5%;
     padding-bottom: 10%;
 }
@@ -50,7 +50,7 @@ form .textfield{
     background: 0;
     width: 100%;
     margin-bottom: 40px;
-    padding: 5px 10px;
+    padding: 5px 0;
     color: #fff;
     transition: border 0.5s;
 }
@@ -80,7 +80,7 @@ form a #btn-signUp{
     float: left;
 }
 
-form a:hover{
+form a #btn-signUp:hover{
     color: var(--darkish-pink);
 }
 
