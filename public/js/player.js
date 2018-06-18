@@ -180,9 +180,21 @@ watchListIcon.onclick = function() {
         if (err) {
             alert("Problema a adicioanr na watchlist");
         } else if (addedToWatchList) {
-            alert("Video adicionada na watchlist");
+            $("#textFeedback").text("Vídeo adicionado na lista");
+            $("#feedbackBar").animate({opacity: '1'});
+            $("#feedbackBar").show();
+            function esconder(){
+                $("#feedbackBar").animate({opacity: '0'});
+            }
+            setTimeout(esconder, 3000);
         } else {
-            alert("Video Removido da watchl");
+            $("#textFeedback").text("Vídeo removido da lista");
+            $("#feedbackBar").animate({opacity: '1'});
+            $("#feedbackBar").show();
+            function esconder(){
+                $("#feedbackBar").animate({opacity: '0'});
+            }
+            setTimeout(esconder, 3000);
         }
     })
 
