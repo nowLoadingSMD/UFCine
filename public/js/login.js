@@ -6,7 +6,6 @@ logar.onclick = async function(){
     document.getElementById("errorPassword").style.display = "none";
   
     if ( await login() ){  
-        alert("Logado")
         window.location.href = "/pages/home.html"
     } 
     // else {
