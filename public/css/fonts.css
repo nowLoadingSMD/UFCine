@@ -349,3 +349,15 @@
   color: rgb(255, 255, 255);
   color: var(--white);
 }
+
+.yearLabel {
+  font-family: CircularStd-Medium;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
