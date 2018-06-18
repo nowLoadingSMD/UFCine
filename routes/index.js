@@ -4,7 +4,7 @@ var router = express.Router();
 const GenreEnum = require("../config/genreEnum")
 
 const Tag = require("../models/Tag")
-const User = require("../models/user")
+const User = require("../models/User")
 const Video = require("../models/Video")
 const ProductionInfo = require("../models/ProductionInfo")
 
