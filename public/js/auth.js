@@ -1,9 +1,10 @@
 var login = async function() {
+
     const user = {
       email: document.getElementById("loginEmail").value,
       password: document.getElementById("loginPassword").value
     };
-
+ 
     let logged;
 
     await $.post("/auth/authenticate", user, (data) => {
@@ -14,7 +15,14 @@ var login = async function() {
           setCookie("token", "Bearer " + data.token, 1)
           logged = true 
       } else {
-          logged = false
+
+          if (err === "User not found") {
+            document.getElementById("errorEmail").style.display = "block";
+          } else if (err === "Invalid password") {
+            document.getElementById("errorPassword").style.display = "block";
+          }
+          
+        logged = false
       }
     })
 

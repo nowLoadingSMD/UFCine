@@ -95,8 +95,87 @@ addItem.onclick = function(){
   qtdListItens++;
 }
 
+$('#btn-cancel').on('click', function (){
+  $('#uploadForm').submit(function(e){
+    return false;
+  }); //.trigger('submit');
+});
+
 $('#btn-publish').on('click', function (){
-  $('#uploadForm').submit(); //.trigger('submit');
+
+  let errors = 0;
+
+  if( document.getElementById("videoMP4").files.length == 0 ){
+    $("#errorVideo").show();
+    errors++
+  } else {
+    $("#errorVideo").hide();
+  }
+
+  if( document.getElementById("thumbnail1").files.length == 0 ){
+    $("#errorBanner1").show();
+    errors++
+  } else {
+    $("#errorBanner1").hide();
+  }
+
+  if( document.getElementById("thumbnail2").files.length == 0 ){
+    $("#errorBanner2").show();
+    errors++
+  } else {
+    $("#errorBanner2").hide();
+  }
+
+  if( document.getElementById("titleFilm").value == "" ){
+    $("#errorTitle").show();
+    errors++
+  } else {
+    $("#errorTitle").hide();
+  }
+
+  if( document.getElementById("description").value == "" ){
+    $("#errorDescription").show();
+    errors++
+  } else {
+    $("#errorDescription").hide();
+  }
+  
+  if( document.getElementById("year").value == "" ){
+    $("#errorYear").show();
+    errors++
+  } else {
+    $("#errorYear").hide();
+  }
+
+  if( document.getElementById("classification").value == "" ){
+    $("#errorClassification").show();
+    errors++
+  } else {
+    $("#errorClassification").hide();
+  }
+
+  if( document.getElementById("genre").value == "" ){
+    $("#errorGenre").show();
+    errors++
+  } else {
+    $("#errorGenre").hide();
+  }
+
+  console.log(errors)
+
+  if (errors == 0) {
+    
+    document.getElementById("uploadForm").submit();
+
+  } else {
+    $('#uploadForm').submit(function(e){
+      return false
+    });
+  }
+
+
+
+  // $('#uploadForm').submit(); //.trigger('submit');
 });
 
 $('#castType').change(function(){
