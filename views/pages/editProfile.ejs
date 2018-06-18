@@ -29,11 +29,11 @@
                             <label class="sectionHeader3">Nome</label><br/>
                             <input type="text" id="editName" class="placerholderLabel" placeholder="Nome completo"><br/>
                             <label class="sectionHeader3">E-mail</label><br/>
-                            <input type="text" id="editEmail"class="placerholderLabel" placeholder="Email"><br/>
+                            <input type="text" id="editEmail" class="placerholderLabel" placeholder="Email"><br/>
                             <input type="button" class="buttonHoverLabel buttons" id="edit-password" value="MUDAR SENHA">
                         </form>
-                        <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-cancel">CANCELAR</button></a>
-                        <a href="profile.html"><button class="btn-dialog buttonLabel" id="btn-confirm">SALVAR</button></a>
+                        <a href="profile.html"><button class="btn-dialog buttonLabel btn-cancel" id="btn-cancel">CANCELAR</button></a>
+                        <a href="profile.html"><button class="btn-dialog buttonLabel btn-confirm" id="btn-confirm">SALVAR</button></a>
                     </div>
                 </div>
                 <div class="contentRight">
@@ -46,16 +46,21 @@
                             <input type="checkbox" value="None" id="slideOne" name="check" onclick="checkPortfolio()"/>
                             <label for="slideOne"></label>
                         </div>
-                        <a href="editPortfolio.html"><button id="btn-edit" class="buttons buttonHoverLabel">EDITAR PORTFÓLIO</button></a>
+                        <button id="btn-edit" class="buttons buttonHoverLabel">EDITAR PORTFÓLIO</button>
                     </article>
                     <a href=""><button class="buttonHoverLabel buttons" id="btn-delete">EXCLUIR CONTA</button></a>
                 </div>
             </div>
-            <!-- <div class="grid-values">
-                    
-                    
-                    
-                </div> -->
+            <!-- MODALs -->
+            <div id="modalEditType" class="modal">
+                <% include ../partials/modals/editTypeModal %>
+            </div>
+            <div id="modalEditTypeConfirm" class="modal">
+                <% include ../partials/modals/editTypeModalConfirm %>
+            </div>
+            <div id="modalEditPortfolio" class="modal">
+                <% include ../partials/modals/editPortfolioModal %>
+            </div>
 	</section>
 	
     <%- include('../partials/tabBar', {currentPage: "none"}); %>

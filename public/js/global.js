@@ -20,10 +20,6 @@ jQuery(document).ready(async function($) {
       $(".block-logged").css("display", "none");
     }
 
-    $("#iconBack").click(function(event){
-      history.back()
-    })
-
 });
 
 $(document).ready(async function(){
