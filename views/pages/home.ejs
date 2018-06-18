@@ -37,33 +37,9 @@
 		<div class="exhibition">
 			<article class="titles sectionHeader">Em exibição nos festivais</article>
 			<div class="movieCardExhibition">
-				<div class="filmExhibition">
-					<article class="imgFilmExhibition"><img src="../img/films/movie.jpg"></article>
-					<div>
-						<h1 class="onExibitionName">Filme</h1>
-						<h5 class="text">Mostra Percurso de Cinema</h5>
-						<h3 class="sectionHeader4">Exibindo em</h3>
-						<h5 class="onExibitionName text">Cineteatro São Luiz</h5>
-					</div>
-				</div> 
-				<div class="filmExhibition">
-					<article class="imgFilmExhibition"><img src="../img/films/movie.jpg"></article>
-					<div>
-						<h1 class="onExibitionName">Filme</h1>
-						<h5 class="text">Mostra Percurso de Cinema</h5>
-						<h3 class="sectionHeader4">Exibindo em</h3>
-						<h5 class="onExibitionName text">Cineteatro São Luiz</h5>
-					</div>
-				</div>
-				<div class="filmExhibition">
-						<article class="imgFilmExhibition"><img src="../img/films/movie.jpg"></article>
-						<div>
-							<h1 class="onExibitionName">Filme</h1>
-							<h5 class="text">Mostra Percurso de Cinema</h5>
-							<h3 class="sectionHeader4">Exibindo em</h3>
-							<h5 class="onExibitionName text">Cineteatro São Luiz</h5>
-						</div>
-				</div>
+				<% onExibitionList.forEach(function(item){ %>
+					<%- include("../partials/cards/onExibitionCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
+				<% }); %>
 			</div>
 		</div>
 		

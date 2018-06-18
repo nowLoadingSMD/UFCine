@@ -30,11 +30,13 @@ $(document).ready(function () {
           right: ((x*200)+(x*8-12)-400)
       }, 3000, function() {
 
+            $("#videoSelectedName").html(`${video.name}`)
+            
             $("#imgSelect").css('background-size', `cover`)
             $("#imgSelect").css('background-image', `url(${video.videoImg})`)
 
             $("#imgSelect").fadeIn("slow", function(){
-                window.location.replace(`/pages/player.html?id=${video.videoID}`)
+                document.getElementById("randomAnchor").setAttribute("href", `/pages/player.html?id=${video.videoID}`)
             })
       });
   });
