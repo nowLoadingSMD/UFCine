@@ -1,5 +1,6 @@
 <header class="navbar">
-    <input type="text" id="search" class="placerholderLabel" placeholder="Pesquisar" />
+	<input type="text" id="search" class="placerholderLabel" placeholder="Pesquisar" />
+
     <img id="imgLogo" src="/img/icons/logo.svg">
 	<i class="fas fa-sign-in-alt" id="iconLogin"></i>
 	<a href="/pages/upload.html"><button id="uploadVideo" class="ctaButtonLabel">ENVIAR VÍDEO</button></a>
@@ -23,7 +24,18 @@
 </header>
 <div id="myModal" class="modal">
 		<% include ../partials/modals/logoutModal %>
+	<script>
+
+		$("#search").keypress(function(event) {
+			
+			if ((event.keyCode == 13) && (this.value != "")){
+				window.location.replace(`/pages/search.html?term=${this.value}`)
+			}
+		})
+
+	</script>
 </div>
+
 <style>
 
 .navbar{

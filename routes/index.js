@@ -204,6 +204,18 @@ router.get("/pages/signUp.html", function(req, res, next) {
   res.render('pages/signUp')
 })
 
+router.get("/pages/search.html", function(req, res, next) {
+  const term = req.query.term
+
+  Video.find(
+    { "name": { "$regex": term, "$options": "i" } },
+    function(err, videos) {
+          res.render('pages/search', { term: term, result: videos })      
+    }
+  )
+  
+})
+
 router.get("/pages/tag.html", function(req,res, next) {
 
   let tags = []
