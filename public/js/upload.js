@@ -122,6 +122,7 @@ addItem.onclick = function(){
 
 $('#btn-cancel').on('click', function (){
   $('#uploadForm').submit(function(e){
+    window.history.back();
     return false;
   }); //.trigger('submit');
 });

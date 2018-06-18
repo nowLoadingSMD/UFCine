@@ -253,6 +253,7 @@
 
 .checkIcon {
     width: 28px;
+    cursor: pointer;
 }
  
 .descriptionListItem {

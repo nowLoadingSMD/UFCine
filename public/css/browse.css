@@ -412,3 +412,7 @@ border: 4px solid transparent;
 .gridYears article{
     cursor: pointer;
 }
+
+#checkIconBrowse{
+    cursor: pointer;
+}
