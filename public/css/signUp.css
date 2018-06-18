@@ -80,7 +80,7 @@ html{
 .error{
     display: none;
     position: absolute;
-    margin-top: -35px;
+    margin-top: -25px;
 }
 
 form .textfield:focus{

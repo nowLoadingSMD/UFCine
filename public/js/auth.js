@@ -33,7 +33,7 @@ var signUp = async function(){
 
   const user = {
     name: document.getElementById("signUpName").value,
-    userName: document.getElementById("signUpUserName").value,
+    // userName: document.getElementById("signUpUserName").value,
     email: document.getElementById("signUpEmail").value,
     password: document.getElementById("signUpPassword").value,
     accountActivated: true,

@@ -8,7 +8,6 @@ btnGoSignUp.onclick = async function(){
       document.getElementById("errorName").style.display = "block";
       document.getElementById("errorEmail").style.display = "block";
       document.getElementById("errorPassword").style.display = "block";
-      document.getElementById("errorUser").style.display = "block";
     }
 }
 
