@@ -186,7 +186,11 @@ watchListIcon.onclick = function() {
             function esconder(){
                 $("#feedbackBar").animate({opacity: '0'});
             }
+            function darHide(){
+                $("#feedbackBar").hide();
+            }
             setTimeout(esconder, 3000);
+            setTimeout(darHide, 3200);
         } else {
             $("#textFeedback").text("Vídeo removido da lista");
             $("#feedbackBar").animate({opacity: '1'});
@@ -194,7 +198,11 @@ watchListIcon.onclick = function() {
             function esconder(){
                 $("#feedbackBar").animate({opacity: '0'});
             }
+            function darHide(){
+                $("#feedbackBar").hide();
+            }
             setTimeout(esconder, 3000);
+            setTimeout(darHide, 3200);
         }
     })
 

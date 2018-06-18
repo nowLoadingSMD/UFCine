@@ -45,6 +45,9 @@ showModalDelete.onclick = function(){
 
 exitModalConfirm.onclick = function(){
     modalEditConfirm.style.display = "none";
+    document.getElementById("active").style.display = "block";
+    document.getElementById("checkb").style.display = "block";
+    document.getElementById("btn-editType").style.display = "none";
 }
 
 exitModalType.onclick = function(){
