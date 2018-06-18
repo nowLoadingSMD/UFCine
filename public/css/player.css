@@ -53,6 +53,7 @@
 	display: grid;
 	grid-gap: 20px 20px;
 	grid-template-columns: 50% 50%;
+	padding-right: 30px;
 }
 
 .grid-infos div .newInfo{
@@ -62,6 +63,12 @@
 	margin: 5px 0;
 }
 
+#year{
+	margin-top: 70px;
+}
+#classification{
+	text-align: right;
+}
 #titleReal{
 	margin-top: 40px;
 }
@@ -70,21 +77,25 @@
 }
 #titleCast{
 	margin-top: 83px;
+	text-align: right;
 }
 .tag {
 	margin: 2px 2px;
 }
+.alignRight article{
+	text-align: right;
+}
 .classification{
-	margin: 10px 10px 20px 10px;
+	margin: 10px 0 20px 10px;
 	width: 60px;
 	height: 35px;
 	color: #fff;
 	padding: 5px;
+	float: right;
 	border-radius: 5px;
 	background: var(--darkish-pink);
-	text-align: center;
+	text-align: center !important;
 }
-
 .video{
 	margin-top: 15px;
 }
@@ -116,10 +127,18 @@ video{
 
 .content-functions #viewApplauses{
 	float: left;
-	margin-right: -10px;
 	color: #fff;
-	font-size: 23px;
+	font-size: 16px;
 	font-family: CircularStd-Black;
+	background: var(--darkish-pink);
+	padding: 6px 0;
+	width: 40px;
+	border-radius: 10px;
+	text-align: center;
+	position: absolute;
+	margin-top: -35px;
+	margin-left: 12px;
+	display: none;
 }
 
 .video i{

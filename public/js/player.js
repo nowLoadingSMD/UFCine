@@ -45,19 +45,26 @@ jQuery(document).ready(async function($){
 
     console.log(applauses);
 
+    $("#applauseIcon").hover(function() {
+        $("#viewApplauses").show();
+      })
+      $("#applauseIcon").mouseleave(function() {
+        $("#viewApplauses").hide();
+      })
+
     $("#applauseIcon").mousedown(function(){
         if(valor<50){
             valor++
             applauses++
-            $("#viewApplauses").text(valor);
+            $("#viewApplauses").text("+"+valor);
         }
         interval = setInterval(function() {
             if(valor<50){
                 valor++
                 applauses++
-                $("#viewApplauses").text(valor);
+                $("#viewApplauses").text("+"+valor);
             }
-         }, 250);
+         }, 200);
     })
 
     $(document).mouseup(function() {

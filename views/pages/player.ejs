@@ -64,10 +64,10 @@
 					<article class="titlesMedium TitleComment">Gênero</article>
 					<a href="/pages/genre.html?genre=<%= productionInfo.genre.name %>"><article class="newInfo DescriptionComment" id="productionInfoGenres"><%= productionInfo.genre.name %></article></a>
 				</div>
-				<div>
-					<article class="titlesMedium TitleComment">Classificação</article>
+				<div class="alignRight">
+					<article class="titlesMedium TitleComment" id="classification">Classificação</article>
 					<article class="classification DescriptionComment"><%=productionInfo.classification %></article>
-					<article class="newInfo TitleComment"><%= productionInfo.year %></article>
+					<article class="newInfo TitleComment" id="year"><%= productionInfo.year %></article>
 				</div>
 			</div>
 			<article class="titlesMedium TitleComment">Tags</article>
@@ -115,7 +115,7 @@
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">Zezin</article></a>
 				</div>
-				<div>
+				<div class="alignRight">
 					<article class="titlesMedium onExibitionName" id="titleCast">Elenco</article>
 					<a href="portfolio.ejs"><article class="newInfo DescriptionComment">
 						<% productionInfo.cast.forEach(function(item){ %>
