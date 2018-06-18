@@ -19,7 +19,7 @@
 	<% include ../partials/navBar %>
 
 	<section class="principal">
-        <article class="titles sectionHeader"><img src="../img/icons/back.svg" id="iconBack">Minha Lista</article>
+        <article class="titles sectionHeader">Minha Lista</article>
         <div class="movieCardContainer">
 			<% watchList.forEach(function(item){ %>
                 <%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
