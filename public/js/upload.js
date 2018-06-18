@@ -71,13 +71,38 @@ addItem.onclick = function(){
   op3.text = "Roteiro";
 
   var op4 = document.createElement("option");
-  op4.setAttribute("value", "actor");
-  op4.text = "Ator(a)";
+  op4.setAttribute("value", "photograph");
+  op4.text = "Fotografia";
+
+  var op5 = document.createElement("option");
+  op5.setAttribute("value", "artDirection");
+  op5.text = "Direção de arte";
+
+  var op6 = document.createElement("option");
+  op6.setAttribute("value", "production");
+  op6.text = "Produção";
+
+  var op7 = document.createElement("option");
+  op7.setAttribute("value", "sound");
+  op7.text = "Trilha Sonora";
+
+  var op8 = document.createElement("option");
+  op8.setAttribute("value", "editing");
+  op8.text = "Montagem";
+
+  var op9 = document.createElement("option");
+  op9.setAttribute("value", "actor");
+  op9.text = "Ator(a)";
 
   select.appendChild(op1);
   select.appendChild(op2);
   select.appendChild(op3);
   select.appendChild(op4);
+  select.appendChild(op5);
+  select.appendChild(op6);
+  select.appendChild(op7);
+  select.appendChild(op8);
+  select.appendChild(op9);
 
   var input = document.createElement("input");
   input.setAttribute("type", "text");
