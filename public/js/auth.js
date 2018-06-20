@@ -15,7 +15,7 @@ var login = async function() {
           setCookie("token", "Bearer " + data.token, 1)
           logged = true 
       } else {
-
+ 
           if (err === "User not found") {
             document.getElementById("errorEmail").style.display = "block";
           } else if (err === "Invalid password") {
