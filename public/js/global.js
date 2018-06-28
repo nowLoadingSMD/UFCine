@@ -10,8 +10,7 @@ jQuery(document).ready(async function($) {
       document.getElementById("btn-login").style.display = "none";
       document.getElementById("btn-user").style.display = "block";
       document.getElementById("showDropdown").style.display = "block";
-      document.getElementById("uploadVideo").style.display = "block";
-
+    
       $(".block-logged").css("display", "block");
 
       document.getElementById("profileAnchor").href = `/pages/profile.html?id=${getCookie('userId')}`;

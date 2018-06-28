@@ -13,7 +13,8 @@ var login = async function() {
       if (!err) {
           setCookie("userId", data.user._id, 1)
           setCookie("token", "Bearer " + data.token, 1)
-          logged = true 
+          setCookie("isProducer", data.isProducer, 1)
+          logged = true
       } else {
  
           if (err === "User not found") {
@@ -56,6 +57,7 @@ var signUp = async function(){
     if (!err) {
         setCookie("userId", data.user._id, 1)
         setCookie("token", "Bearer " + data.token, 1)
+        setCookie("isProducer", data.isProducer, 1)
         signed = true
     } else {
         signed = false

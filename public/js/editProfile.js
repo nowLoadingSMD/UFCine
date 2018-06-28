@@ -33,8 +33,19 @@ showModalType.onclick = function(){
 }
 
 showModalConfirm.onclick = function(){
-    modalEditConfirm.style.display = "block";
-    modalEdit.style.display = "none";
+
+
+
+    $.get(`/api/user/setIsProducer?id=${getCookie('userId')}`, function(data) {
+
+        const err = data.err
+
+        if (!err) {
+            modalEditConfirm.style.display = "block";
+            modalEdit.style.display = "none";
+        }
+
+    })
 }
 
 showModalPortfolio.onclick = function(){
@@ -43,7 +54,7 @@ showModalPortfolio.onclick = function(){
 
 showModalDelete.onclick = function(){
     modalDeleteAccount.style.display = "block";
-}
+} 
 
 exitModalConfirm.onclick = function(){
     modalEditConfirm.style.display = "none";

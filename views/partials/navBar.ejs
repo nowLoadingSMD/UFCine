@@ -36,6 +36,20 @@
 			}
 		})
 
+	 	$(document).ready(function(){
+
+			const isProducer = getCookie('isProducer')
+			console.log(typeof(isProducer))
+
+			if (isProducer === "false") {
+
+				$("#uploadVideo").css("display", "none")
+			} else {
+				$("#uploadVideo").css("display", "block")
+			}
+			
+		})
+
 	</script>
 </div>
 

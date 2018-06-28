@@ -88,6 +88,17 @@ router.get("/getWatchList", (req, res) => {
         res.json({ watchList: user.watchList})
     })
 
+}) 
+
+router.get("/setIsProducer", (req, res) => {
+    
+    const id = req.query.id
+
+    User.findByIdAndUpdate(id, { isProducer: true }, {new: true}, (err, user) => {
+        if (err) return res.status(500).send(err)
+
+        return res.json({err: null}) 
+    })
 })
 
 module.exports = (app) => app.use("/api/user", router) 

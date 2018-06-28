@@ -31,9 +31,12 @@ router.post("/register", async (req, res) => {
 
         user.password = undefined
 
+        console.log(user.isProducer)
+
         return res.send({ 
             user,
-            token: generateToken({id: user.id}) 
+            token: generateToken({id: user.id}),
+            isProducer: user.isProducer
         })
 
     } catch (err) {
@@ -57,7 +60,8 @@ router.post("/authenticate", async (req, res) => {
 
     res.json({ 
         user: user,
-        token: generateToken({id: user.id}) 
+        token: generateToken({id: user.id}),
+        isProducer: user.isProducer
     })
 })
 

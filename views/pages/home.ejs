@@ -22,24 +22,36 @@
 	<section class="principal">
 		<article class="titleInitial sectionHeader">Acabou de chegar</article>
 
-		<%- include('../partials/slider', {releasesList: releasesList}); %>
+		<% if (releasesList.length > 0) { %>
+			<%- include('../partials/slider', {releasesList: releasesList}); %>
+		<% } else { %>
+			<article class="sectionHeader3">Infelizmente não há nada a recomendar no momento :(</article>
+		<% } %>
 
 		<div class="recommended">
 			<article class="titles sectionHeader">Nós recomendamos</article>
 			<a href="recommended.html"><button class="btn-viewMore buttonLabel">MAIS</button></a>
 			<div class="movieCardContainer">
-					<% recommendedList.forEach(function(item){ %>
+					<% if (recommendedList.length > 0) { %>
+						<% recommendedList.forEach(function(item) { %>
 						<%- include("../partials/cards/movieCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
-					<% }); %>
+					<%		}); %>
+					<% } else { %>
+						<article class="sectionHeader3">Infelizmente não há nada a recomendar no momento :(</article>
+					<% } %>
 			</div>
 		</div>
 		
 		<div class="exhibition">
 			<article class="titles sectionHeader">Em exibição nos festivais</article>
 			<div class="movieCardExhibition">
-				<% onExibitionList.forEach(function(item){ %>
+				<% if (onExibitionList.length > 0) { %> 
+					<% onExibitionList.forEach(function(item){ %>
 					<%- include("../partials/cards/onExibitionCard", {name: item.name, id: item._id, img: item.thumbnailVerticalPath}); %> 
-				<% }); %>
+				<% }); %> 
+				<% } else { %>
+					<article class="sectionHeader3">Infelizmente não há nada a recomendar no momento :(</article>
+				<% } %>
 			</div>
 		</div>
 		

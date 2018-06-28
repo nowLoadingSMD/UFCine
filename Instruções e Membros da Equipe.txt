@@ -1,0 +1,12 @@
+Link do repositório para download do código-fonte:
+    - https://github.com/nowLoadingSMD/projetointegrado
+
+Membros:
+    - Paulo José
+    - Rebecca Dantas
+    - Renata Faria
+
+Instruções
+    - Baixar e instalar Node.JS
+    - Executar npm install na raíz do projeto
+    - Executar comando node app.js na raíz do projeto
